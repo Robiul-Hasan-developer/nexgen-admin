@@ -1,0 +1,43 @@
+{
+  "name": "admin-html",
+  "title": "HTML Admin Template",
+  "version": "1.0.0",
+  "description": "HTML Admin Template",
+  "author": "wowtheme7",
+  "main": "gulpfile.js",
+  "license": "Private",
+  "paths": {
+    "src": {
+      "css": "./src/assets/css/"
+    },
+    "dist": {
+      "base": "./dist/",
+      "css": "./dist/assets/css/"
+    }
+  },
+  "scripts": {
+    "start": "gulp dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fahaddevs@bitbucket.org/fahaddevs/jobtotal.git"
+  },
+  "homepage": "https://bitbucket.org/fahaddevs/jobtotal#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.72.0"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.4.0"
+  }
+}
