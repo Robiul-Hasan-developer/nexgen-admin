@@ -117,15 +117,6 @@ $spaces: (
   "76": #{rem(76px)},
   "80": #{rem(80px)},
   "90": #{rem(90px)},
-  "110": #{rem(110px)},
-  "120": #{rem(120px)},
-  "144": #{rem(144px)},
-  "160": #{rem(160px)},
-  "170": #{rem(170px)},
-  "190": #{rem(190px)},
-  "200": #{rem(200px)},
-  "240": #{rem(240px)},
-  "440": #{rem(440px)},
 );
 
 $shadows: (
@@ -150,9 +141,6 @@ $font-sizes: (
 );
 
 :root {
-  // Font Family 
-  --default-font: ;
-
   // font sizes
   --h1: clamp(2rem, 1.2rem + 4vw, 4.5rem); //72px > 32px
   --h2: clamp(1.75rem, 1.11rem + 3.2vw, 3.75rem); //60px > 28px
@@ -190,13 +178,13 @@ $font-sizes: (
   
   // Design Token variables
   --base: #fff;
-  --brand: var(--primary-600);
+  --brand: #24447F;
   --button-secondary: var(--primary-50);
   --black: var(--dark-2);
   --white: var(--base);
   --bg-color: var(--neutral-50);
-  --text-primary-light: var(--neutral-900);
-  --text-secondary-light: var(--neutral-600);
+  --text-primary-light: #202427;
+  --text-secondary-light: #75868F;
   --text-secondary-dark: var(--neutral-300);
 
   --input-form-light: var(--neutral-300);

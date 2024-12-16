@@ -132,15 +132,16 @@
     }
   }
   &-logo {
-    height: rem(72px);
+    height: rem(50px);
     padding: rem(14px) rem(16px);
+    background-color: var(--brand);
     border-inline-end: 1px solid var(--neutral-200);
     border-block-end: 1px solid var(--neutral-200);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     img {
-      max-height: rem(55px);
+      max-height: rem(25px);
       &.dark-logo {
         display: none;
       }
@@ -206,6 +207,7 @@
 }
 
 .sidebar-menu {
+  margin-top: rem(48px);
   li {
     &.dropdown {
       > a {
@@ -306,10 +308,11 @@
     }
   }
   .sidebar-menu-group-title {
-    color: var(--neutral-500);
+    color: var(--text-primary-light);
     font-weight: 600;
     margin-block: rem(8px);
     font-size: rem(14px);
+    padding-inline-start: rem(14px);
     @include media(3xl) {
       font-size: rem(16px);
     }
