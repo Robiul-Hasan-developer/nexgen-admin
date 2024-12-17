@@ -26,39 +26,39 @@ $colors: (
   ),
 
   danger: (
-    "50": #FEF2F2,
+    "50": #fce7e7,
     "100": #FEE2E2,
     "200": #FECACA,
     "300": #FCA5A5,
     "400": #F87171,
     "500": #EF4444,
-    "600": #DC2626,
+    "600": #ed5e5e,
     "700": #B91C1C,
     "800": #991B1B,
     "900": #7F1D1D
   ),
 
   success: (
-    "50": #F0FDF4,
+    "50": #dcf6e9,
     "100": #DCFCE7,
     "200": #BBF7D0,
     "300": #86EFAC,
     "400": #4ADE80,
     "500": #22C55E,
-    "600": #16A34A,
+    "600": #13c56b,
     "700": #15803D,
     "800": #166534,
     "900": #14532D
   ),
 
   warning: (
-    "50": #FEFCE8,  
+    "50": #fcf5e5,  
     "100": #FEF9C3,
     "200": #FEF08A,
     "300": #FDE047,
     "400": #FACC15,
     "500": #EAB308,
-    "600": #FF9F29,
+    "600": #e8bc52,
     "700": #f39016,
     "800": #e58209,
     "900": #d77907
@@ -91,16 +91,16 @@ $colors: (
 );
 
 $spaces: (
+  "1": #{rem(1px)},
   "2": #{rem(2px)},
   "4": #{rem(4px)},
   "6": #{rem(6px)},
   "8": #{rem(8px)},
-  "9": #{rem(9px)},
   "10": #{rem(10px)},
-  "11": #{rem(11px)},
   "12": #{rem(12px)},
-  "13": #{rem(13px)},
+  "14": #{rem(14px)},
   "16": #{rem(16px)},
+  "18": #{rem(18px)},
   "20": #{rem(20px)},
   "24": #{rem(24px)},
   "28": #{rem(24px)},
@@ -113,19 +113,11 @@ $spaces: (
   "56": #{rem(56px)},
   "60": #{rem(60px)},
   "64": #{rem(64px)},
-  "72": #{rem(72px)},
-  "76": #{rem(76px)},
-  "80": #{rem(80px)},
-  "90": #{rem(90px)},
 );
 
 $shadows: (
-  "1": 0 4px 60px 0 rgba(#04060F, 0.8),
-  "2": 0 4px 60px 0 rgba(#04060F, 0.5),
-  "3": 0 20px 100px 0 rgba(#04060F, 0.8),
-  "4": 4px 8px 24px 0 rgba(#B6B6B6, 0.20),
-  "5": 4px 12px 32px 0 rgba(#00A99E, 0.10),
-  "6": 4px 16px 32px 0 rgba(#00A99E, 0.10)
+  "1": 1px 1px 2px 0 #e5f6fb,
+  "2": 0px 16px 16px -12px rgba(27, 23, 65, 0.25),
 );
 
 $font-sizes: (
@@ -148,6 +140,10 @@ $font-sizes: (
   --h4: clamp(1.375rem, 1.095rem + 1.4vw, 2.25rem); //36px > 22px 
   --h5: clamp(1.25rem, 1.05rem + 1vw, 1.875rem); //30px > 20px
   --h6: clamp(1.125rem, 1.005rem + 0.6vw, 1.5rem); //24px > 18px
+
+  --border-color: #1a1d211a;
+  --placeholder-color: #75868fbf;
+  --white: #fff;
 
   // spacing
   @each $property, $value in $spaces {
@@ -175,24 +171,6 @@ $font-sizes: (
       --#{$color}-#{$shade}: #{$value};
     }
   }
-  
-  // Design Token variables
-  --base: #fff;
-  --brand: #24447F;
-  --button-secondary: var(--primary-50);
-  --black: var(--dark-2);
-  --white: var(--base);
-  --bg-color: var(--neutral-50);
-  --text-primary-light: #202427;
-  --text-secondary-light: #75868F;
-  --text-secondary-dark: var(--neutral-300);
-
-  --input-form-light: var(--neutral-300);
-  --input-form-dark: var(--neutral-500);
-  --input-bg: var(--neutral-50);
-  --input-stroke: var(--neutral-300);
-
-  --border-color: #d1d5db80;
 }
 
 [data-theme="dark"] {
@@ -219,9 +197,5 @@ $font-sizes: (
   --success-100: #DCFCE70f;
   --danger-100: rgba(239, 71, 112, 0.1490196078);
 
-  --border-color: #d1d5db33;
-
-  // @each $shade, $value in $neutral-dark {
-  //   --neutral-#{$shade}: #{$value};
-  // }
+  --border-color: #d0dff21a;
 }

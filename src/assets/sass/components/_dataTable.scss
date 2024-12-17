@@ -1,0 +1,46 @@
+/* Common Data Table Css start */
+table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before {
+    font-family: 'remixicon';
+    content: "\EA78";
+    font-weight: 900;
+    opacity: .525;
+}
+
+table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:after, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:after {
+    font-family: 'remixicon';
+    content: "\EA4E";
+    font-weight: 900;
+    opacity: .525;
+}
+
+table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-desc span.dt-column-order:after {
+    opacity: 1;
+}
+
+
+
+.common-dataTable {
+    .dt-column-title {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    tbody {
+        >tr {
+            td {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+.top-row-hidden {
+    .dt-layout-cell.dt-start {
+        display: none !important;
+    }
+    .dt-layout-cell.dt-end {
+        display: none !important;
+    }
+}
+
+/* Common Data Table Css end */

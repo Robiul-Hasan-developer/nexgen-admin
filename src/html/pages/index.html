@@ -7,17 +7,166 @@
 
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Digital Signature",
-    activePage: "AI"
+    page: "Business Suite",
+    pageLink: "business.html",
+    activePage: "Digital Signature"
   })
   
-  <div class="dashboard-main-body">
-    <h5>Hello</h5>
+  <div class="dashboard-main-body round-shape">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Widgets Start -->
+      <div class="row gy-4">
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-primary-600 mb-24">New</span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-cyan-50 text-cyan-600 ">
+                <i class="ri-coupon-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">202 / 400</h6>
+            <span class="">1 Days 4 Hours Avg/New</span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-primary-600 mb-24">In Progress</span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-warning-50 text-warning-600 ">
+                <i class="ri-hourglass-fill"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">98 / 400</h6>
+            <span class="">3 Days 5 Hours Avg/In progress</span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-primary-600 mb-24">Overdue </span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-danger-50 text-danger-600 ">
+                <i class="ri-time-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">50 / 400</h6>
+            <span class="">2 Days 1 Hour Avg/Overdue </span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-primary-600 mb-24">Completed </span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-success-50 text-success-600 ">
+                <i class="ri-checkbox-circle-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">150 / 400</h6>
+            <span class="">7 Days 8 Hours Avg/Completed </span>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Widgets end -->
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap  gap-3">
+          <a href="javascript:void(0)" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Send Document 
+          </a>
+
+          <div class="d-flex align-items-center gap-3">
+            <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+            <select class="form-control form-select border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <input type="text" class="form-control max-w-760-px w-100" placeholder="Search...">
+
+          <div class="d-flex align-items-center gap-2 ">
+            <button class="text-neutral-400 d-flex"><i class="ri-filter-line"></i></button>
+            <div class="border radius-8 d-flex">
+              <button type="button" class="h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                <i class="ri-printer-line"></i>
+              </button>
+              <div class="dropdown">
+                <button class="h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+      <!-- Table Start -->
+      <table id="example" class="common-dataTable top-row-hidden display w-100">
+        <thead>
+            <tr>
+                <th>Envelope IID</th>
+                <th>Type</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                  <span class="text-primary-500">E0012</span>
+                </td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+        </tbody>
+    </table>
+      <!-- Table End -->
+
+    </div>
   </div>
 
   @@include('../layouts/_footer.html')
 </main>
   
 @@include('../partial-html/_template-bottom.html')
+
+<script>
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false 
+    // paging: false,      // Disables pagination
+    // ordering: false     // Disables column ordering
+});
+</script>
 
 </body>
 </html>

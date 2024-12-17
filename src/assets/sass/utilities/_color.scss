@@ -16,8 +16,16 @@
   }
 }
 
+.text-white-65 {
+  color: rgba(255, 255, 255, 0.65);
+}
+
 .text-primary-light {
   color: var(--text-primary-light) !important;
+}
+
+.text-primary-light-two {
+  color: var(--text-primary-light-two) !important;
 }
 
 .text-secondary-light {
@@ -34,41 +42,4 @@
 
 .text-black {
   color: var(--black) !important;
-}
-
-
-.hover-text-primary, .btn.hover-text-primary {
-  &:hover {
-    color: var(--primary-600) !important;
-  }
-}
-
-.hover-text-success, .btn.hover-text-success {
-  &:hover {
-    color: var(--success-main) !important;
-  }
-}
-
-.hover-text-info, .btn.hover-text-info {
-  &:hover {
-    color: var(--info-main) !important;
-  }
-}
-
-.hover-text-warning, .btn.hover-text-warning {
-  &:hover {
-    color: var(--warning-main) !important;
-  }
-}
-
-.hover-text-danger, .btn.hover-text-danger {
-  &:hover {
-    color: var(--danger-main) !important;
-  }
-}
-
-.hover-text-white, .btn.hover-text-white {
-  &:hover {
-    color: var(--base) !important;
-  }
 }

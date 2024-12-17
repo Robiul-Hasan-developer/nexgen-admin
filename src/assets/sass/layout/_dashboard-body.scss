@@ -5,6 +5,7 @@
   flex-flow: column;
   min-height: 100vh;
   transition: all 0.3s;
+  @extend .section-bg; 
   @include media(xl) {
     margin-inline-start: rem(220px);
   }
@@ -15,15 +16,33 @@
     margin-inline-start: rem(312px);
   }
   &-body {
-    padding: rem(15px);
-    @include media(xxl) {
-      padding: rem(24px);
-    }
+    padding: rem(10px);
+    // @include media(xxl) {
+    //   padding: rem(24px);
+    // }
   }
   &.active {
     @media (min-width: 1199px) {
       margin-inline-start: rem(86px);
     }
+  }
+}
+
+
+.round-shape {
+  position: relative;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 540px;
+    inset-block-start: 0;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-600);
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
   }
 }
 

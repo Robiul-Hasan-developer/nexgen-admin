@@ -1,6 +1,6 @@
 @each $property, $value in $spaces {
   .radius-#{$property} {
-    @include border-radius($value);
+    border-radius: #{$property}px !important;
   }
 }
 

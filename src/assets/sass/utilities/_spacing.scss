@@ -41,54 +41,6 @@
   }
 }
 
-
-// padding css 
-@each $property, $value in $spaces {
-  .p-#{$property} {
-    padding: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .px-#{$property} {
-    padding-inline: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .py-#{$property} {
-    padding-block: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .ps-#{$property} {
-    padding-inline-start: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .pe-#{$property} {
-    padding-inline-end: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .pt-#{$property} {
-    padding-block-start: var(--size-#{$property}) !important;
-  }
-}
-
-@each $property, $value in $spaces {
-  .pb-#{$property} {
-    padding-block-end: var(--size-#{$property}) !important;
-  }
-}
-
-.pe-0 {
-  padding-right: 0!important;
-}
-
 .ms--10px {
     margin-left: -10px;
 }
