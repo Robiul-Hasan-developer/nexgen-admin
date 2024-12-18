@@ -39,5 +39,17 @@
 }
 
 .section-bg {
-  background-color: #F3F6F9
+  background-color: #F3F6F9;
+  &-two {
+    background-color: #F3F6F9;
+  }
+}
+
+.active-bg {
+  &-primary-600 {
+    &:active {
+      background-color: var(--primary-600) !important;
+      color: var(--white) !important;
+    }
+  }
 }

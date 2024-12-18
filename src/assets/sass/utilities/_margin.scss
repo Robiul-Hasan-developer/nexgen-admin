@@ -1,0 +1,48 @@
+// margin css
+@each $property, $value in $spaces {
+    .m-#{$property} {
+      margin: var(--size-#{$property});
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .mx-#{$property} {
+      margin-inline: var(--size-#{$property}) !important;
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .my-#{$property} {
+      margin-block: var(--size-#{$property}) !important;
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .ms-#{$property} {
+      margin-inline-start: var(--size-#{$property}) !important;
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .me-#{$property} {
+      margin-inline-end: var(--size-#{$property}) !important;
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .mt-#{$property} {
+      margin-block-start: var(--size-#{$property}) !important;
+    }
+  }
+  
+  @each $property, $value in $spaces {
+    .mb-#{$property} {
+      margin-block-end: var(--size-#{$property}) !important;
+    }
+  }
+  
+  .ms--10px {
+    margin-inline-start: -10px;
+  }
+// margin css
+  

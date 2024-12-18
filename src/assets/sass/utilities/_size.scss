@@ -5,16 +5,29 @@
   }
 }
 
+.min-w-max {
+  min-width: max-content;
+}
+
 .max-w {
   &-760-px {
     max-width: 760px;
   }
+  &-350-px {
+    max-width: 350px;
+  }
 }
 
+// Height
 .h {
   &-100vh {
     height: 100vh;
   } 
+}
+.max-h {
+  &-322-px {
+    max-height: 322px;
+  }
 }
 
 @each $property, $value in $spaces {

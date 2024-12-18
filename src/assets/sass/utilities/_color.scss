@@ -22,14 +22,25 @@
 
 .text-primary-light {
   color: var(--text-primary-light) !important;
+  &-two {
+    color: var(--text-primary-light-two) !important;
+  }
+  &-three {
+    color: var(--text-primary-light-three) !important;
+  }
 }
 
-.text-primary-light-two {
-  color: var(--text-primary-light-two) !important;
+.text-primary {
+  &-6 {
+    color: var(--text-primary-6);
+  }
 }
 
 .text-secondary-light {
   color: var(--text-secondary-light);
+  &-two {
+    color: var(--text-secondary-light-two);
+  }
 }
 
 .text-secondary-dark {
@@ -42,4 +53,12 @@
 
 .text-black {
   color: var(--black) !important;
+}
+
+.hover-text {
+  &-white {
+    &:hover {
+      color: var(--white) !important;
+    }
+  }
 }

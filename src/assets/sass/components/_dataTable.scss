@@ -1,4 +1,44 @@
 /* Common Data Table Css start */
+.common-dataTable {
+    .dt-column-title {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    tbody {
+        >tr {
+            td {
+                font-size: 15px;
+            }
+            &:hover td {
+                background: var(--neutral-200);
+            }
+        }
+    }
+   
+}
+
+.top-row-hidden {
+    .dt-layout-cell.dt-start {
+        display: none !important;
+    }
+    .dt-layout-cell.dt-end {
+        display: none !important;
+    }
+}
+
+// Pagination css start
+.dt-container .dt-paging .dt-paging-button {
+    background-color: var(--white) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px;
+}
+// Pagination css end
+
+
+.dt-paging .dt-paging-button.disabled, .dt-paging .dt-paging-button.disabled:hover, .dt-paging .dt-paging-button.disabled:active {
+    cursor: no-drop !important;
+}
+
 table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before {
     font-family: 'remixicon';
     content: "\EA78";
@@ -17,30 +57,23 @@ table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.d
     opacity: 1;
 }
 
-
-
-.common-dataTable {
-    .dt-column-title {
-        font-weight: 500;
-        font-size: 15px;
-    }
-    tbody {
-        >tr {
-            td {
-                font-size: 15px;
-            }
-        }
-    }
+table.dataTable>thead>tr>th, table.dataTable>thead>tr>td {
+    border-bottom: 0;
+}
+table.dataTable.stripe>tbody>tr:nth-child(odd)>*, table.dataTable.display>tbody>tr:nth-child(odd)>*, table.dataTable.display>tbody>tr:nth-child(odd)>.sorting_1, table.dataTable.order-column.stripe>tbody>tr:nth-child(odd)>.sorting_1, table.dataTable.order-column>tbody tr>.sorting_1, table.dataTable.order-column>tbody tr>.sorting_2, table.dataTable.order-column>tbody tr>.sorting_3, table.dataTable.display>tbody tr>.sorting_1, table.dataTable.display>tbody tr>.sorting_2, table.dataTable.display>tbody tr>.sorting_3 {
+    box-shadow: none;
 }
 
-
-.top-row-hidden {
-    .dt-layout-cell.dt-start {
-        display: none !important;
-    }
-    .dt-layout-cell.dt-end {
-        display: none !important;
-    }
+table.dataTable>tbody>tr>th, table.dataTable>tbody>tr>td {
+    padding: 11px 10px;
+    border-bottom: 1px solid #e9ebec !important;
 }
-
+table.dataTable.hover>tbody>tr:hover>*, table.dataTable.display>tbody>tr:hover>* {
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.035);
+    box-shadow: none;
+}
+table.dataTable.display tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1 {
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.082);
+    box-shadow: none;
+}
 /* Common Data Table Css end */

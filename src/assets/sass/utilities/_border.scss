@@ -9,6 +9,41 @@
 .border {
   border: 1px solid var(--border-color) !important;
 }
-.border-end {
-  border-inline-end: 1px solid var(--border-color) !important;
+.border {
+  &-end {
+    border-inline-end: 1px solid var(--border-color) !important;
+  }
+  &-bottom {
+    border-block-end: 1px solid var(--border-color) !important;
+  }
+}
+
+
+.border {
+  &-cyan {
+    border-color: rgba(229, 246, 251, 1);
+  }
+  &-warning {
+    border-color: rgba(252, 245, 229, 1);
+  }
+  &-danger {
+    border-color: rgba(252, 231, 231, 1);
+  }
+  &-success {
+    border-color: rgba(220, 246, 233, 1);
+  }
+  &-white {
+    border-color: var(--white) !important;
+  }
+}
+
+.border {
+  &-2 {
+    border-width: 2px !important;
+  }
+
+
+  &-dashed {
+    border-style: dashed !important;
+  }
 }

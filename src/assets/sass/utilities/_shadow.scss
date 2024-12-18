@@ -11,3 +11,19 @@
 .shadow-top {
   box-shadow: 0px -4px 30px 0px rgba(46, 45, 116, 0.05);
 }
+
+
+.shadow {
+  &-cyan {
+    box-shadow: 1px 1px 2px 0px rgba(229, 246, 251, 1);
+  }
+  &-warning {
+    box-shadow: 1px 1px 2px 0px rgba(252, 245, 229, 1);
+  }
+  &-danger {
+    box-shadow: 1px 1px 2px 0px rgba(252, 231, 231, 1);
+  }
+  &-success {
+    box-shadow: 1px 1px 2px 0px rgba(220, 246, 233, 1);
+  }
+}
