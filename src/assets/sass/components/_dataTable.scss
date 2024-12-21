@@ -2,12 +2,19 @@
 .common-dataTable {
     .dt-column-title {
         font-weight: 500;
-        font-size: 15px;
+        font-size: rem(14px);
+    }
+    thead {
+        > tr {
+            th {
+                font-size: rem(14px);
+            }
+        }
     }
     tbody {
         >tr {
             td {
-                font-size: 15px;
+                font-size: rem(14px);
             }
             &:hover td {
                 background: var(--neutral-200);

@@ -7,19 +7,10 @@
   transition: all 0.3s;
   @extend .section-bg; 
   @include media(xl) {
-    margin-inline-start: rem(220px);
-  }
-  @include media(xxl) {
-    margin-inline-start: rem(275px);
-  }
-  @include media(3xl) {
-    margin-inline-start: rem(312px);
+    margin-inline-start: rem(250px);
   }
   &-body {
     padding: rem(10px);
-    // @include media(xxl) {
-    //   padding: rem(24px);
-    // }
   }
   &.active {
     @media (min-width: 1199px) {

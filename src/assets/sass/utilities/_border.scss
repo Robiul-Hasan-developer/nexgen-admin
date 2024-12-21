@@ -3,6 +3,9 @@
   border: 1px solid var(--border-color) !important;
 }
 .border {
+  &-start {
+    border-inline-start: 1px solid var(--border-color) !important;
+  }
   &-end {
     border-inline-end: 1px solid var(--border-color) !important;
   }
@@ -46,4 +49,8 @@
   &-dashed {
     border-style: dashed !important;
   }
+}
+
+.border-light {
+  border-color: rgba(#fff, 0.15) !important;
 }

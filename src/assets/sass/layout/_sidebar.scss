@@ -8,13 +8,7 @@
   z-index: 3;
   @include media(xl) {
     inset-inline-start: 0;
-    width: rem(220px);
-  }
-  @include media(xxl) {
-    width: rem(275px);
-  }
-  @include media(3xl) {
-    width: rem(312px);
+    width: rem(250px);
   }
   &-close-btn {
     position: absolute;
@@ -135,11 +129,20 @@
     height: rem(50px);
     padding: rem(14px) rem(16px);
     background-color: var(--primary-600);
-    border-inline-end: 1px solid var(--neutral-200);
-    border-block-end: 1px solid var(--neutral-200);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      @include transform(translateY(-50%));
+      width: 1px;
+      height: 30px;
+      background-color: rgba(#fff, 0.15);
+    }
     img {
       max-height: rem(25px);
       &.dark-logo {
@@ -152,7 +155,7 @@
   }
   &-menu-area {
     height: calc(100vh - 72px);
-    padding: rem(12px) rem(16px);
+    padding: rem(12px) rem(6px);
     overflow-y: auto;
     border-inline-end: 1px solid var(--neutral-200);
     &:hover {
@@ -262,9 +265,6 @@
       color: var(--text-secondary-light-two);
       @include border-radius(8px);
       font-size: rem(14px);
-      @include media(3xl) {
-        font-size: rem(16px);
-      }
       &:hover {
         color: var(--primary-600);
       }
@@ -272,15 +272,15 @@
         font-size: rem(18px);
         margin-inline-end: rem(8px);
         @include media(3xl) {
-          font-size: rem(22px);
+          font-size: rem(20px);
           margin-inline-end: rem(12px);
         }
       }
       i {
         line-height: 1.2;
-        width: 24px;
+        width: 20px;
         margin-inline-end: rem(12px);
-        font-size: rem(22px);
+        font-size: rem(18px);
       }
       .circle-icon {
         font-size: rem(10px);
@@ -313,8 +313,5 @@
     margin-block: rem(8px);
     font-size: rem(14px);
     padding-inline-start: rem(14px);
-    @include media(3xl) {
-      font-size: rem(16px);
-    }
   }
 }
