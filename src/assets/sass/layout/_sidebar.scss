@@ -259,7 +259,7 @@
       font-weight: 500;
       display: flex;
       align-items: center; 
-      color: var(--text-secondary-light);
+      color: var(--text-secondary-light-two);
       @include border-radius(8px);
       font-size: rem(14px);
       @include media(3xl) {
