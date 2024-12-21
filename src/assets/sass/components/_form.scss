@@ -39,19 +39,30 @@
 }
 
 /* Form switch start */
-.form-check-input {
-  width: 24px !important;
-  height: 14px;
-  margin-top: 0;
-  border: 1px solid var(--neutral-400);
-  background-color: var(--neutral-300);
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
-  &:checked {
-    background-color: var(--primary-600);
-    border-color: var(--primary-600);
+.form-switch {
+  .form-check-input {
+    width: 24px !important;
+    height: 14px;
+    margin-top: 0;
+    border: 1px solid var(--neutral-400);
+    background-color: var(--neutral-300);
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+    &:checked {
+      background-color: var(--primary-600);
+      border-color: var(--primary-600);
+    }
   }
 }
 /* Form switch end */
+
+.form-check {
+  .form-check-input {
+    &:checked {
+      background-color: var(--primary-500);
+      border-color: var(--primary-500);
+    }
+  }
+}
 
 
 .form-select {

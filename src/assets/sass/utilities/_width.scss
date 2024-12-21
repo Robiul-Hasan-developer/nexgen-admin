@@ -9,6 +9,9 @@
   &-80-px {
     max-width: 80px;
   }
+  &-88-px {
+    max-width: 88px;
+  }
 }
 
 .min-w-max {
@@ -28,27 +31,16 @@
   &-152-px {
     max-width: 152px;
   }
-}
-
-
-// Height
-.h {
-  &-100vh {
-    height: 100vh;
-  } 
-  &-68-px {
-    height: 68px;
+  &-330-px {
+    max-width: 330px;
   }
-}
-.max-h {
-  &-362-px {
-    max-height: 362px;
+  &-388-px {
+    @media (min-width: 992px) {
+      max-width: 388px;
+    }
   }
-}
-
-@each $property, $value in $spaces {
-  .h-#{$property}-px {
-    height: $value !important;
+  &-1060-px {
+    max-width: 1060px;
   }
 }
 

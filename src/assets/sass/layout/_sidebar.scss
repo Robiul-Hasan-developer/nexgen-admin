@@ -229,7 +229,7 @@
       &.open,
       &.dropdown-open {
         > a {
-          background-color: var(--brand);
+          background-color: var(--primary-600);
           color: #fff;
           &:hover {
             color: #fff;
@@ -247,7 +247,7 @@
     }
     > a {
       &.active-page {
-        background-color: var(--brand);
+        background-color: var(--primary-600);
         color: #fff;
         &:hover {
           color: #fff;
@@ -266,7 +266,7 @@
         font-size: rem(16px);
       }
       &:hover {
-        color: var(--brand);
+        color: var(--primary-600);
       }
       .menu-icon {
         font-size: rem(18px);

@@ -32,6 +32,10 @@ h6, .h6 {
   font-family: "Ubuntu", sans-serif;
 }
 
+a:active, button:active {
+  transform: scale(.96);
+}
+
 // body font variation
 @each $property, $value in $font-sizes {
   .text-#{$property} {
@@ -47,17 +51,4 @@ h6, .h6 {
   &-2 {
     line-height: 2 !important;
   }
-}
-
-// Text Turnicate
-.text-line-1 {
-  @include text-line-1;
-}
-
-.text-line-2 {
-  @include text-line-2;
-}
-
-.text-line-3 {
-  @include text-line-3;
 }

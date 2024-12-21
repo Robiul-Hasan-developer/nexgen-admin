@@ -1,16 +1,18 @@
-
-.w-30 {
-  width: 30%;
-}
-
-.w-70 {
-  width: 70%;
-}
-
-
 /* Gap Css */
 @each $property, $value in $spaces {
   .gap-#{$property} {
     gap: var(--size-#{$property});
+  }
+}
+
+.gap {
+  &-30-px {
+    gap: clamp(.5rem, -9rem + 10.6667vw, 1.875rem);
+  }
+  &-40-px {
+    gap: clamp(.5rem, -9rem + 10.6667vw, 2.5rem);
+  }
+  &-44-px {
+    gap: clamp(.5rem, -9rem + 10.6667vw, 3rem);
   }
 }
