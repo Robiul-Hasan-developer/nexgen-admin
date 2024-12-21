@@ -1,3 +1,26 @@
 .modal-2xl {
   max-width: 1650px;
 } 
+
+.recipient-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.recipient-dropdown {
+  li {
+    &:nth-child(even), &:hover {
+      background-color: rgba(250, 246, 246, 1);
+    }
+    &:first-child {
+      padding-top: 8px !important;
+    }
+    &:last-child {
+      padding-bottom: 8px !important;
+    }
+  }
+}

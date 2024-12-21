@@ -1,0 +1,63 @@
+// width 
+@each $property, $value in $spaces {
+  .w-#{$property}-px {
+    width: $value !important;
+  }
+}
+
+.w {
+  &-80-px {
+    max-width: 80px;
+  }
+  &-88-px {
+    max-width: 88px;
+  }
+}
+
+.min-w-max {
+  min-width: max-content;
+}
+
+.max-w {
+  &-760-px {
+    max-width: 760px;
+  }
+  &-350-px {
+    max-width: 350px;
+  }
+  &-146-px {
+    max-width: 146px;
+  }
+  &-152-px {
+    max-width: 152px;
+  }
+  &-330-px {
+    max-width: 330px;
+  }
+  &-388-px {
+    @media (min-width: 992px) {
+      max-width: 388px;
+    }
+  }
+  &-1060-px {
+    max-width: 1060px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 575px) {
+  .col-xs-6 {
+    width: 50%;
+  }
+}
+
+.transition-2 {
+  transition: .2s !important;
+}
+.text {
+  &-8-px {
+    font-size: 10px;
+  }
+  &-xxs {
+    font-size: 10px !important;
+  }
+}

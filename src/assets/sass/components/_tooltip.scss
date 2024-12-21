@@ -1,0 +1,25 @@
+/* Tooltip css start */
+.custom-tooltip {
+    &__text {
+        position: absolute;
+        width: 150px;
+        padding: 4px;
+        left: 50%;
+        top: 120%;
+        z-index: 1;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s linear;
+    }
+}
+.custom-tooltip {
+    &:hover {
+        .custom-tooltip__text {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+        }
+    }
+}
+/* Tooltip css End */

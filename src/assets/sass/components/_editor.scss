@@ -11,7 +11,8 @@
 }
 .ql-editor {
     border-radius: 12px;
-    min-height: 600px;
+    min-height: 300px;
+    padding: 18px;
 }
 
 .ql-picker-label, .ql-formats {
@@ -34,9 +35,9 @@
     gap: 16px;
 }
 .ql-formats {
-    border: 1px solid #ddd;
-    padding: 2px 4px;
-    border-radius: 8px;
     margin-right: 0 !important;
+}
+.ql-editor p, .ql-editor ol, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    line-height: 2;
 }
 /* Code edit css end */

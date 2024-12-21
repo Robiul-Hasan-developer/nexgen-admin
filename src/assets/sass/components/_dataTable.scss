@@ -14,7 +14,6 @@
             }
         }
     }
-   
 }
 
 .top-row-hidden {
@@ -75,5 +74,23 @@ table.dataTable.hover>tbody>tr:hover>*, table.dataTable.display>tbody>tr:hover>*
 table.dataTable.display tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1 {
     box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.082);
     box-shadow: none;
+}
+
+div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
+    color: #fff !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: white !important;
+    background: var(--primary-500) !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+    background: var(--primary-500) !important;
+    color: #fff !important;
+}
+div.dt-container .dt-paging .dt-paging-button {
+    border-radius: 6px !important;
+    border: 1px solid rgba(233, 235, 236, 1) !important;
 }
 /* Common Data Table Css end */

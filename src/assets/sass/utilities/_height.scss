@@ -1,0 +1,45 @@
+
+// Height
+@each $property, $value in $spaces {
+    .h-#{$property}-px {
+        height: $value !important;
+    }
+}
+  
+.h {
+    &-100vh {
+      height: 100vh;
+    } 
+    &-68-px {
+      height: 68px;
+    }
+    &-88-px {
+      height: 88px;
+    }
+    &-102-px {
+      height: 102px;
+    }
+  }
+  .max-h {
+    &-362-px {
+      max-height: 362px;
+    }
+    &-230-px {
+      max-height: 230px;
+    }
+    &-258-px {
+      max-height: 258px;
+    }
+    &-470-px {
+      max-height: 470px;
+    }
+    &-510-px {
+      max-height: 510px;
+    }
+  }
+
+  .min-h {
+    &-72-px {
+        min-height: 72px;
+    }
+  }

@@ -1,5 +1,6 @@
 $colors: (
   primary: (
+    "20": #a0bbed2e,
     "50": #E4F1FF,
     "100": #BFDCFF,
     "200": #95C7FF,
@@ -13,8 +14,10 @@ $colors: (
   ),
 
   neutral: (
+    "30": #f3f6f9,
+    "40": #f3f6f9bf,
     "50": #e9ebec,
-    "100": #F3F4F6,
+    "100": #f3f6f9,
     "200": #EBECEF,
     "300": #D1D5DB,
     "400": #9CA3AF,
@@ -89,7 +92,7 @@ $colors: (
     "900": #0390bb
   ),
   "purple": (
-    "50": #dbd0f3,
+    "50": #ede7fb,
     "100": #c9b6f3,
     "200": #bda2f7,
     "300": #ac8cf0,
@@ -99,6 +102,10 @@ $colors: (
     "700": #7d4ee1,
     "800": #6c39da,
     "900": #5f27d6
+  ),
+  "green": (
+    "50": #eaf8db,
+    "600": #57a805,
   ),
 );
 
@@ -115,7 +122,8 @@ $spaces: (
   "18": #{rem(18px)},
   "20": #{rem(20px)},
   "24": #{rem(24px)},
-  "28": #{rem(24px)},
+  "28": #{rem(28px)},
+  "30": #{rem(30px)},
   "32": #{rem(32px)},
   "36": #{rem(32px)},
   "40": #{rem(40px)}, 
@@ -125,11 +133,14 @@ $spaces: (
   "56": #{rem(56px)},
   "60": #{rem(60px)},
   "64": #{rem(64px)},
+  "70": #{rem(70px)},
 );
 
 $shadows: (
   "1": 1px 1px 2px 0 #e5f6fb,
   "2": 0px 16px 16px -12px rgba(27, 23, 65, 0.25),
+  "3": 0px 4.47px 4.47px 0px rgba(0, 0, 0, 0.25),
+  "4": 0px 0.96px 1.93px 0px rgba(56, 65, 74, 0.15),
 );
 
 $font-sizes: (
@@ -158,9 +169,10 @@ $font-sizes: (
   --white: #fff;
   --text-primary-light-two: #495057;
   --text-primary-light-three: #495057;
+  --text-secondary-light: #212529;
   --text-secondary-light-two: #878a99;
   --text-primary-6: #24447f9e;
-
+  
   // spacing
   @each $property, $value in $spaces {
     --size-#{$property}: #{$value};
