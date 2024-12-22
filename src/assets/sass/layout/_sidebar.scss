@@ -161,6 +161,12 @@
     &:hover {
       &::-webkit-scrollbar-thumb {
         background-color: var(--neutral-200);
+        &:hover {
+          background-color: var(--neutral-300);
+        }
+        &:active {
+            background-color: var(--neutral-400);
+        }
       }
     }
     &::-webkit-scrollbar {

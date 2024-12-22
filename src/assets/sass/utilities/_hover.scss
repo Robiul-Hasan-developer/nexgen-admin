@@ -1,36 +1,36 @@
-// when parent div hover change bg color
-@each $color, $shades in $colors {
-  @each $shade, $value in $shades {
-    .group-item {
-      &:hover {
-        .group-hover\:bg-#{$color}-#{$shade} {
-          background-color: var(--#{$color}-#{$shade}) !important;
-        }
-      }
-    }
-  }
-}
+// // when parent div hover change bg color
+// @each $color, $shades in $colors {
+//   @each $shade, $value in $shades {
+//     .group-item {
+//       &:hover {
+//         .group-hover\:bg-#{$color}-#{$shade} {
+//           background-color: var(--#{$color}-#{$shade}) !important;
+//         }
+//       }
+//     }
+//   }
+// }
 
-// when parent div hover change text color
-@each $color, $shades in $colors {
-  @each $shade, $value in $shades {
-    .group-item {
-      &:hover {
-        .group-hover\:text-#{$color}-#{$shade} {
-          color: var(--#{$color}-#{$shade}) !important;
-        }
-      }
-    }
-  }
-}
+// // when parent div hover change text color
+// @each $color, $shades in $colors {
+//   @each $shade, $value in $shades {
+//     .group-item {
+//       &:hover {
+//         .group-hover\:text-#{$color}-#{$shade} {
+//           color: var(--#{$color}-#{$shade}) !important;
+//         }
+//       }
+//     }
+//   }
+// }
 
-.group-item {
-  &:hover {
-    .group-hover\:text-white {
-      color: var(--base);
-    }
-  }
-}
+// .group-item {
+//   &:hover {
+//     .group-hover\:text-white {
+//       color: var(--base);
+//     }
+//   }
+// }
 
 .text-hover {
   &-white {
@@ -42,7 +42,4 @@
 
 .cursor-pointer {
   cursor: pointer;
-}
-.visibility-hidden {
-  visibility: hidden;
 }

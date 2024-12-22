@@ -117,12 +117,12 @@
                   <i class="ri-printer-line"></i>
                 </button>
                 <div class="dropdown">
-                  <button class="h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
                   </ul>
                 </div>
               </div>
@@ -138,17 +138,17 @@
         <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
           <thead>
               <tr>
-                  <th class="text-center bg-neutral-50">Envelope IID</th>
-                  <th class="text-center bg-neutral-50">Type</th>
-                  <th class="text-center bg-neutral-50">Subject</th>
-                  <th class="text-center bg-neutral-50">Sender </th>
-                  <th class="text-center bg-neutral-50">Recipients </th>
-                  <th class="text-center bg-neutral-50">Action Date </th>
-                  <th class="text-center bg-neutral-50">Due Date </th>
-                  <th class="text-center bg-neutral-50">Actions #</th>
-                  <th class="text-center bg-neutral-50">Priority</th>
-                  <th class="text-center bg-neutral-50">Status</th>
-                  <th class="text-center bg-neutral-50">Action</th>
+                  <th class="bg-neutral-50 text-center">Envelope IID</th>
+                  <th class="bg-neutral-50 text-start">Type</th>
+                  <th class="bg-neutral-50 text-start">Subject</th>
+                  <th class="bg-neutral-50 text-start">Sender </th>
+                  <th class="bg-neutral-50 text-start">Recipients </th>
+                  <th class="bg-neutral-50 text-center">Action Date </th>
+                  <th class="bg-neutral-50 text-center">Due Date </th>
+                  <th class="bg-neutral-50 text-center">Actions #</th>
+                  <th class="bg-neutral-50 text-center">Priority</th>
+                  <th class="bg-neutral-50 text-center">Status</th>
+                  <th class="bg-neutral-50 text-center">Action</th>
               </tr>
           </thead>
           <tbody>
@@ -182,31 +182,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -247,31 +247,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -315,31 +315,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -380,31 +380,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -445,31 +445,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -504,31 +504,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -566,31 +566,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -631,31 +631,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -696,31 +696,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -761,31 +761,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -826,31 +826,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -885,31 +885,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -953,31 +953,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -1018,31 +1018,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -1083,31 +1083,31 @@
                   </td>
                   <td class="text-center fw-light">
                     <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 dropdown-toggl" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="ri-more-fill"></i>
                       </button>
                       <ul class="dropdown-menu p-8">
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-eye-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
                             <span class="">View</span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-pencil-line"></i></span>
+                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
                             <span class="">Edit </span>
                           </a>
                         </li>
                         <li class="">
-                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500">
-                            <span class="text-lg d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
                             <span class="">Delete</span>
-                          </a>
+                          </button>
                         </li>
                         <li class="">
                           <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-lg d-flex"><i class="ri-history-fill"></i></span>
+                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
                             <span class="">History</span>
                           </button>
                         </li>
@@ -1130,8 +1130,8 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-60">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title fw-medium" id="createDocumentLabel">Create Document</h6>
-          <span class="bg-primary-600 text-white fw-bold text-sm py-6 px-36 radius-6">Add</span>
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="createDocumentLabel">Create Document</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1182,7 +1182,7 @@
                   <!-- Upload file -->
 
                   <!-- Uploaded view -->
-                  <div class="uploaded-img d-none position-relative border w-100 radius-8 p-4 bg-neutral-100 radius-8 overflow-hidden border-dashed bg-neutral-50 max-w-350-px mt-8">
+                  <div class="uploaded-img d-none position-relative border w-100 radius-8 p-4 bg-neutral-100 radius-8 overflow-hidden border-dashed bg-neutral-50 max-w-150-px mt-8">
                     <button type="button" class="uploaded-img__remove position-absolute top-0 end-0 z-1 text-2xxl line-height-1 me-8 mt-8 d-flex">
                       <iconify-icon icon="radix-icons:cross-2" class="text-xl text-danger-600"></iconify-icon>
                     </button>
@@ -1190,10 +1190,10 @@
                   </div>
                   <!-- Uploaded view -->
 
-                  <h6 class="text-sm text-uppercase my-10 fw-semibold text-primary-light-three">Envelope Attachments </h6>
+                  <h6 class="text-xs text-uppercase my-10 fw-semibold text-primary-light-three">Envelope Attachments </h6>
                   <div class="row g-2">
                     <div class="col-sm-6">
-                      <div class="border border-dashed p-8 radius-4">
+                      <div class="border border-dashed p-8 radius-4 delete-item bg-white">
                         <div class="d-flex align-items-center justify-content-between gap-4">
                           <div class="d-flex align-items-center gap-12">
                             <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
@@ -1208,15 +1208,25 @@
                             <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                               <i class="ri-download-2-line"></i>
                             </button>
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-more-fill"></i>
-                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <div class="border border-dashed p-8 radius-4">
+                      <div class="border border-dashed p-8 radius-4 delete-item bg-white">
                         <div class="d-flex align-items-center justify-content-between gap-4">
                           <div class="d-flex align-items-center gap-12">
                             <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
@@ -1231,15 +1241,25 @@
                             <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                               <i class="ri-download-2-line"></i>
                             </button>
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-more-fill"></i>
-                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <div class="border border-dashed p-8 radius-4">
+                      <div class="border border-dashed p-8 radius-4 delete-item bg-white">
                         <div class="d-flex align-items-center justify-content-between gap-4">
                           <div class="d-flex align-items-center gap-12">
                             <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
@@ -1254,15 +1274,25 @@
                             <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                               <i class="ri-download-2-line"></i>
                             </button>
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-more-fill"></i>
-                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <div class="border border-dashed p-8 radius-4">
+                      <div class="border border-dashed p-8 radius-4 delete-item bg-white">
                         <div class="d-flex align-items-center justify-content-between gap-4">
                           <div class="d-flex align-items-center gap-12">
                             <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
@@ -1277,9 +1307,19 @@
                             <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                               <i class="ri-download-2-line"></i>
                             </button>
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-more-fill"></i>
-                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1671,10 +1711,10 @@
 <div class="modal fade" id="addRecipient" tabindex="-1" aria-labelledby="addRecipientLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content py-36 px-20 radius-16">
-      <div class="border-0 d-flex align-items-start justify-content-between mb-60">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title fw-medium" id="addRecipientLabel">Recipients </h6>
-          <span class="bg-primary-600 text-white fw-bold text-sm py-6 px-36 radius-6">Add</span>
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="addRecipientLabel">Recipients </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1730,7 +1770,7 @@
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
                 <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1760,7 +1800,7 @@
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
                   <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1790,13 +1830,13 @@
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100">
                   <input class="form-control px-12 py-1 placeholder-12" id="expiryDate" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-                  <label for="expiryDate" class="input-group-text d-flex py-0 text-xs px-8">
+                  <span class="input-group-text d-flex py-0 text-xs px-8">
                     <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
-                  </label>
+                  </span>
                 </div>
                 
                 <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1829,7 +1869,7 @@
                   <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
                 </div>
                   <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1869,10 +1909,10 @@
 <div class="modal fade" id="editRecipient" tabindex="-1" aria-labelledby="editRecipientLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content py-36 px-20 radius-16">
-      <div class="border-0 d-flex align-items-start justify-content-between mb-60">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title fw-medium" id="editRecipientLabel">Recipients </h6>
-          <span class="bg-primary-600 text-white fw-bold text-sm py-6 px-36 radius-6">Edit</span>
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="editRecipientLabel">Recipients </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1928,7 +1968,7 @@
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
                 <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1958,7 +1998,7 @@
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
                   <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -1988,13 +2028,13 @@
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100">
                   <input class="form-control px-12 py-1 placeholder-12" id="expiryDate" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-                  <label for="expiryDate" class="input-group-text d-flex py-0 text-xs px-8">
+                  <span class="input-group-text d-flex py-0 text-xs px-8">
                     <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
-                  </label>
+                  </span>
                 </div>
                 
                 <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -2027,7 +2067,7 @@
                   <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
                 </div>
                   <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-lg d-flex text-primary-600">
+                  <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
                   </button>
                   <div class="custom-tooltip__text bg-neutral-200 radius-4">
@@ -2069,8 +2109,8 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title fw-medium" id="privateMessageLabel">Private Message </h6>
-          <span class="bg-primary-600 text-white fw-bold text-sm py-6 px-36 radius-6">Add</span>
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="privateMessageLabel">Private Message </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -2098,7 +2138,7 @@
     <div class="modal-content radius-16 overflow-hidden">
       <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title fw-medium" id="historyModalLabel">History</h6>
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="historyModalLabel">History</h6>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -2326,6 +2366,18 @@
     });
   });
   // *************************** Suggested Recipient Dropdown js End ***************************
+
+  // *************************** Delete Tr js start ***************************
+  $(".delete-tr-button").on('click', function () {
+    $(this).closest('tr').addClass('d-none');
+  });
+  // *************************** Delete Tr js End ***************************
+
+  // ========================= Delete Item Js start ===================
+  $('.delete-button').on('click', function () {
+    $(this).closest('.delete-item').addClass('d-none');
+  });
+  // ========================= Delete Item Js End ===================
 
 </script>
 

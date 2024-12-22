@@ -1,3 +1,9 @@
 .table>:not(caption)>*>* {
     border-bottom-width: 0;
 }
+
+table.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

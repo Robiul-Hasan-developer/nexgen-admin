@@ -28,6 +28,9 @@
     .nav-link { 
         &.active {
             background-color: var(--neutral-50) !important;
+            .text-neutral-400 {
+                color: var(--neutral-900) !important;
+            }
         }
     }
 }

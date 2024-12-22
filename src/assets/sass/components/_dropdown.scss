@@ -29,4 +29,11 @@
 .dropdown-item.active, .dropdown-item:active {
     background-color: var(--primary-600) !important;
 }
+
+.active-bg {
+    border-radius: 4px;
+    &.show {
+        background-color: var(--primary-100);
+    }
+}
 /* Dropdown Css End */

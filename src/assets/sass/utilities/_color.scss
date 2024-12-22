@@ -37,12 +37,12 @@
 }
 
 .text-secondary-light {
-  color: var(--text-secondary-light);
+  color: var(--text-secondary-light) !important;
   &-two {
-    color: var(--text-secondary-light-two);
+    color: var(--text-secondary-light-two) !important;
   }
   &-three {
-    color: var(--text-secondary-light-three);
+    color: var(--text-secondary-light-three) !important;
   }
 }
 

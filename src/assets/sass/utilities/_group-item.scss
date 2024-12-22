@@ -1,0 +1,10 @@
+/* Group Item start */
+.group-item {
+    &:hover {
+        .group-hover-item-visible {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    }
+}
+/* Group Item end */
