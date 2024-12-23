@@ -1080,6 +1080,7 @@
               </div>
               
               <h6 class="line-clamp-1"> Document Content goes here....  </h6>
+              <div id="pdf"></div>
             </div>
 
             <!-- Sidebar Start -->
@@ -1919,6 +1920,17 @@
 <!-- session Information Modal End -->
   
 @@include('../partial-html/_template-bottom.html')
+
+<script>
+  let myPDF = PDFObject.embed("assets/build/invoice.pdf", "#pdf", {
+    page: 1,
+    pdfOpenParams: {
+      pagemode: "thumbs"
+    },
+    forcePDFJS: true,
+    PDFJS_URL: "assets/build/viewer.html"
+  });
+</script>
 
 <script>
   // ========================= Animated Radial Progress Js Start ===================

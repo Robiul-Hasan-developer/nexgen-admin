@@ -76,6 +76,16 @@ function distImages() {
     .pipe(dest('./dist/assets/images/'))
 }
 
+function distPdf() {
+  return src('./src/assets/pdf/**/*.*')
+    .pipe(dest('./dist/assets/pdf/'))
+}
+
+function distBuild() {
+  return src('./src/assets/build/**/*.*')
+    .pipe(dest('./dist/assets/build/'))
+}
+
 function distScript() {
   return src('./src/assets/js/app.js')
     // .pipe(concat("app.js"))
@@ -114,6 +124,10 @@ function watchFiles(){
 
   watch('./src/assets/images/**/*.*', series(distImages, previewReload));
 
+  watch('./src/assets/pdf/**/*.*', series(distPdf, previewReload));
+
+  watch('./src/assets/build/**/*.*', series(distBuild, previewReload));
+
   watch('./src/assets/sass/**/*.*', series(distStyle, previewReload));
 
   watch('./src/assets/js/*.js', series(distJs, previewReload));
@@ -130,7 +144,7 @@ function distClean() {
 exports.dist = series (
   distClean,
   parallel(
-    distHTML, distStyle, distVendorStyle, distCss, distFonts, distFontAwesome, distImages, distScript, distVendorScript, distJs
+    distHTML, distStyle, distVendorStyle, distCss, distFonts, distFontAwesome, distImages, distPdf, distBuild, distScript, distVendorScript, distJs
   ),
   watchFiles
 ) 
