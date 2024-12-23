@@ -1,0 +1,784 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Envelope Type",
+    page: "Business Suite",
+    activePage: "Envelope Type",
+    paraText: "For envelope type masters, display envelope details, status, and actions for streamlined management, with appropriate permissions for viewing, editing, and configuring envelope types."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addEnvelopeType">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Add Envelope Type 
+          </button>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+            <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="max-w-350-px w-100 position-relative">
+            <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
+            <label for="dateTime" class="position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100 border rounded-end bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center">
+              <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+            </label>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 w-100">
+            <input type="text" class="form-control max-w-760-px w-100" placeholder="Search...">
+  
+            <div class="d-flex align-items-center gap-2 ">
+              <button class="text-neutral-400 d-flex line-height-1 text-lg"><i class="ri-filter-line line-height-1"></i></button>
+              <div class="border radius-8 d-flex">
+                <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                  <i class="ri-printer-line"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+      <!-- Table Start -->
+      <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical">
+        <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+          <thead>
+              <tr>
+                <th class="bg-neutral-50 text-center">Type ID</th>
+                  <th class="bg-neutral-50 text-start">Type Name</th>
+                  <th class="bg-neutral-50 text-start">Description</th>
+                  <th class="bg-neutral-50 text-start">Envelope </th>
+                  <th class="bg-neutral-50 text-center">Created Details </th>
+                  <th class="bg-neutral-50 text-center">Modified Details</th>
+                  <th class="bg-neutral-50 text-center">Status</th>
+                  <th class="bg-neutral-50 text-center">Action</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0012</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">09</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0076</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">02</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0012</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">09</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0012</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">07</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0005</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">-</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0097</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">01</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0112</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">05</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0012</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">09</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0111</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">12</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0029</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">02</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0011</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">01</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">A0115</span>
+                </td>
+                <td class="fw-light">Supplier Contract </td>
+                <td class="fw-light">
+                <span class="line-clamp-1">This Envelope defines the type of document file being man... </span>
+                </td>
+                <td class="fw-light text-center">12</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">View</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">Edit </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Table End -->
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+<!-- Add Envelope Type start -->
+<div class="modal fade" id="addEnvelopeType" tabindex="-1" aria-labelledby="addEnvelopeTypeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content py-36 px-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-lg fw-medium line-clamp-1" id="addEnvelopeTypeLabel">Create Envelope Type </h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+            <div class="">
+                <div class="mb-12 position-relative">
+                  <label for="Name" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control" id="Name" placeholder="Name">
+                </div>
+                <div class="mb-12">
+                  <label for="desc" class="text-sm form-label">Description  <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative">
+                        <textarea id="desc" class="max-desc form-control min-h-215-px pe-56" placeholder="Max 1000 Characters "></textarea>
+                        <span class="text-length position-absolute bottom-0 end-0 me-16 mb-8 bg-white"></span>
+                  </div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-36">
+            <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="Status">Status</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Status">
+            </div>
+          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">Save </button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Envelope Type End -->
+
+<!-- History Modal start -->
+<div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-1060-px">
+    <div class="modal-content radius-16 overflow-hidden">
+      <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="historyModalLabel">History</h6>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="overflow-x-auto max-h-510-px overflow-y-auto scroll-sm scroll-vertical">
+          <table class="table mb-0 min-w-max">
+            <thead>
+              <tr>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50"> Last Update </th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">User</th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Type</th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Description </th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Status </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Ahmad Moahmmed </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Regular</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <p class="line-clamp-1 text-secondary-light">This Envelope defines the type of document ...</p>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">25 Aug, 2024 - 11:04am</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Arej Al Azmi</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Contract</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <p class="line-clamp-1 text-secondary-light">This Envelope defines the type of document ...</p>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mohammed al ajmi</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Payment </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <p class="line-clamp-1 text-secondary-light">This Envelope defines the type of document ...</p>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Jassem Khaled </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Salary</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <p class="line-clamp-1 text-secondary-light">This Envelope defines the type of document ...</p>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mosaed Khalel </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Payment </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <p class="line-clamp-1 text-secondary-light">This Envelope defines the type of document ...</p>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- History Modal start -->
+  
+
+@@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/flatpickr.js"></script>
+
+<script>
+  // ***************************** Data Table js ***************************** 
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false,
+  });
+
+  // *****************************  Flat pickr or date picker js ***************************** 
+  function getDatePicker(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+      mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
+    });
+  }
+  getDatePicker('#dateTime');
+  // *****************************  Flat pickr or date picker js ***************************** 
+  
+// *************************** Max Text in textarea js start ***************************
+ var maxDescArea = document.querySelector('.max-desc');
+ var textLength = document.querySelector('.text-length');
+ var maxText = 1000;
+ 
+ maxDescArea.addEventListener('input', function (event) {
+    var valueLength = maxDescArea.value.length;
+    textLength.innerHTML = `${valueLength} / ${maxText}`;
+    
+    if(valueLength > maxText ) {
+        this.value = this.value.slice(0, maxText);
+        textLength.innerHTML = `${maxText} / ${maxText}`;
+    }
+ });
+  // *************************** Max Text in textarea js End ***************************
+
+
+
+</script>
+
+</body>
+</html>

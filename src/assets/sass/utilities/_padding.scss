@@ -54,6 +54,9 @@
   &-36-px {
     padding-inline: clamp(.25rem, -5.25rem + 6.6667vw, 2.25rem);
   }
+  &-32-px {
+    padding-inline: clamp(1rem, -5.25rem + 6.6667vw, 2rem);
+  }
 }
 
 /* Padding css end */

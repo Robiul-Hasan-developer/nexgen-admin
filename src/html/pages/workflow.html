@@ -8,8 +8,8 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Digital Signature",
     page: "Business Suite",
-    pageLink: "business.html",
-    activePage: "Digital Signature"
+    activePage: "Workflow",
+    paraText: "Displays a list of digital signature requests, including customer information, signature status, request time, and actions for efficient tracking and approval management."
   })
   
   <div class="dashboard-main-body">
@@ -736,7 +736,7 @@
               <div class="bg-white shadow-4 radius-4 p-16 mt-10">
                 <div class="max-h-470-px overflow-y-auto scroll-sm pe-8">
                   <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
-                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm">Finish Later </button>
+                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#finishLater">Finish Later </button>
                     <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
                       <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                         <i class="ri-download-2-line"></i>
@@ -904,7 +904,7 @@
                     </div>
                   </div>
                   <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
-                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm">Report Abuse  </button>
+                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#reportAbuse">Report Abuse  </button>
                     <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
                       <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                         <i class="ri-download-2-line"></i>
@@ -926,27 +926,6 @@
                   </div>
                   <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
                     <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#correctionModal">Send for correction  </button>
-                    <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
-                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                        <i class="ri-download-2-line"></i>
-                      </button>
-                      <div class="dropdown">
-                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                          <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                              <span class="">Delete</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
-                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#viewHistoryModal">View History </button>
                     <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
                       <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                         <i class="ri-download-2-line"></i>
@@ -1165,7 +1144,7 @@
               <div class="bg-white shadow-4 radius-4 p-16 mt-10">
                 <div class="max-h-470-px overflow-y-auto scroll-sm pe-8">
                   <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
-                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm">Finish Later </button>
+                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#finishLater">Finish Later </button>
                     <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
                       <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
                         <i class="ri-download-2-line"></i>
@@ -1374,27 +1353,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex border-bottom border-neutral-50 d-flex align-items-center justify-content-between delete-item group-item">
-                    <button type="button" class="click-underline py-12 flex-grow-1 text-hover-neutral-900 text-secondary-light-two text-sm" data-bs-toggle="modal" data-bs-target="#viewHistoryModal">View History </button>
-                    <div class="d-flex align-items-center gap-1 visibility-hidden opacity-0 group-hover-item-visible">
-                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                        <i class="ri-download-2-line"></i>
-                      </button>
-                      <div class="dropdown">
-                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                          <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                              <span class="">Delete</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1409,6 +1367,44 @@
 
   @@include('../layouts/_footer.html')
 </main>
+
+<!-- Finish Later Modal start -->
+<div class="modal fade" id="finishLater" tabindex="-1" aria-labelledby="finishLaterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-20">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="finishLaterLabel">Finish Later </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#finishLater">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mb-12 position-relative">
+            <label for="finishName" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
+            <input type="text" class="form-control recipient-input" id="finishName" placeholder="Name">
+          </div>
+          <div class="mb-12">
+            <label for="finishEmail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
+            <input type="email" class="form-control" id="finishEmail" placeholder="Email">
+          </div>
+          <div class="mb-12">
+            <label for="reasonFinish" class="text-sm form-label">Finish Later Reason  </label>
+            <textarea id="reasonFinish" class="form-control min-h-104-px" placeholder="Finish Later Reason "></textarea>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-4">
+            <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#finishLater">Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Finish Later Modal End -->
 
 <!-- History Modal start -->
 <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
@@ -1831,7 +1827,7 @@
 <!-- Void Modal End -->
 
 <!-- Correction Modal start -->
-<div class="modal fade" id="correctionModal" tabindex="-1" aria-labelledby="correctionModalLabel" aria-hidden="true">
+<div class="modal fade" id="correctionModal" tabindex="-1" aria-labelledby="correctionModalLabel" aria-hidden="true"> 
   <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-20">
@@ -1856,7 +1852,7 @@
           </div>
           <div class="mb-12">
             <label for="reasonCorrecting" class="text-sm form-label">Reason of correcting </label>
-            <textarea id="reasonCorrecting" class="form-control min-h-104-px" placeholder="ReasonCorrecting"></textarea>
+            <textarea id="reasonCorrecting" class="form-control min-h-104-px" placeholder="Reason Correcting"></textarea>
           </div>
           <p class="text-secondary-light-two text-xxs mt-6 mb-0">By correcting this envelope, recipients cannot access or sign it until updates are complete. They will be notified via email.</p>
           <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
@@ -1886,7 +1882,7 @@
       <div class="modal-body p-0">
         <p class="text-md">View History Modal Data will goes here....</p>
         <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
-          <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#viewHistoryModal">Correct </button>
+          <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#viewHistoryModal">Close </button>
         </div>
       </div>
     </div>
@@ -1896,12 +1892,11 @@
 
 <!-- session Information Modal start -->
 <div class="modal fade" id="sessionInformation" tabindex="-1" aria-labelledby="sessionInformationLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+  <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-20">
         <div class="d-flex align-items-center gap-18">
           <h6 class="modal-title text-lg fw-medium line-clamp-1" id="sessionInformationLabel">Session Information</h6>
-          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#sessionInformation">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1909,15 +1904,84 @@
       </div>
 
       <div class="modal-body p-0">
-        
+        <ul>
+          <li class="d-flex align-items-center py-12 border-bottom px-16">
+            <strong class="text-xs text-primary-light max-w-124-px w-100 flex-shrink-0">Envelope ID</strong>
+            <p class="text-xs text-secondary-light mb-0 flex-grow-1">c8389536-88b8-4cbc-8812-4e92e8e8cde53f</p>
+          </li>
+          <li class="d-flex align-items-center py-12 border-bottom px-16">
+            <strong class="text-xs text-primary-light max-w-124-px w-100 flex-shrink-0">Recipient ID</strong>
+            <p class="text-xs text-secondary-light mb-0 flex-grow-1">0e7e3c81-c930-4dfb-8123-d714o5c34b98</p>
+          </li>
+          <li class="d-flex align-items-center py-12 border-bottom px-16">
+            <strong class="text-xs text-primary-light max-w-124-px w-100 flex-shrink-0">Signing Version</strong>
+            <p class="text-xs text-secondary-light mb-0 flex-grow-1">VO2R</p>
+          </li>
+          <li class="d-flex align-items-center py-12 border-bottom px-16">
+            <strong class="text-xs text-primary-light max-w-124-px w-100 flex-shrink-0">Build Version</strong>
+            <p class="text-xs text-secondary-light mb-0 flex-grow-1">24.3.02.01.53746+6132788e3f6.10169</p>
+          </li>
+          <li class="d-flex align-items-center py-12 border-bottom px-16">
+            <strong class="text-xs text-primary-light max-w-124-px w-100 flex-shrink-0">Environment</strong>
+            <p class="text-xs text-secondary-light mb-0 flex-grow-1">na4</p>
+          </li>
+        </ul>
         <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
-          <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#sessionInformation">Correct </button>
+          <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#sessionInformation">Close </button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- session Information Modal End -->
+
+<!-- Report Abuse start -->
+<div class="modal fade" id="reportAbuse" tabindex="-1" aria-labelledby="reportAbuseLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-20">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="reportAbuseLabel">Report Abuse </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#reportAbuse">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mb-12">
+            <label for="reportAbuse" class="text-sm form-label">Reason for Reporting Abuse* <span class="text-danger-600">*</span> </label>
+            <select id="reportAbuse" class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="Type" selected hidden>Type</option>
+              <option value="Violence">Violence</option>
+              <option value="Rules Break">Rules Break</option>
+            </select>
+          </div>
+          <div class="mb-12">
+            <label for="reportComment" class="text-sm form-label">Comments</label>
+            <textarea id="reportComment" class="form-control min-h-104-px" placeholder="report Comment"></textarea>
+          </div>
+          <div class="d-flex flex-column gap-10 mt-24">
+            <div class="form-check ps-0 d-flex gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border mt-4" type="checkbox" id="ContactAddi">
+              <label class="form-check-label text-primary-light-two text-xs" for="ContactAddi">Contact me to request additional information.</label>
+            </div>
+            <div class="form-check ps-0 d-flex gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border mt-4" type="checkbox" id="InvestigatesCondi">
+              <label class="form-check-label text-primary-light-two text-xs" for="InvestigatesCondi">Investigates and takes action against senders who violate our Terms and Conditions.</label>
+            </div>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
+            <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#reportAbuse">Correct </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Report Abuse End -->
   
 @@include('../partial-html/_template-bottom.html')
 

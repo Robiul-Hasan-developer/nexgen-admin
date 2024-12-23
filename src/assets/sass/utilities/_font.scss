@@ -1,0 +1,17 @@
+/* Font Family start */
+.font {
+    &-ubuntu {
+        font-family: var(--font-ubuntu) !important;
+    }
+}
+.font {
+    &-rubik {
+        font-family: var(--font-rubik) !important;
+    }
+}
+.font {
+    &-poppins {
+        font-family: var(--font-poppins) !important;
+    }
+}
+/* Font Family End */

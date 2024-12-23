@@ -31,25 +31,21 @@
     $("body").removeClass("overlay-active");
   });
 
-  //to keep the current page active
   $(function () {
-    for (
-      var nk = window.location,
-        o = $("ul#sidebar-menu a")
-          .filter(function () {
-            return this.href == nk;
-          })
-          .addClass("active-page") // anchor
-          .parent()
-          .addClass("active-page");
-      ;
-
-    ) {
-      // li
-      if (!o.is("li")) break;
-      o = o.parent().addClass("show").parent().addClass("open");
+    var nk = window.location.href.split(/[?#]/)[0]; // Get the base URL without hash or query parameters
+    var o = $("ul#sidebar-menu a")
+      .filter(function () {
+        return this.href.split(/[?#]/)[0] === nk; // Compare only the base URL
+      })
+      .addClass("active-page") // Add class to the anchor
+      .parent()
+      .addClass("active-page"); // Add class to the parent (li)
+  
+    while (o.is("li")) {
+      o = o.parent().addClass("show").parent().addClass("open"); // Add classes to parent elements
     }
   });
+  
 
 
   // Light Dark version js 

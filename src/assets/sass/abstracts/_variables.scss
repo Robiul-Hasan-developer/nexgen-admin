@@ -1,6 +1,7 @@
 $colors: (
   primary: (
     "20": #a0bbed2e,
+    "25": #24447f40,
     "50": #E4F1FF,
     "100": #BFDCFF,
     "200": #95C7FF,
@@ -141,6 +142,7 @@ $shadows: (
   "2": 0px 16px 16px -12px rgba(27, 23, 65, 0.25),
   "3": 0px 4.47px 4.47px 0px rgba(0, 0, 0, 0.25),
   "4": 0px 0.96px 1.93px 0px rgba(56, 65, 74, 0.15),
+  "5": 0px 2.47px 5.47px 0px rgba(0, 0, 0, 0.25),
 );
 
 $font-sizes: (
@@ -164,6 +166,10 @@ $font-sizes: (
   --h5: clamp(1.25rem, 1.05rem + 1vw, 1.875rem); //30px > 20px
   --h6: clamp(1.125rem, 1.005rem + 0.6vw, 1.5rem); //24px > 18px
 
+  --font-ubuntu: "Ubuntu", serif;
+  --font-rubik: "Rubik", serif;
+  --font-poppins: "Poppins", serif;
+  
   --border-color: #1a1d211a;
   --placeholder-color: #75868fbf;
   --white: #fff;
