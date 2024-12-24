@@ -81,10 +81,9 @@
         <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
           <thead>
               <tr>
-                  <th class="bg-neutral-50 text-center">Envelope IID</th>
-                  <th class="bg-neutral-50 text-center">Type Name</th>
-                  <th class="bg-neutral-50 text-start">Envelope Name</th>
-                  <th class="bg-neutral-50 text-start">Recipients </th>
+                  <th class="bg-neutral-50 text-center">Watermark ID</th>
+                  <th class="bg-neutral-50 text-center">Watermark Name</th>
+                  <th class="bg-neutral-50 text-start">Content </th>
                   <th class="bg-neutral-50 text-center">Created Details </th>
                   <th class="bg-neutral-50 text-center">Modified Details</th>
                   <th class="bg-neutral-50 text-center">Status</th>
@@ -94,641 +93,412 @@
           <tbody>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0012</span>
+                  <span class="text-primary-500">WM0012</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Confidential</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">Text, Created User ID / Name , Times Stamp</span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0076</span>
+                  <span class="text-primary-500">WM0076</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Sample</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">File Name / Folder Name, Created User ID / Name , Times Stamp</span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">
-                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center fw-light">
-                  <span class="text-primary-500">A0012</span>
-                </td>
-                <td class="text-center fw-light">Supplier Contract </td>
-                <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                        <span class="text-white text-xs">1+</span>
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">
-                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">inactive</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center fw-light">
-                  <span class="text-primary-500">A0005</span>
-                </td>
-                <td class="text-center fw-light">Supplier Contract </td>
-                <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">
-                    <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center fw-light">
-                  <span class="text-primary-500">A0012</span>
-                </td>
-                <td class="text-center fw-light">Supplier Contract </td>
-                <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">
-                    <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center fw-light">
-                  <span class="text-primary-500">A0097</span>
-                </td>
-                <td class="text-center fw-light">Supplier Contract </td>
-                <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0112</span>
+                  <span class="text-primary-500">WM0012</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">File Name / Folder Name</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">Created User ID / Name </span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">
-                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center fw-light">
-                  <span class="text-primary-500">A0111</span>
-                </td>
-                <td class="text-center fw-light">Supplier Contract </td>
-                <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
-                </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0029</span>
+                  <span class="text-primary-500">WM0005</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Times Stamp</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">Text, Created User ID / Name, File Name / Folder Name</span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0011</span>
+                  <span class="text-primary-500">WM0097</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Authorized Only</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">Text, Created User ID / Name</span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0115</span>
+                  <span class="text-primary-500">WM0112</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Created User ID / Name </td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">Created User ID / Name, File Name / Folder Name</span>
                 </td>
-                <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
-                </td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
-                <td class="text-center fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
             <tr>
                 <td class="text-center fw-light">
-                  <span class="text-primary-500">A0012</span>
+                  <span class="text-primary-500">WM0111</span>
                 </td>
-                <td class="text-center fw-light">Supplier Contract </td>
+                <td class="fw-light">Times Stamp</td>
                 <td class="fw-light">
-                  <span class="line-clamp-1">Salary Memo For Jan'24 Pre Approval</span>
+                  <span class="line-clamp-1">File Name / Folder Name, Created User ID / Name , Times Stamp</span>
+                </td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Mohammed Khalel 24 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
                 </td>
                 <td class="text-center fw-light">
-                    <div class="d-flex align-items-center">
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                      <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                        <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                      </div>
-                    </div>
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                  <span class="text-primary-500">WM0029</span>
+                </td>
+                <td class="fw-light">File Name / Folder Name</td>
+                <td class="fw-light">
+                  <span class="line-clamp-1">Text, Created User ID / Name</span>
+                </td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                  <span class="text-primary-500">WM0011</span>
+                </td>
+                <td class="fw-light">File Name / Folder Name</td>
+                <td class="fw-light">
+                  <span class="line-clamp-1">File Name / Folder Name, Created User ID / Name , Times Stamp</span>
+                </td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                <td class="fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                 <td class="text-center fw-light">
                     <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active</span>
-                  </td>
-                  <td class="text-center fw-light">
-                    <div class="dropdown">
-                      <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                      </button>
-                      <ul class="dropdown-menu p-8">
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                            <span class="">View</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
-                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                            <span class="">Edit </span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                            <span class="">History</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                  <span class="text-primary-500">WM0115</span>
+                </td>
+                <td class="fw-light">Created User ID / Name </td>
+                <td class="fw-light">
+                  <span class="line-clamp-1">Text, Created User ID / Name</span>
+                </td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="fw-light">Al Ajazi Mohammed 23 Apr, 2022 - 13:04pm</td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive</span>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">History</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </td>
             </tr>
           </tbody>
@@ -744,9 +514,9 @@
 <div class="modal fade" id="createDocument" tabindex="-1" aria-labelledby="createDocumentLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-2xl">
     <div class="modal-content py-36 px-20 radius-16">
-      <div class="border-0 d-flex align-items-start justify-content-between mb-60">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="createDocumentLabel">Create Document</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Watermark</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -756,437 +526,269 @@
 
       <div class="modal-body p-0">
         <div class="row gy-4">
-          <div class="col-xxl-6">
-            <div class="">
-              <div class="row gy-4">
-                <div class="col-sm-6">
-                  <label for="EnvelopeName" class="text-sm form-label">Envelope Name</label>
-                  <input type="text" class="form-control" id="EnvelopeName" placeholder="Select Envelope Name">
-                </div>
-                <div class="col-sm-6">
-                  <label for="Priority " class="text-sm form-label">Priority </label>
-                  <select class="form-control form-select py-6" id="Priority">
-                    <option value="1" selected hidden>Select priority</option>
-                    <option value="Priority">Priority</option>
-                    <option value="Priority">Priority</option>
-                    <option value="Priority">Priority</option>
-                  </select>
+          <div class="col-xxl-7">
+            <div class="shadow-6 p-16 radius-4">
+              <div>
+                <label for="WatermarkName" class="text-sm form-label">Watermark Name</label>
+                <input type="text" class="form-control" id="WatermarkName" placeholder="Select Watermark Name">
+              </div>
+              <div class="mt-16">
+                <label for="Description" class="text-sm form-label">Description</label>
+                <div class="position-relative">
+                  <textarea id="Description" class="max-desc form-control min-h-104-px pe-56" placeholder="Max 1000 Characters "></textarea>
+                  <span class="text-length position-absolute bottom-0 end-0 me-16 mb-8 bg-white"></span>
                 </div>
               </div>
-              <div class="mt-24">
-                <h6 class="text-md mb-16 fw-semibold">Add Document </h6>
-                <div class="border radius-6 p-10">
-                  <!-- Upload file -->
-                  <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
-                    <label class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px" for="upload-file">
-                      <span class="text-2xl text-primary-600">
-                        <i class="ri-upload-cloud-2-line"></i>
-                      </span>
-                      <div class="d-flex align-items-center gap-2">
-                        <span class="text-primary-600 text-xs flex-shrink-0">Drag and Drop or  </span>
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
-                      </div>
-                      <input id="upload-file" type="file" hidden>
-                    </label>
-                  </div>
-                  <!-- Upload file -->
-
-                  <!-- Uploaded view -->
-                  <div class="uploaded-img d-none position-relative border w-100 radius-8 p-4 bg-neutral-100 radius-8 overflow-hidden border-dashed bg-neutral-50 max-w-150-px mt-8">
-                    <button type="button" class="uploaded-img__remove position-absolute top-0 end-0 z-1 text-2xxl line-height-1 me-8 mt-8 d-flex">
-                      <iconify-icon icon="radix-icons:cross-2" class="text-xl text-danger-600"></iconify-icon>
-                    </button>
-                    <img id="uploaded-img__preview" class="radius-8 w-100 h-100 object-fit-cover" src="assets/images/user.png" alt="image">  
-                  </div>
-                  <!-- Uploaded view -->
-
-                  <h6 class="text-xs text-uppercase my-10 fw-semibold text-primary-light-three">Envelope Attachments </h6>
-                  <div class="row g-2">
-                    <div class="col-sm-6 delete-item">
-                      <div class="border border-dashed p-8 radius-4 bg-white">
-                        <div class="d-flex align-items-center justify-content-between gap-4">
-                          <div class="d-flex align-items-center gap-12">
-                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                              <i class="ri-folder-zip-line"></i>
-                            </span>
-                            <div class="">
-                              <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                              <span class="text-xs text-secondary-light-two">2.2MB</span>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-download-2-line"></i>
-                            </button>
-                            <div class="dropdown">
-                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ri-more-fill"></i>
-                              </button>
-                              <ul class="dropdown-menu p-8">
-                                <li class="">
-                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                                    <span class="">Delete</span>
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 delete-item">
-                      <div class="border border-dashed p-8 radius-4 bg-white">
-                        <div class="d-flex align-items-center justify-content-between gap-4">
-                          <div class="d-flex align-items-center gap-12">
-                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                              <i class="ri-folder-zip-line"></i>
-                            </span>
-                            <div class="">
-                              <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                              <span class="text-xs text-secondary-light-two">2.2MB</span>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-download-2-line"></i>
-                            </button>
-                            <div class="dropdown">
-                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ri-more-fill"></i>
-                              </button>
-                              <ul class="dropdown-menu p-8">
-                                <li class="">
-                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                                    <span class="">Delete</span>
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 delete-item">
-                      <div class="border border-dashed p-8 radius-4 bg-white">
-                        <div class="d-flex align-items-center justify-content-between gap-4">
-                          <div class="d-flex align-items-center gap-12">
-                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                              <i class="ri-folder-zip-line"></i>
-                            </span>
-                            <div class="">
-                              <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                              <span class="text-xs text-secondary-light-two">2.2MB</span>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-download-2-line"></i>
-                            </button>
-                            <div class="dropdown">
-                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ri-more-fill"></i>
-                              </button>
-                              <ul class="dropdown-menu p-8">
-                                <li class="">
-                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                                    <span class="">Delete</span>
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 delete-item">
-                      <div class="border border-dashed p-8 radius-4 bg-white">
-                        <div class="d-flex align-items-center justify-content-between gap-4">
-                          <div class="d-flex align-items-center gap-12">
-                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                              <i class="ri-folder-zip-line"></i>
-                            </span>
-                            <div class="">
-                              <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                              <span class="text-xs text-secondary-light-two">2.2MB</span>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-center gap-1">
-                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                              <i class="ri-download-2-line"></i>
-                            </button>
-                            <div class="dropdown">
-                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ri-more-fill"></i>
-                              </button>
-                              <ul class="dropdown-menu p-8">
-                                <li class="">
-                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                                    <span class="">Delete</span>
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="mt-28">
+                <div class="d-flex align-items-center justify-content-between mb-12 gap-16 flex-sm-nowrap flex-wrap">
+                  <div class="d-flex align-items-center gap-18">
+                    <h6 class="modal-title text-md fw-medium">Properties </h6>
+                    <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Reset</span>
                   </div>
                 </div>
+                <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
+                  <table class="table min-w-max mb-0">
+                    <thead>
+                      <tr>
+                        <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start"> <span class="d-none">icon</span> </th>
+                        <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-center">Priority </th>
+                        <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Name</th>
+                        <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Details</th>
+                        <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Actions </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">01</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Text</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Confidential, Opacity 20%, X 2, Y 180, R 30%, 20X</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Created User ID / Name </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">IP address</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Times Stamp</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">05</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">File Name / Folder Name</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">06</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Times Stamp</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">07</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">IP address</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
+                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                          </span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 text-center">
+                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">08</span>
+                        </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Created User ID / Name </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                              <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                              <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
-                <div class="mt-48">
-                  <div class="d-flex align-items-center justify-content-between mb-12 gap-16 flex-sm-nowrap flex-wrap">
-                    <div class="d-flex align-items-center gap-18">
-                      <h6 class="modal-title text-md fw-medium">Recipients</h6>
-                      <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 fw-normal flex-shrink-0 text-xs py-4" data-bs-toggle="modal" data-bs-target="#addRecipient">
-                        <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
-                          <i class="ri-add-line"></i>
-                        </span>
-                        <span class="w-1-px h-18-px bg-white-1"></span>
-                        Add
-                      </button>
+                <h6 class="my-16 text-md">Conditions </h6>
+                <div class="max-w-380-px">  
+                  <div class="row g-2">
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="onView">
+                        <label class="form-check-label text-primary-light text-xs" for="onView">On View</label>
+                      </div>
                     </div>
-                    <div class="d-flex align-items-center gap-3">
-                      <span class="text-primary-light text-sm flex-shrink-0">Sequence </span>
-                      <select class="form-control form-select py-6 border bg-white radius-8 w-auto text-sm ps-16 pe-24">
-                        <option value="1">One by one </option>
-                        <option value="1">One by two</option>
-                        <option value="1">One by three</option>
-                        <option value="1">One by four</option>
-                      </select>
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="Download">
+                        <label class="form-check-label text-primary-light text-xs" for="Download">Download</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
-                    <table class="table min-w-max">
-                      <thead>
-                        <tr>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start"> <span class="d-none">icon</span> </th>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-center">Seq #</th>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Name</th>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Email</th>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Security</th>
-                          <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">Actions </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">01</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Ahmad Moahmmed </td>
-                          <td class="text-xs border-bottom py-12 px-20">Ahmad@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Access Code </td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Arej Al Azmi</td>
-                          <td class="text-xs border-bottom py-12 px-20">Arje@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Private Message </td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Mohammed al ajmi</td>
-                          <td class="text-xs border-bottom py-12 px-20">Moahmmed.j@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Expiry </td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jassem Khaled </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Null</td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">05</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Mosaed Khalel </td>
-                          <td class="text-xs border-bottom py-12 px-20">Mosaed@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Access Code, Private...</td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">06</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jassem Khaled </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Null</td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Arej Al Azmi</td>
-                          <td class="text-xs border-bottom py-12 px-20">Arje@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Private Message </td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Mohammed al ajmi</td>
-                          <td class="text-xs border-bottom py-12 px-20">Moahmmed.j@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Expiry </td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-xs border-bottom py-12 px-20"> 
-                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                              <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                            </span>
-                          </td>
-                          <td class="text-xs border-bottom text-center">
-                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
-                          </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jassem Khaled </td>
-                          <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
-                          <td class="text-xs border-bottom py-12 px-20">Null</td>
-                          <td class="text-xs border-bottom py-12 px-20">
-                            <div class="d-flex align-items-center gap-8">
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                                <i class="ri-pencil-fill"></i>
-                              </button>
-                              <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white">
-                                <i class="ri-delete-bin-5-fill"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="Print">
+                        <label class="form-check-label text-primary-light text-xs" for="Print">Print</label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="ApplyonPage">
+                        <label class="form-check-label text-primary-light text-xs" for="ApplyonPage">Apply on Page</label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <select class="form-control form-select text-xxs py-4">
+                          <option value="Select Pages" hidden selected>Select Pages</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                        <select class="form-control form-select text-xxs py-4">
+                          <option value="Select Pages" hidden selected>Select Page</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -1194,340 +796,45 @@
             </div>
           </div>
 
-          <div class="col-xxl-6">
-            <div class="">
-              <div class="">
-                <label for="subject" class="text-sm form-label">Subject <span class="text-danger-600">* </span> </label>
-                <input type="text" class="form-control" id="subject" placeholder="Select Envelope Name">
-              </div>
-              <!-- Editor start -->
-              <div class="mt-24">
-                <span class="text-sm form-label">Description </span>
-                <div class="border radius-6">
-                   <!-- Editor Toolbar Start -->
-                   <div id="toolbar-container" class="bg-neutral-40">
-                     <span class="ql-formats">
-                       <select class="ql-font"></select>
-                       <select class="ql-size"></select>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-bold"></button>
-                       <button class="ql-italic"></button>
-                       <button class="ql-underline"></button>
-                       <button class="ql-strike"></button>
-                     </span>
-                     <span class="ql-formats">
-                       <select class="ql-color"></select>
-                       <select class="ql-background"></select>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-script" value="sub"></button>
-                       <button class="ql-script" value="super"></button>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-header" value="1"></button>
-                       <button class="ql-header" value="2"></button>
-                       <button class="ql-blockquote"></button>
-                       <button class="ql-code-block"></button>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-list" value="ordered"></button>
-                       <button class="ql-list" value="bullet"></button>
-                       <button class="ql-indent" value="-1"></button>
-                       <button class="ql-indent" value="+1"></button>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-direction" value="rtl"></button>
-                       <select class="ql-align"></select>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-link"></button>
-                       <button class="ql-image"></button>
-                       <button class="ql-video"></button>
-                       <button class="ql-formula"></button>
-                     </span>
-                     <span class="ql-formats">
-                       <button class="ql-clean"></button>
-                     </span>
-                   </div>
-                   <!-- Editor Toolbar Start -->
-
-                   <!-- Editor start -->
-                   <div id="editor">
-                     <p class="text-secondary-light text-xs line-height-2">Dear [Recipient's Name], </p>
-                     <p><br /></p>
-                     <p class="text-secondary-light text-xs line-height-2">I hope this email finds you well.</p>
-                     <p class="text-secondary-light text-xs line-height-2">I am writing to seek your approval for the attached memo, titled "[Memo Title]", which outlines [briefly describe the purpose or content of the memo, e.g., new policy changes, project updates, etc.].</p>
-                     <p><br /></p>
-                     <p><br /></p>
-                     <p class="text-secondary-light text-xs line-height-2">This memo has been carefully prepared to address [specific issues or goals] and includes the necessary details to ensure its successful implementation. I kindly request you to review the document and provide your feedback or approval at your earliest convenience.
-                      If there are any adjustments or additional input needed, please feel free to let me know, and I will make the necessary revisions promptly.
-                      Looking forward to your confirmation.</p>
-                     <p><br /></p>
-                     <p class="text-secondary-light text-xs line-height-2">Best regards,</p>
-                     <p><br /></p>
-                     <p class="text-secondary-light text-xs line-height-2">[Your Full Name] </p>
-                     <p class="text-secondary-light text-xs line-height-2">[Your Job Title]</p>
-                     <p class="text-secondary-light text-xs line-height-2">[Your Contact Information]</p>
-                   </div>
-                   <!-- Edit End -->
+          <div class="col-xxl-5">
+            <div class="h-100 min-h-540-px radius-6 shadow-6 bg-neutral-30 p-24">
+              <div class="d-flex flex-column justify-content-between h-100">
+                <div class="text-end">
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#fileName">File Name / Folder Name</button>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#textModal">Text</button>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap gap-16">
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#createUserId">Created User ID / Name</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#ipAddress">IP address</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#timeStamp">Time Stamp</button>
                 </div>
               </div>
-              <!-- Editor end -->
-
-              <div class="mt-16">
-                <div class="row gy-4">
-                  <div class="col-sm-6">
-                    <label for="Frequency" class="text-sm form-label">Frequency of Reminders </label>
-                    <select class="form-control form-select py-6" id="Frequency">
-                      <option value="1" selected>Every 0 Days</option>
-                      <option value="Priority">Every 7 Days</option>
-                      <option value="Priority">Every 14 Days</option>
-                      <option value="Priority">Every 21 Days</option>
-                      <option value="Priority">Every 28 Days</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="DueDate" class="text-sm form-label">Due Date </label>
-                    <input type="text" class="form-control" id="DueDate" placeholder="Due Date">
-                  </div>
-                  <div class="col-sm-12">
-                    <label for="MetaData" class="text-sm form-label">Meta Data</label>
-                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple">
-                      <option selected>UI/UX</option>
-                      <option selected>Figma</option>
-                      <option selected>Javascript</option>
-                      <option>CSS</option>
-                      <option>Tailwind</option>
-                      <option>React</option>
-                      <option>Next</option>
-                      <option>Node</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              
             </div>
           </div>
         </div>
       </div>
 
-      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
-        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">Delete</button>
-        <button type="button" class="btn py-6 px-24 btn-purple-600">Draft</button>
-        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addRecipient">Next</button>
+      <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-36">
+        <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+            <label class="form-check-label text-primary-light text-sm" for="Status">Status</label>
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Status">
+        </div>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">Save </button>
       </div>
     </div>
   </div>
 </div>
 <!-- Send and create document Modal End -->
 
-
-<!-- Add Recipients Modal start -->
-<div class="modal fade" id="addRecipient" tabindex="-1" aria-labelledby="addRecipientLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-md">
+<!-- Text Modal start -->
+<div class="modal fade" id="textModal" tabindex="-1" aria-labelledby="textModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-620-px">
     <div class="modal-content py-36 px-20 radius-16">
-      <div class="border-0 d-flex align-items-start justify-content-between mb-32">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="addRecipientLabel">Recipients </h6>
-          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
-        </div>
-        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
-          <i class="ri-close-fill d-flex line-height-1"></i>
-        </button>
-      </div>
-
-      <div class="modal-body p-0">
-        <div class="">
-          <div class="mb-12 position-relative">
-            <label for="Name" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
-            <input type="text" class="form-control recipient-input" id="Name" placeholder="Name">
-
-            <!-- Suggested Recipient dropdown start -->
-            <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">James Karlos</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">Carls Marton</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">Sofia Marton</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">John Doe</span>
-              </li>
-            </ul>
-            <!-- Suggested Recipient dropdown end -->
-          </div>
-          <div class="mb-12">
-            <label for="Email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-            <input type="email" class="form-control" id="Email" placeholder="Email">
-          </div>
-
-          <div class="mt-24 d-flex flex-column gap-16">
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Passcode">Passcode</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
-                <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Authentication ">Authentication </label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentication " checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
-                  <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Expiry">Expiry</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiry">
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <div class="input-group max-w-146-px w-100">
-                  <input class="form-control px-12 py-1 placeholder-12" id="expiryDate" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-                  <span class="input-group-text d-flex py-0 text-xs px-8">
-                    <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
-                  </span>
-                </div>
-                
-                <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="PrivateMessage">Private Message</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="PrivateMessage" checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <div class="input-group max-w-146-px w-100 ">
-                  <input type="text" class="form-control px-12 py-1 placeholder-12" placeholder="Click to Text" data-bs-toggle="modal" data-bs-target="#privateMessage">
-                  <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
-                </div>
-                  <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
-        <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-toggle="modal" data-bs-target="#createDocument">Cancel</button>
-        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">Save </button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Add Recipients Modal End -->
-
-
-<!-- Edit Recipients Modal start -->
-<div class="modal fade" id="editRecipient" tabindex="-1" aria-labelledby="editRecipientLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-md">
-    <div class="modal-content py-36 px-20 radius-16">
-      <div class="border-0 d-flex align-items-start justify-content-between mb-32">
-        <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="editRecipientLabel">Recipients </h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Text</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -1536,197 +843,147 @@
       </div>
 
       <div class="modal-body p-0">
-        <div class="">
-          <div class="mb-12 position-relative">
-            <label for="Name" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
-            <input type="text" class="form-control recipient-input" id="Name" placeholder="Name">
+        <ul class="nav bordered-tab gap-24-px active-bg nav-pills mb-8 border-bottom border-neutral-300" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-secondary-light fw-normal text-sm py-6 px-24 rounded-0 d-flex align-items-center gap-10 active" id="pills-Text-tab" data-bs-toggle="pill" data-bs-target="#pills-Text" type="button" role="tab" aria-controls="pills-Text" aria-selected="true">
+              <span class="text-sm d-flex text-neutral-400"><i class="ri-discuss-line"></i></span>
+              Text
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-secondary-light fw-normal text-sm py-6 px-24 rounded-0 d-flex align-items-center gap-10" id="pills-Upload-tab" data-bs-toggle="pill" data-bs-target="#pills-Upload" type="button" role="tab" aria-controls="pills-Upload" aria-selected="false">
+              <span class="text-sm d-flex text-neutral-400"><i class="ri-attachment-2"></i></span>
+              Upload
+            </button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="pills-tabContent">
+          <!-- Text Start -->
+          <div class="tab-pane fade show active" id="pills-Text" role="tabpanel" aria-labelledby="pills-Text-tab" tabindex="0">
+              <!-- Editor start -->
+              <div class="mt-16">
+                <span class="text-sm form-label">Description </span>
+                <div class="border radius-6">
+                    <!-- Editor Toolbar Start -->
+                    <div id="toolbar-container" class="bg-neutral-40">
+                      <span class="ql-formats">
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <select class="ql-color"></select>
+                        <select class="ql-background"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-script" value="sub"></button>
+                        <button class="ql-script" value="super"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-header" value="1"></button>
+                        <button class="ql-header" value="2"></button>
+                        <button class="ql-blockquote"></button>
+                        <button class="ql-code-block"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-direction" value="rtl"></button>
+                        <select class="ql-align"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-link"></button>
+                        <button class="ql-image"></button>
+                        <button class="ql-video"></button>
+                        <button class="ql-formula"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                      </span>
+                    </div>
+                    <!-- Editor Toolbar Start -->
 
-            <!-- Suggested Recipient dropdown start -->
-            <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">James Karlos</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">Carls Marton</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">Sofia Marton</span>
-              </li>
-              <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
-                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
-                  <img src="assets/images/home-one/recepient-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                </span>
-                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">John Doe</span>
-              </li>
-            </ul>
-            <!-- Suggested Recipient dropdown end -->
+                    <!-- Editor start -->
+                    <div id="editor" class="min-h-104-px">
+                      <p class="text-secondary-light text-xs line-height-2">Confidential </p>
+                      <p><br /></p>
+                    </div>
+                    <!-- Edit End -->
+                </div>
+              </div>
+              <!-- Editor end -->
           </div>
-          <div class="mb-12">
-            <label for="Email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-            <input type="email" class="form-control" id="Email" placeholder="Email">
-          </div>
+          <!-- Text end -->
 
-          <div class="mt-24 d-flex flex-column gap-16">
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Passcode">Passcode</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
-                <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Authentication ">Authentication </label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentication " checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
-                  <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Expiry">Expiry</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiry">
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <div class="input-group max-w-146-px w-100">
-                  <input class="form-control px-12 py-1 placeholder-12" id="expiryDate" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-                  <span class="input-group-text d-flex py-0 text-xs px-8">
-                    <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
-                  </span>
-                </div>
-                
-                <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
-              <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="PrivateMessage">Private Message</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="PrivateMessage" checked>
-              </div>
-              <div class="d-flex align-items-center gap-16">
-                <div class="input-group max-w-146-px w-100 ">
-                  <input type="text" class="form-control px-12 py-1 placeholder-12" placeholder="Click to Text" data-bs-toggle="modal" data-bs-target="#privateMessage">
-                  <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
-                </div>
-                  <div class="custom-tooltip position-relative">
-                  <button type="button" class="text-md d-flex text-primary-600">
-                    <i class="ri-error-warning-line"></i>
-                  </button>
-                  <div class="custom-tooltip__text bg-neutral-200 radius-4">
-                    <ul class="text-8-px">
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        Codes are not case-sensitive.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        You must provide this code to the signer.
-                      </li>
-                      <li class="line-clamp-2 d-flex align-items-start gap-1">
-                        <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
-                        This code is available for you to review on the Envelope Details page.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <!-- Attachment Start -->
+          <div class="tab-pane fade" id="pills-Upload" role="tabpanel" aria-labelledby="pills-Upload-tab" tabindex="0">
+            <div class="mt-30 mb-64">
+              <input type="file" class="form-control">
             </div>
           </div>
-
+          <!-- Attachment end -->
         </div>
+        
+        <div class="mt-8">
+          <div class="row g-3">
+            <div class="col-sm-3 col-6">
+              <label for="Opacity" class="text-xs text-primary-light mb-8 fw-medium">Opacity</label> 
+              <input type="text" class="form-control border border-neutral-300" id="Opacity" placeholder=".2">
+            </div>
+            <div class="col-sm-3 col-6">
+              <label for="XPosition" class="text-xs text-primary-light mb-8 fw-medium">X Position </label> 
+              <input type="text" class="form-control border border-neutral-300" id="XPosition" placeholder="2">
+            </div>
+            <div class="col-sm-3 col-6">
+              <label for="YPosition" class="text-xs text-primary-light mb-8 fw-medium">YPosition</label> 
+              <input type="text" class="form-control border border-neutral-300" id="YPosition" placeholder="180">
+            </div>
+            <div class="col-sm-3 col-6">
+              <label for="Rotate" class="text-xs text-primary-light mb-8 fw-medium">Rotate</label> 
+              <input type="text" class="form-control border border-neutral-300" id="Rotate" placeholder="30deg">
+            </div>
+          </div>
+        </div>
+        <div class="mt-24 d-flex align-items-center gap-14"> 
+          <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="stretch">
+            <label class="form-check-label text-primary-light-two text-xs " for="stretch">Stretch All Over</label>
+          </div>
+          <div class="d-flex align-items-center gap-8">
+            <input type="text" class="form-control py-2 px-2 w-36-px h-20-px placeholder-10 text-xxs border border-neutral-300 radius-6 text-center" id="times" placeholder="20" value="20 ">
+            <label class="form-check-label text-primary-light text-xxs" for="times">times</label>
+          </div>
+        </div>
+        
       </div>
 
-      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
-        <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn py-6 px-24 btn-primary-600">Save </button>
+      <div class="border-0 d-flex align-items-center gap-16 justify-content-end mt-36">
+        <button type="button" class="btn py-6 px-24 btn-neutral-100 text-primary-light" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#textModal">Save </button>
       </div>
     </div>
   </div>
 </div>
-<!-- Add Recipients Modal End -->
+<!-- Text Modal End -->
 
-<!-- private Message Modal start -->
-<div class="modal fade" id="privateMessage" tabindex="-1" aria-labelledby="privateMessageLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-md">
+<!-- Create User ID start -->
+<div class="modal fade" id="createUserId" tabindex="-1" aria-labelledby="createUserIdLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-620-px">
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="privateMessageLabel">Private Message </h6>
-          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Created User ID / Name </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1734,19 +991,371 @@
       </div>
 
       <div class="modal-body p-0">
-        <label for="englishArabic" class="text-sm form-label">
-          <span class="fw-bold text-primary-600">English</span> / Arabic <span class="text-danger-600">*</span> 
-        </label>
-        <textarea class="form-control h-102-px" id="englishArabic" placeholder="Discount Alert"></textarea>
-      </div>
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="FixedParameters">Fixed Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="FixedParameters">
+        </div>
+        <div class="row g-3">
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Header">
+              <label class="form-check-label text-primary-light text-xs " for="Header">Header</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Footer ">
+              <label class="form-check-label text-primary-light text-xs " for="Footer ">Footer </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Both ">
+              <label class="form-check-label text-primary-light text-xs " for="Both ">Both </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Left">
+              <label class="form-check-label text-primary-light text-xs " for="Left">Left</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Middle">
+              <label class="form-check-label text-primary-light text-xs " for="Middle">Middle</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Right">
+              <label class="form-check-label text-primary-light text-xs " for="Right">Right</label>
+            </div>
+          </div>
+        </div>
 
-      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
-        <button type="button" class="btn py-6 px-24 btn-primary-600">Save </button>
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="DiminutionsParameters ">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="DiminutionsParameters ">
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-4 col-6">
+            <label for="nameOpacity" class="text-xs text-primary-light mb-8 fw-medium">Opacity</label> 
+            <input type="text" class="form-control border border-neutral-300" id="nameOpacity" placeholder=".2">
+          </div>
+          <div class="col-sm-4 col-6">
+            <label for="nameXPosition" class="text-xs text-primary-light mb-8 fw-medium">X Position </label> 
+            <input type="text" class="form-control border border-neutral-300" id="nameXPosition" placeholder="2">
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="row g-3">
+            <div class="col-sm-4 col-6">
+              <label for="nameYPosition" class="text-xs text-primary-light mb-8 fw-medium">YPosition</label> 
+              <input type="text" class="form-control border border-neutral-300" id="nameYPosition" placeholder="180">
+            </div>
+            <div class="col-sm-4 col-6">
+              <label for="nameRotate" class="text-xs text-primary-light mb-8 fw-medium">Rotate</label> 
+              <input type="text" class="form-control border border-neutral-300" id="nameRotate" placeholder="30deg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-0 d-flex align-items-center gap-16 justify-content-end mt-8">
+        <button type="button" class="btn py-6 px-24 btn-neutral-100 text-primary-light" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createUserId">Save </button>
       </div>
     </div>
   </div>
 </div>
-<!-- private Message Modal End -->
+<!-- Create User ID End -->
+
+<!-- IP address start -->
+<div class="modal fade" id="ipAddress" tabindex="-1" aria-labelledby="ipAddressLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-620-px">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-24">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">IP Address</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="ipFixedParameters">Fixed Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipFixedParameters">
+        </div>
+        <div class="row g-3">
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipHeader">
+              <label class="form-check-label text-primary-light text-xs " for="ipHeader">Header</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipFooter ">
+              <label class="form-check-label text-primary-light text-xs " for="ipFooter ">Footer </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipBoth ">
+              <label class="form-check-label text-primary-light text-xs " for="ipBoth ">Both </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipLeft">
+              <label class="form-check-label text-primary-light text-xs " for="ipLeft">Left</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipMiddle">
+              <label class="form-check-label text-primary-light text-xs " for="ipMiddle">Middle</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipRight">
+              <label class="form-check-label text-primary-light text-xs " for="ipRight">Right</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="ipDiminutionsParameters ">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipDiminutionsParameters ">
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-4 col-6">
+            <label for="ipnameOpacity" class="text-xs text-primary-light mb-8 fw-medium">Opacity</label> 
+            <input type="text" class="form-control border border-neutral-300" id="ipnameOpacity" placeholder=".2">
+          </div>
+          <div class="col-sm-4 col-6">
+            <label for="ipnameXPosition" class="text-xs text-primary-light mb-8 fw-medium">X Position </label> 
+            <input type="text" class="form-control border border-neutral-300" id="ipnameXPosition" placeholder="2">
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="row g-3">
+            <div class="col-sm-4 col-6">
+              <label for="ipnameYPosition" class="text-xs text-primary-light mb-8 fw-medium">YPosition</label> 
+              <input type="text" class="form-control border border-neutral-300" id="ipnameYPosition" placeholder="180">
+            </div>
+            <div class="col-sm-4 col-6">
+              <label for="ipnameRotate" class="text-xs text-primary-light mb-8 fw-medium">Rotate</label> 
+              <input type="text" class="form-control border border-neutral-300" id="ipnameRotate" placeholder="30deg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-0 d-flex align-items-center gap-16 justify-content-end mt-8">
+        <button type="button" class="btn py-6 px-24 btn-neutral-100 text-primary-light" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#ipAddress">Save </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- IP address End -->
+
+<!-- Time Stamp start -->
+<div class="modal fade" id="timeStamp" tabindex="-1" aria-labelledby="timeStampLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-620-px">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-24">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Time Stamp</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="timeStampipFixedParameters">Fixed Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipFixedParameters">
+        </div>
+        <div class="row g-3">
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipHeader">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipHeader">Header</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipFooter ">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipFooter ">Footer </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipBoth ">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipBoth ">Both </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipLeft">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipLeft">Left</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipMiddle">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipMiddle">Middle</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipRight">
+              <label class="form-check-label text-primary-light text-xs " for="timeStampipRight">Right</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="timeStampipDiminutionsParameters ">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipDiminutionsParameters ">
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-4 col-6">
+            <label for="timeStampipnameOpacity" class="text-xs text-primary-light mb-8 fw-medium">Opacity</label> 
+            <input type="text" class="form-control border border-neutral-300" id="timeStampipnameOpacity" placeholder=".2">
+          </div>
+          <div class="col-sm-4 col-6">
+            <label for="timeStampipnameXPosition" class="text-xs text-primary-light mb-8 fw-medium">X Position </label> 
+            <input type="text" class="form-control border border-neutral-300" id="timeStampipnameXPosition" placeholder="2">
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="row g-3">
+            <div class="col-sm-4 col-6">
+              <label for="timeStampipnameYPosition" class="text-xs text-primary-light mb-8 fw-medium">YPosition</label> 
+              <input type="text" class="form-control border border-neutral-300" id="timeStampipnameYPosition" placeholder="180">
+            </div>
+            <div class="col-sm-4 col-6">
+              <label for="timeStampipnameRotate" class="text-xs text-primary-light mb-8 fw-medium">Rotate</label> 
+              <input type="text" class="form-control border border-neutral-300" id="timeStampipnameRotate" placeholder="30deg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-0 d-flex align-items-center gap-16 justify-content-end mt-8">
+        <button type="button" class="btn py-6 px-24 btn-neutral-100 text-primary-light" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#timeStamp">Save </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Time Stamp End -->
+
+<!-- File Name start -->
+<div class="modal fade" id="fileName" tabindex="-1" aria-labelledby="fileNameLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-620-px">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-24">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">File Name / Folder Name</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="fileNameipFixedParameters">Fixed Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipFixedParameters">
+        </div>
+        <div class="row g-3">
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipHeader">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipHeader">Header</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipFooter ">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipFooter ">Footer </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipBoth ">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipBoth ">Both </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipLeft">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipLeft">Left</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipMiddle">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipMiddle">Middle</label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipRight">
+              <label class="form-check-label text-primary-light text-xs " for="fileNameipRight">Right</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="fileNameipDiminutionsParameters ">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipDiminutionsParameters ">
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-4 col-6">
+            <label for="fileNameipnameOpacity" class="text-xs text-primary-light mb-8 fw-medium">Opacity</label> 
+            <input type="text" class="form-control border border-neutral-300" id="fileNameipnameOpacity" placeholder=".2">
+          </div>
+          <div class="col-sm-4 col-6">
+            <label for="fileNameipnameXPosition" class="text-xs text-primary-light mb-8 fw-medium">X Position </label> 
+            <input type="text" class="form-control border border-neutral-300" id="fileNameipnameXPosition" placeholder="2">
+          </div>
+        </div>
+        <div class="mt-16">
+          <div class="row g-3">
+            <div class="col-sm-4 col-6">
+              <label for="fileNameipnameYPosition" class="text-xs text-primary-light mb-8 fw-medium">YPosition</label> 
+              <input type="text" class="form-control border border-neutral-300" id="fileNameipnameYPosition" placeholder="180">
+            </div>
+            <div class="col-sm-4 col-6">
+              <label for="fileNameipnameRotate" class="text-xs text-primary-light mb-8 fw-medium">Rotate</label> 
+              <input type="text" class="form-control border border-neutral-300" id="fileNameipnameRotate" placeholder="30deg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-0 d-flex align-items-center gap-16 justify-content-end mt-8">
+        <button type="button" class="btn py-6 px-24 btn-neutral-100 text-primary-light" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#fileName">Save </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- File Name End -->
+
 
 <!-- History Modal start -->
 <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
@@ -1754,7 +1363,7 @@
     <div class="modal-content radius-16 overflow-hidden">
       <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-lg fw-medium line-clamp-1" id="historyModalLabel">History</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1">History</h6>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1875,7 +1484,6 @@
 <script src="assets/js/editor.highlighted.min.js"></script>
 <script src="assets/js/editor.quill.js"></script>
 <script src="assets/js/editor.katex.min.js"></script>
-<script src="assets/js/lib/select2.min.js"></script>
 
 <script>
   // ***************************** Data Table js ***************************** 
@@ -1883,7 +1491,6 @@
     searching: false,   // Removes the search box
     lengthChange: false, 
   });
-
 
   // *****************************  Flat pickr or date picker js ***************************** 
   function getDatePicker(receiveID) {
@@ -1895,26 +1502,28 @@
     });
   }
   getDatePicker('#dateTime');
-
-  // *************************** Upload Single Image js start here ***************************
-  const fileInput = document.getElementById("upload-file");
-  const imagePreview = document.getElementById("uploaded-img__preview");
-  const uploadedImgContainer = document.querySelector(".uploaded-img");
-  const removeButton = document.querySelector(".uploaded-img__remove");
-
-  fileInput.addEventListener("change", (e) => {
-    if (e.target.files.length) {
-      const src = URL.createObjectURL(e.target.files[0]);
-      imagePreview.src = src;
-      uploadedImgContainer.classList.remove('d-none');
-    }
+  
+  // *************************** Delete Tr js start ***************************
+  $(".delete-tr-button").on('click', function () {
+    $(this).closest('tr').addClass('d-none');
   });
-  removeButton.addEventListener("click", () => {
-      imagePreview.src = "";
-      uploadedImgContainer.classList.add('d-none');
-      fileInput.value = ""; 
-    });
-  // *************************** Upload Single Image js End here ***************************
+  // *************************** Delete Tr js End ***************************
+
+  // *************************** Max Text in textarea js start ***************************
+ var maxDescArea = document.querySelector('.max-desc');
+ var textLength = document.querySelector('.text-length');
+ var maxText = 1000;
+ 
+ maxDescArea.addEventListener('input', function (event) {
+    var valueLength = maxDescArea.value.length;
+    textLength.innerHTML = `${valueLength} / ${maxText}`;
+    
+    if(valueLength > maxText ) {
+        this.value = this.value.slice(0, maxText);
+        textLength.innerHTML = `${maxText} / ${maxText}`;
+    }
+ });
+  // *************************** Max Text in textarea js End ***************************
   
   // *************************** Editor js start here ***************************
   const quill = new Quill('#editor', {
@@ -1926,61 +1535,6 @@
     theme: 'snow',
   });
   // *************************** Editor js End here ***************************
-
-  // *************************** Select2 js start here ***************************
-  $(document).ready(function() {
-    $(".meta-tags").select2({
-      tags: true
-    });
-  });
-  // *************************** Select2 js End here ***************************
-
-  
-  // *************************** End date js start here ***************************
-  function getDatePicker(receiveID) {
-    flatpickr(receiveID, {
-      enableTime: false, // Ensure time is disabled to match the format
-      dateFormat: "d M, Y", // Format to match placeholder
-    });
-  }
-  getDatePicker('#expiryDate');
-  // *************************** End date js End here ***************************
-
-  
-  // *************************** Suggested Recipient Dropdown js start ***************************
-  $('body').on('click', function () {
-    $('.recipient-dropdown').removeClass('show');
-  });
-
-  let inputText = "";
-  $('.recipient-input').on('click', function (event) {
-    event.stopPropagation();
-    $('.recipient-dropdown').addClass('show');
-  });
-
-  $('.recipient-dropdown__text').on('click', function () {
-    inputText = $(this).text();
-    $('.recipient-input').val(inputText);
-    $('.recipient-dropdown').removeClass('show');
-  });
-
-  // Search through Dropdown by input fields
-  $('.recipient-input').on('input', function (event) {
-    let inputText = event.target.value.toLowerCase();
-
-    $('.recipient-dropdown li').each(function () {
-      dropdownItemText = $(this).find('.recipient-dropdown__text').text().toLocaleLowerCase();
-      $(this).toggleClass('d-flex', dropdownItemText.includes(inputText));
-      $(this).toggleClass('d-none', !dropdownItemText.includes(inputText));
-    });
-  });
-  // *************************** Suggested Recipient Dropdown js End ***************************
-
-  // *************************** Delete Tr js start ***************************
-  $(".delete-tr-button").on('click', function () {
-    $(this).closest('tr').addClass('d-none');
-  });
-  // *************************** Delete Tr js End ***************************
 
 </script>
 

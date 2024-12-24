@@ -11,8 +11,11 @@
 }
 .ql-editor {
     border-radius: 12px;
-    min-height: 300px;
+    min-height: inherit;
     padding: 18px;
+    &[contenteditable]:focus {
+        outline: 1px solid var(--primary-600);
+    }
 }
 
 .ql-picker-label, .ql-formats {

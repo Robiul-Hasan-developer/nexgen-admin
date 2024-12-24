@@ -36,6 +36,11 @@
       font-size: 12px !important;
     }
   }
+  &-10 {
+    &::placeholder {
+      font-size: 10px !important;
+    }
+  }
 }
 
 /* Form switch start */
@@ -59,7 +64,13 @@
   .form-check-input {
     &:checked {
       background-color: var(--primary-500);
-      border-color: var(--primary-500);
+      border-color: var(--primary-500) !important;
+    }
+    &.bg-main {
+      &:checked { 
+        background-color: var(--primary-600);
+        border-color: var(--primary-600) !important;
+      }
     }
   }
 }

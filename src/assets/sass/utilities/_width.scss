@@ -41,6 +41,9 @@
   &-330-px {
     max-width: 330px;
   }
+  &-380-px {
+    max-width: 380px;
+  }
   &-388-px {
     @media (min-width: 992px) {
       max-width: 388px;
@@ -48,6 +51,9 @@
   }
   &-560-px {
     max-width: 560px;
+  }
+  &-620-px {
+    max-width: 620px;
   }
   &-1060-px {
     max-width: 1060px;

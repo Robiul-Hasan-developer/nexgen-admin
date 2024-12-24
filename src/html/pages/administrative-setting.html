@@ -1,0 +1,90 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Administrative Settings",
+    page: "Masters",
+    activePage: "Administrative Settings",
+    paraText: "Centralized control panel for managing users, roles, departments, and permissions, ensuring efficient configuration and streamlined administration."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 bg-white py-24 px-res-32-px radius-6">
+        <input type="text"  class="form-control placeholder-12" placeholder="Search...">
+        <div class="mt-60">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">OR</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Organization </h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Monitor and manage user creation records with detailed insights, including user information, status, creation time, and actions.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">D</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Department</h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Shows department creation records with details, status, and actions for streamlined onboarding management.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">RR</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Role Rights</h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Shows role creation records with details, status, and actions for efficient management and permissions handling.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">CU</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Create User</h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Shows user creation records with details like user info, status, creation time, and actions for efficient onboarding management.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>
