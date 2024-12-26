@@ -43,6 +43,11 @@
   }
 }
 
+.file-44-px {
+  height: 44px;
+  line-height: 30px;
+}
+
 /* Form switch start */
 .form-switch {
   .form-check-input {
@@ -63,15 +68,21 @@
 .form-check {
   .form-check-input {
     &:checked {
-      background-color: var(--primary-500);
+      background-color: var(--primary-500) !important;
       border-color: var(--primary-500) !important;
     }
     &.bg-main {
       &:checked { 
-        background-color: var(--primary-600);
+        background-color: var(--primary-600) !important;
         border-color: var(--primary-600) !important;
       }
     }
+  }
+}
+.bg-main {
+  &:checked { 
+    background-color: var(--primary-600) !important;
+    border-color: var(--primary-600) !important;
   }
 }
 

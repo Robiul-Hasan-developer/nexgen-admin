@@ -49,6 +49,15 @@
     &-60-px {
       margin-block-start: clamp(1.5rem, -5.25rem + 9vw, 3.75rem);
     }
+    &-84-px {
+      margin-block-start: clamp(1.5rem, -5.25rem + 9vw, 5.25rem);
+    }
+  }
+
+  .mb {
+    &-100-px {
+      margin-block-end: clamp(2rem, -5.25rem + 9vw, 6.25rem);
+    }
   }
 // margin css
   

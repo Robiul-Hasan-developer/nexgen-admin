@@ -1,0 +1,1027 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Department",
+    page: "Administrative",
+    activePage: "Department",
+    paraText: "Displays department creation records with details, status, and actions for efficient onboarding management."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addDepartment">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Add Department 
+          </button>
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#ImportUser">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Import User
+          </button>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+            <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="max-w-350-px w-100 position-relative">
+            <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
+            <label for="dateTime" class="position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100 border rounded-end bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center">
+              <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+            </label>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 w-100">
+            <input type="text" class="form-control max-w-760-px w-100" placeholder="Search...">
+  
+            <div class="d-flex align-items-center gap-2 ">
+              <button class="text-neutral-400 d-flex line-height-1 text-lg"><i class="ri-filter-line line-height-1"></i></button>
+              <div class="border radius-8 d-flex">
+                <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                  <i class="ri-printer-line"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+      <!-- Table Start -->
+      <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical">
+        <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+          <thead>
+              <tr>
+                  <th class="bg-neutral-50 text-center text-xs">Sr. No</th>
+                  <th class="bg-neutral-50 text-start text-xs">Head Department</th>
+                  <th class="bg-neutral-50 text-start text-xs">Department</th>
+                  <th class="bg-neutral-50 text-center text-xs"># of Employees </th>
+                  <th class="bg-neutral-50 text-center text-xs">Created Details</th>
+                  <th class="bg-neutral-50 text-center text-xs">Modified Details</th>
+                  <th class="bg-neutral-50 text-center text-xs">Status</th>
+                  <th class="bg-neutral-50 text-center text-xs">Action</th>
+              </tr>
+          </thead>
+
+
+          <tbody>
+            <tr>
+              <td class="text-center text-xs fw-light">01</td>
+              <td class="text-start text-xs fw-light">Marketing</td>
+              <td class="text-start text-xs fw-light">Marketing</td>
+              <td class="text-center text-xs fw-light">17</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">02</td>
+              <td class="text-start text-xs fw-light">Human Resources</td>
+              <td class="text-start text-xs fw-light">Human Resources</td>
+              <td class="text-center text-xs fw-light">03</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">03</td>
+              <td class="text-start text-xs fw-light">Finance</td>
+              <td class="text-start text-xs fw-light">Finance</td>
+              <td class="text-center text-xs fw-light">12</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">04</td>
+              <td class="text-start text-xs fw-light">Operations</td>
+              <td class="text-start text-xs fw-light">Operations</td>
+              <td class="text-center text-xs fw-light">08</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">05</td>
+              <td class="text-start text-xs fw-light">Research and Development (R&D)</td>
+              <td class="text-start text-xs fw-light">Research and Development (R&D)</td>
+              <td class="text-center text-xs fw-light">19</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">06</td>
+              <td class="text-start text-xs fw-light">Information Technology (IT)</td>
+              <td class="text-start text-xs fw-light">Information Technology (IT)</td>
+              <td class="text-center text-xs fw-light">04</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">07</td>
+              <td class="text-start text-xs fw-light">Sales</td>
+              <td class="text-start text-xs fw-light">Sales</td>
+              <td class="text-center text-xs fw-light">15</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">08</td>
+              <td class="text-start text-xs fw-light">Procurement</td>
+              <td class="text-start text-xs fw-light">Procurement</td>
+              <td class="text-center text-xs fw-light">10</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">09</td>
+              <td class="text-start text-xs fw-light">Legal</td>
+              <td class="text-start text-xs fw-light">Legal</td>
+              <td class="text-center text-xs fw-light">20</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">10</td>
+              <td class="text-start text-xs fw-light">Customer Service</td>
+              <td class="text-start text-xs fw-light">Customer Service</td>
+              <td class="text-center text-xs fw-light">06</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">11</td>
+              <td class="text-start text-xs fw-light">Quality Assurance (QA)</td>
+              <td class="text-start text-xs fw-light">Quality Assurance (QA)</td>
+              <td class="text-center text-xs fw-light">13</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">12</td>
+              <td class="text-start text-xs fw-light">Engineering</td>
+              <td class="text-start text-xs fw-light">Engineering</td>
+              <td class="text-center text-xs fw-light">02</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">13</td>
+              <td class="text-start text-xs fw-light">Public Relations (PR)</td>
+              <td class="text-start text-xs fw-light">Public Relations (PR)</td>
+              <td class="text-center text-xs fw-light">07</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">14</td>
+              <td class="text-start text-xs fw-light">Design</td>
+              <td class="text-start text-xs fw-light">Design</td>
+              <td class="text-center text-xs fw-light">11</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-center text-xs fw-light">15</td>
+              <td class="text-start text-xs fw-light">Data Analytics</td>
+              <td class="text-start text-xs fw-light">Data Analytics</td>
+              <td class="text-center text-xs fw-light">14</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+              <td class="text-center text-xs fw-light">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+              </td>
+              <td class="text-center text-xs fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDepartment">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">View</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#editDepartment">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">Edit </span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">History</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Table End -->
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+<!-- Add Department start -->
+<div class="modal fade" id="addDepartment" tabindex="-1" aria-labelledby="addDepartmentLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-620-px">
+      <div class="modal-content p-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addDepartmentLabel">Add Department</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#">
+            <div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+                <label for="HeadDepartment" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Head Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control form-select flex-grow-1 text-neutral-400 form-control py-9 px-20" id="HeadDepartment">
+                  <option value="Main Department" selected hidden>Main Department</option>
+                  <option value="1">Operation</option>
+                  <option value="2">Crime</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-20">
+                <label for="DepartmentName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control py-9 px-20" id="DepartmentName" placeholder="Enter Department ">
+              </div>
+            </div>
+            
+            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-28">
+              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="UserStatus2">Status</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus2">
+              </div>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Department End -->
+
+<!-- View Department start -->
+<div class="modal fade" id="viewDepartment" tabindex="-1" aria-labelledby="viewDepartmentLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-620-px">
+      <div class="modal-content p-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="viewDepartmentLabel">View Department</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#">
+            <div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+                <label for="viewHeadDepartment" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Head Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control form-select flex-grow-1 text-neutral-400 form-control py-9 px-20" id="viewHeadDepartment">
+                  <option value="Main Department" selected hidden>Main Department</option>
+                  <option value="1" selected>Operation</option>
+                  <option value="2">Crime</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-20">
+                <label for="viewDepartmentName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control py-9 px-20" id="viewDepartmentName" placeholder="Enter Department" value="Business Intelligence">
+              </div>
+            </div>
+            
+            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-28">
+              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="UserStatus2">Status</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus2">
+              </div>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#viewDepartment">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- View Department End -->
+
+<!-- Edit Department start -->
+<div class="modal fade" id="editDepartment" tabindex="-1" aria-labelledby="editDepartmentLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-620-px">
+      <div class="modal-content p-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="editDepartmentLabel">Edit Department</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#">
+            <div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+                <label for="editHeadDepartment" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Head Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control form-select flex-grow-1 text-neutral-400 form-control py-9 px-20" id="editHeadDepartment">
+                  <option value="Main Department" selected hidden>Main Department</option>
+                  <option value="1" selected>Operation</option>
+                  <option value="2">Crime</option>
+                </select>
+              </div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-20">
+                <label for="editDepartmentName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control py-9 px-20" id="editDepartmentName" placeholder="Enter Department" value="Business Intelligence">
+              </div>
+            </div>
+            
+            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-28">
+              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="UserStatus2">Status</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus2">
+              </div>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#editDepartment">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Edit Department End -->
+
+<!-- Import User Start -->
+<div class="modal fade" id="ImportUser" tabindex="-1" aria-labelledby="ImportUserLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-826-px">
+    <div class="modal-content py-44 px-32 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="ImportUserLabel">Add Department</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-16 radius-6">Import Excel</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mt-84-px mb-100-px">
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+              <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
+              <input type="file" class="form-control flex-grow-1 file-44-px" id="fileInput">
+            </div>
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-28">
+              <label for="SampleFile" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">Sample File</label>
+              <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+                <span class="fw-normal text-xs text-neutral-300">
+                  <i class="ri-download-fill"></i>
+                </span>
+                <span class="w-1-px h-18-px bg-white-1"></span>
+                <span class="px-24">Download</span>
+              </button>
+            </div>
+          </div>  
+          <div class="text-end">
+            <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Import User End -->
+
+<!-- History Modal start -->
+<div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-1060-px">
+    <div class="modal-content radius-16 overflow-hidden">
+      <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="historyModalLabel">History</h6>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="overflow-x-auto max-h-510-px overflow-y-auto scroll-sm scroll-vertical">
+          <table class="table mb-0 min-w-max">
+            <thead>
+              <tr>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50"> Last Update </th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Modified User</th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Employee User</th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Department  </th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Status </th>
+                <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">Attachments  </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Ahmad Moahmmed </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Ahmad Moahmmed </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Operations </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    View
+                    <span class="text-neutral-500 text-sm d-flex">
+                      <i class="ri-link"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">25 Aug, 2024 - 11:04am</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Arej Al Azmi</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Arej Al Azmi</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Operations </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    View
+                    <span class="text-neutral-500 text-sm d-flex">
+                      <i class="ri-link"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mohammed al ajmi </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mohammed al ajmi </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Operations </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    View
+                    <span class="text-neutral-500 text-sm d-flex">
+                      <i class="ri-link"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Jassem Khaled </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Jassem Khaled </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Operations </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">Active </span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    View
+                    <span class="text-neutral-500 text-sm d-flex">
+                      <i class="ri-link"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 Apr, 2024 - 13:03pm</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mosaed Khalel  </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Mosaed Khalel  </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">Operations </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Delete  </span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                  <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    View
+                    <span class="text-neutral-500 text-sm d-flex">
+                      <i class="ri-link"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- History Modal start -->
+  
+
+@@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/flatpickr.js"></script>
+
+<script>
+  // ***************************** Data Table js ***************************** 
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false,
+  });
+
+  // *****************************  Flat pickr or date picker js ***************************** 
+  function getDatePicker(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+      mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
+    });
+  }
+  getDatePicker('#dateTime');
+  // *****************************  Flat pickr or date picker js ***************************** 
+
+  // ***************************** Show hide password js ***************************** 
+  document.querySelectorAll('.toggle-icon').forEach(function (toggleIcon) {
+    var passwordField = toggleIcon.closest('div').querySelector('.password-field');
+
+    toggleIcon.addEventListener('click', function () {
+      if(passwordField.type === 'password') { 
+        passwordField.type = 'text';
+        this.classList.remove('ri-eye-off-line');
+        this.classList.add('ri-eye-line');
+      } else {
+        passwordField.type = 'password';
+        this.classList.remove('ri-eye-line');
+        this.classList.add('ri-eye-off-line');
+      }
+    });
+  });
+  // ***************************** Show hide password js ***************************** 
+  
+
+</script>
+
+</body>
+</html>

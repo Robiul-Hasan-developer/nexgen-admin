@@ -9,10 +9,31 @@
   &-30-px {
     gap: clamp(.5rem, -9rem + 10.6667vw, 1.875rem);
   }
+  &-36-px {
+    gap: clamp(1rem, -9rem + 10.6667vw, 2.25rem);
+  }
   &-40-px {
     gap: clamp(.5rem, -9rem + 10.6667vw, 2.5rem);
   }
   &-44-px {
     gap: clamp(.5rem, -9rem + 10.6667vw, 3rem);
+  }
+}
+
+.gx {
+  &-100 {
+    --bs-gutter-x: clamp(1.5rem, -5.1554rem + 10.7345vw, 6.25rem);
+  }
+  &-36-px {
+    gap: clamp(1.25rem, -9rem + 10.6667vw, 2.25rem);
+  }
+  &-44-px {
+    gap: clamp(1.25rem, -9rem + 10.6667vw, 2.75rem);
+  }
+}
+
+.gy {
+  &-20 {
+    --bs-gutter-y: 20px;
   }
 }

@@ -83,5 +83,5 @@ $('#selectAll').on('change', function () {
       $('.no-items-found').show();
     }
   });
-  // Remove Table Tr when click on remove btn end
+  // Remove Table Tr when click on remove btn end  
 })(jQuery);

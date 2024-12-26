@@ -20,6 +20,12 @@
 }
 
 .max-w {
+  &-105-px {
+    max-width: 105px;
+  }
+  &-124-px {
+    max-width: 124px;
+  }
   &-760-px {
     max-width: 760px;
   }
@@ -55,8 +61,23 @@
   &-620-px {
     max-width: 620px;
   }
+  &-826-px {
+    max-width: 826px;
+  }
   &-1060-px {
     max-width: 1060px;
+  }
+  &-1250-px {
+    max-width: 1250px;
+  }
+  &-1472-px {
+    max-width: 1472px;
+  }
+  &-1650-px {
+    max-width: 1650px;
+  }
+  &-1705-px {
+    max-width: 1705px;
   }
 }
 
