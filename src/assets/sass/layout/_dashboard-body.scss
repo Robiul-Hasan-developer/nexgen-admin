@@ -11,6 +11,10 @@
   }
   &-body {
     padding: rem(10px);
+    > div {
+      padding-block-end: 100px !important;
+      position: relative;
+    }
   }
   &.active {
     @media (min-width: 1199px) {

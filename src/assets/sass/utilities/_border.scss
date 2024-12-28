@@ -12,6 +12,9 @@
   &-bottom {
     border-block-end: 1px solid var(--border-color) !important;
   }
+  &-top {
+    border-block-start: 1px solid var(--border-color) !important;
+  }
 }
 
 @each $color, $shades in $colors {

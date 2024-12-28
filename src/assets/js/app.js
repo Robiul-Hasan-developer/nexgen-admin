@@ -47,41 +47,36 @@
   });
   
 
+  // ======================= side menu js start =======================
+  $('.side-menu-icon').on('click', function () {
+    $('.side-menu').addClass('open');
+    $('.body-overlay').addClass('show');
+    $('body').addClass('pe-18 overflow-hidden');
+  });
+
+  $('.body-overlay').on('click', function () {
+    $('.side-menu').removeClass('open');
+    $(this).removeClass('show');
+    $('body').removeClass('pe-18 overflow-hidden');
+  });
+  // ======================= side menu js end =======================
+
 
   // Light Dark version js 
-  $(document).ready(function () {
-    const themeToggle = $("#theme-toggle .form-check-input");
+  // $(document).ready(function () {
+  //   const themeToggle = $("#theme-toggle .form-check-input");
 
-    // Synchronize the switch state with the theme
-    const storedTheme = localStorage.getItem("theme") || "light";
-    themeToggle.prop("checked", storedTheme === "dark");
+  //   // Synchronize the switch state with the theme
+  //   const storedTheme = localStorage.getItem("theme") || "light";
+  //   themeToggle.prop("checked", storedTheme === "dark");
 
-    // Toggle theme on switch click
-    themeToggle.on("change", function () {
-      const isDarkTheme = $(this).is(":checked");
-      const newTheme = isDarkTheme ? "dark" : "light";
-      $("html").attr("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-    });
-  });
+  //   // Toggle theme on switch click
+  //   themeToggle.on("change", function () {
+  //     const isDarkTheme = $(this).is(":checked");
+  //     const newTheme = isDarkTheme ? "dark" : "light";
+  //     $("html").attr("data-theme", newTheme);
+  //     localStorage.setItem("theme", newTheme);
+  //   });
+  // });
 
-
-// =========================== Table Header Checkbox checked all js Start ================================
-$('#selectAll').on('change', function () {
-  $('.form-check .form-check-input').prop('checked', $(this).prop('checked')); 
-}); 
-
-  // Remove Table Tr when click on remove btn start
-  $('.remove-btn').on('click', function () {
-    $(this).closest('tr').remove(); 
-
-    // Check if the table has no rows left
-    if ($('.table tbody tr').length === 0) {
-      $('.table').addClass('bg-danger');
-
-      // Show notification
-      $('.no-items-found').show();
-    }
-  });
-  // Remove Table Tr when click on remove btn end  
 })(jQuery);
