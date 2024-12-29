@@ -1035,7 +1035,6 @@
   </div>
 </div>
 <!-- History Modal start -->
-  
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
@@ -1058,22 +1057,39 @@
   }
   getDatePicker('#dateTime');
   // *****************************  Flat pickr or date picker js ***************************** 
-
   
   // ***************************** Bold Italic Underline Btn js ***************************** 
-    $('.bold-btn').on('click', function () {
-        $(this).toggleClass('bg-neutral-300');
-        $('.sample-text').toggleClass('fw-bold');
-    }); 
-    $('.italic-btn').on('click', function () {
-        $(this).toggleClass('bg-neutral-300');
-        $('.sample-text').toggleClass('fst-italic');
-    }); 
-    $('.underline-btn').on('click', function () {
-        $(this).toggleClass('bg-neutral-300');
-        $('.sample-text').toggleClass('text-decoration-underline');
-    }); 
+  $('.bold-btn').on('click', function () {
+      $(this).toggleClass('bg-neutral-300');
+      $('.sample-text').toggleClass('fw-bold');
+  }); 
+  $('.italic-btn').on('click', function () {
+      $(this).toggleClass('bg-neutral-300');
+      $('.sample-text').toggleClass('fst-italic');
+  }); 
+  $('.underline-btn').on('click', function () {
+      $(this).toggleClass('bg-neutral-300');
+      $('.sample-text').toggleClass('text-decoration-underline');
+  }); 
   // ***************************** Bold Italic Underline Btn js ***************************** 
+
+  // ***************************** Show hide password js ***************************** 
+  document.querySelectorAll('.toggle-icon').forEach(function (toggleIcon) {
+    var passwordField = toggleIcon.closest('div').querySelector('.password-field');
+
+    toggleIcon.addEventListener('click', function () {
+      if(passwordField.type === 'password') { 
+        passwordField.type = 'text';
+        this.classList.remove('ri-eye-off-line');
+        this.classList.add('ri-eye-line');
+      } else {
+        passwordField.type = 'password';
+        this.classList.remove('ri-eye-line');
+        this.classList.add('ri-eye-off-line');
+      }
+    });
+  });
+  // ***************************** Show hide password js ***************************** 
 
 </script>
 

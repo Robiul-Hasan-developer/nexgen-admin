@@ -6,6 +6,9 @@
 }
 
 .gap {
+  &-16-px {
+    gap: clamp(.5rem, -9rem + 10.6667vw, 1rem);
+  }
   &-30-px {
     gap: clamp(.5rem, -9rem + 10.6667vw, 1.875rem);
   }

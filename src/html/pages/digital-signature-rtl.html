@@ -1,0 +1,2391 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top-rtl.html')
+@@include('../layouts/_sidebar-rtl.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav-rtl.html')
+
+  @@include('../layouts/_breadcrumb-rtl.html',{
+    pageTitle: "التوقيع الرقمي",
+    page: "مجموعة الأعمال",
+    activePage: "التوقيع الرقمي",
+    paraText: "يعرض قائمة بطلبات التوقيع الرقمي، بما في ذلك معلومات العميل وحالة التوقيع ووقت الطلب والإجراءات اللازمة للتتبع وإدارة الموافقة بكفاءة."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Widgets Start -->
+      <div class="row gy-4">
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4 border border-cyan shadow-cyan">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-sm text-primary-600 mb-24">جديد</span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-cyan-50 text-cyan-600 ">
+                <i class="ri-coupon-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">202 / 400</h6>
+            <span class="text-primary-6 text-sm">1 يوم 4 ساعات متوسط/جديد</span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4 border border-warning shadow-warning">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-sm text-primary-600 mb-24">قيد التنفيذ</span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-warning-50 text-warning-600 ">
+                <i class="ri-hourglass-fill"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">98 / 400</h6>
+            <span class="text-primary-6 text-sm">3 أيام 5 ساعات متوسط/قيد التنفيذ</span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4 border border-danger shadow-danger">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-sm text-primary-600 mb-24">متأخر </span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-danger-50 text-danger-600 ">
+                <i class="ri-time-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">50 / 400</h6>
+            <span class="text-primary-6 text-sm">يومان ساعة متوسط/متأخر</span>
+          </div>
+        </div>
+
+        <div class="col-xxl-3 col-sm-6">
+          <div class="h-100 p-3 bg-white radius-4 border border-success shadow-success">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+              <span class="text-sm text-primary-600 mb-24">مكتمل </span>
+              <span class="w-48-px h-48-px rounded-circle d-flex justify-content-center align-items-center text-xl bg-success-50 text-success-600 ">
+                <i class="ri-checkbox-circle-line"></i>
+              </span>
+            </div>
+            <h6 class="text-primary-light-two mb-10 fw-medium">150 / 400</h6>
+            <span class="text-primary-6 text-sm">7 أيام 8 ساعات متوسط/مكتمل </span>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Widgets end -->
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            إرسال المستند 
+          </button>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <span class="text-primary-light text-sm flex-shrink-0">إظهار الإدخالات </span>
+            <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="max-w-350-px w-100 position-relative">
+            <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
+            <label for="dateTime" class="position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100 border rounded-end bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center">
+              <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+            </label>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 w-100">
+            <input type="text" class="form-control max-w-760-px w-100" placeholder="يبحث...">
+  
+            <div class="d-flex align-items-center gap-2 ">
+              <button class="text-neutral-400 d-flex line-height-1  text-lg"><i class="ri-filter-line line-height-1"></i></button>
+              <div class="border radius-8 d-flex">
+                <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                  <i class="ri-printer-line"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-sm" href="#">عمل</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">عمل آخر</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">شيء آخر هنا</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+      <!-- Table Start -->
+      <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical">
+        <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+          <thead>
+              <tr>
+                  <th class="bg-neutral-50 text-center">معرف المغلف</th>
+                  <th class="bg-neutral-50 text-start">النوع</th>
+                  <th class="bg-neutral-50 text-start">الموضوع</th>
+                  <th class="bg-neutral-50 text-start">المرسل</th>
+                  <th class="bg-neutral-50 text-start">المستلمون</th>
+                  <th class="bg-neutral-50 text-center">تاريخ الإجراء</th>
+                  <th class="bg-neutral-50 text-center">تاريخ الاستحقاق</th>
+                  <th class="bg-neutral-50 text-center">رقم الإجراءات</th>
+                  <th class="bg-neutral-50 text-center">الأولوية</th>
+                  <th class="bg-neutral-50 text-center">الحالة</th>
+                  <th class="bg-neutral-50 text-center">الإجراء</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0012</span>
+                </td>
+                <td class="fw-light">مذكرة</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">تحديث سياسة الشركة...</span>
+                </td>
+                <td class="fw-light">أحمد محمد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 13:04م</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">02/02</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0076</span>
+                </td>
+                <td class="fw-light">تحديثات عامة</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">عاجل: لوائح جديدة...</span>
+                </td>
+                <td class="fw-light">جمال خالد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 12:52م</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">03/03</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                <span class="text-primary-500">E0013</span>
+                </td>
+                <td class="fw-light">الشؤون المالية والأعمال</td>
+                <td class="fw-light">
+                <span class="line-clamp-1">النزهة السنوية للشركة في...</span>
+                </td>
+                <td class="fw-light">محمد محسن</td>
+                <td class="text-center fw-light">
+                <div class="d-flex align-items-center">
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                    <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img5.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                    <span class="text-white text-xs">1+</span>
+                    </div>
+                </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 13:04</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">02/02</td>
+                <td class="text-center fw-light">
+                <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">منخفض</span>
+                </td>
+                <td class="text-center fw-light">
+                <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">قيد التنفيذ</span>
+                </td>
+                <td class="text-center fw-light">
+                <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">عرض</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">تعديل</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                        <span class="">حذف</span>
+                        </button>
+                    </li>
+                    <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">التاريخ</span>
+                        </button>
+                    </li>
+                    </ul>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0005</span>
+                </td>
+                <td class="fw-light">بدء المشروع</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">موظف الشهر: ج...</span>
+                </td>
+                <td class="fw-light">جمال خالد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 09:22ص</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">02/05</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">قيد التنفيذ</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0097</span>
+                </td>
+                <td class="fw-light">إشعار عاجل</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">اجتماع استراتيجية ربع السنوي...</span>
+                </td>
+                <td class="fw-light">محمد محسن</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img5.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 12:52م</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">05/05</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">عالي</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0112</span>
+                </td>
+                <td class="fw-light">دعوة للفعالية</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">تغييرات على جدول العمل المكتبي...</span>
+                </td>
+                <td class="fw-light">محمد محسن</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">26 أبريل, 2022 - 11:32ص</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">05/05</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0111</span>
+                </td>
+                <td class="fw-light">جلسة تدريبية</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">أمن الإنترنت الإلزامي...</span>
+                </td>
+                <td class="fw-light">جمال خالد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل, 2022 - 13:04م</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">-/02</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">منخفض</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-warning-50 text-warning-600 text-xs radius-4 text-uppercase">مسودة</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0029</span>
+                </td>
+                <td class="fw-light">إعلان توظيف جديد</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">مراجعة الأداء 2024...</span>
+                </td>
+                <td class="fw-light">سارة سعد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">28 أبريل, 2022 - 11:22ص</td>
+                <td class="text-center fw-light">20 أكتوبر, 2024</td>
+                <td class="text-center fw-light">-/04</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">عالي</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-warning-50 text-warning-600 text-xs radius-4 text-uppercase">مسودة</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span>عرض</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span>تعديل</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span>حذف</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span>السجل</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0011</span>
+                </td>
+                <td class="fw-light">مقدمة للموظف الجديد</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">مرحباً ليلى في الفريق!</span>
+                </td>
+                <td class="fw-light">سارة سعد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">29 أبريل، 2022 - 16:29 مساءً</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">05/05</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">عرض</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">تعديل</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                </button>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">التاريخ</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0115</span>
+                </td>
+                <td class="fw-light">جلسة تدريبية</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">بروتوكولات سلامة كوفيد-19...</span>
+                </td>
+                <td class="fw-light">محمد محسن</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل، 2022 - 13:04 مساءً</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">02/05</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">عالي</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">قيد التنفيذ</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">عرض</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">تعديل</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                </button>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">التاريخ</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0098</span>
+                </td>
+                <td class="fw-light">جلسة تدريبية</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">مراجعة الأداء لعام 2024...</span>
+                </td>
+                <td class="fw-light">سارة سود</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">01 مايو، 2022 - 18:59م</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">07/07</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">جارٍ التنفيذ</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">عرض</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">تعديل</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                </button>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">التاريخ</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0198</span>
+                </td>
+                <td class="fw-light">دعوة للحدث</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">نزهة الشركة السنوية...</span>
+                </td>
+                <td class="fw-light">محمد محسن</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">01 مايو، 2022 - 16:35م</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">07/08</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">منخفض</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">جارٍ التنفيذ</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">عرض</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">تعديل</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                </button>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">التاريخ</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                    <span class="text-primary-500">E0055</span>
+                </td>
+                <td class="fw-light">دعوة للحدث</td>
+                <td class="fw-light">
+                    <span class="line-clamp-1">أهلاً ليلى في الفريق!</span>
+                </td>
+                <td class="fw-light">أحمد محمد</td>
+                <td class="text-center fw-light">
+                    <div class="d-flex align-items-center">
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img5.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                            <span class="text-white text-xs">1+</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center fw-light">25 أبريل، 2022 - 13:04م</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">09</td>
+                <td class="text-center fw-light">
+                    <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">منخفض</span>
+                </td>
+                <td class="text-center fw-light">
+                    <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">مكتمل</span>
+                </td>
+                <td class="text-center fw-light">
+                    <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">عرض</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">تعديل</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                </button>
+                            </li>
+                            <li class="">
+                                <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">التاريخ</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center fw-light">
+                  <span class="text-primary-500">E0035</span>
+                </td>
+                <td class="fw-light">إعلان تعيين جديد</td>
+                <td class="fw-light">
+                  <span class="line-clamp-1">نزهة الشركة السنوية في...</span>
+                </td>
+                <td class="fw-light">سارة سود</td>
+                <td class="text-center fw-light">
+                  <div class="d-flex align-items-center">
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                      <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                      <img src="assets/images/home-one/user-img5.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                      <img src="assets/images/home-one/user-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                    </div>
+                  </div>
+                </td>
+                <td class="text-center fw-light">02 أبريل، 2022 - 13:52 مساءً</td>
+                <td class="text-center fw-light">20 أكتوبر، 2024</td>
+                <td class="text-center fw-light">-/05</td>
+                <td class="text-center fw-light">
+                  <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">متوسط</span>
+                </td>
+                <td class="text-center fw-light">
+                  <span class="py-2 px-6 bg-warning-50 text-warning-600 text-xs radius-4 text-uppercase">مسودة</span>
+                </td>
+                <td class="text-center fw-light">
+                  <div class="dropdown">
+                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-more-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                          <span class="">عرض</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                          <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                          <span class="">تعديل</span>
+                        </a>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                          <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                          <span class="">حذف</span>
+                        </button>
+                      </li>
+                      <li class="">
+                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                          <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                          <span class="">التاريخ</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+            <td class="text-center fw-light">
+                <span class="text-primary-500">E0002</span>
+            </td>
+            <td class="fw-light">دعوة إلى الحدث</td>
+            <td class="fw-light">
+                <span class="line-clamp-1">نزهة الشركة السنوية في...</span>
+            </td>
+            <td class="fw-light">سارة سود</td>
+            <td class="text-center fw-light">
+                <div class="d-flex align-items-center">
+                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                    <img src="assets/images/home-one/user-img6.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </div>
+                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </div>
+                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </div>
+                </div>
+            </td>
+            <td class="text-center fw-light">25 أبريل، 2022 - 13:04 مساءً</td>
+            <td class="text-center fw-light">20 أكتوبر، 2024</td>
+            <td class="text-center fw-light">02/05</td>
+            <td class="text-center fw-light">
+                <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">عالي</span>
+            </td>
+            <td class="text-center fw-light">
+                <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 text-uppercase">جاري التنفيذ</span>
+            </td>
+            <td class="text-center fw-light">
+                <div class="dropdown">
+                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <ul class="dropdown-menu p-8">
+                    <li class="">
+                    <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                        <span class="">عرض</span>
+                    </a>
+                    </li>
+                    <li class="">
+                    <a href="workflow.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                        <span class="">تعديل</span>
+                    </a>
+                    </li>
+                    <li class="">
+                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                        <span class="">حذف</span>
+                    </button>
+                    </li>
+                    <li class="">
+                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                        <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                        <span class="">التاريخ</span>
+                    </button>
+                    </li>
+                </ul>
+                </div>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Table End -->
+    </div>
+  </div>
+  @@include('../layouts/_footer-rtl.html')
+</main>
+
+<!-- Send and create document Modal start -->
+<div class="modal fade" id="createDocument" tabindex="-1" aria-labelledby="createDocumentLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-2xl">
+    <div class="modal-content py-36 px-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-60">
+            <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="createDocumentLabel">إنشاء مستند</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">إضافة</span>
+            </div>
+            <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="إغلاق">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+            </button>
+        </div>
+
+      <div class="modal-body p-0">
+        <div class="row gy-4">
+          <div class="col-xxl-6">
+            <div class="">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                      <label for="EnvelopeName" class="text-sm form-label">اسم الظرف</label>
+                      <input type="text" class="form-control" id="EnvelopeName" placeholder="حدد اسم الظرف">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="Prioritysdgl" class="text-sm form-label">الأولوية</label>
+                      <select class="form-control form-select py-6" id="Prioritysdgl">
+                        <option value="1" selected hidden>حدد الأولوية</option>
+                        <option value="Priority">أولوية</option>
+                        <option value="Priority">أولوية</option>
+                        <option value="Priority">أولوية</option>
+                      </select>
+                    </div>
+                </div>
+                  
+              <div class="mt-24">
+                <h6 class="text-md mb-16 fw-semibold">إضافة مستند</h6>
+                <div class="border radius-6 p-10">
+               <!-- تحميل الملف -->
+                <div class="upload-image-wrapper d-flex align-items-center gap-3">
+                    <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px position-relative z-1">
+                    <label for="upload-file" class="position-absolute w-100 h-100 top-0 start-0 z-n1"></label>
+                    <span class="text-2xl text-primary-600">
+                    <i class="ri-upload-cloud-2-line"></i>
+                    </span>
+                    <span class="d-flex align-items-center gap-2">
+                    <span class="text-primary-600 text-xs flex-shrink-0">اسحب وأفلِت أو</span>
+                    <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px ps-8 text-xs text-white pe-24 ">
+                    <option value="1" selected hidden>تحميل</option>
+                    <option value="SVG">SVG</option>
+                    <option value="PNG">PNG</option>
+                    <option value="JPG">JPG</option>
+                    <option value="PDF">PDF</option>
+                    </select>
+                    </span>
+                    </div>
+                    <input id="upload-file" type="file" hidden>
+                </div>
+                    <!-- تحميل الملف -->
+                    
+                    <!-- عرض تم تحميله -->
+                <div class="uploaded-img d-none position-relative border w-100 radius-8 p-4 bg-neutral-100 radius-8 overflow-hidden border-dashed bg-neutral-50 max-w-150-px mt-8">
+                    <button type="button" class="uploaded-img__remove position-absolute top-0 end-0 z-1 text-2xxl line-height-1 me-8 mt-8 d-flex">
+                    <iconify-icon icon="radix-icons:cross-2" class="text-xl text-danger-600"></iconify-icon>
+                    </button>
+                    <img id="uploaded-img__preview" class="radius-8 w-100 h-100 object-fit-cover" src="assets/images/user.png" alt="image">
+                </div>
+                    <!-- عرض تم تحميله -->
+
+                  <h6 class="text-xs text-uppercase my-10 fw-semibold text-primary-light-three">مرفقات المغلف</h6>
+                  <div class="row g-2">
+                    <div class="col-sm-6 delete-item">
+                      <div class="border border-dashed p-8 radius-4 bg-white">
+                        <div class="d-flex align-items-center justify-content-between gap-4">
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                              <i class="ri-folder-zip-line"></i>
+                            </span>
+                            <div class="">
+                              <h6 class="text-sm mb-4 text-primary-light-two">صفحات التطبيق.zip</h6>
+                              <span class="text-xs text-secondary-light-two">2.2MB</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                              <i class="ri-download-2-line"></i>
+                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 delete-item">
+                      <div class="border border-dashed p-8 radius-4 bg-white">
+                        <div class="d-flex align-items-center justify-content-between gap-4">
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                              <i class="ri-folder-zip-line"></i>
+                            </span>
+                            <div class="">
+                              <h6 class="text-sm mb-4 text-primary-light-two">صفحات التطبيق.zip</h6>
+                              <span class="text-xs text-secondary-light-two">2.2MB</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                              <i class="ri-download-2-line"></i>
+                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 delete-item">
+                      <div class="border border-dashed p-8 radius-4 bg-white">
+                        <div class="d-flex align-items-center justify-content-between gap-4">
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                              <i class="ri-folder-zip-line"></i>
+                            </span>
+                            <div class="">
+                              <h6 class="text-sm mb-4 text-primary-light-two">صفحات التطبيق.zip</h6>
+                              <span class="text-xs text-secondary-light-two">2.2MB</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                              <i class="ri-download-2-line"></i>
+                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 delete-item">
+                      <div class="border border-dashed p-8 radius-4 bg-white">
+                        <div class="d-flex align-items-center justify-content-between gap-4">
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                              <i class="ri-folder-zip-line"></i>
+                            </span>
+                            <div class="">
+                              <h6 class="text-sm mb-4 text-primary-light-two">صفحات التطبيق.zip</h6>
+                              <span class="text-xs text-secondary-light-two">2.2MB</span>
+                            </div>
+                          </div>
+                          <div class="d-flex align-items-center gap-1">
+                            <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                              <i class="ri-download-2-line"></i>
+                            </button>
+                            <div class="dropdown">
+                              <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">حذف</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-48">
+                    <div class="d-flex align-items-center justify-content-between mb-12 gap-16 flex-sm-nowrap flex-wrap">
+                        <div class="d-flex align-items-center gap-18">
+                        <h6 class="modal-title text-md fw-medium">المستلمون</h6>
+                        <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 fw-normal flex-shrink-0 text-xs py-4" data-bs-toggle="modal" data-bs-target="#addRecipient">
+                        <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+                        <i class="ri-add-line"></i>
+                        </span>
+                        <span class="w-1-px h-18-px bg-white-1"></span>
+                        إضافة
+                        </button>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                        <span class="text-primary-light text-sm flex-shrink-0">تسلسل </span>
+                        <select class="form-control form-select py-6 border bg-white radius-8 w-auto text-sm ps-16 pe-24">
+                        <option value="1">واحدًا تلو الآخر </option>
+                        <option value="1">واحدًا تلو الآخر</option>
+                        <option value="1">واحدًا تلو الآخر</option>
+                        <option value="1">واحدًا تلو الآخر</option>
+                        <option value="1">واحدًا تلو الآخر</option>
+                        </select>
+                        </div>
+                        </div>
+                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
+                    <table class="table min-w-max mb-0">
+                        <thead>
+                            <tr>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start"> <span class="d-none">رمز</span> </th>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-center">تسلسل #</th>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">الاسم</th>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">البريد الإلكتروني</th>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">الأمان</th>
+                            <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start">الإجراءات </th>
+                            </tr>
+                        </thead>
+                      <tbody>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">01</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">أحمد محمد </td>
+                            <td class="text-xs border-bottom py-12 px-20">Ahmad@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">رمز الدخول </td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                        <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                        </span>
+                        </td>
+                        <td class="text-xs border-bottom text-center">
+                        <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
+                        </td>
+                        <td class="text-xs border-bottom py-12 px-20">Arej Al Azmi</td>
+                        <td class="text-xs border-bottom py-12 px-20">Arje@hotmail.com</td>
+                        <td class="text-xs border-bottom py-12 px-20">رسالة خاصة </td>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <div class="d-flex align-items-center gap-8">
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                        <i class="ri-pencil-fill"></i>
+                        </button>
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        </button>
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">محمد العجمي</td>
+                            <td class="text-xs border-bottom py-12 px-20">Moahmmed.j@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">انتهاء الصلاحية </td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                        <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                        </span>
+                        </td>
+                        <td class="text-xs border-bottom text-center">
+                        <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
+                        </td>
+                        <td class="text-xs border-bottom py-12 px-20">جاسم خالد </td>
+                        <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
+                        <td class="text-xs border-bottom py-12 px-20">Null</td>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <div class="d-flex align-items-center gap-8">
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                        <i class="ri-pencil-fill"></i>
+                        </button>
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        </button>
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">05</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">Mosaed Khalel </td>
+                            <td class="text-xs border-bottom py-12 px-20">Mosaed@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">رمز الوصول، خاص...</td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                        <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                        </span>
+                        </td>
+                        <td class="text-xs border-bottom text-center">
+                        <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">06</span>
+                        </td>
+                        <td class="text-xs border-bottom py-12 px-20">جاسم خالد </td>
+                        <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
+                        <td class="text-xs border-bottom py-12 px-20">Null</td>
+                        <td class="text-xs border-bottom py-12 px-20">
+                        <div class="d-flex align-items-center gap-8">
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                        <i class="ri-pencil-fill"></i>
+                        </button>
+                        <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                        <i class="ri-delete-bin-5-fill"></i>
+                        </button>
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">Arej Al Azmi</td>
+                            <td class="text-xs border-bottom py-12 px-20">Arje@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">رسالة خاصة </td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">محمد العجمي</td>
+                            <td class="text-xs border-bottom py-12 px-20">Moahmmed.j@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">انتهاء الصلاحية </td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                            </span>
+                            </td>
+                            <td class="text-xs border-bottom text-center">
+                            <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
+                            </td>
+                            <td class="text-xs border-bottom py-12 px-20">جاسم خالد </td>
+                            <td class="text-xs border-bottom py-12 px-20">Jasmemk@hotmail.com</td>
+                            <td class="text-xs border-bottom py-12 px-20">لا شيء</td>
+                            <td class="text-xs border-bottom py-12 px-20">
+                            <div class="d-flex align-items-center gap-8">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <i class="ri-pencil-fill"></i>
+                            </button>
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
+                            <i class="ri-delete-bin-5-fill"></i>
+                            </button>
+                            </div>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xxl-6">
+            <div class="">
+                <div class="">
+                    <label for="subject" class="text-sm form-label">الموضوع <span class="text-danger-600">* </span> </label>
+                    <input type="text" class="form-control" id="subject" placeholder="Select Envelope Name">
+                </div>
+                <!-- بداية المحرر -->
+                <div class="mt-24">
+                <span class="text-sm form-label">الوصف </span>
+                <div class="border radius-6">
+                <!-- بداية شريط أدوات المحرر -->
+                <div id="toolbar-container" class="bg-neutral-40">
+                <span class="ql-formats">
+                <select class="ql-font"></select>
+                <select class="ql-size"></select>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-strike"></button>
+                </span>
+                <span class="ql-formats">
+                <select class="ql-color"></select>
+                <select class="ql-background"></select>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-script" value="sub"></button>
+                <button class="ql-script" value="super"></button>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-header" value="1"></button>
+                <button class="ql-header" القيمة = "2"></button>
+                <button class="ql-blockquote"></button>
+                <button class="ql-code-block"></button>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+                <button class="ql-indent" value="-1"></button>
+                <button class="ql-indent" value="+1"></button>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-direction" value="rtl"></button>
+                <select class="ql-align"></select>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-link"></button>
+                <button class="ql-image"></button>
+                <button class="ql-video"></button>
+                <button class="ql-formula"></button>
+                </span>
+                <span class="ql-formats">
+                <button class="ql-clean"></button>
+                </span>
+                </div>
+                <!-- شريط أدوات المحرر ابدأ -->
+                
+                <!-- بدء المحرر -->
+                <div id="editor" class="min-h-300-px">
+                <p class="text-secondary-light text-xs line-height-2">عزيزي [اسم المستلم]، </p>
+                <p><br></p>
+                <p class="text-secondary-light text-xs line-height-2">آمل أن تجدك هذه الرسالة الإلكترونية بخير.</p>
+                <p class="text-secondary-light text-xs line-height-2">أكتب إليك لطلب موافقتك على مذكرة مرفقة بعنوان "[عنوان المذكرة]"، والتي تحدد [وصفًا موجزًا ​​للغرض أو محتوى المذكرة، على سبيل المثال، تغييرات السياسة الجديدة، تحديثات المشروع، إلخ.].</p>
+                <p><br></p>
+                <p><br></p>
+                <p class="text-secondary-light text-xs line-height-2">تم إعداد هذه المذكرة بعناية لمعالجة [قضايا أو أهداف محددة] وتتضمن التفاصيل اللازمة لضمان تنفيذها بنجاح. أرجو منك مراجعة الوثيقة وتقديم ملاحظاتك أو موافقتك في أقرب وقت ممكن.
+                إذا كانت هناك أي تعديلات أو مدخلات إضافية مطلوبة، فلا تتردد في إخباري، وسأقوم بإجراء المراجعات اللازمة على الفور.
+                نتطلع إلى تأكيدك.</p>
+                <p><br></p>
+                <p class="text-secondary-light text-xs line-height-2">مع أطيب التحيات،</p>
+                <p><br></p>
+                <p class="text-secondary-light text-xs line-height-2">[اسمك الكامل] </p>
+                <p class="text-secondary-light text-xs line-height-2">[مسمى وظيفتك]</p>
+                <p class="text-secondary-light text-xs line-height-2">[معلومات الاتصال بك]</p>
+                </div>
+                <!-- Edit End -->
+                </div>
+                </div>
+                <!-- Editor end -->
+
+                <div class="mt-16">
+                    <div class="row gy-4">
+                    <div class="col-sm-6">
+                    <label for="Frequency" class="text-sm form-label">تردد التذكيرات </label>
+                    <select class="form-control form-select py-6" id="Frequency">
+                    <option value="1" selected>كل 0 يوم</option>
+                    <option value="Priority">كل 7 أيام</option>
+                    <option value="Priority">كل 14 يومًا</option>
+                    <option value="Priority">كل 21 يومًا</option>
+                    <option value="Priority">كل 28 يومًا</option>
+                    </select>
+                    </div>
+                    <div class="col-sm-6">
+                    <label for="DueDate" class="text-sm form-label">تاريخ الاستحقاق </label>
+                    <input type="text" class="form-control" id="DueDate" placeholder="تاريخ الاستحقاق">
+                    </div>
+                    <div class="col-sm-12">
+                    <label for="MetaData" class="text-sm form-label">بيانات التعريف</label>
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="MetaData">
+                    <option selected>واجهة المستخدم/تجربة المستخدم</option>
+                    <option>Figma</option>
+                    <option>Javascript</option>
+                    <option>CSS</option>
+                    <option>Tailwind</option>
+                    <option>React</option>
+                    <option>التالي</option>
+                    <option>العقدة</option>
+                    </select> 
+                    </div>
+                        </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
+        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">حذف</button>
+        <button type="button" class="btn py-6 px-24 btn-purple-600">مسودة</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addRecipient">التالي</button>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Send and create document Modal End -->
+
+
+<!-- Add Recipients Modal start -->
+<div class="modal fade" id="addRecipient" tabindex="-1" aria-labelledby="addRecipientLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+            <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addRecipientLabel">المستلمون </h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">إضافة</span>
+            </div>
+            <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+            </زر>
+        </div>
+
+      <div class="modal-body p-0">
+        <div class="">
+            <div class="mb-12 position-relative">
+                <label for="AddName" class="text-sm form-label">الاسم <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control recipient-input" id="AddName" placeholder="Name">
+                
+                <!-- قائمة منسدلة للمستلم المقترح -->
+                <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                </span>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">جيمس كارلوس</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                </span>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">كارلز مارتون</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                </span>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">صوفيا مارتون</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                </span>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">John Doe</span>
+                </li>
+                </ul>
+                <!-- قائمة منسدلة المستلم المقترح -->
+            </div>
+          <div class="mb-12">
+            <label for="addEmail" class="text-sm form-label">البريد الإلكتروني <span class="text-danger-600">*</span> </label>
+            <input type="email" class="form-control" id="addEmail" placeholder="Email">
+            </div>
+
+          <div class="mt-24 d-flex flex-column gap-16">
+            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="Passcode">رمز المرور</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" selected>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="رمز الوصول">
+                <div class="custom-tooltip position-relative">
+                <button type="button" class="text-md d-flex text-primary-600">
+                <i class="ri-error-warning-line"></i>
+                </button>
+                <div class="custom-tooltip__text bg-neutral-200 radius-4">
+                <ul class="text-8-px">
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                الرموز ليست حساسة لحالة الأحرف.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                يجب عليك تقديم هذا الرمز إلى المُوقِّع.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                هذا الرمز متاح لك لمراجعته في صفحة تفاصيل المغلف.
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+                
+            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+            <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+            <label class="form-check-label text-primary-light text-sm" for="Authentication20">المصادقة </label>
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentication20" selected>
+            </div>
+            <div class="d-flex محاذاة مركز العناصر الفجوة-16">
+            <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="البريد الإلكتروني وكلمة مرور الهاتف المحمول لمرة واحدة">
+            <div class="custom-tooltip position-relative">
+            <button type="button" class="text-md d-flex text-primary-600">
+            <i class="ri-error-warning-line"></i>
+            </button>
+            <div class="custom-tooltip__text bg-neutral-200 radius-4">
+            <ul class="text-8-px">
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            
+            الرموز ليست حساسة لحالة الأحرف.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            يجب عليك تقديم هذا الرمز إلى المُوقِّع.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            هذا الرمز متاح لك لمراجعته في صفحة تفاصيل المغلف.
+            </li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="addExpiry">انتهاء الصلاحية</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="addExpiry">
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                <div class="input-group max-w-146-px w-100">
+                <input class="form-control px-12 py-1 placeholder-12" id="dateTimeThree" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
+                <span class="input-group-text d-flex py-0 text-xs px-8">
+                <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
+                </span>
+                </div>
+                
+                <div class="custom-tooltip position-relative">
+                <button type="button" class="text-md d-flex text-primary-600">
+                <i class="ri-error-warning-line"></i>
+                </button>
+                <div class="custom-tooltip__text bg-neutral-200 radius-4">
+                <ul class="text-8-px">
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                
+                الرموز ليست حساسة لحالة الأحرف.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                يجب عليك تقديم هذا الرمز إلى المُوقِّع.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                هذا الكود متاح لك لمراجعته في صفحة تفاصيل المغلف.
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+            <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+            <label class="form-check-label text-primary-light text-sm" for="sdgPrivateMessage">رسالة خاصة</label>
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="sdgPrivateMessage" selected>
+            </div>
+            <div class="d-flex محاذاة العناصر في المنتصف الفجوة-16">
+            <div class="input-group max-w-146-px w-100 ">
+            <input type="text" class="form-control px-12 py-1 placeholder-12" placeholder="انقر للنص" data-bs-toggle="modal" data-bs-target="#privateMessage">
+            <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
+            </div>
+            <div class="custom-tooltip position-relative">
+            <button type="button" class="text-md d-flex text-primary-600">
+            <i class="ri-error-warning-line"></i>
+            </button>
+            <div class="custom-tooltip__text bg-neutral-200 radius-4">
+            <ul class="text-8-px">
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            
+            الرموز ليست حساسة لحالة الأحرف.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            يجب عليك تقديم هذا الرمز إلى المُوقِّع.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            هذا الكود متاح لك لمراجعته في صفحة تفاصيل المغلف.
+            </li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
+        <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-toggle="modal" data-bs-target="#createDocument">إلغاء</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">حفظ</button>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Add Recipients Modal End -->
+
+<!-- Edit Recipients Modal start -->
+<div class="modal fade" id="editRecipient" tabindex="-1" aria-labelledby="editRecipientLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+            <div class="d-flex محاذاة العناصر في وسط الفجوة-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="editRecipientLabel">المستلمون</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">تعديل</span>
+            </div>
+            <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="إغلاق">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+            </الزر>
+        </div>
+
+      <div class="modal-body p-0">
+        <div class="">
+          <div class="mb-12 position-relative">
+            <label for="EditName" class="text-sm form-label">الاسم <span class="text-danger-600">*</span> </label>
+            <input type="text" class="form-control recipient-input" id="EditName" placeholder="Name">
+
+            <!-- Suggested Recipient dropdown start -->
+            <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img1.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </سبان>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">جيمس كارلوس</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img2.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </سبان>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">كارلز مارتون</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img3.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </سبان>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">صوفيا مارتون</span>
+                </li>
+                <li class="d-flex align-items-center gap-8 cursor-pointer py-4 px-8">
+                <span class="w-20-px h-20-px rounded-circle overflow-hidden d-flex flex-shrink-0">
+                <img src="assets/images/home-one/recepient-img4.png" alt="صورة" class="w-100 h-100 object-fit-cover">
+                </سبان>
+                <span class="recipient-dropdown__text text-neutral-400 text-xs flex-grow-1">جون دو</span>
+                </li>
+            </ul>
+            <!-- Suggested Recipient dropdown end -->
+          </div>
+          <div class="mb-12">
+            <label for="editEmail" class="text-sm form-label">البريد الإلكتروني <span class="text-danger-600">*</span> </label>
+            <input type="email" class="form-control" id="editEmail" placeholder="البريد الإلكتروني">
+        </div>
+
+          <div class="mt-24 d-flex flex-column gap-16">
+            <div class="d-flex flex-sm-nowrap flex-wrap الفجوة-44">
+                <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="eodtPasscode">رمز المرور</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="eodtPasscode" selected>
+                </div>
+                <div class="d-flex محاذاة العناصر في وسط الفجوة-16">
+                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="رمز الوصول">
+                <div class="custom-tooltip position-relative">
+                <زر من النوع="زر" فئة="نص-md d-flex نص-أساسي-600">
+                <i class="ri-error-warning-line"></i>
+                </الزر>
+                <div class="custom-tooltip__text bg-neutral-200 radius-4">
+                <ul class="text-8-px">
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                الرموز ليست حساسة لحالة الأحرف.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                يجب عليك تقديم هذا الرمز للموقع.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                هذا الكود متاح لك للمراجعة في صفحة تفاصيل الظرف.
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="d-flex flex-sm-nowrap flex-wrap الفجوة-44">
+            <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+            <label class="form-check-label text-primary-light text-sm" for="edittAuthentication">المصادقة</label>
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="edittAuthentication" selected>
+            </div>
+            <div class="d-flex محاذاة العناصر في وسط الفجوة-16">
+            <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="البريد الإلكتروني وكلمة المرور لمرة واحدة للجوال">
+            <div class="custom-tooltip position-relative">
+            <زر من النوع="زر" فئة="نص-md d-flex نص-أساسي-600">
+            <i class="ri-error-warning-line"></i>
+            </الزر>
+            <div class="custom-tooltip__text bg-neutral-200 radius-4">
+            <ul class="text-8-px">
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            الرموز ليست حساسة لحالة الأحرف.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            يجب عليك تقديم هذا الرمز للموقع.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            هذا الكود متاح لك للمراجعة في صفحة تفاصيل الظرف.
+            </li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="d-flex flex-sm-nowrap flex-wrap الفجوة-44">
+                <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="editsdgExpiry">انتهاء الصلاحية</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="editsdgExpiry">
+                </div>
+                <div class="d-flex محاذاة العناصر في وسط الفجوة-16">
+                <div class="مجموعة الإدخال الحد الأقصى للعرض 146 بكسل العرض 100">
+                <input class="form-control px-12 py-1 placeholder-12" id="dateTimeTwo" type="text" placeholder="01 نوفمبر 2024 إلى 20 نوفمبر 2024">
+                <span class="input-group-text d-flex py-0 text-xs px-8">
+                <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
+                </سبان>
+                </div>
+               
+                <div class="custom-tooltip position-relative">
+                <زر من النوع="زر" فئة="نص-md d-flex نص-أساسي-600">
+                <i class="ri-error-warning-line"></i>
+                </الزر>
+                <div class="custom-tooltip__text bg-neutral-200 radius-4">
+                <ul class="text-8-px">
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                الرموز ليست حساسة لحالة الأحرف.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                يجب عليك تقديم هذا الرمز للموقع.
+                </li>
+                <li class="line-clamp-2 d-flex align-items-start gap-1">
+                <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                هذا الكود متاح لك للمراجعة في صفحة تفاصيل الظرف.
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div class="d-flex flex-sm-nowrap flex-wrap الفجوة-44">
+            <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+            <label class="form-check-label text-primary-light text-sm" for="editPrivateMessage">رسالة خاصة</label>
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="editPrivateMessage" selected>
+            </div>
+            <div class="d-flex محاذاة العناصر في وسط الفجوة-16">
+            <div class="input-group max-w-146-px w-100 ">
+            <input type="text" class="form-control px-12 py-1 placeholder-12" placeholder="انقر للنص" data-bs-toggle="modal" data-bs-target="#privateMessage">
+            <span class="input-group-text d-flex py-0 text-xs px-8"><i class="ri-text"></i></span>
+            </div>
+            <div class="custom-tooltip position-relative">
+            <زر من النوع="زر" فئة="نص-md d-flex نص-أساسي-600">
+            <i class="ri-error-warning-line"></i>
+            </الزر>
+            <div class="custom-tooltip__text bg-neutral-200 radius-4">
+            <ul class="text-8-px">
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            الرموز ليست حساسة لحالة الأحرف.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            يجب عليك تقديم هذا الرمز للموقع.
+            </li>
+            <li class="line-clamp-2 d-flex align-items-start gap-1">
+            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+            هذا الكود متاح لك للمراجعة في صفحة تفاصيل الظرف.
+            </li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
+        <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-dismiss="modal">إلغاء</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600">حفظ</button>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Add Recipients Modal End -->
+
+
+
+<!-- private Message Modal start -->
+<div class="modal fade" id="privateMessage" tabindex="-1" aria-labelledby="privateMessageLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 بكسل-20 نصف قطر-16">
+    <div class="border-0 d-flex align-items-start justify-content-between mb-24">
+    <div class="d-flex محاذاة العناصر في وسط الفجوة-18">
+    <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="privateMessageLabel">رسالة خاصة</h6>
+    <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">إضافة</span>
+    </div>
+    <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="إغلاق">
+    <i class="ri-close-fill d-flex line-height-1"></i>
+    </الزر>
+    </div>
+   
+    <div class="modal-body p-0">
+    <label for="englisharabic" class="text-sm form-label">
+    <span class="fw-bold text-primary-600">الإنجليزية</span> / العربية <span class="text-danger-600">*</span>
+    </label>
+    <textarea class="form-control h-102-px" id="englisharabic" placeholder="تنبيه الخصم"></textarea>
+    </div>
+   
+    <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
+    <button type="button" class="btn py-6 px-24 btn-primary-600">حفظ</button>
+    </div>
+    </div>
+    </div>
+</div>
+<!-- private Message Modal End -->
+
+<!-- History Modal start -->
+<div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-1060-px">
+    <div class="modal-content radius-16 overflow-hidden">
+        <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
+        <div class="d-flex محاذاة العناصر في وسط الفجوة-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="historyModalLabel">التاريخ</h6>
+        </div>
+            <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="إغلاق">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+            </button>
+        </div>
+
+      <div class="modal-body p-0">
+        <div class="overflow-x-auto max-h-510-px overflow-y-auto scroll-sm scroll-vertical">
+          <table class="table mb-0 min-w-max">
+            <thead>
+                <tr>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50"> آخر تحديث </th>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">المستخدم</th>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">النوع</th>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">الموضوع</th>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">الحالة </th>
+                    <th class="bg-neutral-100 py-12 px-16 text-center text-neutral-500 fw-normal text-sm border-bottom border-neutral-50">المرفقات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 أبريل, 2024 - 13:03م</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">أحمد محمد</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">عادي</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مذكرة راتب</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">نشط</span>
+                    </td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                        عرض
+                        <span class="text-neutral-500 text-sm d-flex">
+                          <i class="ri-link"></i>
+                        </span>
+                      </a>
+                    </td>
+                </tr>
+                <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">25 أغسطس, 2024 - 11:04ص</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">أريج العازمي</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">عقد</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مذكرة راتب</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">نشط</span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    عرض
+                    <span class="text-neutral-500 text-sm d-flex">
+                        <i class="ri-link"></i>
+                    </span>
+                    </a>
+                </td>
+                </tr>
+                <tr>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 أبريل, 2024 - 13:03م</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">محمد العجمي</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مدفوعات</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مذكرة راتب</td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">نشط</span>
+                </td>
+                <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                    <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                    عرض
+                    <span class="text-neutral-500 text-sm d-flex">
+                        <i class="ri-link"></i>
+                    </span>
+                    </a>
+                </td>
+                </tr>
+                <tr>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 أبريل, 2024 - 13:03م</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">جاسم خالد</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">الراتب</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مذكرة راتب</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <span class="py-2 px-20 bg-primary-50 text-primary-600 text-xs radius-4 text-uppercase">نشط</span>
+                    </td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                        عرض
+                        <span class="text-neutral-500 text-sm d-flex">
+                          <i class="ri-link"></i>
+                        </span>
+                      </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">23 أبريل, 2024 - 13:03م</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مساعد خليل</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مدفوعات</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">مذكرة راتب</td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <span class="py-2 px-20 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">حذف</span>
+                    </td>
+                    <td class="fw-light text-secondary-light text-sm text-center py-14 px-16 border-bottom border-neutral-200">
+                      <a href="javascript:void(0)" class="py-2 px-20 bg-neutral-50 text-primary-light text-xs radius-4 d-inline-flex align-items-center gap-12 bg-hover-neutral-300">
+                        عرض
+                        <span class="text-neutral-500 text-sm d-flex">
+                          <i class="ri-link"></i>
+                        </span>
+                      </a>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- History Modal start -->
+  
+
+@@include('../partial-html/_template-bottom-rtl.html')
+<script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/editor.highlighted.min.js"></script>
+<script src="assets/js/editor.quill.js"></script>
+<script src="assets/js/editor.katex.min.js"></script>
+<script src="assets/js/lib/select2.min.js"></script>
+
+<script>
+  // ***************************** Data Table js ***************************** 
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false, 
+    // paging: false,      // Disables pagination
+    // ordering: false     // Disables column ordering
+  });
+
+
+  // *****************************  Flat pickr or date picker js ***************************** 
+  function getDatePicker(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+      mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
+    });
+  }
+  getDatePicker('#dateTime');
+
+  // *************************** Upload Single Image js start here ***************************
+  const fileInput = document.getElementById("upload-file");
+  const imagePreview = document.getElementById("uploaded-img__preview");
+  const uploadedImgContainer = document.querySelector(".uploaded-img");
+  const removeButton = document.querySelector(".uploaded-img__remove");
+
+  fileInput.addEventListener("change", (e) => {
+    if (e.target.files.length) {
+      const src = URL.createObjectURL(e.target.files[0]);
+      imagePreview.src = src;
+      uploadedImgContainer.classList.remove('d-none');
+    }
+  });
+  removeButton.addEventListener("click", () => {
+      imagePreview.src = "";
+      uploadedImgContainer.classList.add('d-none');
+      fileInput.value = ""; 
+    });
+  // *************************** Upload Single Image js End here ***************************
+  
+  // *************************** Editor js start here ***************************
+  const quill = new Quill('#editor', {
+    modules: {
+      syntax: true,
+      toolbar: '#toolbar-container',
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow',
+  });
+  // *************************** Editor js End here ***************************
+
+  // *************************** Select2 js start here ***************************
+  $(document).ready(function() {
+    $(".meta-tags").select2({
+      tags: true
+    });
+  });
+  // *************************** Select2 js End here ***************************
+
+  // *************************** End date js start here ***************************
+  function getDatePicker(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+      mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
+    });
+  }
+  getDatePicker('#dateTime');
+  getDatePicker('#dateTimeTwo');
+  getDatePicker('#dateTimeThree');
+  // *************************** End date js End here ***************************
+  
+  // *************************** Suggested Recipient Dropdown js start ***************************
+  $('body').on('click', function () {
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  let inputText = "";
+  $('.recipient-input').on('click', function (event) {
+    event.stopPropagation();
+    $('.recipient-dropdown').addClass('show');
+  });
+
+  $('.recipient-dropdown__text').on('click', function () {
+    inputText = $(this).text();
+    $('.recipient-input').val(inputText);
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  // Search through Dropdown by input fields
+  $('.recipient-input').on('input', function (event) {
+    let inputText = event.target.value.toLowerCase();
+
+    $('.recipient-dropdown li').each(function () {
+      dropdownItemText = $(this).find('.recipient-dropdown__text').text().toLocaleLowerCase();
+      $(this).toggleClass('d-flex', dropdownItemText.includes(inputText));
+      $(this).toggleClass('d-none', !dropdownItemText.includes(inputText));
+    });
+  });
+  // *************************** Suggested Recipient Dropdown js End ***************************
+
+  // *************************** Delete Tr js start ***************************
+  $(".delete-tr-button").on('click', function () {
+    $(this).closest('tr').addClass('d-none');
+  });
+  // *************************** Delete Tr js End ***************************
+
+  // ========================= Delete Item Js start ===================
+  $('.delete-button').on('click', function () {
+    $(this).closest('.delete-item').addClass('d-none');
+  });
+  // ========================= Delete Item Js End ===================
+
+</script>
+
+</body>
+</html>

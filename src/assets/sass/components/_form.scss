@@ -7,7 +7,7 @@
 
 [dir="rtl"] { 
   .form-select {
-    background-position: 10px center !important;
+    background-position: -4px center !important;
   }
 }
 
@@ -88,7 +88,10 @@
 
 
 .form-select {
-  padding: rem(9px) rem(30px) rem(9px) rem(15px);
+  padding-block-start: rem(9px);
+  padding-inline-end: rem(30px);
+  padding-block-end: rem(9px);
+  padding-inline-start: rem(15px);
   background-position-x: right;
 }
 

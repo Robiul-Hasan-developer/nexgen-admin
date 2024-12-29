@@ -18,5 +18,51 @@
         border-top-left-radius: var(--bs-border-radius)!important;
         border-bottom-left-radius: var(--bs-border-radius)!important;
     }
+
+    .select2-selection--multiple .select2-selection__choice__remove {
+        border-top-left-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        border-top-left-radius: var(--bs-border-radius);
+        border-bottom-left-radius: var(--bs-border-radius);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+        border-bottom-right-radius: var(--bs-border-radius);
+        border-top-right-radius: var(--bs-border-radius);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .border-start {
+        border-left: 0 !important;
+    }
+    #addRecipient .form-switch {
+        padding-inline-start: 0;
+    }
+    .round-shape::before {
+        transform: translateX(50%);
+    }
+    .form-switch .form-check-input {
+        margin-left: 0;
+        margin-inline-start: 0;
+    }
+    .ri-arrow-right-line:before {
+        content: "\EA60;";
+    }
+    .form-control.is-valid, .was-validated .form-control:valid {
+        background-position: left calc(.375em + .1875rem) center;
+    }
+    @media (max-width: 1199px) {
+        .sidebar {
+            transform: translateX(100%);
+            &.sidebar-open {
+                transform: translateX(0);
+            }
+        }
+    }
 }
 /* RTL css end */
