@@ -5,10 +5,15 @@
   width: rem(250px);
   height: 100vh;
   background-color: var(--white);
-  z-index: 3;
+  z-index: 9;
   @include media(xl) {
     inset-inline-start: 0;
     width: rem(250px);
+  }
+  @media (max-width: 1199px) {
+    inset-inline-start: 0;
+    transform: translateX(-100%);
+    transition: .2s linear;
   }
   &-close-btn {
     position: absolute;
@@ -27,6 +32,10 @@
   }
   &.sidebar-open {
     inset-inline-start: 0;
+    z-index: 991;
+    @media (max-width: 1199px) {
+      transform: translateX(0);
+    }
   }
   &.active {
     width: 86px;
@@ -35,6 +44,12 @@
     }
     .sidebar-menu li a i {
       margin-inline-end: 16px;
+    }
+    &:hover .sidebar-menu li > a {
+      justify-content: start;
+    }
+    .sidebar-menu li > a {
+      justify-content: center;
     }
     &:hover {
       @include media(xl) {
@@ -99,11 +114,12 @@
     .sidebar-menu {
       li {
         a {
-          span {
+          .menu-text {
             display: none;
           }
           .menu-icon {
             margin-inline-end: 0;
+            line-height: 1;
           }
         }
         &.sidebar-menu-group-title {
@@ -277,6 +293,7 @@
       .menu-icon {
         font-size: rem(18px);
         margin-inline-end: rem(8px);
+        line-height: 1;
         @include media(3xl) {
           font-size: rem(20px);
           margin-inline-end: rem(12px);
@@ -296,11 +313,8 @@
   .sidebar-submenu {
     padding-block-start: rem(12px);
     display: none;
-    padding-inline-start: rem(24px);
+    padding-inline-start: rem(30px);
     transition: none;
-    @include media(3xl) {
-      padding-inline-start: rem(44px);
-    }
     li {
       &.active-page {
         a {

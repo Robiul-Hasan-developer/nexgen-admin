@@ -23,12 +23,12 @@
 
   $(".sidebar-mobile-toggle").on("click", function(){
     $(".sidebar").addClass("sidebar-open");
-    $("body").addClass("overlay-active");
+    $(".body-overlay").addClass("show");
   });
 
-  $(".sidebar-close-btn").on("click", function(){
+  $(".sidebar-close-btn, .body-overlay").on("click", function(){
     $(".sidebar").removeClass("sidebar-open");
-    $("body").removeClass("overlay-active");
+    $(".body-overlay").removeClass("show");
   });
 
   $(function () {
@@ -54,13 +54,20 @@
     $('body').addClass('pe-18 overflow-hidden');
   });
 
-  $('.body-overlay').on('click', function () {
+  $('.body-overlay, .close-side-menu').on('click', function () {
     $('.side-menu').removeClass('open');
-    $(this).removeClass('show');
+    $('.body-overlay').removeClass('show');
     $('body').removeClass('pe-18 overflow-hidden');
   });
   // ======================= side menu js end =======================
-
+  
+  // ========================== Add Attribute For Bg Image Js Start ====================
+  $(".bg-img").css('background', function () {
+    var bg = ('url(' + $(this).data("background-image") + ')');
+    return bg;
+  });
+  // ========================== Add Attribute For Bg Image Js End =====================
+  
 
   // Light Dark version js 
   // $(document).ready(function () {

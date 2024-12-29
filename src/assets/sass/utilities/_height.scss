@@ -39,6 +39,9 @@
   }
 
   .min-h {
+    &-100-vh {
+        min-height: 100vh;
+    }
     &-72-px {
         min-height: 72px;
     }

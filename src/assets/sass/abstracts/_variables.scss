@@ -1,6 +1,7 @@
 $colors: (
   primary: (
     "20": #a0bbed2e,
+    "30": #24447f24,
     "25": #24447f40,
     "50": #E4F1FF,
     "100": #BFDCFF,
@@ -146,6 +147,10 @@ $shadows: (
   "4": 0px 0.96px 1.93px 0px rgba(56, 65, 74, 0.15),
   "5": 0px 2.47px 5.47px 0px rgba(0, 0, 0, 0.25),
   "6": 0px 0.95px 1.89px 0px rgba(56, 65, 74, 0.15),
+  "7": 0px 2px 13px 0px rgba(27, 23, 65, 0.25),
+  "8": 0px 0px 12px 0px rgba(0, 0, 0, 0.15),
+  "9": 0px 3.72px 3.72px 0px rgba(0, 0, 0, 0.25),
+  "10": 0px 2px 32px 0px rgba(27, 23, 65, 0.25),
 );
 
 $font-sizes: (

@@ -6,10 +6,10 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Watermark",
-    page: "Business Suite",
-    activePage: "Watermark",
-    paraText: "Display watermark settings to manage text, opacity, and positioning for secure and professional document handling."
+    pageTitle:"Watermark",
+    page:"Business Suite",
+    activePage:"Watermark",
+    paraText:"Display watermark settings to manage text, opacity, and positioning for secure and professional document handling."
   })
   
   <div class="dashboard-main-body">
@@ -53,7 +53,7 @@
           <div class="d-flex align-items-center gap-3 w-100">
             <input type="text" class="form-control max-w-760-px w-100" placeholder="Search...">
   
-            <div class="d-flex align-items-center gap-2 ">
+            <div class="d-flex align-items-center gap-2">
               <button class="text-neutral-400 d-flex line-height-1  text-lg"><i class="ri-filter-line line-height-1"></i></button>
               <div class="border radius-8 d-flex">
                 <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
@@ -516,7 +516,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Watermark</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="createDocumentLabel">Watermark</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -535,7 +535,7 @@
               <div class="mt-16">
                 <label for="Description" class="text-sm form-label">Description</label>
                 <div class="position-relative">
-                  <textarea id="Description" class="max-desc form-control min-h-104-px pe-56" placeholder="Max 1000 Characters "></textarea>
+                  <textarea id="Description" class="max-desc form-control min-h-104-px pe-56" placeholder="Max 1000 Characters"></textarea>
                   <span class="text-length position-absolute bottom-0 end-0 me-16 mb-8 bg-white"></span>
                 </div>
               </div>
@@ -834,7 +834,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Text</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="textModalLabel">Text</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -843,7 +843,7 @@
       </div>
 
       <div class="modal-body p-0">
-        <ul class="nav bordered-tab gap-24-px active-bg nav-pills mb-8 border-bottom border-neutral-300" id="pills-tab" role="tablist">
+        <ul class="nav bordered-tab gap-24-px active-bg nav-pills mb-8 border-bottom border-neutral-300" id="pills-tabTwo" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link text-secondary-light fw-normal text-sm py-6 px-24 rounded-0 d-flex align-items-center gap-10 active" id="pills-Text-tab" data-bs-toggle="pill" data-bs-target="#pills-Text" type="button" role="tab" aria-controls="pills-Text" aria-selected="true">
               <span class="text-sm d-flex text-neutral-400"><i class="ri-discuss-line"></i></span>
@@ -858,7 +858,7 @@
           </li>
         </ul>
         
-        <div class="tab-content" id="pills-tabContent">
+        <div class="tab-content" id="pills-tabTwoContent">
           <!-- Text Start -->
           <div class="tab-pane fade show active" id="pills-Text" role="tabpanel" aria-labelledby="pills-Text-tab" tabindex="0">
               <!-- Editor start -->
@@ -916,7 +916,7 @@
                     <!-- Editor start -->
                     <div id="editor" class="min-h-104-px">
                       <p class="text-secondary-light text-xs line-height-2">Confidential </p>
-                      <p><br /></p>
+                      <p><br></p>
                     </div>
                     <!-- Edit End -->
                 </div>
@@ -957,10 +957,10 @@
         <div class="mt-24 d-flex align-items-center gap-14"> 
           <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
             <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="stretch">
-            <label class="form-check-label text-primary-light-two text-xs " for="stretch">Stretch All Over</label>
+            <label class="form-check-label text-primary-light-two text-xs" for="stretch">Stretch All Over</label>
           </div>
           <div class="d-flex align-items-center gap-8">
-            <input type="text" class="form-control py-2 px-2 w-36-px h-20-px placeholder-10 text-xxs border border-neutral-300 radius-6 text-center" id="times" placeholder="20" value="20 ">
+            <input type="text" class="form-control py-2 px-2 w-36-px h-20-px placeholder-10 text-xxs border border-neutral-300 radius-6 text-center" id="times" placeholder="20" value="20">
             <label class="form-check-label text-primary-light text-xxs" for="times">times</label>
           </div>
         </div>
@@ -982,7 +982,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Created User ID / Name </h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="createUserIdLabel">Created User ID / Name </h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -999,44 +999,44 @@
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Header">
-              <label class="form-check-label text-primary-light text-xs " for="Header">Header</label>
+              <label class="form-check-label text-primary-light text-xs" for="Header">Header</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Footer ">
-              <label class="form-check-label text-primary-light text-xs " for="Footer ">Footer </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Footerr">
+              <label class="form-check-label text-primary-light text-xs" for="Footerr">Footer </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Both ">
-              <label class="form-check-label text-primary-light text-xs " for="Both ">Both </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Bothh">
+              <label class="form-check-label text-primary-light text-xs" for="Bothh">Both </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Left">
-              <label class="form-check-label text-primary-light text-xs " for="Left">Left</label>
+              <label class="form-check-label text-primary-light text-xs" for="Left">Left</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Middle">
-              <label class="form-check-label text-primary-light text-xs " for="Middle">Middle</label>
+              <label class="form-check-label text-primary-light text-xs" for="Middle">Middle</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="Right">
-              <label class="form-check-label text-primary-light text-xs " for="Right">Right</label>
+              <label class="form-check-label text-primary-light text-xs" for="Right">Right</label>
             </div>
           </div>
         </div>
 
         <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
-          <label class="form-check-label text-primary-light text-xs fw-bold" for="DiminutionsParameters ">Diminutions Parameters </label>
-          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="DiminutionsParameters ">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="DiminutionsParameterss">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="DiminutionsParameterss">
         </div>
 
         <div class="row g-3">
@@ -1077,7 +1077,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">IP Address</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="ipAddressLabel">IP Address</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -1094,44 +1094,44 @@
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipHeader">
-              <label class="form-check-label text-primary-light text-xs " for="ipHeader">Header</label>
+              <label class="form-check-label text-primary-light text-xs" for="ipHeader">Header</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipFooter ">
-              <label class="form-check-label text-primary-light text-xs " for="ipFooter ">Footer </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipFooter">
+              <label class="form-check-label text-primary-light text-xs" for="ipFooter">Footer </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipBoth ">
-              <label class="form-check-label text-primary-light text-xs " for="ipBoth ">Both </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipBoth">
+              <label class="form-check-label text-primary-light text-xs" for="ipBoth">Both </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipLeft">
-              <label class="form-check-label text-primary-light text-xs " for="ipLeft">Left</label>
+              <label class="form-check-label text-primary-light text-xs" for="ipLeft">Left</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipMiddle">
-              <label class="form-check-label text-primary-light text-xs " for="ipMiddle">Middle</label>
+              <label class="form-check-label text-primary-light text-xs" for="ipMiddle">Middle</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipRight">
-              <label class="form-check-label text-primary-light text-xs " for="ipRight">Right</label>
+              <label class="form-check-label text-primary-light text-xs" for="ipRight">Right</label>
             </div>
           </div>
         </div>
 
         <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
-          <label class="form-check-label text-primary-light text-xs fw-bold" for="ipDiminutionsParameters ">Diminutions Parameters </label>
-          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipDiminutionsParameters ">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="ipDiminutionsParameters">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="ipDiminutionsParameters">
         </div>
 
         <div class="row g-3">
@@ -1172,7 +1172,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">Time Stamp</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="timeStampLabel">Time Stamp</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -1189,44 +1189,44 @@
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipHeader">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipHeader">Header</label>
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipHeader">Header</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipFooter ">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipFooter ">Footer </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipFooter">
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipFooter">Footer </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipBoth ">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipBoth ">Both </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipBoth">
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipBoth">Both </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipLeft">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipLeft">Left</label>
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipLeft">Left</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipMiddle">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipMiddle">Middle</label>
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipMiddle">Middle</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipRight">
-              <label class="form-check-label text-primary-light text-xs " for="timeStampipRight">Right</label>
+              <label class="form-check-label text-primary-light text-xs" for="timeStampipRight">Right</label>
             </div>
           </div>
         </div>
 
         <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
-          <label class="form-check-label text-primary-light text-xs fw-bold" for="timeStampipDiminutionsParameters ">Diminutions Parameters </label>
-          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipDiminutionsParameters ">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="timeStampipDiminutionsParameters">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="timeStampipDiminutionsParameters">
         </div>
 
         <div class="row g-3">
@@ -1267,7 +1267,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-24">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">File Name / Folder Name</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="fileNameLabel">File Name / Folder Name</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
@@ -1284,44 +1284,44 @@
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipHeader">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipHeader">Header</label>
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipHeader">Header</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipFooter ">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipFooter ">Footer </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipFooter">
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipFooter">Footer </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipBoth ">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipBoth ">Both </label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipBoth">
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipBoth">Both </label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipLeft">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipLeft">Left</label>
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipLeft">Left</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipMiddle">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipMiddle">Middle</label>
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipMiddle">Middle</label>
             </div>
           </div>
           <div class="col-4">
             <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
               <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipRight">
-              <label class="form-check-label text-primary-light text-xs " for="fileNameipRight">Right</label>
+              <label class="form-check-label text-primary-light text-xs" for="fileNameipRight">Right</label>
             </div>
           </div>
         </div>
 
         <div class="form-check ps-0 d-flex align-items-center gap-12 mt-32 mb-12">
-          <label class="form-check-label text-primary-light text-xs fw-bold" for="fileNameipDiminutionsParameters ">Diminutions Parameters </label>
-          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipDiminutionsParameters ">
+          <label class="form-check-label text-primary-light text-xs fw-bold" for="fileNameipDiminutionsParameters">Diminutions Parameters </label>
+          <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="fileNameipDiminutionsParameters">
         </div>
 
         <div class="row g-3">
@@ -1356,14 +1356,13 @@
 </div>
 <!-- File Name End -->
 
-
 <!-- History Modal start -->
 <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md max-w-1060-px">
     <div class="modal-content radius-16 overflow-hidden">
       <div class="border-0 d-flex align-items-start justify-content-between px-24 py-20">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1">History</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="historyModalLabel">History</h6>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
           <i class="ri-close-fill d-flex line-height-1"></i>
@@ -1478,7 +1477,6 @@
 </div>
 <!-- History Modal start -->
   
-
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
 <script src="assets/js/editor.highlighted.min.js"></script>
@@ -1496,9 +1494,9 @@
   function getDatePicker(receiveID) {
     flatpickr(receiveID, {
       enableTime: false, // Ensure time is disabled to match the format
-      dateFormat: "d M, Y", // Format to match placeholder
-      mode: "range", // Enable range selection
-      minDate: "today", // Prevent past dates
+      dateFormat:"d M, Y", // Format to match placeholder
+      mode:"range", // Enable range selection
+      minDate:"today", // Prevent past dates
     });
   }
   getDatePicker('#dateTime');

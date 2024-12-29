@@ -764,8 +764,8 @@
                   <input type="text" class="form-control" id="EnvelopeName" placeholder="Select Envelope Name">
                 </div>
                 <div class="col-sm-6">
-                  <label for="Priority " class="text-sm form-label">Priority </label>
-                  <select class="form-control form-select py-6" id="Priority">
+                  <label for="Priorityyy" class="text-sm form-label">Priority </label>
+                  <select class="form-control form-select py-6" id="Priorityyy">
                     <option value="1" selected hidden>Select priority</option>
                     <option value="Priority">Priority</option>
                     <option value="Priority">Priority</option>
@@ -778,11 +778,12 @@
                 <div class="border radius-6 p-10">
                   <!-- Upload file -->
                   <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
-                    <label class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px" for="upload-file">
+                    <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px position-relative z-1">
+                      <label for="upload-file" class="position-absolute w-100 h-100 top-0 start-0 z-n1"></label>
                       <span class="text-2xl text-primary-600">
                         <i class="ri-upload-cloud-2-line"></i>
                       </span>
-                      <div class="d-flex align-items-center gap-2">
+                      <span class="d-flex align-items-center gap-2">
                         <span class="text-primary-600 text-xs flex-shrink-0">Drag and Drop or  </span>
                         <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
                           <option value="1" selected hidden>Upload</option>
@@ -791,9 +792,9 @@
                           <option value="JPG">JPG</option>
                           <option value="PDF">PDF</option>
                         </select>
-                      </div>
-                      <input id="upload-file" type="file" hidden>
-                    </label>
+                      </span>
+                    </div>
+                    <input id="upload-file" type="file" hidden>
                   </div>
                   <!-- Upload file -->
 
@@ -1255,17 +1256,17 @@
                    <!-- Editor start -->
                    <div id="editor" class="min-h-300-px">
                      <p class="text-secondary-light text-xs line-height-2">Dear [Recipient's Name], </p>
-                     <p><br /></p>
+                     <p><br></p>
                      <p class="text-secondary-light text-xs line-height-2">I hope this email finds you well.</p>
                      <p class="text-secondary-light text-xs line-height-2">I am writing to seek your approval for the attached memo, titled "[Memo Title]", which outlines [briefly describe the purpose or content of the memo, e.g., new policy changes, project updates, etc.].</p>
-                     <p><br /></p>
-                     <p><br /></p>
+                     <p><br></p>
+                     <p><br></p>
                      <p class="text-secondary-light text-xs line-height-2">This memo has been carefully prepared to address [specific issues or goals] and includes the necessary details to ensure its successful implementation. I kindly request you to review the document and provide your feedback or approval at your earliest convenience.
                       If there are any adjustments or additional input needed, please feel free to let me know, and I will make the necessary revisions promptly.
                       Looking forward to your confirmation.</p>
-                     <p><br /></p>
+                     <p><br></p>
                      <p class="text-secondary-light text-xs line-height-2">Best regards,</p>
-                     <p><br /></p>
+                     <p><br></p>
                      <p class="text-secondary-light text-xs line-height-2">[Your Full Name] </p>
                      <p class="text-secondary-light text-xs line-height-2">[Your Job Title]</p>
                      <p class="text-secondary-light text-xs line-height-2">[Your Contact Information]</p>
@@ -1293,7 +1294,7 @@
                   </div>
                   <div class="col-sm-12">
                     <label for="MetaData" class="text-sm form-label">Meta Data</label>
-                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple">
+                    <select class="form-control form-select py-6 meta-tags w-100" id="MetaData" multiple="multiple">
                       <option selected>UI/UX</option>
                       <option selected>Figma</option>
                       <option selected>Javascript</option>
@@ -1410,8 +1411,8 @@
             </div>
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Authentication ">Authentication </label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentication " checked>
+                <label class="form-check-label text-primary-light text-sm" for="Authenticationn">Authentication </label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authenticationn" checked>
               </div>
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
@@ -1440,8 +1441,8 @@
             </div>
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Expiry">Expiry</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiry">
+                <label class="form-check-label text-primary-light text-sm" for="Expiryyy">Expiry</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiryyy">
               </div>
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100">
@@ -1476,8 +1477,8 @@
             </div>
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="PrivateMessage">Private Message</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="PrivateMessage" checked>
+                <label class="form-check-label text-primary-light text-sm" for="PrivateMessagees">Private Message</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="PrivateMessagees" checked>
               </div>
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100 ">
@@ -1538,8 +1539,8 @@
       <div class="modal-body p-0">
         <div class="">
           <div class="mb-12 position-relative">
-            <label for="Name" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
-            <input type="text" class="form-control recipient-input" id="Name" placeholder="Name">
+            <label for="Nameee" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
+            <input type="text" class="form-control recipient-input" id="Nameee" placeholder="Name">
 
             <!-- Suggested Recipient dropdown start -->
             <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
@@ -1571,15 +1572,15 @@
             <!-- Suggested Recipient dropdown end -->
           </div>
           <div class="mb-12">
-            <label for="Email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-            <input type="email" class="form-control" id="Email" placeholder="Email">
+            <label for="Emailll" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
+            <input type="email" class="form-control" id="Emailll" placeholder="Email">
           </div>
 
           <div class="mt-24 d-flex flex-column gap-16">
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Passcode">Passcode</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" checked>
+                <label class="form-check-label text-primary-light text-sm" for="Passcodeee">Passcode</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcodeee" checked>
               </div>
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
@@ -1608,8 +1609,8 @@
             </div>
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="Authentication ">Authentication </label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentication " checked>
+                <label class="form-check-label text-primary-light text-sm" for="Authentications">Authentication </label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authentications" checked>
               </div>
               <div class="d-flex align-items-center gap-16">
                 <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
@@ -1643,7 +1644,7 @@
               </div>
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100">
-                  <input class="form-control px-12 py-1 placeholder-12" id="expiryDate" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
+                  <input class="form-control px-12 py-1 placeholder-12" id="expiryDate2" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
                   <span class="input-group-text d-flex py-0 text-xs px-8">
                     <iconify-icon icon="solar:calendar-linear" ></iconify-icon>
                   </span>
@@ -1941,9 +1942,12 @@
     flatpickr(receiveID, {
       enableTime: false, // Ensure time is disabled to match the format
       dateFormat: "d M, Y", // Format to match placeholder
+      mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
     });
   }
   getDatePicker('#expiryDate');
+  getDatePicker('#expiryDate2');
   // *************************** End date js End here ***************************
 
   

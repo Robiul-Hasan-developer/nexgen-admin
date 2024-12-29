@@ -1,6 +1,14 @@
 @each $property, $value in $shadows {
   .shadow-#{$property} {
-    box-shadow: var(--shadow-#{$property});
+    box-shadow: var(--shadow-#{$property}) !important;
+  }
+}
+
+.focus-shadow {
+  &-7 {
+    &:focus {
+      box-shadow: var(--shadow-7) !important;
+    }
   }
 }
 

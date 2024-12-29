@@ -1,0 +1,124 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+
+<!-- ======================= Authentication start ================================== -->
+<div class="min-h-100-vh bg-img d-flex justify-content-center align-items-center" data-background-image="assets/images/bg/auth-img.png">
+    <div class="bg-white p-24 pb-32 radius-6 shadow-7 max-w-360-px w-100 m-8">
+        <div class="text-center mb-24">
+            <a href="index.html" class="">
+                <img src="assets/images/logo-two.png" alt="">
+            </a>
+        </div>
+        <p class="bg-primary-30 radius-2 px-4 py-2 text-sm text-center text-primary-600 mb-20">Sign up for 30 days free trial</p>
+        <h6 class="text-primary-600 text-lg fw-semibold mb-16">Account Login</h6>
+        <form action="#">
+            <div class="mb-16 validation">
+                <input type="text" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder="Company Name" required>
+                <div class="invalid-feedback">Please enter Company Name.</div>
+            </div>
+            <div class="mb-16 validation">
+                <input type="text" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder="First Name" required>
+                <div class="invalid-feedback">Please enter First Name.</div>
+            </div>
+            <div class="mb-16 validation">
+                <input type="text" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder="Last Name" required>
+                <div class="invalid-feedback">Please enter Last Name.</div>
+            </div>
+            <div class="mb-16 validation">
+                <input type="email" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder=" Email" required>
+                <div class="invalid-feedback">Please enter valid email.</div>
+            </div>
+            <div class="mb-16 validation">
+                <div class="position-relative">
+                    <input type="password" class="form-control placeholder-12 shadow-none focus-shadow-7 pe-60 validation-input password-field" placeholder="Password*" required>
+                    <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                </div>
+                <div class="invalid-feedback">Please enter confirm password </div>
+            </div>
+            <div class="mb-16 validation">
+                <div class="position-relative">
+                    <input type="password" class="form-control placeholder-12 shadow-none focus-shadow-7 pe-60 validation-input password-field" placeholder="Confirm Password*" required>
+                    <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                </div>
+                <div class="invalid-feedback">Please enter confirm password </div>
+            </div>
+            <div class="my-16">
+                <select class="form-control form-select placeholder-12 shadow-none focus-shadow-7 pe-40 validation-input text-xs text-secondary-light-two" required>
+                    <option value="" selected hidden>Select Location</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="America">America</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="England">England</option> 
+                </select>
+            </div>
+            <div class="my-16">
+                <a href="email-confirmation.html" class="btn btn-primary-600 w-100 py-6">Start Free Trial</a>
+            </div>
+            <div class="my-20">
+                <p class="text-primary-600 text-xs">By clicking "Start Free Trial" you agree to NexGen's terms of service and confirm that you've read and acknowledged NexGen's privacy policy.</p>
+            </div>
+            <div class="mt-16">
+                <p class="text-primary-600 text-xs fw-medium mb-0 pt-10 border-top text-center">Already have an account?
+                    <a href="login.html" class="hover-underline text-xs text-primary-500">Login</a>
+                 </p>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- ======================= Authentication end ================================== -->
+
+@@include('../partial-html/_template-bottom.html')
+
+<script>    
+  // ***************************** Validation js ***************************** 
+    var inputs = document.querySelectorAll('.validation-input');
+    inputs.forEach((input) => {
+        input.addEventListener('input', function () {
+            // Check if input type is email
+            if (input.type === "email") {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(input.value.trim())) {
+                    input.classList.add('is-valid');
+                    input.classList.remove('is-invalid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.remove('d-block');
+                } else {
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.add('d-block');
+                }
+            } else {
+                if (input.value.trim() !== "") {
+                    input.classList.add('is-valid');
+                    input.classList.remove('is-invalid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.remove('d-block');
+                } else {
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.add('d-block');
+                }
+            }
+        });
+    });
+  // ***************************** Validation js end ***************************** 
+    
+  // ***************************** Show hide password js ***************************** 
+  document.querySelectorAll('.toggle-icon').forEach(function (toggleIcon) {
+    var passwordField = toggleIcon.closest('div').querySelector('.password-field');
+
+    toggleIcon.addEventListener('click', function () {
+      if(passwordField.type === 'password') { 
+        passwordField.type = 'text';
+        this.classList.remove('ri-eye-off-line');
+        this.classList.add('ri-eye-line');
+      } else {
+        passwordField.type = 'password';
+        this.classList.remove('ri-eye-line');
+        this.classList.add('ri-eye-off-line');
+      }
+    });
+  });
+  // ***************************** Show hide password js ***************************** 
+</script>
+
+</body>
+</html>

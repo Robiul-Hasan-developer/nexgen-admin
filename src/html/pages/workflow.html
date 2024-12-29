@@ -46,18 +46,18 @@
             <button type="button" class="btn py-6 px-24 btn-danger-600">Delete</button>
           </div>
         </div>
-        <ul class="nav bordered-tab nav-pills mt-16" id="pills-tab" role="tablist">
+        <ul class="nav bordered-tab nav-pills mt-16" id="pills-tabThree" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link text-secondary-light fw-semibold text-sm py-10 active" id="pills-View-tab" data-bs-toggle="pill" data-bs-target="#pills-View" type="button" role="tab" aria-controls="pills-View" aria-selected="true">View</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link text-secondary-light fw-semibold text-sm py-10" id="pills-Document -tab" data-bs-toggle="pill" data-bs-target="#pills-Document " type="button" role="tab" aria-controls="pills-Document " aria-selected="false">Document </button>
+            <button class="nav-link text-secondary-light fw-semibold text-sm py-10" id="pills-Document-tab" data-bs-toggle="pill" data-bs-target="#pills-Document " type="button" role="tab" aria-controls="pills-Document " aria-selected="false">Document </button>
           </li>
         </ul>
       </div>
       <!-- Top Tab end -->
 
-      <div class="tab-content" id="pills-tabContent">
+      <div class="tab-content" id="pills-tabThreeContent">
         <!-- View Tab content start -->
         <div class="tab-pane fade show active" id="pills-View" role="tabpanel" aria-labelledby="pills-View-tab" tabindex="0">
           <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16">
@@ -119,7 +119,7 @@
               </div>
               <div class="bg-white shadow-4 radius-4 mt-12">
                 <div class="px-8 border-bottom">
-                  <ul class="nav bordered-tab gap-40-px active-bg nav-pills" id="pills-tab" role="tablist">
+                  <ul class="nav bordered-tab gap-40-px active-bg nav-pills" id="pills-tabTwo" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link text-secondary-light fw-normal text-sm py-12 px-10 rounded-0 d-flex align-items-center gap-10 active" id="pills-comments-tab" data-bs-toggle="pill" data-bs-target="#pills-comments" type="button" role="tab" aria-controls="pills-comments" aria-selected="true">
                         <span class="text-sm d-flex text-neutral-400"><i class="ri-discuss-line"></i></span>
@@ -147,7 +147,7 @@
                   </ul>
                 </div>
     
-                <div class="tab-content" id="pills-tabContent">
+                <div class="tab-content" id="pills-tabTwoContent">
                   <!-- Comments Start -->
                   <div class="tab-pane fade show active" id="pills-comments" role="tabpanel" aria-labelledby="pills-comments-tab" tabindex="0">
                     <div class="p-16">
@@ -180,7 +180,7 @@
                             <span class="fw-semibold text-xs text-neutral-500">20 Dec, 2024 - 05:47am</span>
                           </div>
                           <p class="text-neutral-500 text-xs">Please be sure to check your Spam mailbox to see if your email filters have identified the email from Dell as spam.</p>
-                          <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16" id="comment-form">
+                          <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
                             <i class="ri-reply-fill d-flex"></i>
                             Reply
                           </button>
@@ -205,7 +205,7 @@
                               <img src="assets/images/home-one/reply-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                           </div>
-                          <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16" id="comment-form">
+                          <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
                             <i class="ri-reply-fill d-flex"></i>
                             Reply
                           </button>
@@ -215,10 +215,10 @@
     
                       <h6 class="mb-8 mt-24 text-md text-primary-light-two fw-semibold">Leave a Comments</h6>
                       <form action="#">
-                        <textarea id="comment-form" class="form-control min-72-px bg-neutral-100" placeholder="Enter comments"></textarea>
+                        <textarea class="form-control min-72-px bg-neutral-100" placeholder="Enter comments"></textarea>
                         <div class="d-flex justify-content-end align-items-center gap-8 mt-12">
                           <label for="attactchment" class=" w-36-px h-36-px d-flex justify-content-center align-items-center text-md text-purple-600">
-                            <input type="file" name="" id="attactchment" hidden>
+                            <input type="file" id="attactchment" hidden>
                             <i class="ri-attachment-line"></i>
                           </label>
                           <button type="submit" class="btn btn-success-600">Post Comments</button>
@@ -1543,13 +1543,14 @@
 
       <div class="modal-body p-0">
         <div class="border radius-6 p-10">
-          <!-- Upload file -->
-          <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
-            <label class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px" for="upload-file">
+           <!-- Upload file -->
+           <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
+            <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px position-relative z-1">
+              <label for="upload-file" class="position-absolute w-100 h-100 top-0 start-0 z-n1"></label>
               <span class="text-2xl text-primary-600">
                 <i class="ri-upload-cloud-2-line"></i>
               </span>
-              <div class="d-flex align-items-center gap-2">
+              <span class="d-flex align-items-center gap-2">
                 <span class="text-primary-600 text-xs flex-shrink-0">Drag and Drop or  </span>
                 <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
                   <option value="1" selected hidden>Upload</option>
@@ -1558,9 +1559,9 @@
                   <option value="JPG">JPG</option>
                   <option value="PDF">PDF</option>
                 </select>
-              </div>
-              <input id="upload-file" type="file" hidden>
-            </label>
+              </span>
+            </div>
+            <input id="upload-file" type="file" hidden>
           </div>
           <!-- Upload file -->
 
@@ -2072,8 +2073,8 @@
       <div class="modal-body p-0">
         <form action="#">
           <div class="mb-12">
-            <label for="reportAbuse" class="text-sm form-label">Reason for Reporting Abuse* <span class="text-danger-600">*</span> </label>
-            <select id="reportAbuse" class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+            <label for="reportAbuseSelect" class="text-sm form-label">Reason for Reporting Abuse* <span class="text-danger-600">*</span> </label>
+            <select id="reportAbuseSelect" class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
               <option value="Type" selected hidden>Type</option>
               <option value="Violence">Violence</option>
               <option value="Rules Break">Rules Break</option>
