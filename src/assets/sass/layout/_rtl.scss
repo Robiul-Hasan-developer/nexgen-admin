@@ -1,11 +1,5 @@
 /* RTL css start */
 [dir=rtl] {
-    .side-menu {
-        transform: translateX(-100%);
-        &.open {
-            transform: translateX(0);
-        }
-    }
     .rounded-start {
         border-bottom-left-radius: 0 !important;
         border-top-left-radius: 0 !important;
@@ -55,14 +49,6 @@
     }
     .form-control.is-valid, .was-validated .form-control:valid {
         background-position: left calc(.375em + .1875rem) center;
-    }
-    @media (max-width: 1199px) {
-        .sidebar {
-            transform: translateX(100%);
-            &.sidebar-open {
-                transform: translateX(0);
-            }
-        }
     }
 }
 /* RTL css end */

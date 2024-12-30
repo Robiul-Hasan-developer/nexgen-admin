@@ -67,9 +67,68 @@
     return bg;
   });
   // ========================== Add Attribute For Bg Image Js End =====================
-  
 
-  // Light Dark version js 
+  // ========================== RTL LTR Js Start =====================
+  var rtlLtrBtn = document.querySelector('.ltr-rtl-btn');
+
+  // On page load, set the initial direction and button state based on localStorage
+  var storedDir = localStorage.getItem('htmlDir');
+  var storedClass = localStorage.getItem('btnClass');
+
+  if (storedDir) {
+    document.documentElement.setAttribute('dir', storedDir);
+    rtlLtrBtn.innerHTML = storedDir === 'ltr' ? 'RTL' : 'LTR';
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+    rtlLtrBtn.innerHTML = 'RTL';
+  }
+
+  if (storedClass) {
+    rtlLtrBtn.className = storedClass; // Set the button's class from localStorage
+  } else {
+    rtlLtrBtn.classList.add('bg-primary-600'); // Default button class
+  }
+
+  // Add event listener for button click
+  rtlLtrBtn.addEventListener('click', function () {
+    var htmlElement = document.documentElement;
+
+    if (htmlElement.getAttribute('dir') === 'ltr') {
+      htmlElement.setAttribute('dir', 'rtl');
+      this.innerHTML = "LTR";
+      localStorage.setItem('htmlDir', 'rtl'); // Save direction to localStorage
+      this.classList.remove('bg-primary-600');
+      this.classList.add('bg-success-600');
+    } else {
+      htmlElement.setAttribute('dir', 'ltr');
+      this.innerHTML = "RTL";
+      localStorage.setItem('htmlDir', 'ltr'); // Save direction to localStorage
+      this.classList.add('bg-primary-600');
+      this.classList.remove('bg-success-600');
+    }
+
+    // Save the updated class list to localStorage
+    localStorage.setItem('btnClass', this.className);
+  });
+  // ========================== RTL LTR Js End =====================
+
+  // ========================== Set Language in dropdown Js Start =================================
+  $('.lang-dropdown li').each(function () {
+    var thisItem = $(this); 
+
+    thisItem.on('click', function () {
+      const listText = thisItem.text().trim(); // Get the text of the clicked item
+      const listImageSrc = thisItem.find('img').attr('src'); // Get the image source of the clicked item
+
+      // Set the selected text and image
+      const selectedTextContainer = thisItem.closest('.group-item').find('.selected-text');
+      selectedTextContainer.contents().last().replaceWith(listText); // Update the text (after the image)
+      selectedTextContainer.find('img').attr('src', listImageSrc); // Update the image
+    });
+  });
+  // ========================== Set Language in dropdown Js End =================================
+  
+  // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
   //   const themeToggle = $("#theme-toggle .form-check-input");
 
@@ -85,5 +144,14 @@
   //     localStorage.setItem("theme", newTheme);
   //   });
   // });
+  // ========================== Light Dark version js end ==========================
+
+
+  // ====================== Preloader js start =================
+  $(window).on('load', function () {
+    $('.loader-mask').fadeOut();
+  });
+  // ====================== Preloader js End =================
+
 
 })(jQuery);

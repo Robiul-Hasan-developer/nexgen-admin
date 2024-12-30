@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,19 @@
 </head>
 <body>
 
+<!-- Preloader -->
+<div class="loader-mask">
+  <div class="loader">
+      <div></div>
+      <div></div>
+  </div>
+</div>
+<!-- Preloader -->
+
 <div class="body-overlay"></div>
+
+<button type="button" class="ltr-rtl-btn bg-primary-600 text-white text-xl d-flex justify-content-center align-items-center rounded-start position-fixed end-0 bottom-0 mb-50 z-3 text-uppercase px-16 py-2">
+  RTL
+</button>
 
 @@include('../partial-html/_side-menu.html')

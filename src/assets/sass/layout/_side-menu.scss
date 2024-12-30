@@ -20,13 +20,12 @@
     position: fixed;
     height: 100vh;
     z-index: 99;
-    inset-inline-end: 0;
+    inset-inline-end: -400px;
     max-width: 364px;
     width: 100%;
-    transform: translateX(100%);
     transition: .2s linear;
     &.open {
-        transform: translateX(0);
+        inset-inline-end: 0px;
     }
     .nav-link {
         &.active {

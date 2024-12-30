@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   inset-block-start: 0;
-  inset-inline-start: -100%;
+  inset-inline-start: -250px;
   width: rem(250px);
   height: 100vh;
   background-color: var(--white);
@@ -11,8 +11,6 @@
     width: rem(250px);
   }
   @media (max-width: 1199px) {
-    inset-inline-start: 0;
-    transform: translateX(-100%);
     transition: .2s linear;
   }
   &-close-btn {
@@ -33,9 +31,6 @@
   &.sidebar-open {
     inset-inline-start: 0;
     z-index: 991;
-    @media (max-width: 1199px) {
-      transform: translateX(0);
-    }
   }
   &.active {
     width: 86px;

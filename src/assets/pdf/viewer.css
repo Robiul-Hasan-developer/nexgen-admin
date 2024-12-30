@@ -3636,7 +3636,7 @@ body{
 
 body{
   margin:0;
-  background-color:var(--body-bg-color);
+  background-color: #fff;
   scrollbar-color:var(--scrollbar-color) var(--scrollbar-bg-color);
 }
 

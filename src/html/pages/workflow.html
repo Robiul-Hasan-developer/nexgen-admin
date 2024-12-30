@@ -1058,8 +1058,8 @@
                 </div>
               </div>
               
-              <h6 class="line-clamp-1"> Document Content goes here....  </h6>
-              <div id="pdf"></div>
+              <div id="my-pdf"></div>
+              <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
             </div>
 
             <!-- Sidebar Start -->
@@ -2106,16 +2106,7 @@
   
 @@include('../partial-html/_template-bottom.html')
 
-<script>
-  let myPDF = PDFObject.embed("assets/build/invoice.pdf", "#pdf", {
-    page: 1,
-    pdfOpenParams: {
-      pagemode: "thumbs"
-    },
-    forcePDFJS: true,
-    PDFJS_URL: "assets/build/viewer.html"
-  });
-</script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
   // ========================= Animated Radial Progress Js Start ===================
@@ -2214,9 +2205,50 @@ $('.recipient-input').on('input', function (event) {
 // *************************** Suggested Recipient Dropdown js End ***************************
 
 
+// *************************** PDF js Start ***************************
+// let options = {
+//   page: 2
+// };
+// PDFObject.embed(
+//   "assets/images/pdf/sample-3.pdf", 
+//   "#my-pdf", 
+//   {fallbackLink: false}
+// );
+
+const template = document.createElement('template');
+template.innerHTML = `
+  <iframe frameborder="0" 
+    width="1280" 
+    height="900">
+  </iframe>
+`
+class PdfViewer extends HTMLElement {
+  constructor() {
+    super()
+    const shadowRoot = this.attachShadow({mode: 'open'})
+    shadowRoot.appendChild(template.content.cloneNode(true))
+  }
+  get observedAttributes() {
+    return ['src']
+  }
+  connectedCallback() {
+    this.updateIframeSrc()
+  }
+  attributeChangedCallback(name) {
+    if (['src', 'viewerPath'].includes(name)) {
+      this.updateIframeSrc()
+    }
+  }
+  updateIframeSrc() {
+    this.shadowRoot.querySelector('iframe').setAttribute(
+      'src', 
+      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+    )
+  }
+}
+window.customElements.define('pdf-viewer', PdfViewer)
+// *************************** PDF js End ***************************
 </script>
-
-
 
 </body>
 </html>

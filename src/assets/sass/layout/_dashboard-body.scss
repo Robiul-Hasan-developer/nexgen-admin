@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   flex-flow: column;
   min-height: 100vh;
-  transition: all 0.3s;
   @extend .section-bg; 
   @include media(xl) {
     margin-inline-start: rem(250px);
