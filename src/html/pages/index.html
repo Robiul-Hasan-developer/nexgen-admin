@@ -1162,13 +1162,13 @@
                 <div class="border radius-6 p-10">
                   <!-- Upload file -->
                   <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
-                    <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-20 h-68-px position-relative z-1">
+                    <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-8 h-68-px position-relative z-1">
                       <label for="upload-file" class="position-absolute w-100 h-100 top-0 start-0 z-n1"></label>
-                      <span class="text-2xl text-primary-600">
+                      <span class="text-2xl text-primary-600 pointer-event-none">
                         <i class="ri-upload-cloud-2-line"></i>
                       </span>
+                      <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <span class="text-primary-600 text-xs flex-shrink-0">Drag and Drop or  </span>
                         <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
                           <option value="1" selected hidden>Upload</option>
                           <option value="SVG">SVG</option>
@@ -1700,12 +1700,150 @@
       <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
         <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">Delete</button>
         <button type="button" class="btn py-6 px-24 btn-purple-600">Draft</button>
-        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addRecipient">Next</button>
+        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createPdf">Next</button>
       </div>
     </div>
   </div>
 </div>
 <!-- Send and create document Modal End -->
+
+<!-- create PDF Modal start -->
+<div class="modal fade" id="createPdf" tabindex="-1" aria-labelledby="createPdfLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-2xl">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-60">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="createPdfLabel">Create Document</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Actions</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+
+          <div class="d-flex flex-md-row flex-column gap-24">
+            <!-- PDF Sidebar start -->
+            <div class="p-8 shadow-4 flex-shrink-0 w-100 max-w-184-px bg-white">
+              <span class="py-1 px-20 bg-primary-600 text-white text-sm fw-semibold radius-4 mb-20">Fields  </span>
+
+              <div class="d-flex flex-column gap-12 max-h-800-px overflow-y-auto scroll-sm">
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon1.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Signature </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon2.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Initial </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon3.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Stamp </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon4.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Date Signed  </span>
+                </div>
+
+                <div class="w-100 border-bottom"></div>
+                
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon5.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Name </span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon6.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Email </span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon7.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Company </span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon8.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Title </span>
+                </div>
+
+                <div class="w-100 border-bottom"></div>
+                
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon9.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Text  </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon10.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Checkbox </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon11.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">Note </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-16">
+                  <span class="radius-4 w-20-px h-16-px border d-flex justify-content-center align-items-center bg-primary-15">
+                    <img src="assets/images/icon/add-doc-icon12.svg" alt="">
+                  </span>
+                  <span class="text-secondary-light-two text-xxs">line </span>
+                </div>
+
+              </div>
+            </div>
+            <!-- PDF Sidebar end -->
+            
+            <!-- PDF Start -->
+            <div class="overflow-x-auto">
+              <div class="min-w-max">
+                 <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+              </div>
+            </div>
+            <!-- PDF End -->
+           </div>
+  
+          <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
+            <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">Delete</button>
+            <button type="button" class="btn py-6 px-24 btn-purple-600">Draft</button>
+            <button type="submit" class="btn py-6 px-24 btn-primary-600">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- create PDF Modal End -->
 
 
 <!-- Add Recipients Modal start -->
@@ -2261,6 +2399,7 @@
 <script src="assets/js/editor.quill.js"></script>
 <script src="assets/js/editor.katex.min.js"></script>
 <script src="assets/js/lib/select2.min.js"></script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
   // ***************************** Data Table js ***************************** 
@@ -2365,17 +2504,49 @@
   });
   // *************************** Suggested Recipient Dropdown js End ***************************
 
-  // *************************** Delete Tr js start ***************************
-  $(".delete-tr-button").on('click', function () {
-    $(this).closest('tr').addClass('d-none');
-  });
-  // *************************** Delete Tr js End ***************************
+  // *************************** PDF js Start ***************************
+  // let options = {
+  //   page: 2
+  // };
+  // PDFObject.embed(
+  //   "assets/images/pdf/sample-3.pdf", 
+  //   "#my-pdf", 
+  //   {fallbackLink: false}
+  // );
 
-  // ========================= Delete Item Js start ===================
-  $('.delete-button').on('click', function () {
-    $(this).closest('.delete-item').addClass('d-none');
-  });
-  // ========================= Delete Item Js End ===================
+  const template = document.createElement('template');
+  template.innerHTML = `
+    <iframe frameborder="0" 
+      width="1280" 
+      height="900">
+    </iframe>
+  `
+  class PdfViewer extends HTMLElement {
+    constructor() {
+      super()
+      const shadowRoot = this.attachShadow({mode: 'open'})
+      shadowRoot.appendChild(template.content.cloneNode(true))
+    }
+    get observedAttributes() {
+      return ['src']
+    }
+    connectedCallback() {
+      this.updateIframeSrc()
+    }
+    attributeChangedCallback(name) {
+      if (['src', 'viewerPath'].includes(name)) {
+        this.updateIframeSrc()
+      }
+    }
+    updateIframeSrc() {
+      this.shadowRoot.querySelector('iframe').setAttribute(
+        'src', 
+        `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+      )
+    }
+  }
+  window.customElements.define('pdf-viewer', PdfViewer)
+  // *************************** PDF js End ***************************
 
 </script>
 

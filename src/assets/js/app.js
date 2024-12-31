@@ -128,6 +128,73 @@
   });
   // ========================== Set Language in dropdown Js End =================================
   
+  
+  // *********************************** Toast Notification Js start ***********************************
+  var notification = document.querySelector('.toast-message');
+  var notificationText = document.querySelector('.notification-text');
+  var closeToast = document.querySelector('.close-toast');
+
+  function toastMessage (toastTextMessage) {
+
+    notificationText.innerHTML = toastTextMessage;
+    notification.classList.add('active');
+    
+    setTimeout (() => {
+        notification.classList.remove('active');
+    }, 3500);
+
+    // Close the notification
+    if (closeToast) {
+        closeToast.addEventListener('click', function () {
+            notification.classList.remove('active', 'hover');
+        });
+    }
+
+    // Hover add and remove class on notification
+    if (notification) {
+        notification.addEventListener('mouseenter', function () {
+            this.classList.add('hover');
+        });
+    
+        notification.addEventListener('mouseleave', function () {
+            this.classList.remove('hover');
+        });
+    }
+  }
+  // ********************************** Toast Notification Js end **********************************
+  
+  // *************************** Delete Tr js start ***************************
+  $(".delete-tr-button").on('click', function () {
+    $(this).closest('tr').addClass('d-none');
+    toastMessage("You deleted successfully!");
+  });
+  // *************************** Delete Tr js End ***************************
+
+  // ========================= Delete Item Js start ===================
+  $('.delete-button').on('click', function () {
+    $(this).closest('.delete-item').addClass('d-none');
+    toastMessage("You deleted successfully!");
+  });
+  // ========================= Delete Item Js End ===================s
+  
+  // ========================= Form Submit Js start ===================s
+  var submitForm = document.querySelector('.submit-form');
+  var inputField = document.querySelectorAll('.form-control');
+
+  if(submitForm) {
+    submitForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      
+      inputField.forEach((inputItem) => {
+        inputItem.classList.remove('is-valid');
+        inputItem.value = "";
+      });
+      
+      toastMessage("Form submitted successfully!");
+    });
+  }
+  // ========================= Form Submit Js End ===================s
+  
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
   //   const themeToggle = $("#theme-toggle .form-check-input");

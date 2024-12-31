@@ -50,5 +50,11 @@
     .form-control.is-valid, .was-validated .form-control:valid {
         background-position: left calc(.375em + .1875rem) center;
     }
+    // .toast-message {
+    //     transform: translateX(calc(-100% - 40px));
+    //     &.active, &.hover {
+    //         transform: translateX(0);
+    //     }
+    // }
 }
 /* RTL css end */

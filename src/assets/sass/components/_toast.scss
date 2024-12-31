@@ -1,0 +1,53 @@
+/* Toast Message Css start  */
+.toast-message{
+    position: fixed;
+    inset-block-start: 25px;
+    inset-inline-end: 30px;
+    background: #fff;
+    border-inline-start: 5px solid var(--success-600);
+    overflow: hidden;
+    margin-inline-end: -320px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+    max-width: 320px;
+    min-width: 280px;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    &.active, &.hover {
+      margin-inline-end: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+    &.active .progress-bar::before{
+      animation: progress-bar 3.6s linear forwards;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--success-600);
+        visibility: hidden;
+        opacity: 0;
+      }
+  }
+  
+  @keyframes progress-bar {
+    100%{
+      right: 100%;
+    }
+  }
+/* Toast Message Css End  */

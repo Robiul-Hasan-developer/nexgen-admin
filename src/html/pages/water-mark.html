@@ -797,8 +797,18 @@
           </div>
 
           <div class="col-xxl-5">
-            <div class="h-100 min-h-540-px radius-6 shadow-6 bg-neutral-30 p-24">
-              <div class="d-flex flex-column justify-content-between h-100">
+            <div class="d-flex align-items-center justify-content-between mb-8 gap-8">
+              <span class="bg-primary-600 text-white fw-bold text-xs py-4 px-24 radius-6">Preview </span>
+              <select class="form-select w-auto bg-primary-600 text-white fw-bold text-xs py-4 px-24 radius-6 arrow-white pe-32">
+                <option selected hidden>Page Format</option>  
+                <option value="PNG">PNG</option>  
+                <option value="JPG">JPG</option>  
+                <option value="PDF">PDF</option>  
+              </select>
+            </div>
+
+            <div class="min-h-540-px radius-6 shadow-6 bg-neutral-30 p-24 mb-24">
+              <div class="min-h-540-px d-flex flex-column justify-content-between">
                 <div class="text-end">
                   <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#fileName">File Name / Folder Name</button>
                 </div>
@@ -812,6 +822,15 @@
                 </div>
               </div>
             </div>
+                  
+            <!-- PDF Start -->
+            <div class="overflow-x-auto">
+              <div class="min-w-max">
+                  <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+              </div>
+            </div>
+            <!-- PDF End -->
+     
           </div>
         </div>
       </div>
@@ -1482,6 +1501,7 @@
 <script src="assets/js/editor.highlighted.min.js"></script>
 <script src="assets/js/editor.quill.js"></script>
 <script src="assets/js/editor.katex.min.js"></script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
   // ***************************** Data Table js ***************************** 
@@ -1500,12 +1520,7 @@
     });
   }
   getDatePicker('#dateTime');
-  
-  // *************************** Delete Tr js start ***************************
-  $(".delete-tr-button").on('click', function () {
-    $(this).closest('tr').addClass('d-none');
-  });
-  // *************************** Delete Tr js End ***************************
+  // *****************************  Flat pickr or date picker js ***************************** 
 
   // *************************** Max Text in textarea js start ***************************
  var maxDescArea = document.querySelector('.max-desc');
@@ -1534,6 +1549,50 @@
   });
   // *************************** Editor js End here ***************************
 
+
+// *************************** PDF js Start ***************************
+// let options = {
+//   page: 2
+// };
+// PDFObject.embed(
+//   "assets/images/pdf/sample-3.pdf", 
+//   "#my-pdf", 
+//   {fallbackLink: false}
+// );
+
+const template = document.createElement('template');
+template.innerHTML = `
+  <iframe frameborder="0" 
+    width="1280" 
+    height="900">
+  </iframe>
+`
+class PdfViewer extends HTMLElement {
+  constructor() {
+    super()
+    const shadowRoot = this.attachShadow({mode: 'open'})
+    shadowRoot.appendChild(template.content.cloneNode(true))
+  }
+  get observedAttributes() {
+    return ['src']
+  }
+  connectedCallback() {
+    this.updateIframeSrc()
+  }
+  attributeChangedCallback(name) {
+    if (['src', 'viewerPath'].includes(name)) {
+      this.updateIframeSrc()
+    }
+  }
+  updateIframeSrc() {
+    this.shadowRoot.querySelector('iframe').setAttribute(
+      'src', 
+      `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+    )
+  }
+}
+window.customElements.define('pdf-viewer', PdfViewer)
+// *************************** PDF js End ***************************
 </script>
 
 </body>
