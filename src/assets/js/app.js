@@ -146,7 +146,13 @@
     // Close the notification
     if (closeToast) {
         closeToast.addEventListener('click', function () {
-            notification.classList.remove('active', 'hover');
+          notification.classList.remove('active', 'hover');
+
+          notification.classList.add('d-none');
+          setTimeout (() => {
+            notification.classList.remove('d-none');
+         }, 1);
+         
         });
     }
 
@@ -175,9 +181,62 @@
     $(this).closest('.delete-item').addClass('d-none');
     toastMessage("You deleted successfully!");
   });
-  // ========================= Delete Item Js End ===================s
+  // ========================= Delete Item Js End ===================
+
+  // ***************************** Show hide password js ***************************** 
+  document.querySelectorAll('.toggle-icon').forEach(function (toggleIcon) {
+    var passwordField = toggleIcon.closest('div').querySelector('.password-field');
+
+    if(toggleIcon) {
+      toggleIcon.addEventListener('click', function () {
+        if(passwordField.type === 'password') { 
+          passwordField.type = 'text';
+          this.classList.remove('ri-eye-off-line');
+          this.classList.add('ri-eye-line');
+        } else {
+          passwordField.type = 'password';
+          this.classList.remove('ri-eye-line');
+          this.classList.add('ri-eye-off-line');
+        }
+      });
+    }
+  });
+  // ***************************** Show hide password js ***************************** 
+
+   // ***************************** Validation js ***************************** 
+   var inputs = document.querySelectorAll('.validation-input');
+   if(inputs) {
+    inputs.forEach((input) => {
+        input.addEventListener('input', function () {
+            // Check if input type is email
+            if (input.type === "email") {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(input.value.trim())) {
+                    input.classList.add('is-valid');
+                    input.classList.remove('is-invalid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.remove('d-block');
+                } else {
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.add('d-block');
+                }
+            } else {
+                if (input.value.trim() !== "") {
+                    input.classList.add('is-valid');
+                    input.classList.remove('is-invalid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.remove('d-block');
+                } else {
+                    input.classList.add('is-invalid');
+                    input.classList.remove('is-valid');
+                    input.closest('.validation').querySelector('.invalid-feedback').classList.add('d-block');
+                }
+            }
+        });
+    });
+   }
+ // ***************************** Validation js end ***************************** 
   
-  // ========================= Form Submit Js start ===================s
+  // ========================= Form Submit Js start ===================
   var submitForm = document.querySelector('.submit-form');
   var inputField = document.querySelectorAll('.form-control');
 

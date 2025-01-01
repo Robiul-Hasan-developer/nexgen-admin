@@ -107,3 +107,18 @@
 .duration-200 {
   transition: .2s linear;
 }
+
+@media (min-width: 359px) {
+  .d-xxxs-block {
+      display: block !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn .w-14-px.h-14-px.rounded-circle {
+    display: none !important;
+  }
+  .btn .w-1-px.h-18-px.bg-white-1 {
+    display: none;
+  }
+}

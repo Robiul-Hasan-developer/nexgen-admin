@@ -1073,24 +1073,6 @@
   }); 
   // ***************************** Bold Italic Underline Btn js ***************************** 
 
-  // ***************************** Show hide password js ***************************** 
-  document.querySelectorAll('.toggle-icon').forEach(function (toggleIcon) {
-    var passwordField = toggleIcon.closest('div').querySelector('.password-field');
-
-    toggleIcon.addEventListener('click', function () {
-      if(passwordField.type === 'password') { 
-        passwordField.type = 'text';
-        this.classList.remove('ri-eye-off-line');
-        this.classList.add('ri-eye-line');
-      } else {
-        passwordField.type = 'password';
-        this.classList.remove('ri-eye-line');
-        this.classList.add('ri-eye-off-line');
-      }
-    });
-  });
-  // ***************************** Show hide password js ***************************** 
-
 </script>
 
 </body>
