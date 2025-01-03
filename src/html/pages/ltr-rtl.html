@@ -1,0 +1,371 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "LTR / RTL",
+    page: "Administrative",
+    activePage: "LTR / RTL",
+    paraText: "Displays a list of user creation records, including user information, status, creation time, and available actions for efficient monitoring and management of the user onboarding process."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+            <span class="fw-normal text-xs">
+                <i class="ri-loop-right-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Update 
+          </button>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+            <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 w-100">
+            <input type="text" class="form-control w-100" placeholder="Search..." required>
+  
+            <div class="d-flex align-items-center gap-2 ">
+              <button class="text-neutral-400 d-flex line-height-1 text-lg"><i class="ri-filter-line line-height-1"></i></button>
+              <div class="border radius-8 d-flex">
+                <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                  <i class="ri-printer-line"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+      <!-- Table Start -->
+      <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical">
+        <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+          <thead>
+              <tr>
+                  <th class="bg-neutral-50 text-center text-xs">ID</th>
+                  <th class="bg-neutral-50 text-center text-xs">LTR Heading </th>
+                  <th class="bg-neutral-50 text-center text-xs">RTL Heading </th>
+                  <th class="bg-neutral-50 text-center text-xs">Created Details</th>
+                  <th class="bg-neutral-50 text-center text-xs">Modified Details</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Customer List">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="قائمة العملاء">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Notification ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="الإشعار ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="PACI Signature">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="توقيع PACI">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Dashboard">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="لوحة المعلومات">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Calendar">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="التقويم">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Announcements ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="الإعلانات">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Action">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="الإجراء ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Workflow">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="سير العمل">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Digital Signature ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="التوقيع الرقمي ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Scan / Import Document ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="مسح / استيراد المستندات">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Metadata">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="البيانات الوصفية">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Dispatch Document ">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="إرسال المستندات">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Archiving">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="الأرشفة">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+            <tr>
+                <td class="text-center text-xs fw-light">
+                    <span class="text-primary-500">LAG0012</span>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-start">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="Files">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">
+                    <div class="text-end">
+                        <input type="text" class="form-control text-sm fw-bold text-secondary-light-two
+                         placeholder-fw-bold placeholder-text-secondary-light-two placeholder-14" placeholder="الملفات">
+                    </div>
+                </td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+                <td class="text-center text-xs fw-light">25 Apr, 2022 - 13:04pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Table End -->
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+<script>
+  // ***************************** Data Table js ***************************** 
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false,
+  });
+</script>
+
+</body>
+</html>

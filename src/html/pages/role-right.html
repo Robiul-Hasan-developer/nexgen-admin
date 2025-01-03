@@ -26,6 +26,13 @@
             <span class="w-1-px h-18-px bg-white-1"></span>
             Add Role  
           </button>
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#ImportRoleRights">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Import Role
+          </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
             <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
@@ -672,6 +679,51 @@
   </div>
   @@include('../layouts/_footer.html')
 </main>
+
+
+<!-- Import Role Rights Start -->
+<div class="modal fade" id="ImportRoleRights" tabindex="-1" aria-labelledby="ImportRoleRightsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-826-px">
+    <div class="modal-content py-44 px-32 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="ImportRoleRightsLabel">Import Role Rights</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-16 radius-6">Import Excel</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mt-84-px mb-100-px">
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+              <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
+              <input type="file" class="form-control validation-input flex-grow-1 file-44-px" id="fileInput" required>
+              <div class="invalid-feedback">Please Full Name</div>
+            </div>
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-28">
+              <span class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">Sample File</span>
+              <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+                <span class="fw-normal text-xs text-neutral-300">
+                  <i class="ri-download-fill"></i>
+                </span>
+                <span class="w-1-px h-18-px bg-white-1"></span>
+                <span class="px-24">Download</span>
+              </button>
+            </div>
+          </div>  
+          <div class="text-end">
+            <button type="submit" class="btn py-8 px-24 btn-primary-600">Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Import Role Rights End -->
+
 
 <!-- Add Role Rights start -->
 <div class="modal fade" id="addRole" tabindex="-1" aria-labelledby="addRoleLabel" aria-hidden="true">
