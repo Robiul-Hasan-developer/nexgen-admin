@@ -19,10 +19,16 @@
     &-102-px {
       height: 102px;
     }
+    &-100--2-px {
+      height: calc(100% - 2px) !important;
+    }
   }
   .max-h {
     &-362-px {
       max-height: 362px;
+    }
+    &-300-px {
+      max-height: 300px;
     }
     &-230-px {
       max-height: 230px;

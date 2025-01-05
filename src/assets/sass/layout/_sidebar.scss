@@ -265,8 +265,8 @@
         }
       }
     }
-    > a {
-      &.active-page {
+    &.active-page {
+      > a {
         background-color: var(--primary-600);
         color: #fff;
         &:hover {
@@ -312,7 +312,7 @@
     transition: none;
     li {
       &.active-page {
-        a {
+        > a {
           background-color: var(--button-secondary);
           color: var(--text-primary-light);
         }

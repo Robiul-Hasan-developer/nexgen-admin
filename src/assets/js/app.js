@@ -30,22 +30,59 @@
     $(".sidebar").removeClass("sidebar-open");
     $(".body-overlay").removeClass("show");
   });
+  // sidebar submenu collapsible js
 
-  $(function () {
-    var nk = window.location.href.split(/[?#]/)[0]; // Get the base URL without hash or query parameters
-    var o = $("ul#sidebar-menu a")
-      .filter(function () {
-        return this.href.split(/[?#]/)[0] === nk; // Compare only the base URL
-      })
-      .addClass("active-page") // Add class to the anchor
-      .parent()
-      .addClass("active-page"); // Add class to the parent (li)
+
+  // Active page js
+  // $(function () {
+  //   var nk = window.location.href.split(/[?#]/)[0]; // Get the base URL without hash or query parameters
+  //   var o = $("ul#sidebar-menu a")
+  //     .filter(function () {
+  //       return this.href.split(/[?#]/)[0] === nk; // Compare only the base URL
+  //     })
+  //     .addClass("active-page") // Add class to the anchor
+  //     .parent()
+  //     .addClass("active-page"); // Add class to the parent (li)
   
-    while (o.is("li")) {
-      o = o.parent().addClass("show").parent().addClass("open"); // Add classes to parent elements
+  //   while (o.is("li")) {
+  //     o = o.parent().addClass("show").parent().addClass("open"); // Add classes to parent elements
+  //   }
+  // });
+
+  // ========================== add active class to navbar menu current page Js Start =====================
+  function dynamicActiveMenuClass(selector) {
+    let FileName = window.location.pathname.split("/").reverse()[0];
+
+    // If we are at the root path ("/" or no file name), keep the active-page class on the Home item
+    if (FileName === "" || FileName === "index.html") {
+      // Keep the active-page class on the Home link
+      selector.find("li.nav-menu__item.has-submenu").eq(0).addClass("active-page");
+    } else {
+      // Remove active-page class from all items first
+      selector.find("li").removeClass("active-page");
+
+      // Add active-page class to the correct li based on the current URL
+      selector.find("li").each(function () {
+        let anchor = $(this).find("a");
+        if ($(anchor).attr("href") == FileName) {
+          $(this).addClass("active-page");
+        }
+      });
+
+      // If any li has active-page element, add class to its parent li
+      selector.children("li").each(function () {
+        if ($(this).find(".active-page").length) {
+          $(this).addClass("active-page");
+        }
+      });
     }
-  });
-  
+  }
+
+  if ($('ul').length) {
+    dynamicActiveMenuClass($('ul'));
+  }
+// ========================== add active class to navbar menu current page Js End =====================
+
 
   // ======================= side menu js start =======================
   $('.side-menu-icon').on('click', function () {
@@ -133,38 +170,38 @@
   var notification = document.querySelector('.toast-message');
   var notificationText = document.querySelector('.notification-text');
   var closeToast = document.querySelector('.close-toast');
+  var toastTimeout; // Declare a global timeout variable
 
-  function toastMessage (toastTextMessage) {
-
+  function toastMessage(toastTextMessage) {
     notificationText.innerHTML = toastTextMessage;
     notification.classList.add('active');
-    
-    setTimeout (() => {
-        notification.classList.remove('active');
+
+    // Set timeout to remove the active class after 3.5 seconds
+    toastTimeout = setTimeout(() => {
+      notification.classList.remove('active');
     }, 3500);
 
     // Close the notification
     if (closeToast) {
-        closeToast.addEventListener('click', function () {
-          notification.classList.remove('active', 'hover');
-
-          notification.classList.add('d-none');
-          setTimeout (() => {
-            notification.classList.remove('d-none');
-         }, 1);
-         
-        });
+      closeToast.addEventListener('click', function () {
+        notification.classList.remove('active');
+        notification.classList.add('d-none');
+        setTimeout(() => {
+          notification.classList.remove('d-none');
+        }, 1);
+      });
     }
 
-    // Hover add and remove class on notification
+    // Hover to pause the removal of the active class
     if (notification) {
-        notification.addEventListener('mouseenter', function () {
-            this.classList.add('hover');
-        });
-    
-        notification.addEventListener('mouseleave', function () {
-            this.classList.remove('hover');
-        });
+      notification.addEventListener('mouseenter', function () {
+        clearTimeout(toastTimeout);
+        this.classList.add('active');
+      });
+
+      notification.addEventListener('mouseleave', function () {
+        this.classList.remove('active'); 
+      });
     }
   }
   // ********************************** Toast Notification Js end **********************************
@@ -203,6 +240,24 @@
   });
   // ***************************** Show hide password js ***************************** 
 
+  // *************************** Max Text in textarea js start ***************************
+  var maxDescArea = document.querySelector('.max-desc');
+  var textLength = document.querySelector('.text-length');
+  var maxText = 1000;
+  
+  if(maxDescArea) {
+    maxDescArea.addEventListener('input', function (event) {
+        var valueLength = maxDescArea.value.length;
+        textLength.innerHTML = `${valueLength} / ${maxText}`;
+        
+        if(valueLength > maxText ) {
+          this.value = this.value.slice(0, maxText);
+          textLength.innerHTML = `${maxText} / ${maxText}`;
+        }
+    });
+  }
+  // *************************** Max Text in textarea js End ***************************
+  
    // ***************************** Validation js ***************************** 
    var inputs = document.querySelectorAll('.validation-input');
    if(inputs) {
@@ -252,8 +307,100 @@
       toastMessage("Form submitted successfully!");
     });
   }
-  // ========================= Form Submit Js End ===================s
+  // ========================= Form Submit Js End ===================
   
+  // ========================= Field Sidebar Js Start ===================
+  var fieldSidebar = document.querySelector('.field-sidebar');
+  var fieldSidebarBtn = document.querySelector('.field-sidebar-btn');
+
+  if(fieldSidebar && fieldSidebarBtn) {
+    fieldSidebarBtn.addEventListener('click', function () {
+      if (this.classList.contains('btn-primary-600')) {
+        this.classList.remove('btn-primary-600');
+        this.classList.add('btn-danger-600');
+        this.innerHTML = "Hide Fields";
+      } else {
+        this.classList.add('btn-primary-600');
+        this.classList.remove('btn-danger-600');
+        this.innerHTML = "Additional Fields";
+      }
+  
+      fieldSidebar.classList.toggle('d-none');
+    });
+  }
+  // ========================= Field Sidebar Js End ===================
+
+  
+  // ========================= review act btn Js Start ===================
+  var reviewActBtn = document.querySelector('.review-act-btn');
+
+  if(reviewActBtn) {
+    reviewActBtn.addEventListener('click', function(e) { 
+      var reviewActBtnText = this.querySelector('.text');
+      var reviewActBtnIcon = this.querySelector('.icon');
+  
+      if (reviewActBtnText.innerHTML.trim() === "Start Action") {
+        reviewActBtnText.innerHTML = "Continue";
+        reviewActBtnIcon.classList.remove('ri-play-circle-line');
+        reviewActBtnIcon.classList.add('ri-pause-circle-line');
+      } 
+      else if (reviewActBtnText.innerHTML.trim() === "Continue") {
+        reviewActBtnText.innerHTML = "Auto Finish";
+        reviewActBtnIcon.classList.remove('ri-pause-circle-line');
+        reviewActBtnIcon.classList.add('ri-stop-circle-line');
+  
+        this.classList.remove('btn-success-600');
+        this.classList.add('btn-danger-600');
+      } 
+      else {
+        reviewActBtnText.innerHTML = "Completed";
+        reviewActBtnIcon.classList.remove('ri-stop-circle-line');
+        reviewActBtnIcon.classList.add('ri-checkbox-circle-line');
+  
+        this.classList.remove('btn-danger-600');
+        this.classList.add('btn-primary-600');
+      }
+    });
+  }
+  // ========================= review act btn Js End ===================
+
+  // ========================= Table Tr Drag Js Start ===================
+  const rows = document.querySelectorAll(".draggable-table tbody tr");
+
+  rows.forEach((row) => {
+    row.setAttribute("draggable", "true");
+    
+    row.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", row.rowIndex);
+      e.currentTarget.classList.add("dragging", "cursor-move");
+    });
+
+    row.addEventListener("dragend", (e) => {
+      e.currentTarget.classList.remove("dragging", "cursor-move");
+    });
+
+    row.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      const draggingRow = document.querySelector(".dragging");
+      const currentRow = e.currentTarget;
+
+      const rect = currentRow.getBoundingClientRect();
+      const offset = e.clientY - rect.top;
+
+      if (offset > rect.height / 2) {
+        currentRow.parentNode.insertBefore(draggingRow, currentRow.nextSibling);
+      } else {
+        currentRow.parentNode.insertBefore(draggingRow, currentRow);
+      }
+    });
+
+    row.addEventListener("drop", (e) => {
+      e.preventDefault();
+    });
+  });
+  // ========================= Table Tr Drag Js End ===================
+
+
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
   //   const themeToggle = $("#theme-toggle .form-check-input");

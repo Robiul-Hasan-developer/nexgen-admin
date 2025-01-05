@@ -71,8 +71,7 @@ $btn-colors: (
         color: #fff !important;
         border-color: var(--#{$color}-700);
       }
-      &:active,
-      &:focus {
+      &:active {
         background-color: var(--#{$color}-800) !important;
         color: #fff !important;
         border-color: var(--#{$color}-800) !important;

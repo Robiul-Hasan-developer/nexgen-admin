@@ -102,7 +102,7 @@
 
           <div class="max-w-350-px w-100 position-relative">
             <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-            <label for="dateTime" class="position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100 border rounded-end bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center">
+            <label for="dateTime" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-1">
               <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
             </label>
           </div>
@@ -1698,8 +1698,8 @@
       </div>
 
       <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
-        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">Delete</button>
-        <button type="button" class="btn py-6 px-24 btn-purple-600">Draft</button>
+        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+        <button type="button" class="btn py-6 px-24 btn-purple-600" data-bs-toggle="modal" data-bs-target="#draftModal">Draft</button>
         <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createPdf">Next</button>
       </div>
     </div>
@@ -1727,7 +1727,7 @@
 
           <div class="d-flex flex-md-row flex-column gap-24">
             <!-- PDF Sidebar start -->
-            <div class="p-8 shadow-4 flex-shrink-0 w-100 max-w-184-px bg-white">
+            <div class="field-sidebar p-8 shadow-4 flex-shrink-0 w-100 max-w-184-px bg-white">
               <span class="py-1 px-20 bg-primary-600 text-white text-sm fw-semibold radius-4 mb-20">Fields  </span>
 
               <div class="d-flex flex-column gap-12 max-h-800-px overflow-y-auto scroll-sm">
@@ -1833,9 +1833,9 @@
            </div>
   
           <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
-            <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal">Delete</button>
-            <button type="button" class="btn py-6 px-24 btn-purple-600">Draft</button>
-            <button type="submit" class="btn py-6 px-24 btn-primary-600">Submit</button>
+            <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+            <button type="button" class="btn py-6 px-24 btn-purple-600" data-bs-toggle="modal" data-bs-target="#draftModal">Draft</button>
+            <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
           </div>
         </form>
       </div>
@@ -2391,6 +2391,78 @@
   </div>
 </div>
 <!-- History Modal start -->
+
+<!-- Delete Modal start -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content radius-16 overflow-hidden p-32">
+      <button type="button" class="text-danger-600 text-2xl position-absolute end-0 top-0 mt-12 me-16" data-bs-dismiss="modal" aria-label="Close" id="deleteModalLabel">
+        <i class="ri-close-fill d-flex line-height-1"></i>
+      </button>
+
+      <div class="modal-body p-0 text-center">
+        <span class="mb-24">
+          <img src="assets/images/icon/delete-icon-img.svg" alt="">
+        </span>
+        <h6 class="text-lg mb-12">Are You Sure?</h6>
+        <p class="text-sm text-secondary-light-two mb-0">Are you sure you want to Delete this Announcement?</p>
+        <div class="d-inline-flex align-items-center gap-44 mt-28">
+          <button type="button" class="btn btn-neutral-200 px-40 text-secondary-light" data-bs-toggle="modal" aria-label="Close">Close</button>
+          <button type="button" class="btn btn-danger-600 px-20">Yes, Delete it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Delete Modal start -->
+
+<!-- Draft Modal start -->
+<div class="modal fade" id="draftModal" tabindex="-1" aria-labelledby="draftModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content radius-16 overflow-hidden p-32">
+      <button type="button" class="text-danger-600 text-2xl position-absolute end-0 top-0 mt-12 me-16" data-bs-dismiss="modal" aria-label="Close" id="draftModalLabel">
+        <i class="ri-close-fill d-flex line-height-1"></i>
+      </button>
+
+      <div class="modal-body p-0 text-center">
+        <span class="mb-24">
+          <img src="assets/images/icon/draft-icon-img.svg" alt="">
+        </span>
+        <h6 class="text-lg mb-12">Draft Saved!</h6>
+        <p class="text-sm text-secondary-light-two mb-0"> You can continue editing anytime</p>
+        <div class="d-inline-flex align-items-center gap-44 mt-28">
+          <button type="button" class="btn btn-neutral-200 px-40 text-secondary-light" data-bs-toggle="modal" aria-label="Close">Close</button>
+          <button type="button" class="btn btn-purple-600 px-20">Yes, Delete it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Draft Modal start -->
+
+<!-- Success Modal start -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content radius-16 overflow-hidden p-32">
+      <button type="button" class="text-danger-600 text-2xl position-absolute end-0 top-0 mt-12 me-16" data-bs-dismiss="modal" aria-label="Close" id="successModalLabel">
+        <i class="ri-close-fill d-flex line-height-1"></i>
+      </button>
+
+      <div class="modal-body p-0 text-center">
+        <span class="mb-24">
+          <img src="assets/images/icon/draft-icon-img.svg" alt="">
+        </span>
+        <h6 class="text-lg mb-12">Successful! </h6>
+        <p class="text-sm text-secondary-light-two mb-0">Your action was completed successfully!</p>
+        <div class="d-inline-flex align-items-center gap-44 mt-28">
+          <button type="button" class="btn btn-neutral-200 px-40 text-secondary-light" data-bs-toggle="modal" aria-label="Close">Close</button>
+          <button type="button" class="btn btn-primary-600 px-20">Another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Success Modal start -->
   
 
 @@include('../partial-html/_template-bottom.html')

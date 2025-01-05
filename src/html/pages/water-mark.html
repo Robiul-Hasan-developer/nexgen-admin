@@ -12,6 +12,93 @@
     paraText:"Display watermark settings to manage text, opacity, and positioning for secure and professional document handling."
   })
   
+
+
+
+  <!-- <style>
+    td{
+      padding:5px 10px;
+    }
+    tr:nth-child(odd){
+      background:#ddd;
+    }
+    tr:nth-child(even){
+      background:#bbb;
+    }
+  </style>
+  
+
+  <table id="draggable-table">
+    <tr draggable="true">
+      <td>1</td>
+      <td>nabil</td>
+      <td>droid</td>
+    </tr>
+    <tr draggable="true">
+      <td>2</td>
+      <td>test</td>
+      <td>testing</td>
+    </tr>
+    <tr draggable="true">
+      <td>3</td>
+      <td>hello</td>
+      <td>world</td>
+    </tr>
+    <tr draggable="true">
+      <td>4</td>
+      <td>programming</td>
+      <td>javascript</td>
+    </tr>
+  </table>
+
+
+  <script>
+    let draggedRow = null;
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const tableRows = document.querySelectorAll('#draggable-table tr');
+      cursor: "move",
+  
+      tableRows.forEach((row) => {
+        // Drag Start
+        row.addEventListener('dragstart', (event) => {
+          draggedRow = row; // Store the dragged row
+          event.dataTransfer.effectAllowed = 'move';
+          event.dataTransfer.setData('text/html', row.outerHTML); // Optional, to show feedback
+        });
+  
+        // Drag Over
+        row.addEventListener('dragover', (event) => {
+          event.preventDefault(); // Necessary to allow dropping
+          const targetRow = event.target.closest('tr');
+          const rows = Array.from(targetRow.parentNode.children);
+  
+          if (rows.indexOf(targetRow) > rows.indexOf(draggedRow)) {
+            targetRow.after(draggedRow);
+          } else {
+            targetRow.before(draggedRow);
+          }
+        });
+  
+        // Drag End
+        row.addEventListener('dragend', () => {
+          draggedRow = null; // Clear the reference
+        });
+      });
+    });
+  </script> -->
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6">
 
@@ -45,7 +132,7 @@
 
           <div class="max-w-350-px w-100 position-relative">
             <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="01 Nov, 2024 to 20 Nov, 2024">
-            <label for="dateTime" class="position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100 border rounded-end bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center">
+            <label for="dateTime" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-1">
               <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
             </label>
           </div>
@@ -547,7 +634,7 @@
                   </div>
                 </div>
                 <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
-                  <table class="table min-w-max mb-0">
+                  <table class="draggable-table table min-w-max mb-0">
                     <thead>
                       <tr>
                         <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal text-start"> <span class="d-none">icon</span> </th>
@@ -560,18 +647,20 @@
                     <tbody>
                       <tr>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                          <button class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                             <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
+                          </button>
                         </td>
                         <td class="text-xs border-bottom border-neutral-200 text-center">
                           <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">01</span>
                         </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Text</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <button type="button" class="text-hover-primary-500" data-bs-toggle="modal" data-bs-target="#textModal">Text</button>
+                        </td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Confidential, Opacity 20%, X 2, Y 180, R 30%, 20X</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -582,18 +671,22 @@
                       </tr>
                       <tr>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                          <button class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                             <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
+                          </button>
                         </td>
                         <td class="text-xs border-bottom border-neutral-200 text-center">
                           <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">02</span>
                         </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Created User ID / Name </td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <button type="button" class="text-hover-primary-500" data-bs-toggle="modal" data-bs-target="#createUserId">
+                            Created User ID / Name
+                          </button>
+                         </td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -604,18 +697,22 @@
                       </tr>
                       <tr>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                          <button class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                             <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
+                          </button>
                         </td>
                         <td class="text-xs border-bottom border-neutral-200 text-center">
                           <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">03</span>
                         </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">IP address</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <button type="button" class="text-hover-primary-500" data-bs-toggle="modal" data-bs-target="#ipAddress">
+                            IP address
+                          </button>
+                        </td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -626,18 +723,22 @@
                       </tr>
                       <tr>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                          <button class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                             <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
+                          </button>
                         </td>
                         <td class="text-xs border-bottom border-neutral-200 text-center">
                           <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">04</span>
                         </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Times Stamp</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <button type="button" class="text-hover-primary-500" data-bs-toggle="modal" data-bs-target="#timeStamp">
+                            Times Stamp
+                          </button>
+                        </td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -648,84 +749,22 @@
                       </tr>
                       <tr>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                          <button class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                             <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
+                          </button>
                         </td>
                         <td class="text-xs border-bottom border-neutral-200 text-center">
                           <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">05</span>
                         </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">File Name / Folder Name</td>
+                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
+                          <button type="button" class="text-hover-primary-500" data-bs-toggle="modal" data-bs-target="#fileName">
+                            File Name / Folder Name
+                          </button>
+                        </td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                              <i class="ri-pencil-fill"></i>
-                            </button>
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
-                              <i class="ri-delete-bin-5-fill"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 text-center">
-                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">06</span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Times Stamp</td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
-                          <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                              <i class="ri-pencil-fill"></i>
-                            </button>
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
-                              <i class="ri-delete-bin-5-fill"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 text-center">
-                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">07</span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">IP address</td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
-                          <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
-                              <i class="ri-pencil-fill"></i>
-                            </button>
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
-                              <i class="ri-delete-bin-5-fill"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20"> 
-                          <span class="w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
-                            <img src="assets/images/home-one/icon/dot-square.png" alt="">
-                          </span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 text-center">
-                          <span class="w-20-px h-20-px bg-neutral-100 d-inline-flex justify-content-center align-items-center rounded-circle text-xs text-primary-600">08</span>
-                        </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Created User ID / Name </td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
-                        <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
-                          <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white" data-bs-toggle="modal" data-bs-target="#editRecipient">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -810,15 +849,15 @@
             <div class="min-h-540-px radius-6 shadow-6 bg-neutral-30 p-24 mb-24">
               <div class="min-h-540-px d-flex flex-column justify-content-between">
                 <div class="text-end">
-                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#fileName">File Name / Folder Name</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100">File Name / Folder Name</button>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#textModal">Text</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100">Text</button>
                 </div>
                 <div class="d-flex justify-content-between flex-wrap gap-16">
-                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#createUserId">Created User ID / Name</button>
-                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#ipAddress">IP address</button>
-                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100" data-bs-toggle="modal" data-bs-target="#timeStamp">Time Stamp</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100">Created User ID / Name</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100">IP address</button>
+                  <button type="button" class="bg-primary-20 border border-primary-20 border-2 px-20 py-2 text-xs radius-6 w-auto fw-bold text-primary-600 bg-hover-primary-100">Time Stamp</button>
                 </div>
               </div>
             </div>
@@ -1508,6 +1547,7 @@
   new DataTable('#example', {
     searching: false,   // Removes the search box
     lengthChange: false, 
+    rowReorder: true
   });
 
   // *****************************  Flat pickr or date picker js ***************************** 
@@ -1521,22 +1561,6 @@
   }
   getDatePicker('#dateTime');
   // *****************************  Flat pickr or date picker js ***************************** 
-
-  // *************************** Max Text in textarea js start ***************************
- var maxDescArea = document.querySelector('.max-desc');
- var textLength = document.querySelector('.text-length');
- var maxText = 1000;
- 
- maxDescArea.addEventListener('input', function (event) {
-    var valueLength = maxDescArea.value.length;
-    textLength.innerHTML = `${valueLength} / ${maxText}`;
-    
-    if(valueLength > maxText ) {
-        this.value = this.value.slice(0, maxText);
-        textLength.innerHTML = `${maxText} / ${maxText}`;
-    }
- });
-  // *************************** Max Text in textarea js End ***************************
   
   // *************************** Editor js start here ***************************
   const quill = new Quill('#editor', {

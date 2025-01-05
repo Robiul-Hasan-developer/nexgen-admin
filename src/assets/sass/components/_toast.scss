@@ -13,7 +13,7 @@
     z-index: 9999;
     visibility: hidden;
     opacity: 0;
-    &.active, &.hover {
+    &.active {
       margin-inline-end: 0;
       visibility: visible;
       opacity: 1;
@@ -23,20 +23,23 @@
       visibility: visible;
       opacity: 1;
     }
+    &:hover .progress-bar::before {
+      animation-play-state: paused;
+    }
   }
 
 .progress-bar {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
     height: 2px;
     width: 100%;
     background: #fff;
     &::before{
         content: "";
         position: absolute;
-        bottom: 0;
-        right: 0;
+        inset-block-end: 0;
+        inset-inline-start: 0;
         height: 100%;
         width: 100%;
         background-color: var(--success-600);
@@ -46,8 +49,11 @@
   }
   
   @keyframes progress-bar {
-    100%{
-      right: 100%;
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
     }
   }
 /* Toast Message Css End  */

@@ -50,11 +50,28 @@
     .form-control.is-valid, .was-validated .form-control:valid {
         background-position: left calc(.375em + .1875rem) center;
     }
-    // .toast-message {
-    //     transform: translateX(calc(-100% - 40px));
-    //     &.active, &.hover {
-    //         transform: translateX(0);
-    //     }
-    // }
+    .rounded-end-8-px {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        border-top-left-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+    }
+    .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month, .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
+        left: auto;
+        right: 0;
+    }
+    .flatpickr-months .flatpickr-prev-month.flatpickr-next-month, .flatpickr-months .flatpickr-next-month.flatpickr-next-month {
+        right: auto;
+        left: 0;
+    }
+    .flatpickr-months .flatpickr-prev-month svg, .flatpickr-months .flatpickr-next-month svg {
+        transform: rotate(180deg);
+    }
+    .form-switch .form-check-input {
+        background-position: right center;
+    }
+    .form-switch .form-check-input:checked {
+        background-position: left center;
+    }
 }
 /* RTL css end */

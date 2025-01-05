@@ -19,15 +19,14 @@
     .select2-selection__choice {
         background-color: #ede7fb !important;
         border: 0 !important;
-        padding-left: 0 !important;
         padding-inline-end: 20px !important;
         padding-inline-start: 4px !important;
         color: #865ce2 !important;
     }
     .select2-selection__choice__remove {
-        left: auto !important;
+        inset-inline-start: auto !important;
         top: 50% !important;
-        inset-inline-end: 0;
+        inset-inline-end: 0 !important;
         border: 0 !important;
         transform: translateY(-50%);
         color: #865ce2 !important;

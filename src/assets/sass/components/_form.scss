@@ -144,6 +144,12 @@
 .form-control.is-valid, .was-validated .form-control:valid {
   border-color: var(--bs-form-valid-border-color) !important;
 }
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+  box-shadow: none;
+}
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus {
+  box-shadow: none;
+}
 
 .before-border {
   &::before {

@@ -17,7 +17,7 @@
 
 .recipient-dropdown {
   li {
-    &:nth-child(even), &:hover {
+    &:hover {
       background-color: rgba(250, 246, 246, 1);
     }
     &:first-child {

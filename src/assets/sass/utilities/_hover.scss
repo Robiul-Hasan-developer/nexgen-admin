@@ -6,8 +6,13 @@
   }
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.cursor {
+  &-pointer {
+    cursor: pointer;
+  }
+  &-move {
+    cursor: move !important;
+  }
 }
 
 .pointer-event-none {
