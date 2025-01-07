@@ -1,0 +1,106 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Business Suite",
+    page: "Settings",
+    activePage: "Business Suite",
+    paraText: "Streamlining configuration and administration of users, roles, permissions, and module integrations for efficient operations across the suite."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 bg-white py-24 px-res-32-px radius-6">
+        
+        <input type="text"  class="form-control placeholder-12" placeholder="Search...">
+        <div class="mt-60">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">MN</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Meeting Name </h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">rack and manage meeting titles with details, including creation time, status, and associated actions.</p>
+                        </div>
+                        <a href="#" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">E</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Location</h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Organize and monitor location details, including setup, availability, and linked records.</p>
+                        </div>
+                        <a href="#" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">AT</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Announcement Template  </h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Manage Announcement Template details efficiently, including type, status, creation time, and usage history.</p>
+                        </div>
+                        <a href="announcement-template.html" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">AN</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Action Name</h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Monitor task titles with comprehensive insights, including status, priority, and assigned users.</p>
+                        </div>
+                        <a href="#" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white radius-8 shadow-5 px-res-32-px py-24 h-100 d-flex flex-column justify-content-between">
+                        <div class="">
+                            <div class="w-56-px h-56-px rounded-circle bg-primary-25 d-flex justify-content-center align-items-center mb-32">
+                                <span class="font-rubik w-48-px h-48-px bg-primary-25 rounded-circle d-flex justify-content-center align-items-center text-primary-600 fw-bold">CW</span>
+                            </div>
+                            <h6 class="font-rubik text-lg fw-semibold">Create workflow </h6>
+                            <p class="font-rubik mt-8 text-secondary-light-two text-sm">Initiate and manage workflows with detailed tracking of steps, participants, and progress.</p>
+                        </div>
+                        <a href="#" class="font-rubik d-inline-flex align-items-center gap-6 fw-medium text-primary-600">
+                            <span class="hover-underline">View More</span>
+                            <i class="ri-arrow-right-line line-height-1 d-flex"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>

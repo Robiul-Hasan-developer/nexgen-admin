@@ -20,7 +20,7 @@
       height: 102px;
     }
     &-100--2-px {
-      height: calc(100% - 2px) !important;
+      height: calc(100% - 3px) !important;
     }
   }
   .max-h {
@@ -42,6 +42,9 @@
     &-510-px {
       max-height: 510px;
     }
+    &-520-px {
+      max-height: 520px;
+    }
     &-800-px {
       max-height: 800px;
     }
@@ -52,7 +55,7 @@
         min-height: 100vh;
     }
     &-72-px {
-        min-height: 72px;
+        min-height: 72px !important;
     }
     &-104-px {
         min-height: 104px !important;

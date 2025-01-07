@@ -237,6 +237,7 @@
         }
       });
     }
+    
   });
   // ***************************** Show hide password js ***************************** 
 
@@ -345,7 +346,7 @@
         reviewActBtnIcon.classList.add('ri-pause-circle-line');
       } 
       else if (reviewActBtnText.innerHTML.trim() === "Continue") {
-        reviewActBtnText.innerHTML = "Auto Finish";
+        reviewActBtnText.innerHTML = "Pause";
         reviewActBtnIcon.classList.remove('ri-pause-circle-line');
         reviewActBtnIcon.classList.add('ri-stop-circle-line');
   
@@ -367,38 +368,94 @@
   // ========================= Table Tr Drag Js Start ===================
   const rows = document.querySelectorAll(".draggable-table tbody tr");
 
-  rows.forEach((row) => {
-    row.setAttribute("draggable", "true");
-    
-    row.addEventListener("dragstart", (e) => {
-      e.dataTransfer.setData("text/plain", row.rowIndex);
-      e.currentTarget.classList.add("dragging", "cursor-move");
+  if(rows) {
+    rows.forEach((row) => {
+      row.setAttribute("draggable", "true");
+      
+      row.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text/plain", row.rowIndex);
+        e.currentTarget.classList.add("dragging", "cursor-move");
+      });
+  
+      row.addEventListener("dragend", (e) => {
+        e.currentTarget.classList.remove("dragging", "cursor-move");
+      });
+  
+      row.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        const draggingRow = document.querySelector(".dragging");
+        const currentRow = e.currentTarget;
+  
+        const rect = currentRow.getBoundingClientRect();
+        const offset = e.clientY - rect.top;
+  
+        if (offset > rect.height / 2) {
+          currentRow.parentNode.insertBefore(draggingRow, currentRow.nextSibling);
+        } else {
+          currentRow.parentNode.insertBefore(draggingRow, currentRow);
+        }
+      });
+  
+      row.addEventListener("drop", (e) => {
+        e.preventDefault();
+      });
     });
+  }
+  // ========================= Table Tr Drag Js End ===================
 
-    row.addEventListener("dragend", (e) => {
-      e.currentTarget.classList.remove("dragging", "cursor-move");
-    });
 
-    row.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      const draggingRow = document.querySelector(".dragging");
-      const currentRow = e.currentTarget;
+  // ========================= Announcement Dept Select Js start ===================
+  let searchFilterInput = document.querySelector('.search-filter-input');
 
-      const rect = currentRow.getBoundingClientRect();
-      const offset = e.clientY - rect.top;
-
-      if (offset > rect.height / 2) {
-        currentRow.parentNode.insertBefore(draggingRow, currentRow.nextSibling);
+  let announcementDeptSelect = document.querySelector('.announcement-dept-select');
+  let announcementItems = document.querySelectorAll('.announcement-item');
+  
+  if(announcementDeptSelect && announcementItems) {
+    announcementDeptSelect.addEventListener('change', function (event) {
+      const selectedValue = event.target.value;
+  
+      // Filter Announcement Item
+      announcementItems.forEach(item => {
+        const itemValue = item.getAttribute("data-value");
+        
+        if(selectedValue === itemValue) { 
+          item.classList.remove('d-none');
+        } else {
+          item.classList.add('d-none');
+        }
+      });
+      // Filter Announcement Item end
+      
+      // Select's selected value replace to the search input filter start
+      if(selectedValue === "Select Announcement") {
+        searchFilterInput.setAttribute('placeholder', 'Search here...');
       } else {
-        currentRow.parentNode.insertBefore(draggingRow, currentRow);
+        searchFilterInput.setAttribute('placeholder', `Search by ${selectedValue}`);
       }
+      // Select's selected value replace to the search input filter end
     });
+  }
+  // ========================= Announcement Dept Select Js End ===================
 
-    row.addEventListener("drop", (e) => {
-      e.preventDefault();
+  
+  // ========================= checkbox checked announcement item Js start ===================
+  let announcementItemCheckboxes = document.querySelectorAll('.announcement-item-checkbox');
+
+  announcementItemCheckboxes.forEach(checkboxItem => {
+    checkboxItem.addEventListener('change', function () {
+
+      const parentItem = this.closest('.check-announcement-item');
+
+      if(this.checked) {
+        parentItem.classList.add('bg-neutral-100');
+      } else {
+        parentItem.classList.remove('bg-neutral-100');
+      }
+
     });
   });
-  // ========================= Table Tr Drag Js End ===================
+  // ========================= checkbox checked announcement item Js End ===================
+
 
 
   // ========================== Light Dark version js start ==========================
