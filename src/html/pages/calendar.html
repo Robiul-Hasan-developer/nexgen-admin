@@ -1,0 +1,38 @@
+ <!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Announcement Template",
+    page: "Business Suite",
+    activePage: "Announcement Template",
+    paraText: "For envelope  masters, display envelope details, status, and actions for streamlined management, with appropriate permissions for viewing, editing, and configuring envelope."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+        <div id='calendar'></div>
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+
+@@include('../partial-html/_template-bottom.html')
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
+    });
+</script>
+
+</body>
+</html>
