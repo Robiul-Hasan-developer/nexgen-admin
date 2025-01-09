@@ -456,6 +456,23 @@
   });
   // ========================= checkbox checked announcement item Js End ===================
 
+  
+  // ========================= Days Select Input Js Start ===================
+  let daysSelectInput = document.querySelectorAll('.days-select-input');
+
+  daysSelectInput.forEach(checkedItem => {
+    checkedItem.addEventListener('change', function (event) {
+      if(checkedItem.checked) {
+        checkedItem.closest('div').querySelector('.form-check-label').classList.remove('bg-neutral-200', 'text-secondary-light-two');
+        checkedItem.closest('div').querySelector('.form-check-label').classList.add('bg-primary-600', 'text-white');
+      } else {
+        checkedItem.closest('div').querySelector('.form-check-label').classList.add('bg-neutral-200', 'text-secondary-light-two');
+        checkedItem.closest('div').querySelector('.form-check-label').classList.remove('bg-primary-600', 'text-white');
+      }
+    });
+  });
+  // ========================= Days Select Input Js End ===================
+
 
 
   // ========================== Light Dark version js start ==========================

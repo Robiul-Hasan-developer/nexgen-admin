@@ -18,17 +18,17 @@
       visibility: visible;
       opacity: 1;
     }
-    &.active .progress-bar::before{
+    &.active .progress__bar::before{
       animation: progress-bar 3.6s linear forwards;
       visibility: visible;
       opacity: 1;
     }
-    &:hover .progress-bar::before {
+    &:hover .progress__bar::before {
       animation-play-state: paused;
     }
   }
 
-.progress-bar {
+.progress__bar {
     position: absolute;
     inset-block-end: 0;
     inset-inline-start: 0;
