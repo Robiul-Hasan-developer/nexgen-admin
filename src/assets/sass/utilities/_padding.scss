@@ -47,6 +47,12 @@
   padding-right: 0 !important;
 }
 
+.pe {
+  &-88-px {
+    padding-inline-end:  clamp(3.75rem, -5.0655rem + 18.2692vw, 5.5rem);
+  }
+}
+
 .px-res {
   &-40-px {
     padding-inline: clamp(1.5rem, 0.25rem + 4vw, 2.5rem);

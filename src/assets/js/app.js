@@ -473,7 +473,47 @@
   });
   // ========================= Days Select Input Js End ===================
 
+  
+  // ========================= Add Action Add Remove Js Start ===================
+    document.addEventListener('DOMContentLoaded', function () {
+      var addActionWrappers = document.querySelectorAll('.add-action-wrapper');
 
+      if(addActionWrappers) {
+        addActionWrappers.forEach(function (wrapper) {
+            var addActionAdd = wrapper.querySelector('.add-action__add');
+            var addActionRemove = wrapper.querySelector('.add-action__remove');
+  
+            // Function to handle adding a new wrapper
+            addActionAdd.addEventListener('click', function () {
+                toastMessage("Add action create successfully!");
+                // Clone the wrapper
+                var newWrapper = wrapper.cloneNode(true);
+  
+                // Reset the cloned wrapper's values
+                var selects = newWrapper.querySelectorAll('select');
+                selects.forEach(function (select) {
+                    select.selectedIndex = 0; // Reset dropdowns to their default option
+                });
+  
+                // Attach remove button functionality to the new clone
+                var removeButton = newWrapper.querySelector('.add-action__remove');
+                removeButton.addEventListener('click', function () {
+                    this.closest('.add-action-wrapper').remove();
+                    toastMessage("You deleted successfully!");
+                });
+  
+                // Insert the cloned wrapper immediately after the current one
+                wrapper.insertAdjacentElement('afterend', newWrapper);
+            });
+  
+            // Function to handle removing the wrapper
+            addActionRemove.addEventListener('click', function () {
+                wrapper.remove();
+            });
+        });
+      }
+  });
+  // ========================= Add Action Add Remove Js End ===================
 
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
