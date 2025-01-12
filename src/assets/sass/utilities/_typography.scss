@@ -46,6 +46,10 @@ a:active, button:active {
   }
 }  
 
+.text-20 {
+  font-size: clamp(0.75rem, -1rem + 2vw, 1.25rem);
+}
+
 
 .line-height {
   &-1 {

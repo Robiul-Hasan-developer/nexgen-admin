@@ -1,0 +1,1301 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Create Workflow",
+    page: "Business Suite",
+    activePage: "Create Workflow",
+    paraText: "Displays a list of workflow creation requests, including workflow details, status, creation time, and actions for efficient tracking and management."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+      <!-- Filter start -->
+      <div class="my-24">
+        <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addWorkflow">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Add Workflow
+          </button>
+
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#importWorkflow">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Import Workflow 
+          </button>
+
+          <div class="d-flex align-items-center gap-3 flex-shrink-0">
+            <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+            <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 w-100">
+            <input type="text" class="form-control w-100" placeholder="Search...">
+  
+            <div class="d-flex align-items-center gap-2 ">
+              <button class="text-neutral-400 d-flex line-height-1  text-lg"><i class="ri-filter-line line-height-1"></i></button>
+              <div class="border radius-8 d-flex">
+                <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                  <i class="ri-printer-line"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                    <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Filter end -->
+
+        <!-- Table Start -->
+        <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical">
+            <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+                <thead>
+                    <tr>
+                        <th class="bg-neutral-50 text-start">Workflow Name</th>
+                        <th class="bg-neutral-50 text-start">Documents Type</th>
+                        <th class="bg-neutral-50 text-center">Due Days</th>
+                        <th class="bg-neutral-50 text-center"># of Departments</th>
+                        <th class="bg-neutral-50 text-center">Assignee</th>
+                        <th class="bg-neutral-50 text-center">Created Details</th>
+                        <th class="bg-neutral-50 text-center">Modified Details</th>
+                        <th class="bg-neutral-50 text-center">Status</th>
+                        <th class="bg-neutral-50 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-primary-50 text-info-600 text-xxs radius-4 text-uppercase">Active  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-danger-50 text-danger-600 text-xxs radius-4 text-uppercase">Inactive  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                                <span class="text-white text-xs">1+</span>
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-primary-50 text-info-600 text-xxs radius-4 text-uppercase">Active  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-danger-50 text-danger-600 text-xxs radius-4 text-uppercase">Inactive  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-primary-50 text-info-600 text-xxs radius-4 text-uppercase">Active  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-danger-50 text-danger-600 text-xxs radius-4 text-uppercase">Inactive  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-primary-50 text-info-600 text-xxs radius-4 text-uppercase">Active  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-danger-50 text-danger-600 text-xxs radius-4 text-uppercase">Inactive  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-primary-50 text-info-600 text-xxs radius-4 text-uppercase">Active  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fw-light">Contract Approval </td>
+                        <td class="text-center fw-light">Accountant Leave Form </td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">3</td>
+                        <td class="text-center fw-light">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                        <td class="text-center fw-light">
+                            <span class="py-1 px-8 bg-danger-50 text-danger-600 text-xxs radius-4 text-uppercase">Inactive  </span>
+                        </td>
+                        <td class="text-center fw-light">
+                            <div class="dropdown">
+                                <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100" data-bs-toggle="modal" data-bs-target="#viewDocuments">
+                                            <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                            <span class="">View</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100 text-sm delete-tr-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                            <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                            <span class="">History</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Table End -->
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+<!-- Add Action Modal start -->
+<div class="modal fade" id="addWorkflow" tabindex="-1" aria-labelledby="addWorkflow" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1444-px">
+      <div class="modal-content py-36 ps-24 pe-88-px radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-40">
+          <div class="d-flex align-items-center gap-18">
+            <h5 class="modal-title fw-semibold line-clamp-1" id="#addWorkflow"> Create Workflow </h5>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+            <div class="">
+                <div class="row gy-4">
+                  <div class="col-lg-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <label for="actionNamee" class="text-sm form-label">Action Name <span class="text-danger-600">*</span> </label>
+                    </div>
+                    <input type="text" class="form-control py-10" id="actionNamee" value="Hiring Staff" placeholder="Action name">
+                  </div>
+                  <div class="col-lg-3">
+                    <label for="Document" class="text-sm form-label">Document <span class="text-danger-600">*</span> </label>
+                    <select class="form-control form-select py-10 px-20" id="Document">
+                        <option value="Document">Document </option>
+                        <option value="News">News </option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <label for="priority" class="text-sm form-label">priority <span class="text-danger-600">*</span> </label>
+                    <select class="form-control form-select py-10 px-20" id="priority">
+                        <option value="Hight">Hight </option>
+                        <option value="Low">Low </option>
+                        <option value="Medium">Medium </option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <label for="DueDays" class="text-sm form-label">Due Days <span class="text-danger-600">*</span> </label>
+                    <input type="number" class="form-control" min="0" id="DueDays" placeholder="Due Days">
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center flex-wrap gap-20">
+                        <label for="parametersTwo" class="text-sm form-label mb-0">Parameters <span class="text-danger-600">*</span> </label>
+                        <div class="d-flex align-items-center flex-wrap gap-24">
+                            <div class="d-flex align-items-center gap-20">
+                                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 flex-shrink-0">
+                                    <input class="form-check-input float-none mt-0 ms-0 shadow-none border w-18-px h-18-px bg-main radius-4" type="checkbox" value="" id="allowAddAction">
+                                    <label class="form-check-label text-primary-light-two text-sm" for="allowAddAction">Allow Add Action </label>
+                                </div>
+                                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 flex-shrink-0">
+                                    <input class="form-check-input float-none mt-0 ms-0 shadow-none border w-18-px h-18-px bg-main radius-4" type="checkbox" value="" id="Sequenceesss">
+                                    <label class="form-check-label text-primary-light-two text-sm" for="Sequenceesss">Sequence </label>
+                                </div>
+                                <select class="form-control form-select py-1 text-xs ps-10 arrow-10-px">
+                                    <option value="1" selected="">One by one </option>
+                                    <option value="Priority">One by two </option>
+                                    <option value="Priority">two by two </option>
+                                    <option value="Priority">two by one </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="d-flex align-items-center flex-wrap gap-20">
+                        <label for="RepeatEvery" class="text-sm form-label mb-0">Repeat every</label>
+                        <div class="d-flex align-items-center gap-24">
+                            <div class="d-flex align-items-center gap-20">
+                                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                                    <input class="form-check-input float-none mt-0 ms-0 shadow-none border w-18-px h-18-px bg-main radius-4" type="checkbox" value="" id="RepeatWeekly">
+                                    <label class="form-check-label text-primary-light-two text-sm" for="RepeatWeekly">Weekly</label>
+                                </div>
+                                <div class="d-flex align-items-center gap-6">
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="sunday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="sunday"> S </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="monday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="monday"> M </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="tuesday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="tuesday"> T </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="wednesday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="wednesday"> W </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="thursday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="thursday"> T </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="friday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="friday"> F </label>
+                                    </div>
+                                    <div class="">
+                                        <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="saturday">
+                                        <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="saturday"> S </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-28">
+                                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                                    <input class="form-check-input float-none mt-0 ms-0 shadow-none border w-18-px h-18-px bg-main radius-4" type="checkbox" value="" id="RepeatMonthly">
+                                    <label class="form-check-label text-primary-light-two text-sm" for="RepeatMonthly">Monthly</label>
+                                </div>
+                                <div class="d-flex align-items-center gap-16">
+                                    <input type="text" class="form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                    <select class="form-control form-select w-80-px h-20-px text-xxs px-6 py-0 radius-6 pe-16 arrow-10-px">
+                                        <option value="Fixed">Fixed</option>
+                                        <option value="Not Fixed">Not Fixed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    <div class="col-12">
+                        <form action="#" class="d-flex align-items-center gap-12">
+                        <input type="text" class="form-control py-10 w-100 flex-grow-1" placeholder="Search action to add in Workflow">
+                        <button type="submit" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-36 fw-normal flex-shrink-0 py-10">Add to Workflow</button>
+                        </form>
+                    </div>
+                    <div class="col-12">
+                        <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm border rounded-top">
+                            <table class="draggable-table table min-w-max mb-0">
+                              <thead>
+                                <tr>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start"> <span class="d-none">icon</span> </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-center">Action Name</th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Department </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Assignee</th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Positive Response  </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Negative Response   </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">NBA on Negative Response  </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Weightage % </th>
+                                  <th class="bg-neutral-100 py-8 px-12 text-secondary-light-two text-sm fw-normal border-bottom text-start">Actions </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs border-bottom py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Store </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">Meeting </td>
+                                  <td class="text-xs border-bottom py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs border-bottom py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                                <tr draggable="true">
+                                  <td class="text-xs py-12 px-20"> 
+                                    <span class="draggable-btn cursor-move w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                      <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                                    </span>
+                                  </td>
+                                  <td class="text-xs py-12 px-20">Added Select2 </td>
+                                  <td class="text-xs py-12 px-20">Store </td>
+                                  <td class="text-xs py-12 px-20">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                          <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                          <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  <td class="text-xs py-12 px-20">
+                                        <span class="text-primary-500">Approve</span>
+                                   </td>
+                                  <td class="text-xs py-12 px-20">
+                                        <span class="text-danger-600">Decline</span>
+                                   </td>
+                                  <td class="text-xs py-12 px-20">Meeting </td>
+                                  <td class="text-xs py-20 px-20 d-flex align-items-center gap-10">
+                                        <input type="text" class="form-control radius-6 w-100-px h-30-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                        %
+                                   </td>
+                                  <td class="text-xs py-12 px-20">
+                                    <div class="dropdown">
+                                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="ri-more-fill"></i>
+                                        </button>
+                                        <ul class="dropdown-menu p-8">
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                              <span class="">View</span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                              <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                              <span class="">Edit </span>
+                                            </a>
+                                          </li>
+                                          <li class="">
+                                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                              <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                              <span class="">Delete</span>
+                                            </button>
+                                          </li>
+                                        </ul>
+                                    </div>  
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-neutral-30 py-8 px-38 text-secondary-light-two text-sm fw-normal text-end border border-top-0 rounded-bottom">
+                            <p class="text-secondary-light mb-0 text-md">Weightage % :  <span class="fw-semibold text-primary-600">100</span> / 100</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+  
+        <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-40 flex-wrap">
+            <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Workflow Status</label>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
+            </div>
+            <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addWorkflow">Save</button>
+        </div>
+      </div>
+    </div>
+</div> 
+<!-- Add Action Modal End -->
+ 
+@@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/editor.highlighted.min.js"></script>
+<script src="assets/js/editor.quill.js"></script>
+<script src="assets/js/editor.katex.min.js"></script>
+<script src="assets/js/lib/select2.min.js"></script>
+
+<script>
+  // ***************************** Data Table js ***************************** 
+  new DataTable('#example', {
+    searching: false,   // Removes the search box
+    lengthChange: false, 
+    // paging: false,      // Disables pagination
+    // ordering: false     // Disables column ordering
+  });
+
+  // *************************** Editor js start here ***************************
+  const quill = new Quill('#editor', {
+    modules: {
+      syntax: true,
+      toolbar: '#toolbar-container',
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow',
+  });
+  // *************************** Editor js End here ***************************
+
+  // *************************** Select2 js start here ***************************
+  $(document).ready(function() {
+    $(".meta-tags").select2({
+      tags: true
+    });
+  });
+  // *************************** Select2 js End here ***************************
+  
+  // *************************** Suggested Recipient Dropdown js start ***************************
+  $('body').on('click', function () {
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  let inputText = "";
+  $('.recipient-input').on('click', function (event) {
+    event.stopPropagation();
+    $('.recipient-dropdown').addClass('show');
+  });
+
+  $('.recipient-dropdown__text').on('click', function () {
+    inputText = $(this).text();
+    $('.recipient-input').val(inputText);
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  // Search through Dropdown by input fields
+  $('.recipient-input').on('input', function (event) {
+    let inputText = event.target.value.toLowerCase();
+
+    $('.recipient-dropdown li').each(function () {
+      dropdownItemText = $(this).find('.recipient-dropdown__text').text().toLocaleLowerCase();
+      $(this).toggleClass('d-flex', dropdownItemText.includes(inputText));
+      $(this).toggleClass('d-none', !dropdownItemText.includes(inputText));
+    });
+  });
+  // *************************** Suggested Recipient Dropdown js End ***************************
+  
+</script>
+
+</body>
+</html>

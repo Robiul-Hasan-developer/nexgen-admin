@@ -1,7 +1,7 @@
 /* ====================== Animated Radial Progress bar Css Start ======================== */
 .radial-progress {
     height: auto;
-    max-width: 78px;
+    max-width: 32px;
     transform: rotate(-90deg);
     width: 100%;
     circle {
@@ -20,8 +20,25 @@
     }
     text {
         fill: var(--text-secondary-light);
-        font-size: 20px !important;
+        font-size: 26px !important;
         text-anchor: middle;
+    }
+}
+.stroke {
+    &-blue {
+        .radial-progress circle {
+            stroke: #6691E7D9;
+        }
+    }
+    &-green {
+        .radial-progress circle {
+            stroke: #13C56BD9;
+        }
+    }
+    &-yellow {
+        .radial-progress circle {
+            stroke: #E8BC52D9;
+        }
     }
 }
 /* ====================== Animated Radial Progress bar Css End ======================== */

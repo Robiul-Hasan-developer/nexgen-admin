@@ -6,10 +6,10 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Announcement Template",
+    pageTitle: "Calendar",
     page: "Business Suite",
-    activePage: "Announcement Template",
-    paraText: "For envelope  masters, display envelope details, status, and actions for streamlined management, with appropriate permissions for viewing, editing, and configuring envelope."
+    activePage: "Calendar",
+    paraText: "For efficient scheduling, view, edit, and manage events with role-based permissions."
   })
   
   <div class="dashboard-main-body">
@@ -22,7 +22,8 @@
 
 
 @@include('../partial-html/_template-bottom.html')
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+<script src='assets/js/jquery-ui.min.js'></script>
+<script src='assets/js/full-calendar.js'></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

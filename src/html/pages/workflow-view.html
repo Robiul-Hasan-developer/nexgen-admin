@@ -1,0 +1,1293 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Workflow",
+    page: "Business Suite",
+    activePage: "Workflow",
+    paraText: "For Workflow management, display Workflow details, status, and actions for efficient workflow, with appropriate permissions for viewing, editing, and managing Workflow."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="radius-4 bg-neutral-30">
+      
+      <!-- Top Tab start -->
+      <div class="pt-16 px-24 bg-primary-20 shadow-4 position-relative">
+        <div class="d-flex align-items-start flex-wrap justify-content-between gap-16">
+          <div class="d-flex align-items-sm-center align-items-start gap-16 flex-sm-row flex-column">
+            <span class="w-70-px h-70-px bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
+              <img src="assets/images/home-one/slack.png" alt="">
+            </span>
+            <div class="flex-grow-1">
+              <h6 class="text-xl text-xl text-primary-light-two mb-8">WF00200 - Content Creation Workflow </h6>
+              <div class="d-flex align-items-center gap-44-px flex-wrap">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="d-flex text-sm">
+                    <i class="ri-user-shared-2-line"></i>
+                  </span>
+                  <span class="text-primary-light-two text-sm">John Doe</span>
+                </div>
+                <span class="text-primary-light-two text-sm">Create Date : 12 Nov, 2024 - 14:02pm</span>
+                <span class="text-primary-light-two text-sm">Due Date : 31 Dec, 2026</span>
+                <div class="d-flex align-items-center gap-16">
+                  <span class="py-0 px-8 bg-danger-600 text-xs fw-medium text-white rounded-pill">High</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-14 flex-wrap">
+            <button type="button" class="btn py-6 px-24 btn-primary-600">Edit</button>
+            <button type="button" class="btn py-6 px-24 btn-danger-600">Delete</button>
+          </div>
+        </div>
+        <ul class="nav bordered-tab nav-pills mt-16" id="pills-tabThree" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-secondary-light fw-semibold text-sm py-10 active" id="pills-Details-tab" data-bs-toggle="pill" data-bs-target="#pills-Details" type="button" role="tab" aria-controls="pills-Details" aria-selected="true">Details</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-secondary-light fw-semibold text-sm py-10" id="pills-Chart-tab" data-bs-toggle="pill" data-bs-target="#pills-Chart " type="button" role="tab" aria-controls="pills-Chart " aria-selected="false">Chart </button>
+          </li>
+        </ul>
+      </div>
+      <!-- Top Tab end -->
+
+      <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16">
+        <div class="tab-content flex-grow-1" id="pills-tabThreeContent">
+          <!-- Details Tab start -->
+          <div class="tab-pane fade show active" id="pills-Details" role="tabpanel" aria-labelledby="pills-Details-tab" tabindex="0">
+            <div class="bg-white py-16 px-20 shadow-4 radius-4">
+              <h6 class="text-sm text-uppercase text-primary-light-two mb-14">Topics</h6>  
+              <div class="d-flex align-items-center gap-1 pb-12">
+                <span class="text-sm radius-4 px-8 bg-purple-50 text-purple-600">Figma</span>
+                <span class="text-sm radius-4 px-8 bg-purple-50 text-purple-600">Figma</span>
+              </div>
+              <div class="border-top border-dashed border-neutral-200 w-100 mb-24"></div>
+              <h6 class="text-sm text-uppercase text-primary-light-two mb-14">Description</h6>  
+              <p class="text-neutral-500 text-xs mb-44 pb-44">It will be as simple as occidental in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
+              <h6 class="text-sm text-uppercase text-primary-light-two mb-14">Check List </h6>  
+              <div class="d-flex flex-column gap-10">
+                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                  <input class="form-check-input float-none mt-0 ms-0 shadow-none border" type="checkbox" value="" id="productDesign">
+                  <label class="form-check-label text-primary-light-two text-xs" for="productDesign">Product Design, Figma (Software), Prototype</label>
+                </div>
+                <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0">
+                  <input class="form-check-input float-none mt-0 ms-0 shadow-none border" type="checkbox" value="" id="EcommerceProject">
+                  <label class="form-check-label text-primary-light-two text-xs" for="EcommerceProject">Dashboards : Ecommerce, Analytics, Project,etc.</label>
+                </div>
+              </div>
+              <a href="javascript:void(0)" class="text-green-600 text-sm mt-12 hover-underline">Read More ...</a>
+              <div class="border-top border-dashed border-neutral-200 w-100 mb-14 mt-36"></div>
+              <h6 class="text-sm text-uppercase text-primary-light-two mb-14">task Attachments </h6>  
+              <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                  <div class="d-flex align-items-center gap-12">
+                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                      <i class="ri-folder-zip-line"></i>
+                    </span>
+                    <div class="">
+                      <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                      <span class="text-xs text-secondary-light-two">2.2MB</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-1">
+                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                      <i class="ri-download-2-line"></i>
+                    </button>
+                    <div class="dropdown">
+                      <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-fill"></i>
+                      </button>
+                      <ul class="dropdown-menu p-8">
+                        <li class="">
+                          <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                            <span class="">Delete</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white shadow-4 radius-4 mt-12">
+              <div class="px-8 border-bottom">
+                <ul class="nav bordered-tab gap-40-px active-bg nav-pills" id="pills-tabTwo" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary-light fw-normal text-sm py-12 px-10 rounded-0 d-flex align-items-center gap-10 active" id="pills-comments-tab" data-bs-toggle="pill" data-bs-target="#pills-comments" type="button" role="tab" aria-controls="pills-comments" aria-selected="true">
+                      <span class="text-sm d-sm-flex d-none text-neutral-400"><i class="ri-discuss-line"></i></span>
+                      Comments (5)
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary-light fw-normal text-sm py-12 px-10 rounded-0 d-flex align-items-center gap-10" id="pills-attachments-tab" data-bs-toggle="pill" data-bs-target="#pills-attachments" type="button" role="tab" aria-controls="pills-attachments" aria-selected="false">
+                      <span class="text-sm d-sm-flex d-none text-neutral-400"><i class="ri-attachment-2"></i></span>
+                      Attachments File (4)
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary-light fw-normal text-sm py-12 px-10 rounded-0 d-flex align-items-center gap-10" id="pills-actions-tab" data-bs-toggle="pill" data-bs-target="#pills-actions" type="button" role="tab" aria-controls="pills-actions" aria-selected="false">
+                      <span class="text-sm d-sm-flex d-none text-neutral-400"><i class="ri-timer-line"></i></span>
+                      Actions (11)
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary-light fw-normal text-sm py-12 px-10 rounded-0 d-flex align-items-center gap-10" id="pills-other-actions-tab" data-bs-toggle="pill" data-bs-target="#pills-other-actions" type="button" role="tab" aria-controls="pills-other-actions" aria-selected="false">
+                      <span class="text-sm d-sm-flex d-none text-neutral-400"><i class="ri-flashlight-line"></i></span>
+                      Meetings (4)
+                    </button>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="tab-content" id="pills-tabTwoContent">
+                <!-- Comments Start -->
+                <div class="tab-pane fade show active" id="pills-comments" role="tabpanel" aria-labelledby="pills-comments-tab" tabindex="0">
+                  <div class="p-16">
+                    <h6 class="mb-24 text-md text-primary-light-two fw-semibold">Comments</h6>
+                    <!-- Item start -->
+                    <div class="d-flex align-items-start gap-16-px">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                        <img src="assets/images/home-one/user-img6.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                          <h6 class="text-sm mb-0">Joseph Parker</h6>
+                          <span class="fw-semibold text-xs text-neutral-500">20 Dec, 2024 - 05:47am</span>
+                        </div>
+                        <p class="text-neutral-500 text-xs">I am getting message from customers that when they place order always get error message .</p>
+                        <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16" id="comment-form">
+                          <i class="ri-reply-fill d-flex"></i>
+                          Reply
+                        </button>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex align-items-start gap-16-px ms-44 mt-24">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                        <img src="assets/images/home-one/user-img4.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                          <h6 class="text-sm mb-0">Tonya Noble</h6>
+                          <span class="fw-semibold text-xs text-neutral-500">20 Dec, 2024 - 05:47am</span>
+                        </div>
+                        <p class="text-neutral-500 text-xs">Please be sure to check your Spam mailbox to see if your email filters have identified the email from Dell as spam.</p>
+                        <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
+                          <i class="ri-reply-fill d-flex"></i>
+                          Reply
+                        </button>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex align-items-start gap-16-px mt-24">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                        <img src="assets/images/home-one/user-img4.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                          <h6 class="text-sm mb-0">Tonya Noble</h6>
+                          <span class="fw-semibold text-xs text-neutral-500">26 min ago</span>
+                        </div>
+                        <p class="text-neutral-500 text-xs">Your <a href="javascript:void(0)" class="text-primary-500 text-decoration-underline">Online Order Support</a>  provides you with the most current status of your order. To help manage your order refer to the “Action Menu” to initiate return, contact Customer Support and more. </p>
+                        <div class="d-flex gap-2">
+                          <div class="radius-4 overflow-hidden">
+                            <img src="assets/images/home-one/reply-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="radius-4 overflow-hidden">
+                            <img src="assets/images/home-one/reply-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                        </div>
+                        <button type="button" class="px-6 py-1 radius-4 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
+                          <i class="ri-reply-fill d-flex"></i>
+                          Reply
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Item End -->
+  
+                    <h6 class="mb-8 mt-24 text-md text-primary-light-two fw-semibold">Leave a Comments</h6>
+                    <form action="#">
+                      <textarea class="form-control min-72-px bg-neutral-100" placeholder="Enter comments"></textarea>
+                      <div class="d-flex justify-content-end align-items-center gap-8 mt-12">
+                        <label for="attactchment" class=" w-36-px h-36-px d-flex justify-content-center align-items-center text-md text-purple-600">
+                          <input type="file" id="attactchment" hidden>
+                          <i class="ri-attachment-line"></i>
+                        </label>
+                        <button type="submit" class="btn btn-success-600">Post Comments</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- Comments end -->
+
+                <!-- Attachment Start -->
+                <div class="tab-pane fade" id="pills-attachments" role="tabpanel" aria-labelledby="pills-attachments-tab" tabindex="0">
+                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
+                    <table class="table min-w-max mb-0">
+                      <thead>
+                        <tr>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">File Name</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Type</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Size</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Upload Date</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">History </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="d-flex align-items-center gap-20">
+                              <span class="w-48-px h-44-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                <img src="assets/images/home-one/attatchment-icon1.png" alt="">
+                              </span>
+                              <span class="fw-medium text-sm text-secondary-light">App Pager.ppt</span>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">Power Point</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">2.22MB</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">22 Dec, 2024 - 13:01pm</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="custom-tooltip position-relative text-center">
+                              <button type="button" class="text-lg d-inline-flex justify-content-center text-primary-600">
+                                <i class="ri-error-warning-line"></i>
+                              </button>
+                              <div class="custom-tooltip__text bg-neutral-200 radius-4 text-start">
+                                <ul class="text-8-px">
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    Codes are not case-sensitive.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    You must provide this code to the signer.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    This code is available for you to review on the Envelope Details page.
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="d-flex align-items-center gap-20">
+                              <span class="w-48-px h-44-px bg-primary-100 radius-4 d-flex justify-content-center align-items-center">
+                                <img src="assets/images/home-one/attatchment-icon2.png" alt="">
+                              </span>
+                              <span class="fw-medium text-sm text-secondary-light">App Pager.word</span>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">Word Document </span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">0.05KB</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">05 Jan, 2024 - 13:01pm</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="custom-tooltip position-relative text-center">
+                              <button type="button" class="text-lg d-inline-flex justify-content-center text-primary-600">
+                                <i class="ri-error-warning-line"></i>
+                              </button>
+                              <div class="custom-tooltip__text bg-neutral-200 radius-4 text-start">
+                                <ul class="text-8-px">
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    Codes are not case-sensitive.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    You must provide this code to the signer.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    This code is available for you to review on the Envelope Details page.
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="d-flex align-items-center gap-20">
+                              <span class="w-48-px h-44-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                <img src="assets/images/home-one/attatchment-icon1.png" alt="">
+                              </span>
+                              <span class="fw-medium text-sm text-secondary-light">App Pager.ppt</span>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">Power Point</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">3.09MB</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">21 Jun, 2024 - 13:01pm</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="custom-tooltip position-relative text-center">
+                              <button type="button" class="text-lg d-inline-flex justify-content-center text-primary-600">
+                                <i class="ri-error-warning-line"></i>
+                              </button>
+                              <div class="custom-tooltip__text bg-neutral-200 radius-4 text-start">
+                                <ul class="text-8-px">
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    Codes are not case-sensitive.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    You must provide this code to the signer.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    This code is available for you to review on the Envelope Details page.
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="d-flex align-items-center gap-20">
+                              <span class="w-48-px h-44-px bg-success-200 radius-4 d-flex justify-content-center align-items-center">
+                                <img src="assets/images/home-one/attatchment-icon3.png" alt="">
+                              </span>
+                              <span class="fw-medium text-sm text-secondary-light">App Pager.excel</span>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">Excel Workbook</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">4.04MB</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <span class="fw-medium text-sm text-secondary-light">05 Oct, 2024 - 13:01pm</span>  
+                          </td>
+                          <td class="text-xs border-bottom py-10 px-20">
+                            <div class="custom-tooltip position-relative text-center">
+                              <button type="button" class="text-lg d-inline-flex justify-content-center text-primary-600">
+                                <i class="ri-error-warning-line"></i>
+                              </button>
+                              <div class="custom-tooltip__text bg-neutral-200 radius-4 text-start">
+                                <ul class="text-8-px">
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    Codes are not case-sensitive.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    You must provide this code to the signer.
+                                  </li>
+                                  <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                    <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                    This code is available for you to review on the Envelope Details page.
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Attachment end -->
+
+                <!-- Actions Start -->
+                <div class="tab-pane fade" id="pills-actions" role="tabpanel" aria-labelledby="pills-actions-tab" tabindex="0">
+                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
+                    <table class="table min-w-max mb-0">
+                      <thead>
+                        <tr>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Action ID</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Action Name</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Department </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Assignee </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Priority </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Status </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Percentage</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Due Date </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00918</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Added Select2  </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Store</td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">High</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-cyan-50 text-cyan-600">New</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-blue">
+                                  <svg class="radial-progress" data-percentage="62" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">62%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">23 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00100</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Additional Calendar  </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Finance </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">High</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-success-50 text-success-600">Completed</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-green">
+                                  <svg class="radial-progress" data-percentage="89" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">89%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">23 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00233</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Add Dynamic Contact List  </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Operations </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                                <span class="text-white text-xs">1+</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">Low</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-cyan-50 text-cyan-600">New</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-yellow">
+                                  <svg class="radial-progress" data-percentage="25" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">25%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">24 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00924</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Brand Logo design  </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Operations </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">Medium</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-cyan-50 text-cyan-600">New</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-blue">
+                                  <svg class="radial-progress" data-percentage="60" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">60%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">25 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00920</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Change email option process  </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Finance </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-danger-600 text-xs text-white radius-4 text-uppercase">High</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-success-50 text-success-600">Completed</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-green">
+                                  <svg class="radial-progress" data-percentage="85" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">85%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">23 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00902</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Make a creating an account profile </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Store</td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-warning-600 text-xs text-white radius-4 text-uppercase">Medium</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-success-50 text-success-600">Completed</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-yellow">
+                                  <svg class="radial-progress" data-percentage="25" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">25%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">26 Apr, 2022</td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-bottom py-10 px-20"> 
+                            <span class="text-primary-500">A00966</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal"> Profile Page Structure </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">Sales</td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <div class="d-flex align-items-center">
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="py-0 px-6 bg-success-600 text-xs text-white radius-4 text-uppercase">Low</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                            <span class="text-xs radius-4 px-8 text-uppercase bg-cyan-50 text-cyan-600">New</span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">
+                              <span class="text-primary-light text-sm d-block text-center stroke-green">
+                                  <svg class="radial-progress" data-percentage="85" viewBox="0 0 80 80">
+                                      <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                                      <circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 39.58406743523136;"></circle>
+                                      <text class="percentage" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">85%</text>
+                                  </svg>
+                              </span>
+                          </td>
+                          <td class="text-xs border-bottom py-16 px-20 text-secondary-light fw-normal">27 Apr, 2022</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Actions end -->
+
+                <!-- Other Actions start -->
+                <div class="tab-pane fade" id="pills-other-actions" role="tabpanel" aria-labelledby="pills-other-actions-tab" tabindex="0">
+                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm mt-30">
+                    <table class="table min-w-max mb-0">
+                      <thead>
+                        <tr>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">22 Dec, 2024 13:00pm - 13:20pm</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">Start up meeting </h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon1.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">First Agenda.ppt </h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon1.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">First MOM.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <button type="button"><i class="ri-eye-line"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">22 Dec, 2024 13:00pm - 13:20pm</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">Start up meeting </h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">First Agenda.ppt </h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon1.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">First MOM.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <button type="button"><i class="ri-eye-line"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">05 Jan, 2024 11:00am - 12:30pm</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">Gap Discussion </h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon1.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Second Agenda.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Second MOM.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <button type="button"><i class="ri-eye-line"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">21 Jun, 2024 14:00pm - 15:00pm</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">Revision of Workflow</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Third Agenda.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Third MOM.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <button type="button"><i class="ri-eye-line"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">05 Oct, 2024 11:00am - 12:00pm</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <h6 class="text-xs mb-0">Final submission for UI/UX</h6>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Forth Agenda.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <div class="d-flex align-items-center gap-12">
+                                <span class="w-24-px h-22-px bg-danger-200 radius-4 d-flex justify-content-center align-items-center">
+                                    <img src="assets/images/icon/ppt-icon2.png" alt="">
+                                </span>
+                                <h6 class="text-xs mb-0">Forth MOM.ppt</h6>
+                            </div>
+                          </td>
+                          <td class="text-xs border-0 py-10 px-20"> 
+                            <button type="button"><i class="ri-eye-line"></i></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Other Actions end -->
+              </div>
+            </div>
+          </div>
+          <!-- Details Tab end -->
+
+          <!-- Chart Tab start -->
+          <div class="tab-pane fade" id="pills-Chart" role="tabpanel" aria-labelledby="pills-Chart-tab" tabindex="0">
+            <h6>Workflow chart will goes here.................</h6>
+          </div>
+          <!-- Document Tab start -->
+        </div>
+
+        <!-- Sidebar Start -->
+        <div class="max-w-388-px w-100 ps-12">
+            <h6 class="text-md mb-1">Follow up Events</h6>
+            <span class="text-secondary-light-two text-xs mb-10">Stay Aligned for Success</span>
+
+            <div class="d-flex flex-column gap-16 max-h-300-px overflow-y-auto scroll-sm pe-8">
+                <div class="bg-white shadow-4 radius-4 px-16 py-20 d-flex flex-column gap-10">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-6">
+                            <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                            <span class="text-primary-light text-xs">31 Dec, 2024 13:00pm - 14:00pm</span>
+                        </div>
+                        <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-4 fw-semibold">E00291</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="text-primary-light-two text-md">Gathering Information </h6>
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                              <span class="text-white text-xs">1+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-4 radius-4 px-16 py-20 d-flex flex-column gap-10">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-6">
+                            <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                            <span class="text-primary-light text-xs">01 Jan, 2025 11:00am - 12:00pm</span>
+                        </div>
+                        <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-4 fw-semibold">E00199</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="text-primary-light-two text-md">UI/UX</h6>
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                              <span class="text-white text-xs">1+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow-4 radius-4 px-16 py-20 d-flex flex-column gap-10">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-6">
+                            <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                            <span class="text-primary-light text-xs">02 Jan, 2025 13:00pm - 13:45pm</span>
+                        </div>
+                        <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-4 fw-semibold">E00200</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6 class="text-primary-light-two text-md">Development </h6>
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                              <span class="text-white text-xs">1+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-4 radius-4 mt-16">
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-16 max-w-130-px w-100">Workflow No.</div>
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-8 pe-10 flex-grow-1 d-flex justify-content-between align-items-center">
+                        <span class="">#WF456</span>
+                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 fw-semibold">High</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-16 max-w-130-px w-100">Workflow Name </div>
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-8 pe-10 flex-grow-1">Profile Page Structure</div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-16 max-w-130-px w-100">Status</div>
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-8 pe-10 flex-grow-1">
+                        <span class="py-2 px-6 bg-purple-50 text-purple-600 text-xs radius-4 fw-semibold">Inprogress</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 px-16 w-100">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="">Action</span>
+                            <span class=""> <i class="ri-list-check line-height-1 me-2"></i> 0/02</span>
+                        </div>
+                        <div class="progress rounded-pill h-6-px mt-4" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar rounded-pill bg-success-600" style="width: 6%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-16 max-w-130-px w-100">Start Date</div>
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-8 pe-10 flex-grow-1">01 Dec, 2024</div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-16 max-w-130-px w-100">Due Date</div>
+                    <div class="border-bottom border-neutral-200 text-primary-light-two fw-medium text-sm py-14 ps-8 pe-10 flex-grow-1">05 Dec, 2024</div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-4 radius-4 mt-16">
+                <div class="d-flex align-items-center justify-content-between p-16 border-bottom border-dashed border-neutral-200">
+                    <h6 class="text-md mb-0">Recipients</h6>
+                    <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 ps-6 py-4 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#addTeamMember">
+                        <span class="text-white fw-normal text-md line-clamp-1">
+                          <i class="ri-add-line"></i>
+                        </span>
+                        <span class="w-1-px h-18-px bg-white-1"></span>
+                        Add Member    
+                    </button>
+                </div>
+                 
+                <div class="d-flex flex-column gap-16 p-16">
+                    <div class="d-flex align-items-center justify-content-between delete-item">
+                        <div class="d-flex align-items-center gap-16">
+                            <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                                <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h6 class="text-xs mb-0">Nancy Martino</h6>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button type="button" class="btn btn-neutral-100 py-4 px-12 radius-4 text-xxs text-primary-light">Message</button>
+                            <div class="dropdown">
+                                <button class="text-xl h-20-px w-20-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between delete-item">
+                        <div class="d-flex align-items-center gap-16">
+                            <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                                HB
+                            </div>
+                            <h6 class="text-xs mb-0">Henry Baird</h6>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button type="button" class="btn btn-neutral-100 py-4 px-12 radius-4 text-xxs text-primary-light">Message</button>
+                            <div class="dropdown">
+                                <button class="text-xl h-20-px w-20-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between delete-item">
+                        <div class="d-flex align-items-center gap-16">
+                            <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                                <img src="assets/images/another/avatar-2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h6 class="text-xs mb-0">Frank Hook</h6>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button type="button" class="btn btn-neutral-100 py-4 px-12 radius-4 text-xxs text-primary-light">Message</button>
+                            <div class="dropdown">
+                                <button class="text-xl h-20-px w-20-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between delete-item">
+                        <div class="d-flex align-items-center gap-16">
+                            <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                                <img src="assets/images/another/avatar-3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h6 class="text-xs mb-0">Jennifer Carter</h6>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button type="button" class="btn btn-neutral-100 py-4 px-12 radius-4 text-xxs text-primary-light">Message</button>
+                            <div class="dropdown">
+                                <button class="text-xl h-20-px w-20-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between delete-item">
+                        <div class="d-flex align-items-center gap-16">
+                            <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-success-600 bg-success-50 d-flex justify-content-center align-items-center fw-semibold">
+                                AC
+                            </div>
+                            <h6 class="text-xs mb-0">Alexis Clarke</h6>
+                        </div>
+                        <div class="d-flex align-items-center gap-10">
+                            <button type="button" class="btn btn-neutral-100 py-4 px-12 radius-4 text-xxs text-primary-light">Message</button>
+                            <div class="dropdown">
+                                <button class="text-xl h-20-px w-20-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Sidebar End -->
+      </div>
+
+    </div>
+  </div>
+
+  @@include('../layouts/_footer.html')
+</main>
+
+
+<!-- Add Member Modal start -->
+<div class="modal fade" id="addTeamMember" tabindex="-1" aria-labelledby="addTeamMemberLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+      <div class="modal-content py-36 px-20 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-0">
+          <h6 class="modal-title text-2xl fw-semibold line-clamp-1" id="addTeamMemberLabel">Team Members </h6>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addTeamMember">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <div class="my-40">
+                <select class="form-control form-select w-100 bg-neutral-100 radius-6 py-6 mb-12">
+                    <option value="">Select Action</option>
+                    <option value="">Select 1</option>
+                    <option value="">Select 2</option>
+                    <option value="">Select 3</option>
+                </select>
+                <input type="text" class="form-control w-100 bg-neutral-100 radius-6" placeholder="Search here...">
+          </div>
+          <div class="mb-30 d-flex align-items-center gap-16">
+              <h6 class="text-sm mb-0">Members: </h6>
+              <div class="d-flex align-items-center">
+                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                  <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                  <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                  <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                  <span class="text-white text-xs">1+</span>
+                  </div>
+              </div>
+          </div>
+          <div class="d-flex flex-column gap-16 max-h-230-px overflow-y-auto scroll-sm pe-8">
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                          <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <h6 class="text-xs mb-0">Nancy Martino</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                          hb
+                      </div>
+                      <h6 class="text-xs mb-0">Henry Baird</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                          <img src="assets/images/another/avatar-2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <h6 class="text-xs mb-0">Frank Hook</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                          <img src="assets/images/another/avatar-3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <h6 class="text-xs mb-0">Jennifer Carter</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-success-600 bg-success-50 d-flex justify-content-center align-items-center fw-semibold">
+                          AC
+                      </div>
+                      <h6 class="text-xs mb-0">Alexis Clarke</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+              <div class="d-flex align-items-center justify-content-between delete-item">
+                  <div class="d-flex align-items-center gap-16">
+                      <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                          <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                      </div>
+                      <h6 class="text-xs mb-0">Nancy Martino</h6>
+                  </div>
+                  <button type="button" class="text-secondary-light px-8 py-2 radius-4 text-uppercase text-xxs bg-neutral-100 bg-hover-neutral-300">ADD</button>
+              </div>
+          </div>
+          
+        </div>
+        <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
+          <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-toggle="modal" data-bs-target="#addTeamMember">Cancel</button>
+          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addTeamMember">Add </button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Member Modal End -->
+
+  
+@@include('../partial-html/_template-bottom.html')
+
+<script>
+  // ========================= Animated Radial Progress Js Start ===================
+  function animateProgress() {
+    $('svg.radial-progress').each(function () {
+      // Check if the element is within the viewport
+      const elementTop = $(this).offset().top;
+      const elementBottom = elementTop + $(this).outerHeight();
+      const viewportTop = $(window).scrollTop();
+      const viewportBottom = viewportTop + $(window).height();
+
+      if (elementBottom > viewportTop && elementTop < viewportBottom) {
+        const percent = $(this).data('percentage');
+        const radius = $(this).find('circle.complete').attr('r');
+        const circumference = 2 * Math.PI * radius;
+        const strokeDashOffset = circumference - (percent / 100) * circumference;
+
+        // Animate the circle
+        $(this).find('circle.complete').css('stroke-dashoffset', strokeDashOffset);
+      }
+    });
+  }
+
+  // Trigger animation on scroll and page load
+  $(window).on('scroll', animateProgress);
+  animateProgress(); // Run on page load
+// ========================= Animated Radial Progress Js End ===================
+
+// ========================= Delete Item Js start ===================
+$('.delete-button').on('click', function () {
+  $(this).closest('.delete-item').addClass('d-none');
+});
+// ========================= Delete Item Js End ===================
+
+  // ================================ Aminated Radial Progress Bar Start ================================ 
+  $('svg.radial-progress').each(function( index, value ) { 
+        $(this).find($('circle.complete')).removeAttr( 'style' );
+    });
+
+    // Activate progress animation on scroll
+    $(window).scroll(function(){
+        $('svg.radial-progress').each(function( index, value ) { 
+            // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
+            if ( 
+                $(window).scrollTop() > $(this).offset().top - ($(window).height() * 0.75) &&
+                $(window).scrollTop() < $(this).offset().top + $(this).height() - ($(window).height() * 0.25)
+            ) {
+                // Get percentage of progress
+                percent = $(value).data('percentage');
+                // Get radius of the svg's circle.complete
+                radius = $(this).find($('circle.complete')).attr('r');
+                // Get circumference (2πr)
+                circumference = 2 * Math.PI * radius;
+                // Get stroke-dashoffset value based on the percentage of the circumference
+                strokeDashOffset = circumference - ((percent * circumference) / 100);
+                // Transition progress for 1.25 seconds
+                $(this).find($('circle.complete')).animate({'stroke-dashoffset': strokeDashOffset}, 1250);
+            }
+        });
+    }).trigger('scroll');
+  // ================================ Aminated Radial Progress Bar End ================================ 
+</script>
+
+</body>
+</html>
