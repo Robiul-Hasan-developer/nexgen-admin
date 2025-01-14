@@ -32,23 +32,6 @@
   });
   // sidebar submenu collapsible js
 
-
-  // Active page js
-  // $(function () {
-  //   var nk = window.location.href.split(/[?#]/)[0]; // Get the base URL without hash or query parameters
-  //   var o = $("ul#sidebar-menu a")
-  //     .filter(function () {
-  //       return this.href.split(/[?#]/)[0] === nk; // Compare only the base URL
-  //     })
-  //     .addClass("active-page") // Add class to the anchor
-  //     .parent()
-  //     .addClass("active-page"); // Add class to the parent (li)
-  
-  //   while (o.is("li")) {
-  //     o = o.parent().addClass("show").parent().addClass("open"); // Add classes to parent elements
-  //   }
-  // });
-
   // ========================== add active class to navbar menu current page Js Start =====================
   function dynamicActiveMenuClass(selector) {
     let FileName = window.location.pathname.split("/").reverse()[0];

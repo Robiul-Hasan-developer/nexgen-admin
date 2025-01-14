@@ -701,8 +701,12 @@
     height: unset !important;
     padding: 3px 20px;
 }
-
 .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right {
+  background: #865CE2;
+  color: #fff;
+}
+
+.fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled {
     background: #865CE2;
     color: #fff;
     opacity: .6;

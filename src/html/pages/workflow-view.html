@@ -690,8 +690,6 @@
                           <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
                           <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
                           <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -843,6 +841,8 @@
           <!-- Chart Tab start -->
           <div class="tab-pane fade" id="pills-Chart" role="tabpanel" aria-labelledby="pills-Chart-tab" tabindex="0">
             <h6>Workflow chart will goes here.................</h6>
+            <div class="create-flowy">The block to be dragged</div>
+            <div id="canvas"></div>
           </div>
           <!-- Document Tab start -->
         </div>
@@ -1111,13 +1111,11 @@
         </div>
         <!-- Sidebar End -->
       </div>
-
     </div>
   </div>
 
   @@include('../layouts/_footer.html')
 </main>
-
 
 <!-- Add Member Modal start -->
 <div class="modal fade" id="addTeamMember" tabindex="-1" aria-labelledby="addTeamMemberLabel" aria-hidden="true">
@@ -1223,9 +1221,31 @@
     </div>
 </div>
 <!-- Add Member Modal End -->
-
   
 @@include('../partial-html/_template-bottom.html')
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alyssaxuu/flowy/flowy.min.css"> 
+<script src="https://cdn.jsdelivr.net/gh/alyssaxuu/flowy/flowy.min.js"></script>
+<script>
+  var spacing_x = 40;
+  var spacing_y = 100;
+  // Initialize Flowy
+  flowy(document.getElementById("canvas"), onGrab, onRelease, onSnap, onRearrange, spacing_x, spacing_y);
+  function onGrab(block){
+    // When the user grabs a block
+  }
+  function onRelease(){
+    // When the user releases a block
+  }
+  function onSnap(block, first, parent){
+    // When a block snaps with another one
+  }
+  function onRearrange(block, parent){
+    // When a block is rearranged
+  }
+</script>
+<script src="https://raw.githubusercontent.com/alyssaxuu/flowy/refs/heads/master/demo/main.js"></script> -->
+
 
 <script>
   // ========================= Animated Radial Progress Js Start ===================
