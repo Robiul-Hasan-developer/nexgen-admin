@@ -1,8 +1,3 @@
-/* Scrollbar css start */
-// .scroll-sm:hover::-webkit-scrollbar-thumb {
-//     background-color: var(--neutral-200);
-// }
-  
 .scroll-sm {
     &::-webkit-scrollbar {
         width: 6px;
@@ -10,12 +5,12 @@
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--white);
-        background-color: var(--neutral-200);
+        background-color: var(--neutral-300);
         &:hover {
-            background-color: var(--neutral-300);
+            background-color: var(--neutral-400);
         }
         &:active {
-            background-color: var(--neutral-400);
+            background-color: var(--neutral-500);
         }
     }
     &.scroll-vertical {

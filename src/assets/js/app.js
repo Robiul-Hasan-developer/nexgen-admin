@@ -515,6 +515,21 @@
   });
   // ========================= Add Action Add Remove Js End ===================
 
+  
+  // ========================= Custom Accordion of Add Event Js Start ===================
+  let collapseBtns = document.querySelectorAll('.collapse-btn');
+
+  collapseBtns.forEach((collapseBtn) => {
+    collapseBtn.addEventListener('click', function () {
+
+      let collapsableBody = collapseBtn.closest('.delete-item').querySelector('.collapsable-body');
+      this.closest('.delete-item').classList.toggle('active');
+      
+      collapsableBody.classList.toggle('d-none');
+    });
+  });
+  // ========================= Custom Accordion of Add Event Js End ===================
+
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
   //   const themeToggle = $("#theme-toggle .form-check-input");

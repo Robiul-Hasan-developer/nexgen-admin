@@ -67,5 +67,9 @@
   .me--8-px {
     margin-inline-end: -8px;
   }
+
+  .ms-res-42 {
+    margin-inline-start: clamp(1rem, -0.5rem + 3.125vw, 2.625rem);
+  }
 // margin css
   

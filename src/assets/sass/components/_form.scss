@@ -178,3 +178,7 @@
   background-size: 10px !important;
   background-position: right 4px center !important;
 }
+
+.bg-transparent + .select2-container--default .select2-selection--multiple {
+  background: transparent;
+}

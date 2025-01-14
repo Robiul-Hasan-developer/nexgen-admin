@@ -705,6 +705,7 @@
 .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right {
     background: #865CE2;
     color: #fff;
+    opacity: .6;
 }
 
 .fc-header-title h2 {

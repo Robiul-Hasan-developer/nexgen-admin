@@ -14,25 +14,1986 @@
   
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6">
-        <div id='calendar'></div>
+      <div class="d-sm-flex gap-20">
+        <div class="max-w-380-px w-100">
+
+          <div class="bg-white shadow-4 mb-24">
+            <div class=" pt-16 px-12 ">
+              <button type="button" class="btn btn-primary-600 radius-6 d-flex align-items-center gap-2 ps-6 py-6 fw-normal flex-shrink-0 text-xs w-100 justify-content-center " data-bs-toggle="modal" data-bs-target="#createNewEvent">
+                <span class="text-white fw-normal text-sm line-clamp-1">
+                  <i class="ri-add-line"></i>
+                </span>
+                Create New Event
+              </button>
+              <p class="mt-18 mb-14 text-secondary-light-two text-sm">Drag and drop your event or click in the calendar</p>
+            </div>
+
+            <div class="pb-16">
+              <div class="d-flex flex-column gap-6 max-h-230-px overflow-y-auto scroll-sm px-12">
+                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-success-100 text-success-600">
+                  <span class="w-10-px h-10-px rounded-circle bg-success-600"></span>
+                  <span class="">New Event Planning</span>
+                </div>
+                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-info-100 text-info-600">
+                  <span class="w-10-px h-10-px rounded-circle bg-info-600"></span>
+                  <span class="">Approval Meeting </span>
+                </div>
+                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-warning-100 text-warning-600">
+                  <span class="w-10-px h-10-px rounded-circle bg-warning-600"></span>
+                  <span class="">Meeting with operation departments </span>
+                </div>
+                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-danger-100 text-danger-600">
+                  <span class="w-10-px h-10-px rounded-circle bg-danger-600"></span>
+                  <span class="">Heads Meeting  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="text-md mb-1 text-primary-light-two">Upcoming Events</h6>
+          <span class="text-secondary-light-two text-xs mb-10">Don't miss scheduled events</span>
+          <div class="d-flex flex-column gap-16 max-h-440-px overflow-y-auto scroll-sm pe-8">
+              <div class="bg-white shadow-4 radius-6 px-16 py-20 d-flex flex-column gap-10">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-6">
+                          <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                          <span class="text-primary-light text-xs">31 Dec, 2024 13:00pm - 14:00pm</span>
+                      </div>
+                      <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-6 fw-semibold">E00291</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-primary-light-two text-md">Gathering Information </h6>
+                      <div class="d-flex align-items-center">
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                            <span class="text-white text-xs">1+</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bg-white shadow-4 radius-6 px-16 py-20 d-flex flex-column gap-10">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-6">
+                          <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                          <span class="text-primary-light text-xs">01 Jan, 2025 11:00am - 12:00pm</span>
+                      </div>
+                      <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-6 fw-semibold">E00199</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-primary-light-two text-md">UI/UX</h6>
+                      <div class="d-flex align-items-center">
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                            <span class="text-white text-xs">1+</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bg-white shadow-4 radius-6 px-16 py-20 d-flex flex-column gap-10">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-6">
+                          <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                          <span class="text-primary-light text-xs">02 Jan, 2025 13:00pm - 13:45pm</span>
+                      </div>
+                      <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-6 fw-semibold">E00200</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-primary-light-two text-md">Development </h6>
+                      <div class="d-flex align-items-center">
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                            <span class="text-white text-xs">1+</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bg-white shadow-4 radius-6 px-16 py-20 d-flex flex-column gap-10">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex align-items-center gap-6">
+                          <span class="w-6-px h-6-px bg-primary-500 rounded-circle"></span>
+                          <span class="text-primary-light text-xs">02 Feb, 2025 12:00pm - 12:30pm</span>
+                      </div>
+                      <span class="text-xs px-24 bg-primary-50 text-primary-500 radius-6 fw-semibold">E00201</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-primary-light-two text-md">Quality Control </h6>
+                      <div class="d-flex align-items-center">
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                            <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                            <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                          </div>
+                          <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                            <span class="text-white text-xs">1+</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-24">
+            <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEvents">
+            <label class="form-check-label text-primary-light text-xs" for="DeletedEvents">Deleted Events  </label>
+          </div>
+        </div>
+
+        <!-- Calendar Start -->
+        <div class="flex-grow-1">
+          <div id='calendar'></div>
+        </div>
+        <!-- Calendar End -->
+
+      </div>
     </div>
   </div>
   @@include('../layouts/_footer.html')
 </main>
 
 
+<!-- Announcement Department Modal start -->
+<!-- <div class="modal-backdrop fade show"></div>
+<div class="modal fade show" id="createNewEvent" tabindex="-1" aria-labelledby="createNewEventLabel" aria-modal="true" role="dialog" style="display: block;"> -->
+
+<div class="modal fade" id="createNewEvent" tabindex="-1" aria-labelledby="createNewEventLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content py-36 radius-16">
+
+      <div class="border-0 d-flex align-items-start justify-content-between mb-12 px-30">
+        <div class="d-flex align-items-center gap-18">
+          <h5 class="modal-title fw-semibold line-clamp-1 text-md" id="createNewEventLabel"> Add Event  </h5>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-4 px-16 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-dismiss="modal" aria-label="Close">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="">
+            <!-- Top Tab start -->
+            <div class="pt-16 pe-12 ps-lg-5 ps-16 bg-primary-20 shadow-4 position-relative">
+              <div class="d-flex align-items-start flex-wrap justify-content-between gap-16">
+                <div class="d-flex align-items-sm-center align-items-start gap-10 flex-sm-row flex-column">
+                  <span class="w-40-px h-40-px bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
+                    <img src="assets/images/home-one/slack2.png" alt="">
+                  </span>
+                  <div class="flex-grow-1">
+                    <h6 class="text-sm text-primary-light-two mb-8">E00198 - Gathering Information  </h6>
+                    <div class="d-flex align-items-center gap-16 flex-wrap">
+                      <div class="d-flex align-items-center gap-1">
+                        <span class="d-flex text-sm">
+                          <i class="ri-user-shared-2-line"></i>
+                        </span>
+                        <span class="text-primary-light text-xs">John Doe</span>
+                      </div>
+                      <span class="text-primary-light text-xs">Event Date : 31 Dec, 2025 13:00pm - 14:00pm</span>
+                      <div class="d-flex align-items-center gap-16 flex-wrap">
+                        <span class="py-0 px-8 bg-danger-600 text-xs fw-medium text-white rounded-pill">60 Mins</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <ul class="nav bordered-tab nav-pills mt-16 gap-16" id="pills-tabThree" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4 active" id="pills-Details-tab" data-bs-toggle="pill" data-bs-target="#pills-Details" type="button" role="tab" aria-controls="pills-Details" aria-selected="true">Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Attendees-tab" data-bs-toggle="pill" data-bs-target="#pills-Attendees" type="button" role="tab" aria-controls="pills-Attendees" aria-selected="false" tabindex="-1">Attendees </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Guest-tab" data-bs-toggle="pill" data-bs-target="#pills-Guest" type="button" role="tab" aria-controls="pills-Guest" aria-selected="false" tabindex="-1">Guest </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Agenda-tab" data-bs-toggle="pill" data-bs-target="#pills-Agenda" type="button" role="tab" aria-controls="pills-Agenda" aria-selected="false" tabindex="-1">Agenda </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-mom-tab" data-bs-toggle="pill" data-bs-target="#pills-mom" type="button" role="tab" aria-controls="pills-mom" aria-selected="false" tabindex="-1">MOM </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Comments-tab" data-bs-toggle="pill" data-bs-target="#pills-Comments" type="button" role="tab" aria-controls="pills-Comments" aria-selected="false" tabindex="-1">Comments </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Top Tab end -->
+      
+            <div class="px-16 pt-18">
+                <div class="tab-content" id="pills-tabThreeContent">
+                    <!-- Details Tab start -->
+                    <div class="tab-pane active show" id="pills-Details" role="tabpanel" aria-labelledby="pills-Details-tab" tabindex="0">
+                      <div class="row gy-3">
+                        <div class="col-12">
+                          <label for="Typees" class="text-sm form-label">Type </label>
+                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Typees">
+                            <option value="1" selected hidden>Type</option>
+                            <option value="Type 1">Type 1 </option>
+                            <option value="Type 2">Type 2 </option>
+                            <option value="Type 3">Type 3 </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label for="EventTitle" class="text-sm form-label">Event Title </label>
+                          <input type="text" class="form-control py-6 px-8 radius-6 text-xs" id="EventTitle" placeholder="event Title">
+                        </div>
+                        <div class="col-12">
+                          <label for="Descriptionnn" class="text-sm form-label">Description</label>
+                          <textarea class="form-control min-72-px radius-6" id="Descriptionnn" placeholder="Enter comments"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <div class="row g-3">
+                            <div class="col-sm-4">
+                              <label for="dateTimeOne" class="text-sm form-label">Event Date</label>
+                              <div class="max-w-350-px w-100 position-relative">
+                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeOne" type="text" placeholder="Start Date" readonly="readonly">
+                                  <label for="dateTimeOne" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                  </label>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <label for="dateTimeTwo" class="text-sm form-label">Start Time</label>
+                              <div class="max-w-350-px w-100 position-relative">
+                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeTwo" type="text" placeholder="Start Date" readonly="readonly">
+                                  <label for="dateTimeTwo" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                  </label>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <label for="dateTimeThree" class="text-sm form-label">End Time</label>
+                              <div class="max-w-350-px w-100 position-relative">
+                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeThree" type="text" placeholder="Start Date" readonly="readonly">
+                                  <label for="dateTimeThree" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                  </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="Descriptionnn" class="text-sm form-label">Description</label>
+                          <textarea class="form-control min-72-px radius-6" id="Descriptionnn" placeholder="Enter comments"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <label for="AuthorizedPerson" class="text-sm form-label">Authorized Person </label>
+                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="AuthorizedPerson">
+                            <option value="1" selected>Authorized Person</option>
+                            <option value="Unauthorized Person">Unauthorized Person </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label for="Locationns" class="text-sm form-label">Location</label>
+                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Locationns">
+                            <option value="1" selected hidden>Event Location</option>
+                            <option value="Calefornia">Calefornia </option>
+                            <option value="Indonesia">Indonesia </option>
+                            <option value="Kuwait">Kuwait </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label for="workfloww" class="text-sm form-label">Workflow</label>
+                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="workfloww">
+                            <option value="1" selected>Workflow</option>
+                            <option value="Department">Department </option>
+                            <option value="Employee">Employee </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label for="actionss" class="text-sm form-label">Action</label>
+                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="actionss">
+                            <option value="1" selected>Action</option>
+                            <option value="Active">Active </option>
+                            <option value="Inactive">Inactive </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <label for="DayLength" class="text-sm form-label">Day/Length</label>
+                          <div class="d-flex align-items-center gap-20">
+                            <div class="d-flex align-items-center gap-6">
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="sunday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="sunday"> S </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="monday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="monday"> M </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="tuesday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="tuesday"> T </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="wednesday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="wednesday"> W </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="thursday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="thursday"> T </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="friday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="friday"> F </label>
+                              </div>
+                              <div class="">
+                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="saturday">
+                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="saturday"> S </label>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-secondary-light-two">Mins</span>
+                              <input type="text" class="form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
+                        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                      </div>
+                    </div>
+                    <!-- Details Tab end -->
+          
+                    <!-- Attendees Tab start -->
+                    <div class="tab-pane fade " id="pills-Attendees" role="tabpanel" aria-labelledby="pills-Attendees-tab" tabindex="0">
+                        <div class="d-flex align-items-center gap-20 flex-sm-nowrap flex-wrap">
+                            <div class="position-relative max-w-620-px w-100">
+                                <input type="text" class="search-filter-input form-control max-w-760-px py-4 w-100 ps-40" placeholder="Search here...">
+                                <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
+                                    <i class="ri-search-line"></i>
+                                </span>
+                            </div>
+                            <select class="form-control form-select max-w-340-px announcement-dept-select text-xs py-6">
+                                <option selected disabled>Select Announcement</option>
+                                <option value="Department">Department</option>
+                                <option value="Employee">Employee </option>
+                                <option value="Workflow">Workflow</option>
+                                <option value="Action">Action</option>
+                                <option value="Meeting">Meeting</option>
+                            </select>
+                          </div>
+    
+                          <div class="mt-18 d-flex flex-column gap-6 overflow-x-auto max-h-532-px overflow-y-auto scroll-sm pe-8 pb-8">
+    
+                            <!-- Department Select start -->
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox1">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            HD
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Human Resources</h6>
+                                            <span class="text-secondary-light-two text-xxs">Employee Management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Department6</button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox2">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            HR
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Human Resources</h6>
+                                            <span class="text-secondary-light-two text-xxs">Employee Management	</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Department6</button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox3">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            SR
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Sales</h6>
+                                            <span class="text-secondary-light-two text-xxs">Revenue Generation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Department6</button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox4">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            MB
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Marketing</h6>
+                                            <span class="text-secondary-light-two text-xxs">Brand Management	</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Department6</button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox5">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            CC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Customer Support/Service</h6>
+                                            <span class="text-secondary-light-two text-xxs">Customer Relations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Department6</button>
+                            </div>
+                            <!-- Department Select end -->
+    
+                            <!-- Employee Select start -->
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox6">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
+                                            <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Ahmad Mohsen</h6>
+                                            <span class="text-secondary-light-two text-xxs">Human Resources</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Profile </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox7">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
+                                            <img src="assets/images/another/avatar-2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Layla Mohammed</h6>
+                                            <span class="text-secondary-light-two text-xxs">Finance and Accounting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Profile </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox8">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
+                                            <img src="assets/images/another/avatar-3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Sara Khaled</h6>
+                                            <span class="text-secondary-light-two text-xxs">Sales</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Profile </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox9">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
+                                            <img src="assets/images/another/avatar-4.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Mariam Khalel</h6>
+                                            <span class="text-secondary-light-two text-xxs">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Profile </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox10">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
+                                            <img src="assets/images/another/avatar-5.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Yara Qosai</h6>
+                                            <span class="text-secondary-light-two text-xxs">Customer Support/Service</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Profile </button>
+                            </div>
+                            <!-- Employee Select end -->
+                            
+                            <!-- Workflow Select start -->
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox11">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            CO
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Contract Approval </h6>
+                                            <span class="text-secondary-light-two text-xxs">Operations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Workflow </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox12">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            MH
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Monthly Review AL </h6>
+                                            <span class="text-secondary-light-two text-xxs">Human Resources </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Workflow </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox13">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            RH
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Request Submission</h6>
+                                            <span class="text-secondary-light-two text-xxs">Human Resources </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Workflow </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox14">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            DM
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Document Review</h6>
+                                            <span class="text-secondary-light-two text-xxs">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Workflow </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox15">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            OH
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Onboarding</h6>
+                                            <span class="text-secondary-light-two text-xxs">Human Resources </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs">View Workflow </button>
+                            </div>
+                            <!-- Workflow Select end -->
+                            
+                            <!-- Action Select start -->
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox16">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            FM
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Fill Request Form</h6>
+                                            <span class="text-secondary-light-two text-xxs">Monthly Review AL </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Action </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox17">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            RC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Review Request</h6>
+                                            <span class="text-secondary-light-two text-xxs">Contract Approval </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Action </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox18">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            SR
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Set Deadlines</h6>
+                                            <span class="text-secondary-light-two text-xxs">Request Submission</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Action </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox19">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            PO
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Provide Access to Systems</h6>
+                                            <span class="text-secondary-light-two text-xxs">Onboarding</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Action </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox20">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            DU
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Document Review</h6>
+                                            <span class="text-secondary-light-two text-xxs">Upload Document</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Action </button>
+                            </div>
+                            <!-- Action Select end -->
+                            
+                            <!-- Meeting Select start -->
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox21">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            LC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Leadership Alignment Meeting</h6>
+                                            <span class="text-secondary-light-two text-xxs">Contract Approval / Review Request</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Meeting </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox22">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            TM
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Task Progress Review</h6>
+                                            <span class="text-secondary-light-two text-xxs">Monthly Review AL / Fill Request Form</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Meeting </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox23">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            RR
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Resource Planning Meeting</h6>
+                                            <span class="text-secondary-light-two text-xxs">Request Submission / Set Deadlines</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Meeting </button>
+                            </div>
+                            <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox24">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            IU
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Idea Generation Workshop</h6>
+                                            <span class="text-secondary-light-two text-xxs">Upload Document / Document Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> View Meeting </button>
+                            </div>
+                            <!-- Meeting Select end -->
+    
+                          </div>
+    
+                          <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
+                            <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                            <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                          </div>
+                    </div>
+                    <!-- Attendees Tab start -->
+          
+                    <!-- Guest Tab start -->
+                    <div class="tab-pane fade" id="pills-Guest" role="tabpanel" aria-labelledby="pills-Guest-tab" tabindex="0">
+                        <div class="d-flex align-items-center gap-20 flex-sm-nowrap flex-wrap">
+                            <div class="position-relative max-w-620-px w-100">
+                                <input type="text" class="form-control recipient-input ps-40 placeholder-12 py-4" placeholder="Search / Add by Guest Email">
+                                <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
+                                    <i class="ri-search-line"></i>
+                                </span>
+
+                                <!-- Suggested Recipient dropdown start -->
+                                <div class="recipient-dropdown shadow-12 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1 py-10">
+                                    <ul class="max-h-258-px overflow-y-auto scroll-sm">
+                                        <li class="d-flex align-items-center gap-8 cursor-pointer">
+                                            <span class="recipient-dropdown__text text-secondary-light py-6 px-24 text-xs flex-grow-1">James Karlos</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-8 cursor-pointer">
+                                            <span class="recipient-dropdown__text text-secondary-light py-6 px-24 text-xs flex-grow-1">Carls Marton</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-8 cursor-pointer">
+                                            <span class="recipient-dropdown__text text-secondary-light py-6 px-24 text-xs flex-grow-1">Sofia Marton</span>
+                                        </li>
+                                        <li class="d-flex align-items-center gap-8 cursor-pointer">
+                                            <span class="recipient-dropdown__text text-secondary-light py-6 px-24 text-xs flex-grow-1">John Doe</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-end pe-22 mt-4">
+                                        <button type="button" class="btn btn-primary-600 radius-8 d-inline-flex align-items-center py-6 gap-2 px-24 fw-normal flex-shrink-0 text-xxs" data-bs-toggle="modal" data-bs-target="#addGuest">
+                                            Add Guest
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Suggested Recipient dropdown end -->
+                            </div>
+                            <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center py-6 gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#addGuest">
+                                <span class="d-flex text-white fw-normal text-md line-height-1">
+                                  <i class="ri-add-line"></i>
+                                </span>
+                                Add 
+                            </button>
+                        </div>
+    
+                        <div class="mt-18 d-flex flex-column gap-6 overflow-x-auto max-h-532-px overflow-y-auto scroll-sm pe-8 pb-8">
+                            <!-- Department Select start -->
+                            <div class="border ps-12 pe-36 check-announcement-item py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox1">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            LC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Ahmad Mohammed  - Alshaye Co.</h6>
+                                            <span class="text-secondary-light-two text-xxs">Ahmad.m@gmail,com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12">
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                </div>
+                            </div>
+
+                            <div class="border ps-12 pe-36 check-announcement-item py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox1">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            LC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Ahmad Mohammed  - Alshaye Co.</h6>
+                                            <span class="text-secondary-light-two text-xxs">Ahmad.m@gmail,com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12">
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                </div>
+                            </div>
+
+                            <div class="border ps-12 pe-36 check-announcement-item py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox1">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            LC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Ahmad Mohammed  - Alshaye Co.</h6>
+                                            <span class="text-secondary-light-two text-xxs">Ahmad.m@gmail,com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12">
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                </div>
+                            </div>
+
+                            <div class="border ps-12 pe-36 check-announcement-item py-16 radius-6 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
+                                <div class="d-flex align-items-center gap-12">
+                                    <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-16-px h-16-px bg-main radius-4" type="checkbox" id="checkBox1">
+                                    <div class="d-flex align-items-center gap-6">
+                                        <div class="w-36-px h-36-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xs fw-semibold font-rubik text-uppercase overflow-hidden">
+                                            LC
+                                        </div>
+                                        <div class="">
+                                            <h6 class="text-xs mb-0">Ahmad Mohammed  - Alshaye Co.</h6>
+                                            <span class="text-secondary-light-two text-xxs">Ahmad.m@gmail,com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-12">
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                </div>
+                            </div>
+                            <!-- Department Select end -->
+                        </div>
+
+                        <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
+                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                        </div>
+                    </div>
+                    <!-- Guest Tab start -->
+                     
+                    <!-- Agenda Tab start -->
+                    <div class="tab-pane fade" id="pills-Agenda" role="tabpanel" aria-labelledby="pills-Agenda-tab" tabindex="0">
+                      <div class="">
+                        <div class="d-flex justify-content-end mb-24">
+                          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center py-6 gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#agendaListDetails">
+                            <span class="d-flex text-white fw-normal text-md line-height-1">
+                              <i class="ri-add-line"></i>
+                            </span>
+                            Add List
+                        </button>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Review of Hiring Needs (10 minutes)</button>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-danger-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">This should be in  the last </span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Urgent hiring due to new department </span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start w-100">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column w-100">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1 mb-16">Urgent hiring due to new department </span>
+                                <div class="row g-3">
+                                  <div class="col-sm-6 delete-item">
+                                    <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                                      <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                                          <i class="ri-close-large-line line-height-1"></i>
+                                      </button>
+                                      
+                                      <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center gap-12">
+                                          <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                                            <i class="ri-folder-zip-line"></i>
+                                          </span>
+                                          <div class="">
+                                            <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                                            <span class="text-xs text-secondary-light-two">2.2MB</span>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                          <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                                              <i class="ri-eye-line"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 delete-item">
+                                    <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                                      <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                                          <i class="ri-close-large-line line-height-1"></i>
+                                      </button>
+                                      
+                                      <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center gap-12">
+                                          <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                                            <i class="ri-folder-zip-line"></i>
+                                          </span>
+                                          <div class="">
+                                            <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                                            <span class="text-xs text-secondary-light-two">2.2MB</span>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                          <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                                              <i class="ri-eye-line"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-between mt-36 pe-30">
+                        <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-0">
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEventsTwo">
+                          <label class="form-check-label text-primary-light text-xs" for="DeletedEventsTwo">Deleted Events  </label>
+                        </div>
+                        <div class="">
+                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Agenda Tab end -->
+                          
+                    <!-- MOM Tab start -->
+                    <div class="tab-pane fade" id="pills-mom" role="tabpanel" aria-labelledby="pills-mom-tab" tabindex="0">
+                      <div class="">
+                        <div class="d-flex justify-content-end mb-24">
+                          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center py-6 gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#momListDetails">
+                            <span class="d-flex text-white fw-normal text-md line-height-1">
+                              <i class="ri-add-line"></i>
+                            </span>
+                            Add List
+                        </button>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Review of Hiring Needs (10 minutes)</button>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-danger-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">This should be in  the last </span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Urgent hiring due to new department </span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="delete-item py-16 border-bottom">
+                          <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
+                            <div class="d-flex gap-10 align-items-start w-100">
+                              <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
+                                <img src="assets/images/home-one/icon/dot-square.png" alt="">
+                              </span>
+                              <div class="d-flex flex-column w-100">
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
+                                <span class="text-xxs text-secondary-light-two line-clamp-1 mb-16">Urgent hiring due to new department </span>
+                                <div class="row g-3">
+                                  <div class="col-sm-6 delete-item">
+                                    <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                                      <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                                          <i class="ri-close-large-line line-height-1"></i>
+                                      </button>
+                                      
+                                      <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center gap-12">
+                                          <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                                            <i class="ri-folder-zip-line"></i>
+                                          </span>
+                                          <div class="">
+                                            <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                                            <span class="text-xs text-secondary-light-two">2.2MB</span>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                          <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                                              <i class="ri-eye-line"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 delete-item">
+                                    <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                                      <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                                          <i class="ri-close-large-line line-height-1"></i>
+                                      </button>
+                                      
+                                      <div class="d-flex align-items-center justify-content-between gap-4">
+                                        <div class="d-flex align-items-center gap-12">
+                                          <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                                            <i class="ri-folder-zip-line"></i>
+                                          </span>
+                                          <div class="">
+                                            <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                                            <span class="text-xs text-secondary-light-two">2.2MB</span>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-1">
+                                          <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                                              <i class="ri-eye-line"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-10">
+                              <span class="text-success-600 line-height-1"><i class="ri-flag-2-line"></i></span>
+                              <div class="d-flex align-items-center gap-1">
+                                <span class="text-xs text-primary-600">2</span>
+                                <button type="button" class="collapse-btn collapse-arrow-btn line-height-1 text-md text-primary-600 fw-bold"><i class="ri-arrow-right-s-line"></i></button>
+                              </div>
+                              <div class="dropdown">
+                                <button class="text-xl h-16-px w-16-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu p-8">
+                                  <li class="">
+                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                      <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                      <span class="">Delete</span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                            <ul class="d-flex flex-column gap-8">
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                              </li>
+                              <li class="d-flex align-items-center gap-10">
+                                <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-between mt-36 pe-30">
+                        <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-0">
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEventsThree">
+                          <label class="form-check-label text-primary-light text-xs" for="DeletedEventsThree">Deleted Events  </label>
+                        </div>
+                        <div class="">
+                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
+                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Next</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- MOM Tab end -->
+          
+                    <!-- Comments Tab start -->
+                    <div class="tab-pane fade " id="pills-Comments" role="tabpanel" aria-labelledby="pills-Comments-tab" tabindex="0">
+                        <div class="">
+                            <h6 class="mb-24 text-md text-primary-light-two fw-semibold">Comments</h6>
+                            <!-- Item start -->
+                            <div class="d-flex align-items-start gap-16-px">
+                              <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                                <img src="assets/images/home-one/user-img6.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="flex-grow-1">
+                                <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                                  <h6 class="text-sm mb-0">Joseph Parker</h6>
+                                  <span class="fw-semibold text-xs text-neutral-500">20 Dec, 2024 - 05:47am</span>
+                                </div>
+                                <p class="text-neutral-500 text-xs">I am getting message from customers that when they place order always get error message .</p>
+                                <button type="button" class="px-6 py-1 radius-6 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16" id="comment-form">
+                                  <i class="ri-reply-fill d-flex"></i>
+                                  Reply
+                                </button>
+                              </div>
+                            </div>
+          
+                            <div class="d-flex align-items-start gap-16-px ms-44 mt-24">
+                              <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                                <img src="assets/images/home-one/user-img4.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="flex-grow-1">
+                                <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                                  <h6 class="text-sm mb-0">Tonya Noble</h6>
+                                  <span class="fw-semibold text-xs text-neutral-500">20 Dec, 2024 - 05:47am</span>
+                                </div>
+                                <p class="text-neutral-500 text-xs">Please be sure to check your Spam mailbox to see if your email filters have identified the email from Dell as spam.</p>
+                                <button type="button" class="px-6 py-1 radius-6 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
+                                  <i class="ri-reply-fill d-flex"></i>
+                                  Reply
+                                </button>
+                              </div>
+                            </div>
+          
+                            <div class="d-flex align-items-start gap-16-px mt-24">
+                              <div class="w-30-px h-30-px rounded-circle overflow-hidden flex-shrink-0">
+                                <img src="assets/images/home-one/user-img4.png" alt="User Image" class="w-100 h-100 object-fit-cover">
+                              </div>
+                              <div class="flex-grow-1">
+                                <div class="d-flex gap-2 flex-wrap align-items-center mb-6">
+                                  <h6 class="text-sm mb-0">Tonya Noble</h6>
+                                  <span class="fw-semibold text-xs text-neutral-500">26 min ago</span>
+                                </div>
+                                <p class="text-neutral-500 text-xs">Your <a href="javascript:void(0)" class="text-primary-500 text-decoration-underline">Online Order Support</a>  provides you with the most current status of your order. To help manage your order refer to the “Action Menu” to initiate return, contact Customer Support and more. </p>
+                                <div class="d-flex gap-2">
+                                  <div class="radius-6 overflow-hidden">
+                                    <img src="assets/images/home-one/reply-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                                  <div class="radius-6 overflow-hidden">
+                                    <img src="assets/images/home-one/reply-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                                </div>
+                                <button type="button" class="px-6 py-1 radius-6 bg-neutral-50 text-neutral-500 text-xs d-flex align-items-center gap-1 fw-medium bg-hover-neutral-300 mt-16">
+                                  <i class="ri-reply-fill d-flex"></i>
+                                  Reply
+                                </button>
+                              </div>
+                            </div>
+                            <!-- Item End -->
+          
+                            <h6 class="mb-8 mt-32 text-md text-primary-light-two fw-semibold">Leave a Comments</h6>
+                            <form action="#">
+                              <textarea class="form-control min-72-px bg-neutral-100" placeholder="Enter comments"></textarea>
+                              <div class="d-flex justify-content-end align-items-center gap-8 mt-12">
+                                <label for="attactchment" class=" w-36-px h-36-px d-flex justify-content-center align-items-center text-md text-purple-600">
+                                  <input type="file" id="attactchment" hidden="">
+                                  <i class="ri-attachment-line"></i>
+                                </label>
+                                <button type="submit" class="btn btn-primary-600">Post Comments</button>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Comments Tab start -->
+                </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Announcement Department Modal End -->
+
+<!-- Add Guest Modal start -->
+<div class="modal fade" id="addGuest" tabindex="-1" aria-labelledby="addGuestLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addGuestLabel">Add guest  </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addGuest">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#" class="">
+          <div class="mb-16">
+            <label for="fulllName" class="text-sm form-label">Full Name </label>
+            <input type="text" class="form-control" id="fulllName" placeholder="Full Name">
+          </div>
+          <div class="mb-16">
+            <label for="companyyName" class="text-sm form-label">Company Name </label>
+            <input type="text" class="form-control" id="companyyName" placeholder="Company Name">
+          </div>
+          <div class="mb-16">
+            <label for="addEmail" class="text-sm form-label">Email Address </label>
+            <input type="email" class="form-control" id="addEmail" placeholder="Email">
+          </div>
+          <div class="mb-0">
+            <label for="Descriptionn" class="text-sm form-label">Description</label>
+            <textarea class="form-control min-h-72-px" id="Descriptionn" placeholder="Description"></textarea>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-30">
+              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addGuest">Save </button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Add Guest Modal end -->
+
+<!-- List Details start -->
+<div class="modal fade" id="agendaListDetails" tabindex="-1" aria-labelledby="agendaListDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16 bg-neutral-20">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="agendaListDetailsLabel">Details - Agenda</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#agendaListDetails">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="row gy-3">
+          <div class="col-12">
+            <label for="DetauksTitle" class="text-sm form-label">Title </label>
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="DetauksTitle" placeholder="Welcome and Opening Remarks (20 minutes)" value="Welcome and Opening Remarks (20 minutes)">
+          </div>
+          <div class="col-12">
+            <label for="NotesHere" class="text-sm form-label">Notes</label>
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="NotesHere" placeholder="Notes">
+          </div>
+          <div class="col-12">
+            <label for="workflowwThree" class="text-sm form-label">Workflow</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="workflowwThree">
+              <option value="1" selected="">Workflow</option>
+              <option value="Department">Department </option>
+              <option value="Employee">Employee </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="actionssThree" class="text-sm form-label">Action</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="actionssThree">
+              <option value="1" selected="">Action</option>
+              <option value="Active">Active </option>
+              <option value="Inactive">Inactive </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="PriorityThree" class="text-sm form-label">Priority</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="PriorityThree">
+              <option value="1" selected>Priority</option>
+              <option value="Hight">Hight </option>
+              <option value="Medium">Medium </option>
+              <option value="Low">Low </option>
+            </select>
+          </div>
+          <div class="col-sm-12">
+            <label for="MetaData" class="text-sm form-label">Meta Data</label>
+            <select class="form-control bg-transparent form-select py-6 meta-tags w-100" multiple="multiple" id="MetaData">
+              <option selected>UI/UX</option>
+              <option>Figma</option>
+              <option>Javascript</option>
+              <option>CSS</option>
+              <option>Tailwind</option>
+              <option>React</option>
+              <option>Next</option>
+              <option>Node</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <div class="d-flex align-items-center gap-16">
+              <label class="text-sm form-label mb-0">Time</label>
+              <div class="d-flex align-items-center gap-16">
+                <span class="text-secondary-light-two">Mins</span>
+                <input type="text" class="form-control bg-transparent radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="SubpointsThree" class="text-sm form-label">Subpoints</label>
+            <div class="bg-white py-16 px-8 radius-4">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                    <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                        <i class="ri-close-large-line line-height-1"></i>
+                    </button>
+                    <p class="text-secondary-light-two mb-0">Objectives of the meeting </p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                    <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                        <i class="ri-close-large-line line-height-1"></i>
+                    </button>
+                    <p class="text-secondary-light-two mb-0">Objectives of the meeting </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-12 d-flex align-items-center gap-16">
+              <h6 class="text-md mb-0 fw-medium">Attachments  </h6>
+              <select class="form-control bg-transparent form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
+                <option value="1" selected="" hidden="">Upload</option>
+                <option value="SVG">SVG</option>
+                <option value="PNG">PNG</option>
+                <option value="JPG">JPG</option>
+                <option value="PDF">PDF</option>
+              </select>
+            </div>
+            <div class="row g-3">
+              <div class="col-12 delete-item">
+                <div class="border border-dashed p-8 radius-4 position-relative">
+                  <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                      <i class="ri-close-large-line line-height-1"></i>
+                  </button>
+                  
+                  <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                      <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                      </span>
+                      <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                          <i class="ri-eye-line"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 delete-item">
+                <div class="border border-dashed p-8 radius-4 position-relative">
+                  <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                      <i class="ri-close-large-line line-height-1"></i>
+                  </button>
+                  
+                  <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                      <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                      </span>
+                      <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                          <i class="ri-eye-line"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
+          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Delete</button>
+          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- List Details end -->
+
+<!-- List Details start -->
+<div class="modal fade" id="momListDetails" tabindex="-1" aria-labelledby="momListDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16 bg-neutral-20">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="momListDetailsLabel">Details - Agenda</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#momListDetails">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="row gy-3">
+          <div class="col-12">
+            <label for="DetauksTitleFour" class="text-sm form-label">Title </label>
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="DetauksTitleFour" placeholder="Welcome and Opening Remarks (20 minutes)" value="Welcome and Opening Remarks (20 minutes)">
+          </div>
+          <div class="col-12">
+            <label for="NotesHereFour" class="text-sm form-label">Notes</label>
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="NotesHereFour" placeholder="Notes">
+          </div>
+          <div class="col-12">
+            <label for="workflowwThreeFour" class="text-sm form-label">Workflow</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="workflowwThreeFour">
+              <option value="1" selected="">Workflow</option>
+              <option value="Department">Department </option>
+              <option value="Employee">Employee </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="actionssThreeFour" class="text-sm form-label">Action</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="actionssThreeFour">
+              <option value="1" selected="">Action</option>
+              <option value="Active">Active </option>
+              <option value="Inactive">Inactive </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="PriorityThreeFour" class="text-sm form-label">Priority</label>
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="PriorityThreeFour">
+              <option value="1" selected>Priority</option>
+              <option value="Hight">Hight </option>
+              <option value="Medium">Medium </option>
+              <option value="Low">Low </option>
+            </select>
+          </div>
+          <div class="col-sm-12">
+            <label for="MetaDataFour" class="text-sm form-label">Meta Data</label>
+            <select class="form-control bg-transparent form-select py-6 meta-tags w-100" multiple="multiple" id="MetaDataFour">
+              <option selected>UI/UX</option>
+              <option>Figma</option>
+              <option>Javascript</option>
+              <option>CSS</option>
+              <option>Tailwind</option>
+              <option>React</option>
+              <option>Next</option>
+              <option>Node</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <div class="d-flex align-items-center gap-16">
+              <label class="text-sm form-label mb-0">Time</label>
+              <div class="d-flex align-items-center gap-16">
+                <span class="text-secondary-light-two">Mins</span>
+                <input type="text" class="form-control bg-transparent radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="text-sm form-label">Subpoints</label>
+            <div class="bg-white py-16 px-8 radius-4">
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                    <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                        <i class="ri-close-large-line line-height-1"></i>
+                    </button>
+                    <p class="text-secondary-light-two mb-0">Objectives of the meeting </p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                    <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                        <i class="ri-close-large-line line-height-1"></i>
+                    </button>
+                    <p class="text-secondary-light-two mb-0">Objectives of the meeting </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-12 d-flex align-items-center gap-16">
+              <h6 class="text-md mb-0 fw-medium">Attachments  </h6>
+              <select class="form-control bg-transparent form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
+                <option value="1" selected="" hidden="">Upload</option>
+                <option value="SVG">SVG</option>
+                <option value="PNG">PNG</option>
+                <option value="JPG">JPG</option>
+                <option value="PDF">PDF</option>
+              </select>
+            </div>
+            <div class="row g-3">
+              <div class="col-12 delete-item">
+                <div class="border border-dashed p-8 radius-4 position-relative">
+                  <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                      <i class="ri-close-large-line line-height-1"></i>
+                  </button>
+                  
+                  <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                      <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                      </span>
+                      <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                          <i class="ri-eye-line"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 delete-item">
+                <div class="border border-dashed p-8 radius-4 position-relative">
+                  <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
+                      <i class="ri-close-large-line line-height-1"></i>
+                  </button>
+                  
+                  <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                      <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                      </span>
+                      <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                          <i class="ri-eye-line"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
+          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Delete</button>
+          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- List Details end -->
+
+
 @@include('../partial-html/_template-bottom.html')
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src='assets/js/full-calendar.js'></script>
+<script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/lib/select2.min.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'resourceTimelineWeek'
-        });
-        calendar.render();
+  // *****************************  Flat pickr or date picker js ***************************** 
+  function getDatePickerSingle(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+    //   mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
     });
+  }
+  getDatePickerSingle('#dateTimeOne');
+  getDatePickerSingle('#dateTimeTwo');
+  getDatePickerSingle('#dateTimeThree');
+    
+
+    // *************************** Suggested Recipient Dropdown js start ***************************
+    $('body').on('click', function () {
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  let inputText = "";
+  $('.recipient-input').on('click', function (event) {
+    event.stopPropagation();
+    $('.recipient-dropdown').addClass('show');
+  });
+
+  $('.recipient-dropdown__text').on('click', function () {
+    inputText = $(this).text();
+    $('.recipient-input').val(inputText);
+    $('.recipient-dropdown').removeClass('show');
+  });
+
+  // Search through Dropdown by input fields
+  $('.recipient-input').on('input', function (event) {
+    let inputText = event.target.value.toLowerCase();
+
+    $('.recipient-dropdown li').each(function () {
+      dropdownItemText = $(this).find('.recipient-dropdown__text').text().toLocaleLowerCase();
+      $(this).toggleClass('d-flex', dropdownItemText.includes(inputText));
+      $(this).toggleClass('d-none', !dropdownItemText.includes(inputText));
+    });
+  });
+  // *************************** Suggested Recipient Dropdown js End ***************************
+  
+  // *************************** Select2 js start here ***************************
+  $(document).ready(function() {
+    $(".meta-tags").select2({
+      tags: true
+    });
+  });
+  // *************************** Select2 js End here ***************************
+    
 </script>
 
 </body>
