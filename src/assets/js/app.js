@@ -513,6 +513,21 @@
   });
   // ========================= Custom Accordion of Add Event Js End ===================
 
+  
+  // ========================= Email Sidebar see more btn and list Js Start ===================
+  let seeMoreBtn = document.querySelector('.see-more-btn');
+  let seeMoreList = document.querySelector('.see-more-list');
+
+  if(seeMoreBtn && seeMoreList) {
+    seeMoreBtn.addEventListener('click', function () {
+      seeMoreList.classList.toggle('d-none');
+      this.classList.toggle('active');
+    });
+  }
+  // ========================= Email Sidebar see more btn and list Js End ===================
+
+  
+
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
   //   const themeToggle = $("#theme-toggle .form-check-input");

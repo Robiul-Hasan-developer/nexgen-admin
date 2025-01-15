@@ -1,0 +1,460 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Email",
+    page: "Business Suite",
+    activePage: "Email",
+    paraText: "For email management, display relevant details, status, and actions for efficient communication, with appropriate permissions for viewing, composing, and managing emails."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg radius-6 overflow-hidden d-flex gap-8">
+
+        <!-- ======================== Email sidebar start ======================== -->
+        <div class="email-sidebar bg-white max-w-286-px w-100 flex-shrink-0 flex-grow-1">
+          <div class="p-24">
+            <button type="button" class="btn btn-danger-600 radius-4 d-flex align-items-center justify-content-center gap-2 px-3 fw-normal flex-shrink-0 w-100" data-bs-toggle="modal" data-bs-target="#composeEmail">
+                <span class="w-16-px h-16-px bg-white-1 d-flex justify-content-center align-items-center rounded-circle text-white fw-bold border border-white border-2 fw-normal text-xs">
+                  <i class="ri-add-line"></i>
+                </span>
+                Compose 
+            </button>
+            <span class="d-block border-bottom border-dashed border-neutral-300 my-24"></span>
+
+            <ul class="d-flex flex-column gap-10">
+              <li class="">
+                <a href="email.html" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-mail-fill"></i></span>
+                    <span class="text fw-normal line-height-1">All</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">2</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-inbox-archive-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Inbox</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">5</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-send-plane-2-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Sent</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-edit-2-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Draft</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <button type="button" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100 see-more-btn">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm fw-bold"><i class="ri-arrow-down-s-line"></i></span>
+                    <span class="text fw-normal line-height-1">More</span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <ul class="d-flex flex-column gap-10 mt-12 see-more-list d-none">
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-arrow-right-circle-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Important</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-message-2-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Chats</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">2</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-calendar-schedule-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Scheduled</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">5</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-mail-fill"></i></span>
+                    <span class="text fw-normal line-height-1">All Mail</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-error-warning-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Spam</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm"><i class="ri-delete-bin-5-fill"></i></span>
+                    <span class="text fw-normal line-height-1">Trash</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <span class="d-block text-sm text-uppercase text-secondary-light-two font-ubuntu fw-semibold mt-20 mb-14">Labels</span>
+
+            <ul class="d-flex flex-column gap-10">
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-10">
+                    <span class="line-height-1 d-flex text-sm text-info-600"><i class="ri-circle-line"></i></span>
+                    <span class="text fw-normal line-height-1">Support</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">2</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-10">
+                    <span class="line-height-1 d-flex text-sm text-warning-600"><i class="ri-circle-line"></i></span>
+                    <span class="text fw-normal line-height-1">Freelance</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-10">
+                    <span class="line-height-1 d-flex text-sm text-primary-500"><i class="ri-circle-line"></i></span>
+                    <span class="text fw-normal line-height-1">Social</span>
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-10">
+                    <span class="line-height-1 d-flex text-sm text-danger-600"><i class="ri-circle-line"></i></span>
+                    <span class="text fw-normal line-height-1">Friends</span>
+                  </span>
+                  <span class="w-18-px h-16-px bg-success-100 text-success-600 fw-medium d-flex justify-content-center align-items-center radius-4 text-xxs">3</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
+                  <span class="d-flex align-items-center gap-10">
+                    <span class="line-height-1 d-flex text-sm text-success-600"><i class="ri-circle-line"></i></span>
+                    <span class="text fw-normal line-height-1">Family</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <span class="d-block border-bottom border-dashed border-neutral-300 mt-24"></span>
+          </div>
+
+          <!-- Chart start -->
+          <div>
+            <div class="d-flex align-items-center justify-content-between px-24 mb-8">
+              <span class="d-block text-sm text-uppercase text-secondary-light-two font-ubuntu fw-semibold">Chat</span>
+              <button type="button" class="w-28-px h-28-px bg-info-50 text-info-600 fw-semibold text-md rounded-circle d-flex justify-content-center align-items-center bg-hover-info-600 hover-text-white" data-bs-toggle="modal" data-bs-target="#addChat">
+                <i class="ri-add-line"></i>
+              </button>
+            </div>
+
+            <div class="">
+              <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <span class="w-32-px h-32-px rounded-circle overflow-hidden">
+                  <img src="assets/images/home-one/user-img1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                </span>
+                <div class="">
+                  <h6 class="text-sm mb-1 text-primary-light-two"> Scott Median</h6>
+                  <span class="text-secondary-light-two text-xs">Hello! are you there?</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <span class="w-32-px h-32-px rounded-circle overflow-hidden">
+                  <img src="assets/images/home-one/user-img2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                </span>
+                <div class="">
+                  <h6 class="text-sm mb-1 text-primary-light-two">Julian Rosa</h6>
+                  <span class="text-secondary-light-two text-xs">What about our next..</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <span class="w-32-px h-32-px rounded-circle overflow-hidden">
+                  <img src="assets/images/home-one/user-img3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                </span>
+                <div class="">
+                  <h6 class="text-sm mb-1 text-primary-light-two">David Medina</h6>
+                  <span class="text-secondary-light-two text-xs">Yeah everything is fine</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <span class="w-32-px h-32-px rounded-circle overflow-hidden">
+                  <img src="assets/images/home-one/user-img4.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                </span>
+                <div class="">
+                  <h6 class="text-sm mb-1 text-primary-light-two">Jay Baker</h6>
+                  <span class="text-secondary-light-two text-xs">Wow that's great</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chart end -->
+        </div>
+        <!-- ======================== Email sidebar End ======================== -->
+
+
+        <!-- ========================== Email body start ========================== -->       
+        <div class="email-body pt-10 pe-10 flex-grow-1">
+          <div class="d-flex align-items-center gap-10">
+            <div class="position-relative w-100">
+              <input type="text" class="search-filter-input form-control w-100 ps-40 bg-neutral-200 border-neutral-200" placeholder="Search mail">
+              <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
+                <i class="ri-search-line"></i>
+              </span>
+            </div>
+            <button class="text-neutral-400 d-flex line-height-1  text-lg"><i class="ri-filter-line line-height-1"></i></button>
+          </div>
+
+          <!-- Action Menu start -->
+          <div class="bg-white mt-10 d-flex align-items-center justify-content-between flex-wrap gap-16  py-12 px-16 border-bottom border-neutral-200">
+             <div class="d-flex align-items-center gap-26-px">
+               <div class="form-check style-check d-flex align-items-center gap-6 p-0">
+                 <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main w-16-px h-16-px border-neutral-500 radius-2 border-2" type="checkbox" name="checkbox" id="selectAll">
+                 <div class="dropdown line-height-1">
+                   <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-hover-primary-500 text-secondary-light line-height-1 d-flex"> 
+                     <iconify-icon icon="typcn:arrow-sorted-down" class="icon line-height-1"></iconify-icon>
+                   </button>
+                   <ul class="dropdown-menu p-8">
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         All
+                       </button>
+                     </li>
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         None
+                       </button>
+                     </li>
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         Read
+                       </button>
+                     </li>
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         Unread
+                       </button>
+                     </li>
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         Starred
+                       </button>
+                     </li>
+                     <li>
+                       <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900">
+                         Unstarred
+                       </button>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-inbox-archive-fill"></i>
+              </button>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-error-warning-fill"></i>
+              </button>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500 action-menu-delete">
+                <i class="ri-delete-bin-5-fill"></i>
+              </button>
+              <span class="w-1-px h-16-px bg-neutral-200"></span>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-discuss-fill"></i>
+              </button>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-time-fill"></i>
+              </button>
+              <span class="w-1-px h-16-px bg-neutral-200"></span>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-folder-transfer-fill"></i>
+              </button>
+               <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                <i class="ri-price-tag-3-fill"></i>
+              </button>
+              <div class="dropdown line-height-1">
+                <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-hover-primary-500 text-secondary-light line-height-1 d-flex"> 
+                  <i class="ri-more-2-fill fw-bold"></i>
+                </button>
+                <ul class="dropdown-menu p-8">
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-mail-unread-line"></i></span>
+                      <span class="line-clamp-1">Mark as unread</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-bookmark-line"></i></span>
+                      <span class="line-clamp-1">Mark as important</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-star-line"></i></span>
+                      <span class="line-clamp-1">Add star</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-filter-3-line"></i></span>
+                      <span class="line-clamp-1">Filter messages like this </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-volume-mute-line"></i></span>
+                      <span class="line-clamp-1">Mute</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                      <span class="text-sm line-height-1"><i class="ri-attachment-line"></i></span>
+                      <span class="line-clamp-1">Forward as attachment </span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+             </div>
+             <div class="d-flex align-items-center gap-10">
+              <span class="text-secondary-light line-height-1">1-12 of 1,253</span>
+              <div class="d-flex align-items-center gap-10">
+                <button type="button" class="w-22-px h-22-px text-secondary-light-two d-flex justify-content-center align-items-center text-md line-height-1 text-hover-primary-500">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button type="button" class="w-22-px h-22-px text-secondary-light-two d-flex justify-content-center align-items-center text-md line-height-1 text-hover-primary-500">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+             </div>
+            </div>
+            <!-- Action Menu End -->
+
+            <!-- Email List Start -->
+            <div class="py-16 px-24 bg-white"> 
+              <ul class="nav bordered-tab nav-pills border-bottom border-dashed border-neutral-200" id="pills-tabThree" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-primary-500 fw-semibold line-height-1 text-sm py-12 px-16 d-flex align-items-center gap-10 active" id="pills-primary-tab" data-bs-toggle="pill" data-bs-target="#pills-primary" type="button" role="tab" aria-controls="pills-primary" aria-selected="true">
+                    <span class=""><i class="ri-inbox-fill"></i></span>
+                    <span class="">Primary</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-primary-500 fw-semibold line-height-1 text-sm py-12 px-16 d-flex align-items-center gap-10" id="pills-announcement-tab" data-bs-toggle="pill" data-bs-target="#pills-announcement" type="button" role="tab" aria-controls="pills-announcement " aria-selected="false" tabindex="-1">
+                    <span class=""><i class="ri-group-fill"></i></span>
+                    <span class="">Announcement</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-primary-500 fw-semibold line-height-1 text-sm py-12 px-16 d-flex align-items-center gap-10" id="pills-WorkflowAction-tab" data-bs-toggle="pill" data-bs-target="#pills-WorkflowAction" type="button" role="tab" aria-controls="pills-WorkflowAction " aria-selected="false" tabindex="-1">
+                    <span class=""><i class="ri-price-tag-3-fill"></i></span>
+                    <span class="">Workflow & Actions </span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabThreeContent">
+                <!-- primary Tab start -->
+                <div class="tab-pane fade show active" id="pills-primary" role="tabpanel" aria-labelledby="pills-primary-tab" tabindex="0">
+                  <div class="">
+
+                    <!-- Email Item -->
+                    <div class="email-item px-20 bg-white py-16 d-flex align-items-center group-item cursor-pointer position-relative">
+                      <span class="six-dots position-absolute start-0 top-50 translate-middle-y ms-6 line-height-1 d-flex">
+                        <img src="assets/images/icon/six-dots.png" alt="">
+                      </span>
+                      <div class="max-w-260-px w-100">
+                        <div class="d-flex align-items-center gap-14">
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer" type="checkbox" name="checkbox">
+                          <button type="button" class="starred-button text-secondary-light-two text-md line-height-1 d-flex"><i class="ri-star-fill"></i></button>
+                          <button type="button" class="email-item__tag group-hover-item-block d-none text-secondary-light-two text-md line-height-1 d-flex">
+                            <i class="ri-price-tag-3-line"></i>
+                          </button>
+                          <span class="email-item__from fw-medium text-sm text-primary-light-two ps-20">Peter</span>
+                        </div>
+                      </div>
+                      <div class="text-secondary-light-two">
+                        <p class="line-clamp-1 mb-0">
+                          <span class="fw-bold text-primary-light-two">Hello</span> - Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm.
+                        </p>
+                      </div>
+                      <div class="email-item__icons ms-auto ps-8 group-hover-item-block d-none">
+                        <div class="d-flex align-items-center gap-26-px">
+                          <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                            <i class="ri-inbox-archive-fill"></i>
+                          </button>
+                          <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500 email-item__delete">
+                            <i class="ri-delete-bin-5-fill"></i>
+                          </button>
+                          <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                            <i class="ri-discuss-fill"></i>
+                          </button>
+                          <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                            <i class="ri-time-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="email-item__date fw-medium group-hover-item-none text-primary-light text-sm flex-shrink-0 ms-auto ps-8">Mar 7</span>
+                    </div>
+                    <!-- Email Item -->
+                    
+                  </div>            
+                </div>
+                <!-- primary Tab end -->
+      
+                <!-- announcement Tab start -->
+                <div class="tab-pane fade" id="pills-announcement" role="tabpanel" aria-labelledby="pills-announcement-tab" tabindex="0">
+                  <h6>announcement</h6>            
+                </div>
+                <!-- announcement Tab start -->
+      
+                <!-- WorkflowAction Tab start -->
+                <div class="tab-pane fade" id="pills-WorkflowAction" role="tabpanel" aria-labelledby="pills-WorkflowAction-tab" tabindex="0">
+                  <h6>WorkflowAction</h6>            
+                </div>
+                <!-- WorkflowAction Tab start -->
+              </div>
+            </div>
+            <!-- Email List End -->
+        </div>
+        <!-- ========================== Email body End ========================== -->
+        
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>

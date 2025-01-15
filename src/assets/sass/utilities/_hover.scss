@@ -18,3 +18,15 @@
 .pointer-event-none {
   pointer-events: none;
 }
+
+.focus-text-white {
+  &:focus, &:active {
+    color: #fff !important;
+  }
+}
+
+.focus-bg-primary-600 {
+  &:focus, &:active {
+    background-color: var(--primary-600) !important;
+  }
+}

@@ -14,4 +14,8 @@
         font-family: var(--font-poppins) !important;
     }
 }
+
+.hover-fw-medium:hover, .hover-fw-medium:hover span {
+    font-weight: 500 !important;
+}
 /* Font Family End */
