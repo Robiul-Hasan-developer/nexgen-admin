@@ -526,6 +526,134 @@
   }
   // ========================= Email Sidebar see more btn and list Js End ===================
 
+  // ========================= Check All checkbox by checking one checkbox start Start ===================
+  let selectAll = document.querySelector('#selectAll');
+
+  if(selectAll) {
+    selectAll.addEventListener('change', function () {
+      const allEmailItems = document.querySelectorAll('.email-item');
+  
+      allEmailItems.forEach((allEmailItem, index) => {
+        const checkbox = allEmailItem.querySelector('.email-item__checkbox');
+        checkbox.checked = this.checked;
+  
+        if (this.checked) {
+          allEmailItem.classList.add('active');
+          localStorage.setItem(`email-item-${index}`, 'active'); // Store active state
+        } else {
+          allEmailItem.classList.remove('active');
+          localStorage.removeItem(`email-item-${index}`); // Remove active state
+        }
+      });
+    });
+  
+    document.querySelectorAll('.email-item__checkbox').forEach((checkbox, index) => {
+      checkbox.addEventListener('change', function () {
+        const allEmailCheckboxes = document.querySelectorAll('.email-item__checkbox');
+        const allChecked = Array.from(allEmailCheckboxes).every(cb => cb.checked);
+        const anyChecked = Array.from(allEmailCheckboxes).some(cb => cb.checked);
+  
+        // Update the "Select All" checkbox
+        selectAll.checked = allChecked;
+  
+        // Update the "active" class for the email item
+        const emailItem = this.closest('.email-item');
+        if (this.checked) {
+          emailItem.classList.add('active');
+          localStorage.setItem(`email-item-${index}`, 'active'); // Store active state
+        } else {
+          emailItem.classList.remove('active');
+          localStorage.removeItem(`email-item-${index}`); // Remove active state
+        }
+      });
+    });
+  
+    // Initialize state from localStorage on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const allEmailItems = document.querySelectorAll('.email-item');
+  
+      allEmailItems.forEach((allEmailItem, index) => {
+        const checkbox = allEmailItem.querySelector('.email-item__checkbox');
+        const isActive = localStorage.getItem(`email-item-${index}`) === 'active';
+  
+        checkbox.checked = isActive; // Set checkbox state
+        if (isActive) {
+          allEmailItem.classList.add('active'); // Add active class
+        } else {
+          allEmailItem.classList.remove('active'); // Ensure active class is removed
+        }
+      });
+  
+      // Ensure "Select All" reflects the current state
+      const allEmailCheckboxes = document.querySelectorAll('.email-item__checkbox');
+      selectAll.checked = Array.from(allEmailCheckboxes).every(cb => cb.checked);
+    });
+  }
+  // ========================= Check All checkbox by checking one checkbox Js End ===================
+
+  // ========================= Email Item checked Js Start ===================
+  let emailItemCheckboxes = document.querySelectorAll('.email-item__checkbox');
+
+  if (emailItemCheckboxes) {
+    // Initialize checkboxes state from localStorage
+    emailItemCheckboxes.forEach((checkboxItem, index) => {
+      const isChecked = localStorage.getItem(`checkbox-${index}`) === 'true';
+      checkboxItem.checked = isChecked;
+
+      if (isChecked) {
+        checkboxItem.closest('.email-item').classList.add('active');
+      } else {
+        checkboxItem.closest('.email-item').classList.remove('active');
+      }
+    });
+
+    // Add event listeners to handle changes
+    emailItemCheckboxes.forEach((checkboxItem, index) => {
+      checkboxItem.addEventListener('change', function () {
+        const isChecked = checkboxItem.checked;
+        localStorage.setItem(`checkbox-${index}`, isChecked);
+
+        if (isChecked) {
+          this.closest('.email-item').classList.add('active');
+        } else {
+          this.closest('.email-item').classList.remove('active');
+        }
+      });
+    });
+  }
+  // ========================= Email Item checked Js End ===================
+
+  // ========================= Starred Star Js Start ===================
+  let starredButtons = document.querySelectorAll('.starred-button');
+
+  if(starredButtons) {
+    starredButtons.forEach((starredButtonItem) => {
+      starredButtonItem.addEventListener('click', function () {
+        this.classList.toggle('active');
+      });
+    });
+  }
+  // ========================= Starred Star Js End ===================
+
+  
+  // ========================= Delete All Selected Email Item Js Start ===================
+  let actionMenuDelete = document.querySelector('.action-menu-delete');
+
+  if(actionMenuDelete) {
+    actionMenuDelete.addEventListener('click', function() {
+      const activeEmailItems = document.querySelectorAll('.email-item.active');
+      
+      activeEmailItems.forEach((activeEmailItem) => {
+        activeEmailItem.classList.add('d-none');
+      });
+
+      console.log(activeEmailItems.length);
+      if(activeEmailItems.length > 0) {
+        toastMessage(" All selected email item deleted successfully!");
+      }
+    });
+  }
+  // ========================= Delete All Selected Email Item Js End ===================
   
 
   // ========================== Light Dark version js start ==========================
