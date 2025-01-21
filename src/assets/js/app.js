@@ -742,15 +742,17 @@
   let emailReplyBox = document.querySelector('.email-reply-box');
   let emailAutoReply = document.querySelector('.email-auto-reply');
 
-  emailReplyBtn.addEventListener('click', function () {
-    emailReplyBox.classList.remove('d-none');
-    emailAutoReply.classList.add('d-none');
-  });
-
-  removeEmailChatBox.addEventListener('click', function () {
-    emailReplyBox.classList.add('d-none');
-    emailAutoReply.classList.remove('d-none');
-  });
+  if(emailReplyBtn && removeEmailChatBox && emailReplyBox && emailAutoReply) {
+    emailReplyBtn.addEventListener('click', function () {
+      emailReplyBox.classList.remove('d-none');
+      emailAutoReply.classList.add('d-none');
+    });
+  
+    removeEmailChatBox.addEventListener('click', function () {
+      emailReplyBox.classList.add('d-none');
+      emailAutoReply.classList.remove('d-none');
+    });
+  }
 
   // ========================= Email Details reply Js End ===================
   
