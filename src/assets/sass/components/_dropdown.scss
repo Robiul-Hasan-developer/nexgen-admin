@@ -36,4 +36,17 @@
         background-color: var(--primary-100);
     }
 }
+
+.active-bg-main-800 {
+    border-radius: 4px;
+    &.show {
+        background-color: var(--primary-800);
+    }
+}
+
+.text-bg-main-600 {
+    &.show {
+        color: var(--primary-600) !important;
+    }
+}
 /* Dropdown Css End */

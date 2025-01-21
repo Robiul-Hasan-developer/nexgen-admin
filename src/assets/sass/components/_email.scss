@@ -69,4 +69,24 @@
 .z-index-9 {
     z-index: 9;
 }
+
+.h-100--64-px {
+    height: calc(100% - 64px);
+}
+.minimized {
+    height: 47px !important;
+    width: 300px !important;
+}
+
+.expanded {
+    max-width: 1260px;
+    inset-inline-start: 50% !important;
+    inset-block-start: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 8px;
+    .ri-expand-diagonal-line:before {
+        content: "\F4CC";
+    }
+}
 /* =================================== Email Page CSS End ================================ */

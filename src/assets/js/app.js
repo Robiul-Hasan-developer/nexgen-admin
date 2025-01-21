@@ -654,6 +654,65 @@
     });
   }
   // ========================= Delete All Selected Email Item Js End ===================
+
+
+  // ========================= Compose New Email Js Start ===================
+  let composeEmailBtn = document.querySelector('.compose-email-btn');
+  let composeEmailBox = document.querySelector('.compose-email-box');
+  let minimizeComposeEmailBox = document.querySelector('.minimize-compose-email-box');
+  let expandComposeEmailBox = document.querySelector('.expand-compose-email-box');
+  let removeComposeEmailBoxes = document.querySelectorAll('.remove-compose-email-box');
+  
+  let formComposeEmailBox = document.querySelector('.form-compose-email');
+  let bodyOverlay = document.querySelector('.body-overlay');
+
+  if(composeEmailBtn && composeEmailBox && minimizeComposeEmailBox && expandComposeEmailBox && removeComposeEmailBoxes && formComposeEmailBox && bodyOverlay) {
+    // Show and hide email box
+    composeEmailBtn.addEventListener('click', function () {
+      composeEmailBox.classList.add('d-block');
+      composeEmailBox.classList.remove('d-none');
+    });
+  
+    // Remove email box
+    removeComposeEmailBoxes.forEach(removeComposeEmailBoxItem => {
+      removeComposeEmailBoxItem.addEventListener('click', function () {
+        composeEmailBox.classList.add('d-none');
+        composeEmailBox.classList.remove('d-block');
+        composeEmailBox.classList.remove('minimized');
+        composeEmailBox.classList.remove('expanded');
+        document.querySelector('.body-overlay').classList.remove('show');
+      });
+    })
+    
+    // Minimize email box
+    minimizeComposeEmailBox.addEventListener('click', function () {
+      composeEmailBox.classList.toggle('minimized');
+      composeEmailBox.classList.remove('expanded');
+      document.querySelector('.body-overlay').classList.remove('show');
+    });
+    
+    // Minimize email box
+    expandComposeEmailBox.addEventListener('click', function () {
+      composeEmailBox.classList.remove('minimized');
+      composeEmailBox.classList.toggle('expanded');
+      document.querySelector('.body-overlay').classList.toggle('show');
+    });
+  
+    // remove overlay and email box
+    bodyOverlay.addEventListener('click', function () {
+      composeEmailBox.classList.remove('d-block');
+      composeEmailBox.classList.add('d-none');
+      composeEmailBox.classList.remove('minimized');
+      composeEmailBox.classList.remove('expanded');
+      document.querySelector('.body-overlay').classList.remove('show');
+    });
+  
+    formComposeEmailBox.addEventListener('submit', function () { 
+      toastMessage("Email Sent successfully!");
+    });
+  }
+  
+  // ========================= Compose New Email Js End ===================
   
 
   // ========================== Light Dark version js start ==========================
