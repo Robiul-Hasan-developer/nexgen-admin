@@ -185,7 +185,7 @@
               </div>
   
               <div class="">
-                <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <div class="email-chat-item d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
                   <span class="w-32-px h-32-px rounded-circle overflow-hidden">
                     <img src="assets/images/home-one/user-img1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                   </span>
@@ -194,7 +194,7 @@
                     <span class="text-secondary-light-two text-xs">Hello! are you there?</span>
                   </div>
                 </div>
-                <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <div class="email-chat-item d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
                   <span class="w-32-px h-32-px rounded-circle overflow-hidden">
                     <img src="assets/images/home-one/user-img2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                   </span>
@@ -203,7 +203,7 @@
                     <span class="text-secondary-light-two text-xs">What about our next..</span>
                   </div>
                 </div>
-                <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <div class="email-chat-item d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
                   <span class="w-32-px h-32-px rounded-circle overflow-hidden">
                     <img src="assets/images/home-one/user-img3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                   </span>
@@ -212,7 +212,7 @@
                     <span class="text-secondary-light-two text-xs">Yeah everything is fine</span>
                   </div>
                 </div>
-                <div class="d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
+                <div class="email-chat-item d-flex align-items-center gap-8 py-8 cursor-pointer bg-hover-neutral-100 transition-2 px-24">
                   <span class="w-32-px h-32-px rounded-circle overflow-hidden">
                     <img src="assets/images/home-one/user-img4.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                   </span>
@@ -1365,18 +1365,56 @@ Good Day! </textarea>
  
 
 <!-- ChatBox Start -->
-<div class="chat-box">
+<div class="chat-box max-w-350-px radius-4 overflow-hidden ms-auto me-40 mb-20 shadow position-fixed end-0 bottom-0 z-index-9 bg-white me-2 d-none">
+  <!-- Header -->
   <div class="px-16 py-12 bg-primary-600 d-flex align-items-center justify-content-between gap-8">
     <div class="">
-      <h6 class="text-sm">Scott Median</h6>
-      <span class="text-white-65">Active</span>  
+      <h6 class="text-sm text-white mb-4">Scott Median</h6>
+      <span class="text-white-65 fw-light">Active</span>  
     </div>
     <div class="d-flex align-items-center gap-14">
-      <button type="button" class="text-white-65 hover-text-white text-md line-height-1 d-flex remove-compose-email-box">
+      <button type="button" class="text-white-65 hover-text-white text-md line-height-1 d-flex remove-chat-box">
         <i class="ri-close-large-line"></i>
       </button>
     </div>
   </div>
+  <!-- Header -->
+
+  <!-- Body -->
+  <div class="bg-white px-16 py-20 d-flex flex-column gap-24 max-h-278-px scroll-sm overflow-y-auto">
+
+    <div class="d-flex align-items-end gap-3">
+      <div class="w-28-px h-28-px rounded-circle overflow-hidden flex-shrink-0">
+        <img src="assets/images/home-one/user-img1.png" alt="User" class="w-100 h-100 object-fit-cover">
+      </div>
+      <div class="d-flex flex-column align-items-start flex-grow-1">
+        <p class="d-inline-block mb-0 px-20 py-14 bg-neutral-100 text-xs text-secondary-light radius-4">Yeah everything is fine. <br> Our next meeting <br> tomorrow at 10.00 AM</p>
+        <span class="text-secondary-light-two text-xs mt-8">09:10 am</span>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-end text-end">
+      <p class="d-inline-block mb-0 px-20 py-14 bg-primary-50 text-xs text-primary-500 radius-4">Wow that's great</p>
+      <div class="mt-8">
+        <span class="text-success-600 text-sm line-height-1 d-flex"><i class="ri-check-double-fill"></i></span>
+        <span class="text-secondary-light-two text-xs">09:10 am</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- Body -->
+
+  <!-- Footer -->
+  <div class="border-top border-dashed border-neutral-300 py-16 px-20">
+    <form action="#" class="d-flex gap-10">
+      <input type="text" class="form-control bg-neutral-30 border-neutral-30 py-8 px-16 radius-4" placeholder="Enter Message...">
+      <button type="submit" class="w-48-px h-40-px bg-skype hover-bg-skype text-white text-xl d-flex justify-content-center align-items-center radius-4">
+        <i class="ri-send-plane-fill"></i>
+      </button>
+    </form>
+  </div>
+  <!-- Footer -->
+
 </div>
 <!-- ChatBox end -->
 

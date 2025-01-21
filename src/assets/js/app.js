@@ -671,6 +671,7 @@
     composeEmailBtn.addEventListener('click', function () {
       composeEmailBox.classList.add('d-block');
       composeEmailBox.classList.remove('d-none');
+      chatBox.classList.add('d-none');
     });
   
     // Remove email box
@@ -713,6 +714,45 @@
   }
   
   // ========================= Compose New Email Js End ===================
+
+  
+  // ========================= Email Chat box Js End ===================
+  let emailChatItems = document.querySelectorAll('.email-chat-item');
+  let chatBox = document.querySelector('.chat-box');
+  let removeChatBox = document.querySelector('.remove-chat-box');
+
+  if(emailChatItems && chatBox && removeChatBox) {
+    emailChatItems.forEach(chatItem => {
+      chatItem.addEventListener('click', function() {
+        chatBox.classList.remove('d-none');
+        composeEmailBox.classList.add('d-none');
+      });
+    });
+  
+    removeChatBox.addEventListener('click', function() {
+      chatBox.classList.add('d-none');
+    });
+  }
+  // ========================= Email Chat box Js End ===================
+
+
+  // ========================= Email Details reply Js Start ===================
+  let emailReplyBtn = document.querySelector('.email-reply-btn');
+  let removeEmailChatBox = document.querySelector('.remove-email-chat-box');
+  let emailReplyBox = document.querySelector('.email-reply-box');
+  let emailAutoReply = document.querySelector('.email-auto-reply');
+
+  emailReplyBtn.addEventListener('click', function () {
+    emailReplyBox.classList.remove('d-none');
+    emailAutoReply.classList.add('d-none');
+  });
+
+  removeEmailChatBox.addEventListener('click', function () {
+    emailReplyBox.classList.add('d-none');
+    emailAutoReply.classList.remove('d-none');
+  });
+
+  // ========================= Email Details reply Js End ===================
   
 
   // ========================== Light Dark version js start ==========================

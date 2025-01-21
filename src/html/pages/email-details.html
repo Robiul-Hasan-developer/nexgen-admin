@@ -1,0 +1,434 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Email",
+    page: "Business Suite",
+    activePage: "Email",
+    paraText: "For email management, display relevant details, status, and actions for efficient communication, with appropriate permissions for viewing, composing, and managing emails."
+  })
+  
+  <div class="dashboard-main-body position-relative">
+    
+    <div class="email-wrapper shadow-2 section-bg radius-6 overflow-hidden position-relative">
+
+        <!-- ========================== Email Details start ========================== -->       
+        <!-- Action Menu start -->
+        <div class="bg-white my-8 d-flex align-items-center justify-content-between flex-wrap gap-16 py-12 px-16 border-bottom border-neutral-200">
+            <div class="d-flex align-items-center gap-40">
+                <a href="email.html" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500 fw-bold">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
+                <div class="d-flex align-items-center gap-26-px">
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-inbox-archive-fill"></i>
+                    </button>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-error-warning-fill"></i>
+                    </button>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500 action-menu-delete">
+                    <i class="ri-delete-bin-5-fill"></i>
+                    </button>
+                    <span class="w-1-px h-16-px bg-neutral-200"></span>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-discuss-fill"></i>
+                    </button>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-time-fill"></i>
+                    </button>
+                    <span class="w-1-px h-16-px bg-neutral-200"></span>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-folder-transfer-fill"></i>
+                    </button>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                    <i class="ri-price-tag-3-fill"></i>
+                    </button>
+                    <div class="dropdown line-height-1">
+                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-hover-primary-500 text-secondary-light line-height-1 d-flex"> 
+                        <i class="ri-more-2-fill fw-bold"></i>
+                    </button>
+                    <ul class="dropdown-menu p-8">
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-mail-unread-line"></i></span>
+                            <span class="line-clamp-1">Mark as unread</span>
+                        </button>
+                        </li>
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-bookmark-line"></i></span>
+                            <span class="line-clamp-1">Mark as important</span>
+                        </button>
+                        </li>
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-star-line"></i></span>
+                            <span class="line-clamp-1">Add star</span>
+                        </button>
+                        </li>
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-filter-3-line"></i></span>
+                            <span class="line-clamp-1">Filter messages like this </span>
+                        </button>
+                        </li>
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-volume-mute-line"></i></span>
+                            <span class="line-clamp-1">Mute</span>
+                        </button>
+                        </li>
+                        <li>
+                        <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                            <span class="text-sm line-height-1"><i class="ri-attachment-line"></i></span>
+                            <span class="line-clamp-1">Forward as attachment </span>
+                        </button>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-10">
+                <span class="text-secondary-light-two line-height-1">1-50 of 2,619</span>
+                <div class="d-flex align-items-center gap-10">
+                    <button type="button" class="w-22-px h-22-px text-secondary-light-two d-flex justify-content-center align-items-center text-md line-height-1 text-hover-primary-500">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <button type="button" class="w-22-px h-22-px text-secondary-light-two d-flex justify-content-center align-items-center text-md line-height-1 text-hover-primary-500">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Action Menu End -->
+         
+        <!-- Email Body Start -->
+        <div class="bg-white px-24 min-h-100-vh pb-200-px">
+            <div class="d-flex align-items-center justify-content-between gap-16 py-30 ms-76-px">
+                <div class="d-flex align-items-center gap-16">
+                    <h5 class="text-2xxl mb-0 fw-normal">Email Subject</h5>
+                    <span>
+                        <img src="assets/images/icon/arrow-vector.png" alt="">
+                    </span>
+                    <div class="d-flex align-items-center gap-6">
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="d-flex align-items-center gap-6 fw-semibold text-xs rounded-start px-4 py-2 bg-neutral-200 text-secondary-light bg-hover-neutral-600 hover-text-white">
+                                <span class="">Inbox</span>
+                            </button>
+                            <button type="button" class="d-flex align-items-center gap-6 fw-semibold text-xs rounded-end px-4 py-2 bg-neutral-200 text-secondary-light bg-hover-neutral-600 hover-text-white h-24-px">
+                                <span class=""><i class="ri-close-large-fill"></i></span>
+                            </button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="d-flex align-items-center gap-6 fw-semibold text-xs rounded-start px-4 py-2 bg-primary-100 text-primary-light bg-hover-primary-500 hover-text-white">
+                                <span class="">Promotions</span>
+                            </button>
+                            <button type="button" class="d-flex align-items-center gap-6 fw-semibold text-xs rounded-end px-4 py-2 bg-primary-100 text-primary-light bg-hover-primary-500 hover-text-white h-24-px">
+                                <span class=""><i class="ri-close-large-fill"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-16">
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500">
+                        <i class="ri-printer-fill"></i>
+                    </button>
+                    <button type="button" class="line-height-1 d-flex text-md text-neutral-500 text-hover-primary-500 fw-bold">
+                        <i class="ri-external-link-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="d-flex align-items-start gap-16">
+                    <span class="w-60-px h-60-px rounded-circle text-2xl text-neutral-300 d-flex justify-content-center align-items-center bg-neutral-100 flex-shrink-0">
+                        <i class="ri-user-fill"></i>
+                    </span>
+                    <div class="flex-grow-1">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="">
+                                <div class="d-flex align-items-center gap-6">
+                                    <span class="fw-bold text-primary-light text-md">Michelle Rivera</span>
+                                    <span class="text-secondary-light-two"> &lt;michelle.rivera@example.com&gt; </span>
+                                    <button class="text-secondary-light-two fw-semibold text-decoration-underline text-hover-primary-600"> Unsubscribe </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-6 text-secondary-light-two fw-medium text-md">
+                                    to
+                                    <div class="dropdown d-flex align-items-center gap-1">
+                                        me, Sidney, Sharon
+                                        <button class="text-lg d-flex w-16-px h-16-px align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg p-0 text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                                          <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                                          <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-20">
+                                <div class="d-flex align-items-center gap-6 fw-medium text-secondary-light-two">
+                                    <span class="">9:14 AM</span>
+                                    <span class="">(8 hours ago)</span>
+                                </div>
+                                <button type="button" class="text-xl text-secondary-light-two text-hover-primary-600 line-height-1 starred-button">
+                                    <i class="ri-star-line"></i>
+                                </button>
+                                <button type="button" class="text-xl text-secondary-light-two text-hover-primary-600 line-height-1">
+                                    <i class="ri-reply-fill"></i>
+                                </button>
+                                <div class="dropdown line-height-1">
+                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-xl text-secondary-light-two text-hover-primary-600 line-height-1 text-bg-main-600"> 
+                                        <i class="ri-more-2-fill fw-bold"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-8 max-h-380-px overflow-y-auto scroll-sm">
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-reply-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Reply</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-share-forward-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Forward</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-filter-3-fill"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Filter message lik this</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-printer-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Print</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-delete-bin-6-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Delete this message</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-prohibited-2-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Block "Vodafoneidea"</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-spam-2-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Report Spam</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1 w-16-px">
+                                                    <img src="assets/images/icon/fish-hook.png" alt="">
+                                                </span>
+                                                <span class="line-clamp-1">Report Phishing</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-expand-left-right-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Show original</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <span class="text-sm line-height-1 w-16-px">
+                                                        <img src="assets/images/icon/translate.png" alt="">
+                                                    </span>
+                                                </span>
+                                                <span class="line-clamp-1">Translate message</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-download-2-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Download message</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item px-12 py-8 rounded text-primary-light-two focus-text-white focus-bg-primary-600 text-xs radius-4 bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-8">
+                                                <span class="text-sm line-height-1">
+                                                    <i class="ri-mail-unread-line"></i>
+                                                </span>
+                                                <span class="line-clamp-1">Mark as unread</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-32">
+                            <div class="d-flex flex-column gap-24">
+                                <p class="text-black mb-0">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                                <p class="text-black mb-0">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                                <p class="text-black mb-0">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                            </div>
+                            <div class="email-auto-reply">
+                                <div class="d-flex align-items-center flex-wrap gap-12 pb-36 border-bottom border-neutral-200 mt-170-px">
+                                    <button type="button" class="px-20 py-12 text-primary-500 fw-semibold radius-10 border border-neutral-300 bg-hover-primary-50">Looking forward to it!</button>
+                                    <button type="button" class="px-20 py-12 text-primary-500 fw-semibold radius-10 border border-neutral-300 bg-hover-primary-50">We will be there!</button>
+                                    <button type="button" class="px-20 py-12 text-primary-500 fw-semibold radius-10 border border-neutral-300 bg-hover-primary-50">Thanks for the update!</button>
+                                </div>
+                                <div class="d-flex align-items-center flex-wrap gap-16 mt-36">
+                                    <button type="button" class="px-20 py-6 text-secondary-light-two fw-semibold radius-4 border border-neutral-300 bg-hover-neutral-200 d-flex align-items-center gap-10 email-reply-btn">
+                                        <i class="ri-reply-fill"></i>
+                                        Reply
+                                    </button>
+                                    <button type="button" class="px-20 py-6 text-secondary-light-two fw-semibold radius-4 border border-neutral-300 bg-hover-neutral-200 d-flex align-items-center gap-10">
+                                        <i class="ri-reply-all-fill"></i>
+                                        Reply all
+                                    </button>
+                                    <button type="button" class="px-20 py-6 text-secondary-light-two fw-semibold radius-4 border border-neutral-300 bg-hover-neutral-200 d-flex align-items-center gap-10">
+                                        <i class="ri-share-forward-fill"></i>
+                                        Forward
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+              
+                <div class="email-reply-box mt-32 d-none">
+                    <div class="d-flex align-items-start gap-16">
+                        <span class="w-60-px h-60-px rounded-circle text-2xl text-neutral-300 d-flex justify-content-center align-items-center bg-neutral-100 flex-shrink-0">
+                            <i class="ri-user-fill"></i>
+                        </span>
+                        <div class="flex-grow-1 px-24 py-14 shadow-3 min-h-320-px radius-18 border border-neutral-100">
+                            <div class="d-flex align-items-center gap-24">
+                                <div class="dropdown d-flex align-items-center gap-1">
+                                    <button class="text-lg d-flex p-4 align-items-center justify-content-center text-secondary-light-two dropdown-toggle active-bg p-0 text-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-reply-fill line-height-1 pe-16 text-md"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                                      <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+                                <span class="text-secondary-light-two">michelle.rivera@example.com</span>
+                            </div>
+                            <textarea class="form-control border-0 min-h-215-px"></textarea>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-16 mt-18">
+                                <div class="d-flex align-items-center gap-12">
+                                  <div class="cursor-pointer bg-primary-600 d-flex radius-4">
+                                    <button type="submit" class="submit-compose-email btn btn-primary-600 rounded-0 rounded-start d-flex align-items-center gap-2 px-3 fw-medium flex-shrink-0 h-100 py-6">
+                                      Send
+                                    </button>
+                                    <span class="w-1-px h-36-px bg-white-1"></span>
+                                    <div class="dropdown">
+                                      <button class="dropdown-toggle active-bg-main-800 h-100 w-100 rounded-0 px-8 text-white rounded-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      </button>
+                                      <ul class="dropdown-menu p-0">
+                                        <li>
+                                          <button type="button" class="dropdown-item text-sm py-0 px-8 bg-neutral-300 d-flex gap-10 text-primary-600 bg-hover-neutral-400 focus-text-white">
+                                            <span class="align-self-center"> <i class="ri-timer-line"></i> </span>
+                                            <span class="w-1-px h-36-px bg-primary-600"></span>
+                                            <span class="align-self-center">Schedule Time</span>
+                                          </button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-font-color"></i>
+                                  </button>
+                                  <label for="attachment" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-attachment-line"></i>
+                                    <input type="file" hidden="" id="attachment">
+                                  </label>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-link"></i>
+                                  </button>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-user-smile-line"></i>
+                                  </button>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-emoji-sticker-line"></i>
+                                  </button>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-drive-line"></i>
+                                  </button>
+                                  <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+                                    <i class="ri-image-fill"></i>
+                                  </button>
+                                  <div class="dropdown">
+                                    <button class="text-lg text-secondary-light-two line-height-1 text-bg-main-600" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="ri-ball-pen-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-0">
+                                      <li class="">
+                                        <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 rounded-0 active-bg-primary-600 text-neutral-500 text-xs border-bottom border-neutral-200">
+                                          <span class="">Manage Signatures</span>
+                                        </a>
+                                      </li>
+                                      <li class="">
+                                        <a href="digital-signature-view.html" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 rounded-0 active-bg-primary-600 text-neutral-500 text-xs">
+                                          <span class="">No Signature</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                          
+                                <div class="d-flex align-items-center gap-12">
+                                  <button type="button" class="text-secondary-light-two text-md fw-bold text-hover-primary-600">
+                                    <i class="ri-more-2-fill"></i>
+                                  </button>
+                                  <button type="button" class="text-secondary-light-two text-md fw-bold text-hover-primary-600 remove-email-chat-box">
+                                    <i class="ri-delete-bin-6-fill"></i>
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Email Body End -->
+
+
+        <!-- ========================== Email Details End ========================== -->
+        
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+@@include('../partial-html/_template-bottom.html')
+
+</body>
+</html>

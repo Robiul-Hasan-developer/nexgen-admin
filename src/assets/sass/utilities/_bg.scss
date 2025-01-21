@@ -57,3 +57,13 @@
 .bg-red {
   background-color: #FB4C2F;
 }
+
+.bg-skype {
+  background-color: #50C3E6 !important;
+}
+
+.hover-bg-skype {
+  &:hover {
+    background-color: #2aa9cf !important;
+  }
+}
