@@ -753,8 +753,26 @@
       emailAutoReply.classList.remove('d-none');
     });
   }
-
   // ========================= Email Details reply Js End ===================
+
+
+  // ========================= Link compose box Js Start ===================
+  let linkComposeBox = document.querySelector('.link-compose-box');
+  let linkComposeBtn = document.querySelector('.link-compose-btn');
+
+  if(linkComposeBox && linkComposeBtn) {
+    linkComposeBtn.addEventListener('click', function (event) {
+      linkComposeBox.classList.toggle('d-none');
+      event.stopPropagation();
+    });
+  
+    document.addEventListener('click', function (event) {
+      if (!linkComposeBox.contains(event.target) && !linkComposeBtn.contains(event.target)) {
+        linkComposeBox.classList.add('d-none');
+      }
+    });
+  }
+  // ========================= Link compose box Js End ===================
   
 
   // ========================== Light Dark version js start ==========================

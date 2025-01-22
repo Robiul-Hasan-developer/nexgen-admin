@@ -1283,12 +1283,30 @@
       </div>
       <input type="text" class="form-control w-100 rounded-0 border-start-0 border-top-0 border-end-0 border-neutral-200 mt-4" placeholder="Cc">
       <input type="text" class="form-control w-100 rounded-0 border-start-0 border-top-0 border-end-0 border-neutral-200 mt-4" placeholder="Subject">
-      <textarea class="form-control border-0 h-100 rounded-0 min-h-224-px py-16">
-Dear Shaikha, 
-Good Day! </textarea>
+      <div class="position-relative min-h-320-px">
+        <textarea class="form-control border-0 h-100 rounded-0 min-h-320-px py-16">
+  Dear Shaikha, 
+  Good Day! </textarea>
+          
+        <!-- link compose box start -->
+        <div class="link-compose-box bg-white shadow px-20 py-28 radius-16 position-absolute start-0 top-0 mt-40 ms-40 d-none">
+          <div class="position-relative mb-16">
+            <input type="text" class="form-control radius-6 ps-40" placeholder="Text">
+            <span class="position-absolute top-50 translate-middle-y start-0 ms-10 text-primary-600"><i class="ri-bar-chart-horizontal-line"></i></span>
+          </div>
+          <div class="position-relative mb-16">
+            <input type="text" class="form-control radius-6 ps-40" placeholder="Type or paste a link ">
+            <span class="position-absolute top-50 translate-middle-y start-0 ms-10 text-primary-600"><i class="ri-link"></i></span>
+          </div>
+          <div class="mt-24 text-end">
+            <button type="button" class="text-hover-primary-600">Apply</button>
+          </div>
+        </div>
+        <!-- link compose box end -->
+      </div>
     </div>
 
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-16">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-16 bg-white">
       <div class="d-flex align-items-center gap-12">
         <div class="cursor-pointer bg-primary-600 d-flex radius-4">
           <button type="submit" class="submit-compose-email btn btn-primary-600 rounded-0 rounded-start d-flex align-items-center gap-2 px-3 fw-medium flex-shrink-0 h-100 py-6">
@@ -1316,7 +1334,7 @@ Good Day! </textarea>
           <i class="ri-attachment-line"></i>
           <input type="file" hidden id="attachment">
         </label>
-        <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
+        <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1 link-compose-btn">
           <i class="ri-link"></i>
         </button>
         <button type="button" class="text-secondary-light-two text-hover-primary-600 text-lg line-height-1">
@@ -1360,6 +1378,7 @@ Good Day! </textarea>
       </div>
     </div>
   </form>
+
 </div>
 <!-- Compose new Email Message end -->
  
@@ -1417,6 +1436,48 @@ Good Day! </textarea>
 
 </div>
 <!-- ChatBox end -->
+
+ 
+<!-- Label Modal start -->
+<div class="modal fade" id="addChat" tabindex="-1" aria-labelledby="addChatLabel" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md max-w-560-px">
+    <div class="modal-content py-20 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-20">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addChatLabel">New Label </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addChat">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mb-20">
+            <label for="LabelName" class="text-sm form-label">Label Name: <span class="text-danger-600">*</span> </label>
+            <input type="text" class="form-control radius-6" id="LabelName" placeholder="Main Department">
+          </div>
+          <div class="mb-16">
+            <div class="form-check d-flex aligic gap-8 ps-0 mb-1">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" id="NestLabelunder">
+              <label for="NestLabelunder" class="text-sm form-label mb-0 line-height-1">Nest label under:</label>
+            </div>
+            <select class="form-control form-select text-secondary-light-two">
+              <option value="Select a parent ">Select a parent </option>
+            </select>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
+            <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addChat">Save </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Label Modal end -->
+
+
 
 @@include('../partial-html/_template-bottom.html')
 
