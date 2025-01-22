@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Calendar",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Calendar",
     paraText: "For efficient scheduling, view, edit, and manage events with role-based permissions."
   })
@@ -161,7 +162,7 @@
 
           <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-24">
             <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEvents">
-            <label class="form-check-label text-primary-light text-xs" for="DeletedEvents">Deleted Events  </label>
+            <label class="form-check-label text-primary-light text-xs delete-event-checkbox" for="DeletedEvents">Deleted Events  </label>
           </div>
         </div>
 
@@ -179,9 +180,6 @@
 
 
 <!-- Announcement Department Modal start -->
-<!-- <div class="modal-backdrop fade show"></div>
-<div class="modal fade show" id="createNewEvent" tabindex="-1" aria-labelledby="createNewEventLabel" aria-modal="true" role="dialog" style="display: block;"> -->
-
 <div class="modal fade" id="createNewEvent" tabindex="-1" aria-labelledby="createNewEventLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content py-36 radius-16">
@@ -300,10 +298,6 @@
                           </div>
                         </div>
                         <div class="col-12">
-                          <label for="Descriptionnn" class="text-sm form-label">Description</label>
-                          <textarea class="form-control min-72-px radius-6" id="Descriptionnn" placeholder="Enter comments"></textarea>
-                        </div>
-                        <div class="col-12">
                           <label for="AuthorizedPerson" class="text-sm form-label">Authorized Person </label>
                           <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="AuthorizedPerson">
                             <option value="1" selected>Authorized Person</option>
@@ -370,7 +364,11 @@
                             </div>
                             <div class="d-flex align-items-center gap-10">
                               <span class="text-secondary-light-two">Mins</span>
-                              <input type="text" class="form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                              <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                              <div class="d-flex flex-column">
+                                <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -813,7 +811,7 @@
                                             <span class="recipient-dropdown__text text-secondary-light py-6 px-24 text-xs flex-grow-1">John Doe</span>
                                         </li>
                                     </ul>
-                                    <div class="text-end pe-22 mt-4">
+                                    <div class="text-end pe-22">
                                         <button type="button" class="btn btn-primary-600 radius-8 d-inline-flex align-items-center py-6 gap-2 px-24 fw-normal flex-shrink-0 text-xxs" data-bs-toggle="modal" data-bs-target="#addGuest">
                                             Add Guest
                                         </button>
@@ -924,14 +922,14 @@
                         </button>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item active">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Review of Hiring Needs (10 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Review of Hiring Needs (10 minutes)</button>
                               </div>
                             </div>
                             <div class="d-flex align-items-center gap-10">
@@ -955,32 +953,32 @@
                               </div>
                             </div>
                           </div>
-                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                          <div class="collapsable-body pt-12 ms-res-42">  
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">This should be in  the last </span>
                               </div>
                             </div>
@@ -1009,28 +1007,28 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Urgent hiring due to new department </span>
                               </div>
@@ -1060,28 +1058,28 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start w-100">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column w-100">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1 mb-16">Urgent hiring due to new department </span>
                                 <div class="row g-3">
@@ -1161,15 +1159,15 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
@@ -1179,7 +1177,7 @@
                       <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-between mt-36 pe-30">
                         <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-0">
                           <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEventsTwo">
-                          <label class="form-check-label text-primary-light text-xs" for="DeletedEventsTwo">Deleted Events  </label>
+                          <label class="form-check-label text-primary-light text-xs delete-event-checkbox" for="DeletedEventsTwo">Deleted Events  </label>
                         </div>
                         <div class="">
                           <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
@@ -1201,14 +1199,14 @@
                         </button>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item active">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Review of Hiring Needs (10 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Review of Hiring Needs (10 minutes)</button>
                               </div>
                             </div>
                             <div class="d-flex align-items-center gap-10">
@@ -1232,32 +1230,32 @@
                               </div>
                             </div>
                           </div>
-                          <div class="collapsable-body pt-12 ms-res-42 d-none">  
+                          <div class="collapsable-body pt-12 ms-res-42">  
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">This should be in  the last </span>
                               </div>
                             </div>
@@ -1286,28 +1284,28 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Urgent hiring due to new department </span>
                               </div>
@@ -1337,28 +1335,28 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
                         </div>
 
-                        <div class="delete-item py-16 border-bottom">
+                        <div class="delete-item py-16 border-bottom collapse-item">
                           <div class="cursor-pointer d-flex align-items-start justify-content-between gap-10">
                             <div class="d-flex gap-10 align-items-start w-100">
                               <span class="draggable-btn w-16-px h-18-px bg-neutral-100 d-inline-flex justify-content-center align-items-center radius-4 text-xs text-primary-600">
                                 <img src="assets/images/home-one/icon/dot-square.png" alt="">
                               </span>
                               <div class="d-flex flex-column w-100">
-                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn">Q&A and Open Discussion (15 minutes)</button>
+                                <button type="button" class="text-xs fw-semibold line-clamp-1 collapse-btn colored">Q&A and Open Discussion (15 minutes)</button>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1">Recruitment / Operation Department </span>
                                 <span class="text-xxs text-secondary-light-two line-clamp-1 mb-16">Urgent hiring due to new department </span>
                                 <div class="row g-3">
@@ -1438,15 +1436,15 @@
                             <ul class="d-flex flex-column gap-8">
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">1</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Departments or roles requiring new hires (2 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Departments or roles requiring new hires (2 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">2</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Number of positions to be filled (4 minutes)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Number of positions to be filled (4 minutes)</p>
                               </li>
                               <li class="d-flex align-items-center gap-10">
                                 <span class="w-16-px h-16-px bg-neutral-200 radius-2 text-primary-600 text-xxs d-flex justify-content-center align-items-center">3</span>
-                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0">Skill sets and experience levels required (4 minuties)</p>
+                                <p class="line-clamp-1 text-secondary-light-two text-xs mb-0 colored">Skill sets and experience levels required (4 minuties)</p>
                               </li>
                             </ul>
                           </div>
@@ -1456,7 +1454,7 @@
                       <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-between mt-36 pe-30">
                         <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 mt-0">
                           <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main" type="checkbox" id="DeletedEventsThree">
-                          <label class="form-check-label text-primary-light text-xs" for="DeletedEventsThree">Deleted Events  </label>
+                          <label class="form-check-label text-primary-light text-xs delete-event-checkbox" for="DeletedEventsThree">Deleted Events  </label>
                         </div>
                         <div class="">
                           <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
@@ -1561,7 +1559,7 @@
     <div class="modal-content py-36 px-20 radius-16">
       <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addGuestLabel">Add guest  </h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addGuestLabel">Add Guest  </h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addGuest">
@@ -1669,11 +1667,19 @@
             </div>
           </div>
           <div class="col-12">
-            <label class="text-sm form-label">Subpoints</label>
+            <div class="d-flex align-items-center justify-content-between mb-8">
+              <label class="mb-0 text-sm form-label">Sub points</label>
+              <button type="button" class="add-subpoint-btn btn btn-primary-600 btn-sm radius-4 d-flex align-items-center py-2 gap-2 px-8 fw-normal flex-shrink-0 text-xs">
+                <span class="d-flex text-white fw-normal text-md line-height-1">
+                  <i class="ri-add-line"></i>
+                </span>
+                Add
+            </button>
+            </div>
             <div class="bg-white py-16 px-8 radius-4">
               <div class="row g-3">
                 <div class="col-12">
-                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1681,7 +1687,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1694,13 +1700,10 @@
           <div class="col-12">
             <div class="mb-12 d-flex align-items-center gap-16">
               <h6 class="text-md mb-0 fw-medium">Attachments  </h6>
-              <select class="form-control bg-transparent form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                <option value="1" selected="" hidden="">Upload</option>
-                <option value="SVG">SVG</option>
-                <option value="PNG">PNG</option>
-                <option value="JPG">JPG</option>
-                <option value="PDF">PDF</option>
-              </select>
+              <div class="">
+                <input type="file" id="upload" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+              </div>
             </div>
             <div class="row g-3">
               <div class="col-12 delete-item">
@@ -1838,11 +1841,19 @@
             </div>
           </div>
           <div class="col-12">
-            <label class="text-sm form-label">Subpoints</label>
+            <div class="d-flex align-items-center justify-content-between mb-8">
+              <label class="mb-0 text-sm form-label">Sub points</label>
+              <button type="button" class="add-subpoint-btn btn btn-primary-600 btn-sm radius-4 d-flex align-items-center py-2 gap-2 px-8 fw-normal flex-shrink-0 text-xs">
+                <span class="d-flex text-white fw-normal text-md line-height-1">
+                  <i class="ri-add-line"></i>
+                </span>
+                Add
+            </button>
+            </div>
             <div class="bg-white py-16 px-8 radius-4">
               <div class="row g-3">
                 <div class="col-12">
-                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1850,7 +1861,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1863,13 +1874,10 @@
           <div class="col-12">
             <div class="mb-12 d-flex align-items-center gap-16">
               <h6 class="text-md mb-0 fw-medium">Attachments  </h6>
-              <select class="form-control bg-transparent form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                <option value="1" selected="" hidden="">Upload</option>
-                <option value="SVG">SVG</option>
-                <option value="PNG">PNG</option>
-                <option value="JPG">JPG</option>
-                <option value="PDF">PDF</option>
-              </select>
+              <div class="">
+                <input type="file" id="uploadTwo" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                <label for="uploadTwo" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+              </div>
             </div>
             <div class="row g-3">
               <div class="col-12 delete-item">
@@ -1992,8 +2000,30 @@
       tags: true
     });
   });
-  // *************************** Select2 js End here ***************************
-    
+  // *************************** Select2 js End here ***************************   
+  
+  
+  // *************************** Sub Point js Start here ***************************   
+  const addSubPointButton = document.querySelector('.add-subpoint-btn');
+  const subPointsContainer = document.querySelector('.bg-white .row');
+
+  addSubPointButton.addEventListener('click', () => {
+    const subPointTemplate = subPointsContainer.querySelector('.col-12');
+
+    if (subPointTemplate) {
+      const clonedSubPoint = subPointTemplate.cloneNode(true);
+
+      const paragraph = clonedSubPoint.querySelector('p');
+      if (paragraph) {
+        paragraph.textContent = 'New subpoint';
+      }
+      subPointsContainer.appendChild(clonedSubPoint);
+    }
+  });
+  // *************************** Sub Point js End here ***************************   
+
+
+  
 </script>
 
 </body>

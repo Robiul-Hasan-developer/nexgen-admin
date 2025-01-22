@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Envelope",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Digital Signature",
     paraText: "For envelope  masters, display envelope details, status, and actions for streamlined management, with appropriate permissions for viewing, editing, and configuring envelope."
   })
@@ -25,6 +26,13 @@
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
             Add Envelope  
+          </button>
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#ImportEnvelope">
+            <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+              <i class="ri-add-line"></i>
+            </span>
+            <span class="w-1-px h-18-px bg-white-1"></span>
+            Import Envelope
           </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
@@ -713,13 +721,10 @@
                       </span>
                       <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
+                        <div class="">
+                          <input type="file" id="upload" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                          <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                        </div>
                       </span>
                     </div>
                     <input id="upload-file" type="file" hidden>
@@ -1250,6 +1255,49 @@
 </div>
 <!-- Send and create document Modal End -->
 
+<!-- Import Envelope Modal Start -->
+<div class="modal fade" id="ImportEnvelope" tabindex="-1" aria-labelledby="ImportEnvelopeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-826-px">
+    <div class="modal-content py-44 px-32 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="ImportEnvelopeLabel">Add Envelope</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-16 radius-6">Import Excel</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="mt-84-px mb-100-px">
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+              <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
+              <input type="file" class="form-control validation-input flex-grow-1 file-44-px" id="fileInput" required="">
+              <div class="invalid-feedback">Please enter confirm password</div>
+            </div>
+            <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-28">
+              <span class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">Sample File</span>
+              <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+                <span class="fw-normal text-xs text-neutral-300">
+                  <i class="ri-download-fill"></i>
+                </span>
+                <span class="w-1-px h-18-px bg-white-1"></span>
+                <span class="px-24">Download</span>
+              </button>
+            </div>
+          </div>  
+          <div class="text-end">
+            <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Import Envelope Modal End -->
+
 <!-- Edit document Modal start -->
 <div class="modal fade" id="editDocument" tabindex="-1" aria-labelledby="editDocumentLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-2xl">
@@ -1295,13 +1343,10 @@
                       </span>
                       <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
+                        <div class="">
+                          <input type="file" id="uploadTwo" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                          <label for="uploadTwo" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                        </div>
                       </span>
                     </div>
                     <input id="upload-file-two" type="file" hidden>
@@ -2028,7 +2073,6 @@
   </div>
 </div>
 <!-- Add Recipients Modal End -->
-
 
 <!-- Edit Recipients Modal start -->
 <div class="modal fade" id="editRecipient" tabindex="-1" aria-labelledby="editRecipientLabel" aria-hidden="true">

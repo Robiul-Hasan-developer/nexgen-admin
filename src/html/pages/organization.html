@@ -7,7 +7,8 @@
 
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Organizations",
-    page: "Manage",
+    page: "Administrative",
+    pageLink: "administrative-setting.html",
     activePage: "Organizations",
     paraText: "Monitor and manage user creation records with detailed insights, including user information, status, creation time, and actions, ensuring seamless and efficient onboarding for your organization."
   })
@@ -529,13 +530,10 @@
                       </span>
                       <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
+                        <div class="">
+                          <input type="file" id="upload" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                          <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                        </div>
                       </span>
                     </div>
                     <input id="upload-file" type="file" hidden>
@@ -769,13 +767,10 @@
                       </span>
                       <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
+                        <div class="">
+                          <input type="file" id="uploadTwo" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                          <label for="uploadTwo" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                        </div>
                       </span>
                     </div>
                     <input id="upload-file-edit" type="file" hidden>
@@ -1009,13 +1004,10 @@
                       </span>
                       <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
                       <span class="d-flex align-items-center gap-2">
-                        <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                          <option value="1" selected hidden>Upload</option>
-                          <option value="SVG">SVG</option>
-                          <option value="PNG">PNG</option>
-                          <option value="JPG">JPG</option>
-                          <option value="PDF">PDF</option>
-                        </select>
+                        <div class="">
+                          <input type="file" id="uploadThree" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                          <label for="uploadThree" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                        </div>
                       </span>
                     </div>
                     <input id="upload-file-view" type="file" hidden>
@@ -1211,9 +1203,6 @@
                         <input type="text" class="form-control py-10">
                     </div>
                 </div>
-            </div>
-            <div class="border-0 d-flex align-items-center gap-24 justify-content-end mt-8 flex-wrap">
-                <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#ViewOrganization">Save </button>
             </div>
           </form>
         </div>

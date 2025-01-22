@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Action",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Action",
     paraText: "For Action management, display action details, status, and actions for efficient workflow, with appropriate permissions for viewing, editing, and managing action."
   })
@@ -1343,13 +1344,10 @@
                 </div>
                 <div class="mt-16 mb-12 d-flex align-items-center gap-16">
                     <h6 class="text-md mb-0 fw-medium">Attachments  </h6>
-                    <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                      <option value="1" selected="" hidden="">Upload</option>
-                      <option value="SVG">SVG</option>
-                      <option value="PNG">PNG</option>
-                      <option value="JPG">JPG</option>
-                      <option value="PDF">PDF</option>
-                    </select>
+                    <div class="">
+                        <input type="file" id="upload" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                        <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                    </div>
                 </div>
                 <div class="row g-3">
                   <div class="col-sm-4 delete-item">
@@ -1492,7 +1490,7 @@
       
                               <!-- Department Select start -->
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox1">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1506,7 +1504,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox2">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1520,7 +1518,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox3">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1534,7 +1532,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox4">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1548,7 +1546,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Department">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox5">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1565,7 +1563,7 @@
       
                               <!-- Employee Select start -->
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox6">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
@@ -1578,7 +1576,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w announcement-item__info-max gap-32 delete-item" data-value="Employee">
                                   <div class="d-flex align-items-center gap-24">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox7">
                                       <div class="d-flex align-items-center gap-12">
@@ -1593,7 +1591,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox8">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
@@ -1607,7 +1605,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox9">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden border border-2 border-white">
@@ -1620,7 +1618,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Employee">
+                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w announcement-item__info-max gap-32 delete-item" data-value="Employee">
                                   <div class="d-flex align-items-center gap-24">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox10">
                                       <div class="d-flex align-items-center gap-12">
@@ -1638,7 +1636,7 @@
                               
                               <!-- Workflow Select start -->
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox11">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1652,7 +1650,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox12">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1665,7 +1663,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
+                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w announcement-item__info-max gap-32 delete-item" data-value="Workflow">
                                   <div class="d-flex align-items-center gap-24">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox13">
                                       <div class="d-flex align-items-center gap-12">
@@ -1680,7 +1678,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox14">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1694,7 +1692,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Workflow">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox15">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1711,7 +1709,7 @@
                               
                               <!-- Action Select start -->
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox16">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1724,7 +1722,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
+                              <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w announcement-item__info-max gap-32 delete-item" data-value="Action">
                                   <div class="d-flex align-items-center gap-24">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox17">
                                       <div class="d-flex align-items-center gap-12">
@@ -1739,7 +1737,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox18">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1753,7 +1751,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox19">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1767,7 +1765,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Action">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox20">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1784,7 +1782,7 @@
                               
                               <!-- Meeting Select start -->
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox21">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1798,7 +1796,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox22">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1812,7 +1810,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox23">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">
@@ -1826,7 +1824,7 @@
                                   </div>
                               </div>
                               <div class="announcement-item check-announcement-item border ps-12 pe-36 py-16 radius-4 shadow-11 d-flex align-items-center justify-content-between min-w-max gap-32 delete-item" data-value="Meeting">
-                                  <div class="d-flex align-items-center gap-24">
+                                  <div class="d-flex align-items-center gap-24 announcement-item__info max-w-420-px w-100">
                                       <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="checkBox24">
                                       <div class="d-flex align-items-center gap-12">
                                           <div class="w-64-px h-64-px rounded-circle d-flex justify-content-center align-items-center shadow-9 text-xl fw-semibold font-rubik text-uppercase overflow-hidden">

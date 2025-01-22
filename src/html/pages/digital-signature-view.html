@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Digital Signature",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Workflow",
     paraText: "Displays a list of digital signature requests, including customer information, signature status, request time, and actions for efficient tracking and approval management."
   })
@@ -41,7 +42,7 @@
             </div>
           </div>
           <div class="d-flex align-items-center gap-14 flex-wrap">
-            <button type="button" class="btn py-6 px-16 btn-primary-600 field-sidebar-btn">Additional Fields</button>
+            <button type="button" class="btn py-6 px-16 btn-primary-600 field-sidebar-btn">Hide Fields</button>
             <button type="button" class="btn py-6 px-24 btn-primary-600">Edit</button>
             <button type="button" class="btn py-6 px-24 btn-danger-600">Delete</button>
           </div>
@@ -57,7 +58,7 @@
       </div>
       <!-- Top Tab end -->
 
-      <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16">
+      <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16 overflow-x-auto scroll-sm scroll-vertical">
         <div class="tab-content" id="pills-tabThreeContent">
           <!-- View Tab start -->
           <div class="tab-pane fade show active" id="pills-View" role="tabpanel" aria-labelledby="pills-View-tab" tabindex="0">
@@ -855,7 +856,7 @@
               
               <!-- PDF Start -->
               <div class="overflow-x-auto flex-grow-1">
-                <div class="min-w-max">
+                <div class="w-100">
                     <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
                 </div>
               </div>
@@ -1351,13 +1352,10 @@
               </span>
               <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
               <span class="d-flex align-items-center gap-2">
-                <select class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24 ">
-                  <option value="1" selected hidden>Upload</option>
-                  <option value="SVG">SVG</option>
-                  <option value="PNG">PNG</option>
-                  <option value="JPG">JPG</option>
-                  <option value="PDF">PDF</option>
-                </select>
+                <div class="">
+                  <input type="file" id="upload" hidden class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                  <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                </div>
               </span>
             </div>
             <input id="upload-file" type="file" hidden>

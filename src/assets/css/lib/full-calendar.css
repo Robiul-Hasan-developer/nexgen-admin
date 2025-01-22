@@ -75,7 +75,7 @@
   /* buttons edges butting together */
   
   .fc-header .fc-button {
-    margin-right: -2px;
+    margin-right: -1px;
   }
   
   .fc-header .fc-corner-right,  /* non-theme */
@@ -700,6 +700,7 @@
   .fc-header .fc-button {
     height: unset !important;
     padding: 3px 20px;
+    text-transform: capitalize;
 }
 .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right {
   background: #865CE2;
@@ -720,4 +721,7 @@
 }
 .fc-header tr td {
     vertical-align: middle;
+}
+.fc-event {
+  background-color: #e8d1ff;
 }

@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Create Workflow",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Create Workflow",
     paraText: "Displays a list of workflow creation requests, including workflow details, status, creation time, and actions for efficient tracking and management."
   })
@@ -683,20 +684,20 @@
                 <div class="row gy-4">
                   <div class="col-lg-3">
                     <div class="d-flex align-items-center justify-content-between">
-                        <label for="actionNamee" class="text-sm form-label">Action Name <span class="text-danger-600">*</span> </label>
+                        <label for="WorkflowNameeeee" class="text-sm form-label">Workflow Name <span class="text-danger-600">*</span> </label>
                     </div>
-                    <input type="text" class="form-control py-10" id="actionNamee" value="Hiring Staff" placeholder="Action name">
+                    <input type="text" class="form-control py-10" id="WorkflowNameeeee" value="Hiring Staff" placeholder="Workflow Name">
                   </div>
                   <div class="col-lg-3">
                     <label for="Document" class="text-sm form-label">Document <span class="text-danger-600">*</span> </label>
-                    <select class="form-control form-select py-10 px-20" id="Document">
+                    <select class="form-control form-select py-10 px-20 text-secondary-light-two" id="Document">
                         <option value="Document">Document </option>
                         <option value="News">News </option>
                     </select>
                   </div>
                   <div class="col-lg-3">
-                    <label for="priority" class="text-sm form-label">priority <span class="text-danger-600">*</span> </label>
-                    <select class="form-control form-select py-10 px-20" id="priority">
+                    <label for="priority" class="text-sm form-label">Priority <span class="text-danger-600">*</span> </label>
+                    <select class="form-control form-select text-secondary-light-two py-10 px-20" id="priority">
                         <option value="Hight">Hight </option>
                         <option value="Low">Low </option>
                         <option value="Medium">Medium </option>
@@ -704,7 +705,7 @@
                   </div>
                   <div class="col-lg-3">
                     <label for="DueDays" class="text-sm form-label">Due Days <span class="text-danger-600">*</span> </label>
-                    <input type="number" class="form-control" min="0" id="DueDays" placeholder="Due Days">
+                    <input type="number" class="form-control custom-number-input" min="0" id="DueDays" placeholder="Due Days">
                   </div>
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center flex-wrap gap-20">
@@ -719,7 +720,7 @@
                                     <input class="form-check-input float-none mt-0 ms-0 shadow-none border w-18-px h-18-px bg-main radius-4" type="checkbox" value="" id="Sequenceesss">
                                     <label class="form-check-label text-primary-light-two text-sm" for="Sequenceesss">Sequence </label>
                                 </div>
-                                <select class="form-control form-select py-1 text-xs ps-10 arrow-10-px">
+                                <select class="form-control form-select text-secondary-light-two py-1 text-xs ps-10 arrow-10-px">
                                     <option value="1" selected="">One by one </option>
                                     <option value="Priority">One by two </option>
                                     <option value="Priority">two by two </option>
@@ -775,7 +776,12 @@
                                     <label class="form-check-label text-primary-light-two text-sm" for="RepeatMonthly">Monthly</label>
                                 </div>
                                 <div class="d-flex align-items-center gap-16">
-                                    <input type="text" class="form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                    <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                    <div class="d-flex flex-column">
+                                      <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                      <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                                    </div>
+                                    
                                     <select class="form-control form-select w-80-px h-20-px text-xxs px-6 py-0 radius-6 pe-16 arrow-10-px">
                                         <option value="Fixed">Fixed</option>
                                         <option value="Not Fixed">Not Fixed</option>
@@ -783,6 +789,75 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <label for="SubjectTwoHere" class="text-sm form-label">Subject </label>
+                    </div>
+                    <input type="text" class="form-control py-10" id="SubjectTwoHere" value="New Department Opening (Customer Support)" placeholder="New Department Opening (Customer Support)">
+                  </div>
+                  <div class="col-sm-12">
+                    <label class="text-sm form-label"> Description </label>
+                    <div class="border radius-6">
+                        <!-- Editor Toolbar Start -->
+                        <div id="toolbar-container" class="bg-neutral-40">
+                          <span class="ql-formats">
+                            <select class="ql-font"></select>
+                            <select class="ql-size"></select>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                            <button class="ql-strike"></button>
+                          </span>
+                          <span class="ql-formats">
+                            <select class="ql-color"></select>
+                            <select class="ql-background"></select>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-script" value="sub"></button>
+                            <button class="ql-script" value="super"></button>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-header" value="1"></button>
+                            <button class="ql-header" value="2"></button>
+                            <button class="ql-blockquote"></button>
+                            <button class="ql-code-block"></button>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-list" value="ordered"></button>
+                            <button class="ql-list" value="bullet"></button>
+                            <button class="ql-indent" value="-1"></button>
+                            <button class="ql-indent" value="+1"></button>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-direction" value="rtl"></button>
+                            <select class="ql-align"></select>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-link"></button>
+                            <button class="ql-image"></button>
+                            <button class="ql-video"></button>
+                            <button class="ql-formula"></button>
+                          </span>
+                          <span class="ql-formats">
+                            <button class="ql-clean"></button>
+                          </span>
+                        </div>
+                        <!-- Editor Toolbar Start -->
+     
+                        <!-- Editor start -->
+                        <div id="editor" class="min-h-200-px">
+                          <p class="text-secondary-light text-xs line-height-2">Dear Team,</p>
+                          <p><br></p>
+                          <p class="text-secondary-light text-xs line-height-2">We are pleased to announce the opening of a new department, Customer Support, starting on November 20, 2024. This department will focus on improving customer satisfaction and providing dedicated support to our clients.</p>
+                          <p><br></p>
+                          <p class="text-secondary-light text-xs line-height-2">Department Head: Jane Smit</p>
+                          <p><br></p>
+                        </div>
+                        <!-- Edit End -->
                     </div>
                   </div>
                     <div class="col-12">

@@ -8,6 +8,7 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Workflow",
     page: "Business Suite",
+    pageLink: "business-suites.html",
     activePage: "Workflow",
     paraText: "For Workflow management, display Workflow details, status, and actions for efficient workflow, with appropriate permissions for viewing, editing, and managing Workflow."
   })
@@ -681,15 +682,15 @@
 
                 <!-- Other Actions start -->
                 <div class="tab-pane fade" id="pills-other-actions" role="tabpanel" aria-labelledby="pills-other-actions-tab" tabindex="0">
-                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm mt-30">
+                  <div class="overflow-x-auto max-h-362-px overflow-y-auto scroll-sm">
                     <table class="table min-w-max mb-0">
                       <thead>
                         <tr>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"></th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
-                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom d-none"> </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Meeting Date</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Meeting Subject  </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Agenda</th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">Minutes of Meeting  </th>
+                          <th class="bg-neutral-100 py-16 px-24 text-secondary-light-two text-sm fw-normal text-start border-bottom">View  </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -840,9 +841,356 @@
 
           <!-- Chart Tab start -->
           <div class="tab-pane fade" id="pills-Chart" role="tabpanel" aria-labelledby="pills-Chart-tab" tabindex="0">
-            <h6>Workflow chart will goes here.................</h6>
-            <div class="create-flowy">The block to be dragged</div>
-            <div id="canvas"></div>
+            <div class="overflow-x-auto scroll-sm scroll-vertical mt-20 bg-neutral-200">
+              <div class="min-w-max">
+                <div class="d-flex align-items-center justify-content-between py-8 px-48 bg-neutral-300">
+                  <span class="fw-semibold text-sm">Sun 29/9</span>
+                  <span class="fw-semibold text-sm">Mon 30/9</span>
+                  <span class="fw-semibold text-sm">Tue 1/10</span>
+                  <span class="fw-semibold text-sm">Wed 2/10</span>
+                  <span class="fw-semibold text-sm">Thu 3/10</span>
+                  <span class="fw-semibold text-sm">Fri 4/10</span>
+                  <span class="fw-semibold text-sm">Sat 5/10</span>
+                </div>
+                <div class="pt-22 pb-44 px-44 position-relative">
+                  <span class="bg-white py-2 px-8 radius-4 mb-22">Started</span>
+                  <div class="position-absolute start-0 bottom-0 ms-8 mb-8 z-2">
+                    <span class="text-xxs text-primary-600">Add Action</span>
+                    <button type="button" class="w-48-px h-48-px rounded-circle bg-neutral-400 text-primary-600 d-flex justify-content-center align-items-center text-2xxl bg-hover-primary-600 hover-text-white">
+                      <i class="ri-add-fill"></i>
+                    </button>
+                  </div>
+  
+                  <div class="">
+                    <div class="shadow-4 radius-6 bg-white position-relative delete-item max-w-390-px w-100 line-bottom">
+                      <div class="d-flex align-items-center justify-content-between px-16 bg-success-100 gap-2">
+                          <a href="workflow-view.html" class="h6 fw-semibold text-hover-primary-500 py-12 flex-grow-1 text-sm mb-0 line-clamp-1">Content Creation Workflow</a>
+                          <div class="">
+                            <span class="bg-success-200 py-2 px-6 radius-2 text-xxs text-success-600">Avg : 06 Days</span>
+                          </div>
+                          <div class="dropdown">
+                              <button class="text-xl h-20-px w-24-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">View</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">Edit </span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">History</span>
+                                  </button>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="border border-top-0">
+                          <div class="ps-12 p-8">
+                              <div class="d-flex align-items-center flex-wrap justify-content-between gap-16">
+                                  <div class="d-flex align-items-center gap-10 flex-wrap">
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill">WF00231</span>
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill"> 
+                                          <i class="ri-calendar-event-line line-height-1"></i>
+                                          11 Dec, 2024 - 17:09pm
+                                      </span>
+                                  </div>
+                                  <span class="py-2 px-12 bg-danger-50 text-danger-600 text-xxs fw-semibold rounded-pill">High</span>
+                              </div>
+                              <p class="text-secondary-light-two text-xxs mt-12 mb-28">Streamlining the process of creating high-quality content, including blogs, videos, and graphics, to align with the company's marketing goals.</p>
+                              <div class="mt-12 d-flex align-items-center gap-32">
+                                <div class="">
+                                  <span class="text-secondary-light-two">Action</span>
+                                  <div class="text-xs">
+                                    <span class="text-primary-500">Expertise /</span> 
+                                    <span class="text-danger-600">Not Expertise</span> 
+                                  </div>
+                                </div>
+                                <span class="fw-semibold text-xs text-secondary-light-two">NBA</span>
+                              </div>
+                          </div>
+                          <div class="border-top border-neutral-200 border-dashed px-16 py-8 d-flex align-items-center flex-wrap justify-content-between">
+                              <div class="d-flex align-items-center">
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center bg-danger-600 text-white fw-medium">
+                                    D
+                                  </div>
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                              </div>
+                              <div class="text-secondary-light-two fw-medium text-xs d-flex align-items-center gap-1">
+                                  <div class="d-flex align-items-center gap-1">
+                                      <span class=""><i class="ri-calendar-event-line"></i></span>
+                                      <span class="">Due :</span>
+                                  </div>
+                                  <span class="text-primary-light-two fw-semibold text-xs">18 Dec, 2024</span>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="shadow-4 radius-6 bg-white position-relative delete-item max-w-390-px w-100 line-left line-bottom line-bottom-small mt-50" style="margin-inline-start: 30%;">
+                      <div class="d-flex align-items-center justify-content-between px-16 bg-success-100 gap-2">
+                          <a href="workflow-view.html" class="h6 fw-semibold text-hover-primary-500 py-12 flex-grow-1 text-sm mb-0 line-clamp-1">Content Creation Workflow</a>
+                          <div class="">
+                            <span class="bg-success-200 py-2 px-6 radius-2 text-xxs text-success-600">Avg : 06 Days</span>
+                          </div>
+                          <div class="dropdown">
+                              <button class="text-xl h-20-px w-24-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">View</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">Edit </span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">History</span>
+                                  </button>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="border border-top-0">
+                          <div class="ps-12 p-8">
+                              <div class="d-flex align-items-center flex-wrap justify-content-between gap-16">
+                                  <div class="d-flex align-items-center gap-10 flex-wrap">
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill">WF00231</span>
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill"> 
+                                          <i class="ri-calendar-event-line line-height-1"></i>
+                                          11 Dec, 2024 - 17:09pm
+                                      </span>
+                                  </div>
+                                  <span class="py-2 px-12 bg-danger-50 text-danger-600 text-xxs fw-semibold rounded-pill">High</span>
+                              </div>
+                              <p class="text-secondary-light-two text-xxs mt-12 mb-28">Streamlining the process of creating high-quality content, including blogs, videos, and graphics, to align with the company's marketing goals.</p>
+                              <div class="mt-12 d-flex align-items-center gap-32">
+                                <div class="">
+                                  <span class="text-secondary-light-two">Action</span>
+                                  <div class="text-xs">
+                                    <span class="text-primary-500">Expertise /</span> 
+                                    <span class="text-danger-600">Not Expertise</span> 
+                                  </div>
+                                </div>
+                                <span class="fw-semibold text-xs text-secondary-light-two">NBA</span>
+                              </div>
+                          </div>
+                          <div class="border-top border-neutral-200 border-dashed px-16 py-8 d-flex align-items-center flex-wrap justify-content-between">
+                              <div class="d-flex align-items-center">
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center bg-danger-600 text-white fw-medium">
+                                    D
+                                  </div>
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                              </div>
+                              <div class="text-secondary-light-two fw-medium text-xs d-flex align-items-center gap-1">
+                                  <div class="d-flex align-items-center gap-1">
+                                      <span class=""><i class="ri-calendar-event-line"></i></span>
+                                      <span class="">Due :</span>
+                                  </div>
+                                  <span class="text-primary-light-two fw-semibold text-xs">18 Dec, 2024</span>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="shadow-4 radius-6 bg-white position-relative delete-item max-w-390-px w-100 mt-50 line-bottom style-small line-full" style="margin-inline-start: 42%;">
+                      <div class="d-flex align-items-center justify-content-between px-16 bg-success-100 gap-2">
+                          <a href="workflow-view.html" class="h6 fw-semibold text-hover-primary-500 py-12 flex-grow-1 text-sm mb-0 line-clamp-1">Content Creation Workflow</a>
+                          <div class="">
+                            <span class="bg-success-200 py-2 px-6 radius-2 text-xxs text-success-600">Avg : 06 Days</span>
+                          </div>
+                          <div class="dropdown">
+                              <button class="text-xl h-20-px w-24-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">View</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">Edit </span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">History</span>
+                                  </button>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="border border-top-0">
+                          <div class="ps-12 p-8">
+                              <div class="d-flex align-items-center flex-wrap justify-content-between gap-16">
+                                  <div class="d-flex align-items-center gap-10 flex-wrap">
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill">WF00231</span>
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill"> 
+                                          <i class="ri-calendar-event-line line-height-1"></i>
+                                          11 Dec, 2024 - 17:09pm
+                                      </span>
+                                  </div>
+                                  <span class="py-2 px-12 bg-danger-50 text-danger-600 text-xxs fw-semibold rounded-pill">High</span>
+                              </div>
+                              <p class="text-secondary-light-two text-xxs mt-12 mb-28">Streamlining the process of creating high-quality content, including blogs, videos, and graphics, to align with the company's marketing goals.</p>
+                              <div class="mt-12 d-flex align-items-center gap-32">
+                                <div class="">
+                                  <span class="text-secondary-light-two">Action</span>
+                                  <div class="text-xs">
+                                    <span class="text-primary-500">Expertise /</span> 
+                                    <span class="text-danger-600">Not Expertise</span> 
+                                  </div>
+                                </div>
+                                <span class="fw-semibold text-xs text-secondary-light-two">NBA</span>
+                              </div>
+                          </div>
+                          <div class="border-top border-neutral-200 border-dashed px-16 py-8 d-flex align-items-center flex-wrap justify-content-between">
+                              <div class="d-flex align-items-center">
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center bg-danger-600 text-white fw-medium">
+                                    D
+                                  </div>
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                              </div>
+                              <div class="text-secondary-light-two fw-medium text-xs d-flex align-items-center gap-1">
+                                  <div class="d-flex align-items-center gap-1">
+                                      <span class=""><i class="ri-calendar-event-line"></i></span>
+                                      <span class="">Due :</span>
+                                  </div>
+                                  <span class="text-primary-light-two fw-semibold text-xs">18 Dec, 2024</span>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="shadow-4 radius-6 bg-white position-relative delete-item max-w-390-px w-100 mt-140-px line-top" style="margin-inline-start: 68%;">
+                      <div class="d-flex align-items-center justify-content-between px-16 bg-success-100 gap-2">
+                          <a href="workflow-view.html" class="h6 fw-semibold text-hover-primary-500 py-12 flex-grow-1 text-sm mb-0 line-clamp-1">Content Creation Workflow</a>
+                          <div class="">
+                            <span class="bg-success-200 py-2 px-6 radius-2 text-xxs text-success-600">Avg : 06 Days</span>
+                          </div>
+                          <div class="dropdown">
+                              <button class="text-xl h-20-px w-24-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="ri-more-fill"></i>
+                              </button>
+                              <ul class="dropdown-menu p-8">
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                    <span class="">View</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                    <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                    <span class="">Edit </span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-tr-button">
+                                    <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                    <span class="">Delete</span>
+                                  </button>
+                                </li>
+                                <li class="">
+                                  <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                    <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                    <span class="">History</span>
+                                  </button>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="border border-top-0">
+                          <div class="ps-12 p-8">
+                              <div class="d-flex align-items-center flex-wrap justify-content-between gap-16">
+                                  <div class="d-flex align-items-center gap-10 flex-wrap">
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill">WF00231</span>
+                                      <span class="text-xxs fw-semibold px-8 py-1 text-secondary-light-two bg-neutral-200 rounded-pill"> 
+                                          <i class="ri-calendar-event-line line-height-1"></i>
+                                          11 Dec, 2024 - 17:09pm
+                                      </span>
+                                  </div>
+                                  <span class="py-2 px-12 bg-danger-50 text-danger-600 text-xxs fw-semibold rounded-pill">High</span>
+                              </div>
+                              <p class="text-secondary-light-two text-xxs mt-12 mb-28">Streamlining the process of creating high-quality content, including blogs, videos, and graphics, to align with the company's marketing goals.</p>
+                              <div class="mt-12 d-flex align-items-center gap-32">
+                                <div class="">
+                                  <span class="text-secondary-light-two">Action</span>
+                                  <div class="text-xs">
+                                    <span class="text-primary-500">Expertise /</span> 
+                                    <span class="text-danger-600">Not Expertise</span> 
+                                  </div>
+                                </div>
+                                <span class="fw-semibold text-xs text-secondary-light-two">NBA</span>
+                              </div>
+                          </div>
+                          <div class="border-top border-neutral-200 border-dashed px-16 py-8 d-flex align-items-center flex-wrap justify-content-between">
+                              <div class="d-flex align-items-center">
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center bg-danger-600 text-white fw-medium">
+                                    D
+                                  </div>
+                                  <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                  </div>
+                              </div>
+                              <div class="text-secondary-light-two fw-medium text-xs d-flex align-items-center gap-1">
+                                  <div class="d-flex align-items-center gap-1">
+                                      <span class=""><i class="ri-calendar-event-line"></i></span>
+                                      <span class="">Due :</span>
+                                  </div>
+                                  <span class="text-primary-light-two fw-semibold text-xs">18 Dec, 2024</span>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
           <!-- Document Tab start -->
         </div>

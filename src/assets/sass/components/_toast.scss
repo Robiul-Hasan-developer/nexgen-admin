@@ -4,7 +4,7 @@
     inset-block-start: 25px;
     inset-inline-end: 30px;
     background: #fff;
-    border-inline-start: 5px solid var(--success-600);
+    border-inline-start: 4px solid var(--success-600);
     overflow: hidden;
     margin-inline-end: -320px;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
@@ -32,7 +32,7 @@
     position: absolute;
     inset-block-end: 0;
     inset-inline-start: 0;
-    height: 2px;
+    height: 3px;
     width: 100%;
     background: #fff;
     &::before{

@@ -8,96 +8,10 @@
   @@include('../layouts/_breadcrumb.html',{
     pageTitle:"Watermark",
     page:"Business Suite",
+    pageLink: "business-suites.html",
     activePage:"Watermark",
     paraText:"Display watermark settings to manage text, opacity, and positioning for secure and professional document handling."
   })
-  
-
-
-
-  <!-- <style>
-    td{
-      padding:5px 10px;
-    }
-    tr:nth-child(odd){
-      background:#ddd;
-    }
-    tr:nth-child(even){
-      background:#bbb;
-    }
-  </style>
-  
-
-  <table id="draggable-table">
-    <tr draggable="true">
-      <td>1</td>
-      <td>nabil</td>
-      <td>droid</td>
-    </tr>
-    <tr draggable="true">
-      <td>2</td>
-      <td>test</td>
-      <td>testing</td>
-    </tr>
-    <tr draggable="true">
-      <td>3</td>
-      <td>hello</td>
-      <td>world</td>
-    </tr>
-    <tr draggable="true">
-      <td>4</td>
-      <td>programming</td>
-      <td>javascript</td>
-    </tr>
-  </table>
-
-
-  <script>
-    let draggedRow = null;
-  
-    document.addEventListener('DOMContentLoaded', () => {
-      const tableRows = document.querySelectorAll('#draggable-table tr');
-      cursor: "move",
-  
-      tableRows.forEach((row) => {
-        // Drag Start
-        row.addEventListener('dragstart', (event) => {
-          draggedRow = row; // Store the dragged row
-          event.dataTransfer.effectAllowed = 'move';
-          event.dataTransfer.setData('text/html', row.outerHTML); // Optional, to show feedback
-        });
-  
-        // Drag Over
-        row.addEventListener('dragover', (event) => {
-          event.preventDefault(); // Necessary to allow dropping
-          const targetRow = event.target.closest('tr');
-          const rows = Array.from(targetRow.parentNode.children);
-  
-          if (rows.indexOf(targetRow) > rows.indexOf(draggedRow)) {
-            targetRow.after(draggedRow);
-          } else {
-            targetRow.before(draggedRow);
-          }
-        });
-  
-        // Drag End
-        row.addEventListener('dragend', () => {
-          draggedRow = null; // Clear the reference
-        });
-      });
-    });
-  </script> -->
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
   
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6">
@@ -686,7 +600,7 @@
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#createUserId">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -712,7 +626,7 @@
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#ipAddress">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -738,7 +652,7 @@
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#timeStamp">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">
@@ -764,7 +678,7 @@
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">Header, Middle, Opacity 20%, R 10%</td>
                         <td class="text-xs border-bottom border-neutral-200 py-16 px-20">
                           <div class="d-flex align-items-center gap-8">
-                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#textModal">
+                            <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-cyan-100 text-cyan-600 bg-hover-cyan-600 text-hover-white"  data-bs-toggle="modal" data-bs-target="#fileName">
                               <i class="ri-pencil-fill"></i>
                             </button>
                             <button type="button" class="w-20-px h-20-px radius-4 text-xs d-flex justify-content-center align-items-center bg-danger-100 text-danger-600 bg-hover-danger-600 text-hover-white delete-tr-button">

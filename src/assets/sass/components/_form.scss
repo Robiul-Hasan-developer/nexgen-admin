@@ -182,3 +182,13 @@
 .bg-transparent + .select2-container--default .select2-selection--multiple {
   background: transparent;
 }
+
+
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  opacity: 1; 
+}
+
+.custom-number-input::-moz-inner-spin-button {
+  opacity: 1;
+}

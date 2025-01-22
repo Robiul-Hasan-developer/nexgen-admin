@@ -1,0 +1,60 @@
+.line-bottom {
+    &::after {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 170px;
+        background: #C4C4C4;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        inset-block-start: 100%;
+    }
+    &-small {
+        &::after {
+            inset-inline-start: 80%;
+        }
+    }
+    &.style-small {
+        &::after {
+            inset-inline-start: 50%;
+            height: 70px;
+        }
+    }
+}
+
+
+.line-left {
+    &::before {
+        position: absolute;
+        content: "";
+        width: 175px;
+        height: 3px;
+        inset-inline-end: 100%;
+        inset-block-start: 50%;
+        background: #C4C4C4;
+        transform: translateY(-50%);
+    }
+}
+
+.line-full {
+    &::before {
+        position: absolute;
+        content: "";
+        width: calc(100% - 66px);
+        height: 3px;
+        inset-inline-start: 50%;
+        inset-block-start: calc(100% + 70px);
+        background: #C4C4C4;
+    }
+}
+
+.line-top::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 70px;
+    background: #C4C4C4;
+    transform: translateX(-50%);
+    inset-block-end: 100%;
+    inset-inline-start: 50%;
+}

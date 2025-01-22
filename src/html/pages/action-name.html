@@ -6,9 +6,10 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Announcement Template",
+    pageTitle: "Action Name",
     page: "Business Suite",
-    activePage: "Announcement Template",
+    pageLink: "business-suites.html",
+    activePage: "Action Name",
     paraText: "For envelope  masters, display envelope details, status, and actions for streamlined management, with appropriate permissions for viewing, editing, and configuring envelope."
   })
   
@@ -989,7 +990,11 @@
                                 <label class="form-check-label text-primary-light-two text-sm" for="RepeatMonthly">Monthly</label>
                             </div>
                             <div class="d-flex align-items-center gap-16">
-                                <input type="text" class="form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                                <div class="d-flex flex-column">
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                                </div>
                                 <select class="form-control form-select w-80-px h-20-px text-xxs px-6 py-0 radius-6 pe-16 arrow-10-px">
                                     <option value="Fixed">Fixed</option>
                                     <option value="Not Fixed">Not Fixed</option>
@@ -1020,7 +1025,7 @@
   
         <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-40 flex-wrap">
             <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Workflow Status</label>
+                <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Status</label>
                 <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
             </div>
             <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addActionName">Save</button>

@@ -302,11 +302,11 @@
       if (this.classList.contains('btn-primary-600')) {
         this.classList.remove('btn-primary-600');
         this.classList.add('btn-danger-600');
-        this.innerHTML = "Hide Fields";
+        this.innerHTML = "Additional Fields";
       } else {
         this.classList.add('btn-primary-600');
         this.classList.remove('btn-danger-600');
-        this.innerHTML = "Additional Fields";
+        this.innerHTML = "Hide Fields";
       }
   
       fieldSidebar.classList.toggle('d-none');
@@ -773,7 +773,57 @@
     });
   }
   // ========================= Link compose box Js End ===================
+
   
+  // ========================= delete event checkbox Js start ===================
+  function handleCheckboxChange (checkboxId) {
+    let collapseItems = document.querySelectorAll('.collapse-item');
+    let deleteEventCheckbox = document.querySelector(checkboxId);
+  
+    if(deleteEventCheckbox && collapseItems) {
+      deleteEventCheckbox.addEventListener('change', () => {
+        collapseItems.forEach(collapseItem => {
+          if (collapseItem.classList.contains('active')) {
+            if (deleteEventCheckbox.checked) {
+              collapseItem.classList.add('colored-text');
+            } else {
+              collapseItem.classList.remove('colored-text');
+            }
+          }
+        });
+      });
+    }
+  }
+  handleCheckboxChange('#DeletedEventsTwo');
+  handleCheckboxChange('#DeletedEventsThree');
+  // ========================= delete event checkbox Js End ===================
+
+  
+  // ========================= Increment and Decrement Js Start ===================
+  $(document).ready(function() {
+    const minus = $('.quantity__minus');
+    const plus = $('.quantity__plus');
+    const input = $('.quantity__input');
+    minus.click(function(e) {
+      e.preventDefault();
+      var value = input.val();
+      if (value > 1) {
+        value--;
+      }
+      input.val(value);
+    });
+    
+    plus.click(function(e) {
+      e.preventDefault();
+      var value = input.val();
+      value++;
+      input.val(value);
+    })
+  });
+  // ========================= Increment and Decrement Js End ===================
+  
+
+
 
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {
