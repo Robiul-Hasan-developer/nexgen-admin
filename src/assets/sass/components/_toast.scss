@@ -56,4 +56,24 @@
       width: 0%;
     }
   }
+
+  .error-message {
+    border-color: var(--danger-600) !important;
+    .text-success-600 {
+      color: var(--danger-600) !important;
+    }
+    .progress__bar::before {
+      background-color: var(--danger-600);
+    }
+  }
+
+  .warning-message {
+    border-color: var(--warning-600) !important;
+    .text-success-600 {
+      color: var(--warning-600) !important;
+    }
+    .progress__bar::before {
+      background-color: var(--warning-600);
+    }
+  }
 /* Toast Message Css End  */

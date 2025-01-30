@@ -822,8 +822,84 @@
   });
   // ========================= Increment and Decrement Js End ===================
   
+  // ========================= Password filed validation Js Start ===================
+  document.addEventListener("DOMContentLoaded", function () {
+    const passwordFields = document.querySelectorAll('.password-field'); // Select all password inputs
+    const validationForm = document.querySelector('.validation-form');  // Select form
+    const errorDivs = document.querySelectorAll(".password-error");     // Select error messages
+    var inputField = document.querySelectorAll('.form-control');
 
+    function validatePassword(password) {
+        const minLength = /.{8,}/;
+        const upperCase = /[A-Z]/;
+        const lowerCase = /[a-z]/;
+        const number = /[0-9]/;
+        const specialChar = /[!@#$%^&*]/;
 
+        let errors = [];
+        if (!minLength.test(password)) errors.push("At least 8 characters.");
+        if (!upperCase.test(password)) errors.push("At least 1 uppercase letter.");
+        if (!lowerCase.test(password)) errors.push("At least 1 lowercase letter.");
+        if (!number.test(password)) errors.push("At least 1 number.");
+        if (!specialChar.test(password)) errors.push("At least 1 special character (!@#$%^&*).");
+
+        return errors;
+    }
+
+    if(validationForm) {
+      validationForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          let hasError = false;
+  
+          if (passwordFields.length === 1) {
+              // Login Page (Only One Password Field)
+              const password = passwordFields[0].value;
+              const errors = validatePassword(password);
+  
+              if (errors.length > 0) {
+                  errorDivs[0].innerHTML = errors.join("<br>");
+                  errorDivs[0].style.display = "block";
+                  hasError = true;
+              } else {
+                  errorDivs[0].style.display = "none";
+              }
+  
+          } else if (passwordFields.length === 2) {
+              // Registration Page (Password + Confirm Password)
+              const password = passwordFields[0].value;
+              const confirmPassword = passwordFields[1].value;
+              const errors = validatePassword(password);
+  
+              if (errors.length > 0) {
+                  errorDivs[0].innerHTML = errors.join("<br>");
+                  errorDivs[0].style.display = "block";
+                  hasError = true;
+              } else {
+                  errorDivs[0].style.display = "none";
+              }
+  
+              // Confirm Password Validation
+              if (password !== confirmPassword) {
+                  errorDivs[1].innerHTML = "Passwords do not match.";
+                  errorDivs[1].style.display = "block";
+                  hasError = true;
+              } else {
+                  errorDivs[1].style.display = "none";
+              }
+          }
+  
+          if (!hasError) {
+            inputField.forEach((inputItem) => {
+              inputItem.classList.remove('is-valid');
+              inputItem.value = "";
+            });
+            toastMessage("Form submitted successfully!");
+            validationForm.submit(); // Uncomment this line for real form submission
+          }
+      });
+    }
+});
+  // ========================= Password filed validation Js End ===================
 
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {

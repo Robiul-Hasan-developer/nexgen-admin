@@ -11,7 +11,7 @@
         </div>
         <p class="bg-primary-30 radius-2 px-4 py-2 text-sm text-center text-primary-600 mb-20">Sign up for 30 days free trial</p>
         <h6 class="text-primary-600 text-lg fw-semibold mb-16">Account Login</h6>
-        <form action="#" class="submit-form">
+        <form action="#" class="validation-form">
             <div class="mb-16 validation">
                 <input type="text" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder="Company Name" required>
                 <div class="invalid-feedback">Please enter Company Name.</div>
@@ -28,20 +28,20 @@
                 <input type="email" class="form-control placeholder-12 shadow-none focus-shadow-7 validation-input" placeholder=" Email" required>
                 <div class="invalid-feedback">Please enter valid email.</div>
             </div>
-            <div class="mb-16 validation">
+            <div class="mb-16">
                 <div class="position-relative">
                     <input type="password" class="form-control placeholder-12 shadow-none focus-shadow-7 pe-60 validation-input password-field" placeholder="Password*" required>
                     <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                 </div>
-                <div class="invalid-feedback">Please enter confirm password </div>
+                <div class="text-danger password-error"></div>
             </div>
             <div class="mb-16 validation">
                 <div class="position-relative">
                     <input type="password" class="form-control placeholder-12 shadow-none focus-shadow-7 pe-60 validation-input password-field" placeholder="Confirm Password*" required>
                     <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                 </div>
-                <div class="invalid-feedback">Please enter confirm password </div>
-            </div>
+                <div class="text-danger password-error"></div>
+            </div> 
             <div class="my-16">
                 <select class="form-control form-select placeholder-12 shadow-none focus-shadow-7 pe-40 validation-input text-xs text-secondary-light-two" required>
                     <option value="" selected hidden>Select Location</option>

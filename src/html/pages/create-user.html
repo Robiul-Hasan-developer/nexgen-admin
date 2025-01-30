@@ -698,124 +698,126 @@
 
 <!-- add User start -->
 <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered max-w-1472-px">
-      <div class="modal-content py-44 px-res-100-px radius-16">
-        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
-          <div class="d-flex align-items-center gap-18">
-            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addUserLabel">Create User</h6>
-            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
-          </div>
-          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
-            <i class="ri-close-fill d-flex line-height-1"></i>
-          </button>
+  <div class="modal-dialog modal-dialog-centered max-w-1472-px">
+    <div class="modal-content py-44 px-res-100-px radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="addUserLabel">Create User</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
-  
-        <div class="modal-body p-0">
-          <form action="#">
-            <div class="row gy-4 gx-100">
-              <!-- Top Content -->
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="FullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
-                  <input type="text" class="form-control validation-input py-12 px-20" id="FullName" placeholder="Full Name" required>
-                  <div class="invalid-feedback">Please Full Name</div>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-                  <input type="email" class="form-control validation-input py-12 px-20" id="email" placeholder="Enter Email" required>
-                  <div class="invalid-feedback">Please enter email</div>
-                </div>
-                <div class="row g-4">
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="Password" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="Password" placeholder="Enter Password" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="ConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="ConfirmPassword" placeholder="Enter Confirm Password" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="Department" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="Department">
-                    <option value="Operations">Operations</option>
-                    <option value="English">English</option>
-                    <option value="Bangla">Bangla</option>
-                    <option value="Economics">Economics</option>
-                  </select>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="Role" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="Role">
-                    <option value="Operations">Operations</option>
-                    <option value="User">User</option>
-                    <option value="Admin">Admin</option>
-                  </select>
-                </div>
-                <div class="position-relative">
-                  <label for="phone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
-                  <input type="number" class="form-control validation-input py-12 px-20" id="phone" placeholder="Enter phone" required>
-                </div>
-              </div>
-              <!-- Top Content -->
-            </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
 
-            <div class="mt-48">
-              <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="windowsUser">
-                <label class="form-check-label text-primary-light text-sm fw-semibold" for="windowsUser">Windows User (SSO)</label>
+      <div class="modal-body p-0">
+        <form action="#">
+          <div class="row gy-4 gx-100">
+            <!-- Top Content -->
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="FullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control validation-input py-12 px-20" id="FullName" placeholder="Full Name" required>
+                <div class="invalid-feedback">Please Full Name</div>
               </div>
-              <div class="row gy-4 gx-100">
+              <div class="mb-32 position-relative">
+                <label for="email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
+                <input type="email" class="form-control validation-input py-12 px-20" id="email" placeholder="Enter Email" required>
+                <div class="invalid-feedback">Please enter email</div>
+              </div>
+              <div class="row g-4">
                 <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="Username" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="Username" placeholder="Username" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="PasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative validation">
+                    <label for="Password" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
                     <div class="position-relative">
-                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="PasswordTwo" placeholder="Enter Password" required>
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="Password" placeholder="Enter Password" required>
                       <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                     </div>
+                    <div class="text-danger password-error"></div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="DomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="DomainComputer" placeholder="Domain/Computer Name" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="DomainVault" class="text-sm form-label">Domain Vault <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="DomainVault" placeholder="Enter Domain Vault" required>
+                  <div class="position-relative validation">
+                    <label for="ConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="ConfirmPassword" placeholder="Enter Confirm Password" required>
+                      <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                    </div>
+                    <div class="text-danger password-error"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
-              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="UserStatus">User Status</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus">
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="Department" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="Department">
+                  <option value="Operations">Operations</option>
+                  <option value="English">English</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="Economics">Economics</option>
+                </select>
               </div>
-              <button type="submit" class="btn py-6 px-24 btn-primary-600">Save </button>
+              <div class="mb-32 position-relative">
+                <label for="Role" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="Role">
+                  <option value="Operations">Operations</option>
+                  <option value="User">User</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+              <div class="position-relative">
+                <label for="phone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
+                <input type="number" class="form-control validation-input py-12 px-20" id="phone" placeholder="Enter phone" required>
+              </div>
             </div>
-          </form>
-        </div>
+            <!-- Top Content -->
+          </div>
+
+          <div class="mt-48">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="windowsUser">
+              <label class="form-check-label text-primary-light text-sm fw-semibold" for="windowsUser">Windows User (SSO)</label>
+            </div>
+
+            <div class="row gy-4 gx-100">
+              <div class="col-sm-6">
+                <div class="mb-32 position-relative">
+                  <label for="Username" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="Username" placeholder="Username" required>
+                </div>
+                <div class="position-relative">
+                  <label for="PasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative">
+                    <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="PasswordTwo" placeholder="Enter Password" required>
+                    <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                  </div>
+                  <div class="text-danger password-error"></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="mb-32 position-relative">
+                  <label for="DomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="DomainComputer" placeholder="Domain/Computer Name" required>
+                </div>
+                <div class="position-relative">
+                  <label for="DomainVault" class="text-sm form-label">Domain Vault <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="DomainVault" placeholder="Enter Domain Vault" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
+            <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+              <label class="form-check-label text-primary-light text-sm" for="UserStatus">User Status</label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus">
+            </div>
+            <button type="submit" class="btn py-6 px-24 btn-primary-600">Save </button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </div>
 <!-- add User End -->
 
@@ -834,7 +836,7 @@
         </div>
   
         <div class="modal-body p-0">
-          <form action="#">
+          <form action="#" class="validation-form">
             <div class="row gy-4 gx-100">
               <!-- Top Content -->
               <div class="col-md-6">
@@ -854,7 +856,7 @@
                         <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPassword" placeholder="Enter Password" value="Abdull123" required>
                         <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                       </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
+                      <div class="text-danger password-error"></div>
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -864,7 +866,7 @@
                         <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
                         <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                       </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
+                      <div class="text-danger password-error"></div>
                     </div>
                   </div>
                 </div>
@@ -911,8 +913,9 @@
                       <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPasswordTwo" placeholder="Enter Password" value="270" required>
                       <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                     </div>
-                  </div>
+                  <div class="text-danger password-error"></div>
                 </div>
+              </div>
                 <div class="col-sm-6">
                   <div class="mb-32 position-relative">
                     <label for="viewDomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
@@ -923,7 +926,6 @@
                     <input type="text" class="form-control validation-input py-12 px-20" id="viewDomainVault" placeholder="Enter Domain Vault" value=".com" required>
                   </div>
                 </div>
-              </div>
             </div>
             <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
               <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
@@ -973,7 +975,7 @@
                         <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPassword" placeholder="Enter Password" value="Abdull123" required>
                         <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                       </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
+                      <div class="text-danger password-error"></div>
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -983,7 +985,7 @@
                         <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
                         <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                       </div>
-                      <div class="invalid-feedback">Please enter confirm password</div>
+                      <div class="text-danger password-error"></div>
                     </div>
                   </div>
                 </div>
@@ -1030,7 +1032,7 @@
                       <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPasswordTwo" placeholder="Enter Password" value="270" required>
                       <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                     </div>
-                  </div>
+                  <div class="text-danger password-error"></div>
                 </div>
                 <div class="col-sm-6">
                   <div class="mb-32 position-relative">
@@ -1067,7 +1069,7 @@
           <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="ImportUserLabel">Import User</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-16 radius-6">Import Excel</span>
         </div>
-        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#ImportUser">
           <i class="ri-close-fill d-flex line-height-1"></i>
         </button>
       </div>
@@ -1225,27 +1227,7 @@
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
-
-<script>
-  // ***************************** Data Table js ***************************** 
-  new DataTable('#example', {
-    searching: false,   // Removes the search box
-    lengthChange: false,
-  });
-
-  // *****************************  Flat pickr or date picker js ***************************** 
-  function getDatePicker(receiveID) {
-    flatpickr(receiveID, {
-      enableTime: false, // Ensure time is disabled to match the format
-      dateFormat: "d M, Y", // Format to match placeholder
-      mode: "range", // Enable range selection
-      minDate: "today", // Prevent past dates
-    });
-  }
-  getDatePicker('#dateTime');
-  // *****************************  Flat pickr or date picker js ***************************** 
-
-</script>
+<script src="assets/js/create-user.module.js"></script>
 
 </body>
 </html>

@@ -10,7 +10,8 @@
             </a>
         </div>
         <h6 class="text-primary-600 text-lg fw-semibold mb-16">Account Login</h6>
-        <form action="#" class="submit-form">
+
+        <form action="#" class="validation-form">
             <div class="mb-16 validation">
                 <div class="position-relative">
                     <input type="email" class="form-control placeholder-12 shadow-none focus-shadow-7 ps-36 validation-input" placeholder="Email*" required>
@@ -18,14 +19,15 @@
                 </div>
                 <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
-            <div class="mb-16 validation">
+            <div class="mb-16">
                 <div class="position-relative">
                     <input type="password" class="form-control placeholder-12 shadow-none focus-shadow-7 ps-36 pe-60 validation-input password-field" placeholder="Password*" required>
                     <span class="position-absolute top-50 translate-middle-y start-0 ms-12 text-primary-600 fw-bold"><i class="ri-lock-2-line"></i></span>
                     <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                 </div>
-                <div class="invalid-feedback">Please enter confirm password</div>
+                <div class="text-danger password-error"></div>
             </div>
+            
             <div class="mb-16">
                 <div class="form-check ps-0 d-flex align-items-center gap-10 mb-0">
                     <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 bg-main shadow-9" type="checkbox" id="RememberMe">
@@ -35,28 +37,30 @@
             <div class="my-16">
                 <button type="submit" class="submit-btn btn btn-primary-600 w-100 py-6">Log in</button>
             </div>
-            <div class="my-16 d-flex align-items-center justify-content-between">
-                <a href="forgot-password.html" class="text-primary-600 hover-underline text-xs text-hover-primary-500">Forgot password?</a>
-                <a href="register.html" class="text-primary-600 hover-underline text-xs text-hover-primary-500">Create Organisation</a>
-            </div>
-            <div class="my-24">
-                <div class="before-border position-relative text-center z-1">
-                    <span class="bg-white text-uppercase px-8 py-1 text-secondary-light-two bg-white">or</span>
-                </div>
-            </div>
-            <div class="mt-24">
-                <div class="d-flex align-items-center gap-8">
-                    <a href="javascript:void(0)" class="btn btn-primary-600 fw-normal py-6 px-8 d-flex align-items-center gap-1 text-start text-xxs flex-grow-1">
-                        <img src="assets/images/icon/store.svg" alt="">
-                        Windows Authentication
-                    </a>
-                    <a href="javascript:void(0)" class="btn btn-primary-600 fw-normal py-6 px-8 d-flex align-items-center gap-1 text-start text-xxs flex-grow-1">
-                        <img src="assets/images/icon/message.svg" alt="">
-                        One-time password
-                    </a>
-                </div>
-            </div>
         </form>
+        
+        <div class="my-16 d-flex align-items-center justify-content-between">
+            <a href="forgot-password.html" class="text-primary-600 hover-underline text-xs text-hover-primary-500">Forgot password?</a>
+            <a href="register.html" class="text-primary-600 hover-underline text-xs text-hover-primary-500">Create Organisation</a>
+        </div>
+        <div class="my-24">
+            <div class="before-border position-relative text-center z-1">
+                <span class="bg-white text-uppercase px-8 py-1 text-secondary-light-two bg-white">or</span>
+            </div>
+        </div>
+        <div class="mt-24">
+            <div class="d-flex align-items-center gap-8">
+                <a href="javascript:void(0)" class="btn btn-primary-600 fw-normal py-6 px-8 d-flex align-items-center gap-1 text-start text-xxs flex-grow-1">
+                    <img src="assets/images/icon/store.svg" alt="">
+                    Windows Authentication
+                </a>
+                <a href="javascript:void(0)" class="btn btn-primary-600 fw-normal py-6 px-8 d-flex align-items-center gap-1 text-start text-xxs flex-grow-1">
+                    <img src="assets/images/icon/message.svg" alt="">
+                    One-time password
+                </a>
+            </div>
+        </div>
+        
     </div>
 </div>
 <!-- ======================= Authentication end ================================== -->

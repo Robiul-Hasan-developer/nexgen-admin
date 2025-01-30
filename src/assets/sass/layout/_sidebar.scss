@@ -34,66 +34,14 @@
   }
   &.active {
     width: 86px;
-    &:hover {
-      width: auto;
+    .sidebar-menu-dropdown-data {
+      display: none;
     }
     .sidebar-menu li a i {
       margin-inline-end: 16px;
     }
-    &:hover .sidebar-menu li > a {
-      justify-content: start;
-    }
     .sidebar-menu li > a {
       justify-content: center;
-    }
-    &:hover {
-      @include media(xl) {
-        inset-inline-start: 0;
-      }
-      @include media(xxl) {
-        width: rem(275px);
-      }
-      @include media(3xl) {
-        width: rem(312px);
-      }
-      .sidebar-logo {
-        img {
-          &.light-logo {
-            display: inline-block;
-          }
-          &.logo-icon {
-            display: none;
-          }
-        }
-      }
-      .sidebar-menu {
-        li {
-          a {
-            span {
-              display: inline-block;
-            }
-            .menu-icon {
-              margin-inline-end: rem(8px);
-            }
-          }
-          &.dropdown.dropdown-open,
-          &.dropdown.open {
-            .sidebar-submenu {
-              display: block !important;
-            }
-          }
-          &.sidebar-menu-group-title {
-            display: inline-block;
-          }
-          &.dropdown {
-            a {
-              &::after {
-                display: inline-block;
-              }
-            }
-          }
-        }
-      }
     }
     .sidebar-logo {
       img {
@@ -169,50 +117,24 @@
     padding: rem(12px) rem(6px);
     overflow-y: auto;
     border-inline-end: 1px solid var(--neutral-200);
-    &:hover {
-      &::-webkit-scrollbar-thumb {
-        background-color: var(--neutral-200);
-        &:hover {
-          background-color: var(--neutral-300);
-        }
-        &:active {
-            background-color: var(--neutral-400);
-        }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--neutral-200);
+      &:hover {
+        background-color: var(--neutral-300);
+      }
+      &:active {
+        background-color: var(--neutral-400);
       }
     }
     &::-webkit-scrollbar {
       width: 6px;
-      background-color: var(--white);
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--white);
+      background-color: var(--neutral-200);
     }
   }
 }
 
 [data-theme="dark"] {
   .sidebar {
-    &.active {
-      &:hover {
-        .sidebar-logo {
-          img {
-            &.light-logo {
-              display: none;
-            }
-            &.dark-logo {
-              display: inline-block;
-            }
-          }
-        }
-      }
-      .sidebar-logo {
-        img {
-          &.light-logo {
-            display: none;
-          }
-        }
-      }
-    }
     &-logo {
       img {
         &.light-logo {
