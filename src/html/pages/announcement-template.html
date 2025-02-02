@@ -83,9 +83,9 @@
             <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
                 <thead>
                     <tr>
-                        <th class="bg-neutral-50 text-center">Envelope  ID</th>
+                        <th class="bg-neutral-50 text-center">Announcement  ID</th>
                         <th class="bg-neutral-50 text-center">Type Name</th>
-                        <th class="bg-neutral-50 text-center">Envelope Name </th>
+                        <th class="bg-neutral-50 text-center">Announcement Name </th>
                         <th class="bg-neutral-50 text-start">Recipients  </th>
                         <th class="bg-neutral-50 text-center">Created Details</th>
                         <th class="bg-neutral-50 text-center">Modified Details </th>
@@ -1168,7 +1168,7 @@
                     </div>
                     <div class="col-sm-6">
                       <label for="DueDate" class="text-sm form-label">Due Date </label>
-                      <input type="text" class="form-control" id="DueDate" placeholder="Due Date">
+                      <input class="form-control radius-8 bg-base" id="dateTime" type="text" placeholder="Due Date">
                     </div>
                     <div class="col-sm-12">
                       <label for="MetaData" class="text-sm form-label">Meta Data</label>
@@ -1251,6 +1251,7 @@
             <div class="mb-12">
               <label for="addEmail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
               <input type="email" class="form-control" id="addEmail" placeholder="Email">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
   
             <div class="mt-24 d-flex flex-column gap-16">

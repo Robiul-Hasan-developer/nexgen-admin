@@ -31,19 +31,19 @@
 
             <div class="pb-16">
               <div class="d-flex flex-column gap-6 max-h-230-px overflow-y-auto scroll-sm px-12">
-                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-success-100 text-success-600">
+                <div class="calendar-event-item px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-success-100 text-success-600" draggable="true" id="calendar-item-one">
                   <span class="w-10-px h-10-px rounded-circle bg-success-600"></span>
                   <span class="">New Event Planning</span>
                 </div>
-                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-info-100 text-info-600">
+                <div class="calendar-event-item px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-info-100 text-info-600" draggable="true" id="calendar-item-two">
                   <span class="w-10-px h-10-px rounded-circle bg-info-600"></span>
                   <span class="">Approval Meeting </span>
                 </div>
-                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-warning-100 text-warning-600">
+                <div class="calendar-event-item px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-warning-100 text-warning-600" draggable="true" id="calendar-item-three">
                   <span class="w-10-px h-10-px rounded-circle bg-warning-600"></span>
                   <span class="">Meeting with operation departments </span>
                 </div>
-                <div class="px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-danger-100 text-danger-600">
+                <div class="calendar-event-item px-14 py-10 radius-2 d-flex align-items-center gap-8 text-xs fw-medium bg-danger-100 text-danger-600" draggable="true" id="calendar-item-four">
                   <span class="w-10-px h-10-px rounded-circle bg-danger-600"></span>
                   <span class="">Heads Meeting  </span>
                 </div>
@@ -223,6 +223,27 @@
               
               <ul class="nav bordered-tab nav-pills mt-16 gap-16" id="pills-tabThree" role="tablist">
                 <li class="nav-item" role="presentation">
+                  <a href="#pills-Details" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4 active" id="pills-Details-tab" data-bs-toggle="pill" data-bs-target="#pills-Details" type="button" role="tab" aria-controls="pills-Details" aria-selected="true">Details</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#pills-Attendees" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Attendees-tab" data-bs-toggle="pill" data-bs-target="#pills-Attendees" type="button" role="tab" aria-controls="pills-Attendees" aria-selected="false" tabindex="-1">Attendees </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#pills-Guest" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Guest-tab" data-bs-toggle="pill" data-bs-target="#pills-Guest" type="button" role="tab" aria-controls="pills-Guest" aria-selected="false" tabindex="-1">Guest </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#pills-Agenda" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Agenda-tab" data-bs-toggle="pill" data-bs-target="#pills-Agenda" type="button" role="tab" aria-controls="pills-Agenda" aria-selected="false" tabindex="-1">Agenda </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#pills-mom" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-mom-tab" data-bs-toggle="pill" data-bs-target="#pills-mom" type="button" role="tab" aria-controls="pills-mom" aria-selected="false" tabindex="-1">MOM </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a href="#pills-Comments" class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Comments-tab" data-bs-toggle="pill" data-bs-target="#pills-Comments" type="button" role="tab" aria-controls="pills-Comments" aria-selected="false" tabindex="-1">Comments </a>
+                </li>
+              </ul>
+
+              <!-- <ul class="nav bordered-tab nav-pills mt-16 gap-16" id="pills-tabThree" role="tablist">
+                <li class="nav-item" role="presentation">
                   <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4 active" id="pills-Details-tab" data-bs-toggle="pill" data-bs-target="#pills-Details" type="button" role="tab" aria-controls="pills-Details" aria-selected="true">Details</button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -240,7 +261,7 @@
                 <li class="nav-item" role="presentation">
                   <button class="nav-link text-secondary-light fw-semibold text-xs py-10 px-4" id="pills-Comments-tab" data-bs-toggle="pill" data-bs-target="#pills-Comments" type="button" role="tab" aria-controls="pills-Comments" aria-selected="false" tabindex="-1">Comments </button>
                 </li>
-              </ul>
+              </ul> -->
             </div>
             <!-- Top Tab end -->
       
@@ -375,8 +396,7 @@
 
                       </div>
                       <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
-                        <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
-                        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                        <button type="button" class="btn py-6 px-24 btn-primary-600 next-step" id="next-btn1">Next</button>
                       </div>
                     </div>
                     <!-- Details Tab end -->
@@ -391,7 +411,7 @@
                                 </span>
                             </div>
                             <select class="form-control form-select max-w-340-px announcement-dept-select text-xs py-6">
-                                <option selected disabled>Select Announcement</option>
+                                <option selected disabled>Select Attendees</option>
                                 <option value="Department">Department</option>
                                 <option value="Employee">Employee </option>
                                 <option value="Workflow">Workflow</option>
@@ -780,8 +800,8 @@
                           </div>
     
                           <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
-                            <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
-                            <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                            <button type="button" class="btn py-6 px-24 btn-danger-600 prev-step" id="prev-btn1">Back</button>
+                            <button type="button" class="btn py-6 px-24 btn-primary-600  next-step" id="next-btn2">Next</button>
                           </div>
                     </div>
                     <!-- Attendees Tab start -->
@@ -843,7 +863,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs" data-bs-toggle="modal" data-bs-target="#editGuest"> Edit Guest </button>
                                 </div>
                             </div>
 
@@ -861,7 +881,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs" data-bs-toggle="modal" data-bs-target="#editGuest"> Edit Guest </button>
                                 </div>
                             </div>
 
@@ -879,7 +899,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs" data-bs-toggle="modal" data-bs-target="#editGuest"> Edit Guest </button>
                                 </div>
                             </div>
 
@@ -897,15 +917,15 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-12">
-                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs"> Edit Guest </button>
+                                    <button type="button" class="btn btn-neutral-200 text-secondary-light py-4 px-12 text-xs" data-bs-toggle="modal" data-bs-target="#editGuest"> Edit Guest </button>
                                 </div>
                             </div>
                             <!-- Department Select end -->
                         </div>
 
                         <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
-                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
-                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close" >Next</button>
+                          <button type="button" class="btn py-6 px-24 btn-danger-600 prev-step" id="prev-btn2">Back</button>
+                          <button type="button" class="btn py-6 px-24 btn-primary-600  next-step" id="next-btn3">Next</button>
                         </div>
                     </div>
                     <!-- Guest Tab start -->
@@ -1180,8 +1200,8 @@
                           <label class="form-check-label text-primary-light text-xs delete-event-checkbox" for="DeletedEventsTwo">Deleted Events  </label>
                         </div>
                         <div class="">
-                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
-                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Next</button>
+                          <button type="button" class="btn py-6 px-24 btn-danger-600 prev-step" id="prev-btn3">Back</button>
+                            <button type="button" class="btn py-6 px-24 btn-primary-600  next-step" id="next-btn4">Next</button>
                         </div>
                       </div>
                     </div>
@@ -1457,8 +1477,8 @@
                           <label class="form-check-label text-primary-light text-xs delete-event-checkbox" for="DeletedEventsThree">Deleted Events  </label>
                         </div>
                         <div class="">
-                          <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Back</button>
-                          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Next</button>
+                          <button type="button" class="btn py-6 px-24 btn-danger-600 prev-step" id="prev-btn4">Back</button>
+                          <button type="button" class="btn py-6 px-24 btn-primary-600  next-step" id="next-btn5">Next</button>
                         </div>
                       </div>
                     </div>
@@ -1580,6 +1600,7 @@
           <div class="mb-16">
             <label for="addEmail" class="text-sm form-label">Email Address </label>
             <input type="email" class="form-control" id="addEmail" placeholder="Email">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="mb-0">
             <label for="Descriptionn" class="text-sm form-label">Description</label>
@@ -1594,6 +1615,49 @@
   </div>
 </div>
 <!-- Add Guest Modal end -->
+
+<!-- Edit Guest Modal start -->
+<div class="modal fade" id="editGuest" tabindex="-1" aria-labelledby="editGuestLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content py-36 px-20 radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="editGuestLabel">Edit Guest  </h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#editGuest">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#" class="">
+          <div class="mb-16">
+            <label for="TwofulllName" class="text-sm form-label">Full Name </label>
+            <input type="text" class="form-control" id="TwofulllName" placeholder="Full Name">
+          </div>
+          <div class="mb-16">
+            <label for="TwocompanyyName" class="text-sm form-label">Company Name </label>
+            <input type="text" class="form-control" id="TwocompanyyName" placeholder="Company Name">
+          </div>
+          <div class="mb-16">
+            <label for="TwoaddEmail" class="text-sm form-label">Email Address </label>
+            <input type="email" class="form-control" id="TwoaddEmail" placeholder="Email">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="mb-0">
+            <label for="TwoDescriptionn" class="text-sm form-label">Description</label>
+            <textarea class="form-control min-h-72-px" id="TwoDescriptionn" placeholder="Description"></textarea>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-30">
+              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#editGuest">Save </button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Edit Guest Modal end -->
 
 <!-- List Details start -->
 <div class="modal fade" id="agendaListDetails" tabindex="-1" aria-labelledby="agendaListDetailsLabel" aria-hidden="true">
@@ -1661,8 +1725,14 @@
             <div class="d-flex align-items-center gap-16">
               <label class="text-sm form-label mb-0">Time</label>
               <div class="d-flex align-items-center gap-16">
-                <span class="text-secondary-light-two">Mins</span>
-                <input type="text" class="form-control bg-transparent radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                <div class="d-flex align-items-center gap-10">
+                  <span class="text-secondary-light-two">Mins</span>
+                  <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                  <div class="d-flex flex-column">
+                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1679,7 +1749,7 @@
             <div class="bg-white py-16 px-8 radius-4">
               <div class="row g-3">
                 <div class="col-12">
-                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item delete-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1687,7 +1757,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item delete-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1775,7 +1845,7 @@
     <div class="modal-content py-36 px-20 radius-16 bg-neutral-20">
       <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
         <div class="d-flex align-items-center gap-18">
-          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="momListDetailsLabel">Details - Agenda</h6>
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="momListDetailsLabel">Details - MOM</h6>
           <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
         </div>
         <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#momListDetails">
@@ -1835,8 +1905,14 @@
             <div class="d-flex align-items-center gap-16">
               <label class="text-sm form-label mb-0">Time</label>
               <div class="d-flex align-items-center gap-16">
-                <span class="text-secondary-light-two">Mins</span>
-                <input type="text" class="form-control bg-transparent radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="0">
+                <div class="d-flex align-items-center gap-10">
+                  <span class="text-secondary-light-two">Mins</span>
+                  <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                  <div class="d-flex flex-column">
+                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1853,7 +1929,7 @@
             <div class="bg-white py-16 px-8 radius-4">
               <div class="row g-3">
                 <div class="col-12">
-                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item delete-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>
@@ -1861,7 +1937,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="subpoint-item border border-dashed p-8 radius-4 bg-white position-relative">
+                  <div class="subpoint-item delete-item border border-dashed p-8 radius-4 bg-white position-relative">
                     <button type="button" class="bg-danger-200 text-danger-600 bg-hover-danger-600 hover-text-white w-16-px h-16-px rounded-circle d-flex align-items-center justify-content-center text-xxs position-absolute top-0 end-0 mt--8-px me--8-px z-1  delete-button">
                         <i class="ri-close-large-line line-height-1"></i>
                     </button>

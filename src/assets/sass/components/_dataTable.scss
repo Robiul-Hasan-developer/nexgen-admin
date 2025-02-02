@@ -112,4 +112,9 @@ div.dt-container .dt-paging .dt-paging-button {
 .dt-container div.dt-layout-row.dt-layout-table div.dt-layout-cell {
     min-width: max-content;
 }
+
+
+.dt-layout-row.dt-layout-table {
+    min-height: 438px;
+}
 /* Common Data Table Css end */

@@ -5,6 +5,10 @@
   }
 }
 
+.form-control.is-valid, .was-validated .form-control:valid {
+  background-size: 16px 12px,calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
 [dir="rtl"] { 
   .form-select {
     background-position: -4px center !important;

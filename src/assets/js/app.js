@@ -243,7 +243,7 @@
   // *************************** Max Text in textarea js End ***************************
   
    // ***************************** Validation js ***************************** 
-   var inputs = document.querySelectorAll('.validation-input');
+   var inputs = document.querySelectorAll('input[type="email"]');
    if(inputs) {
     inputs.forEach((input) => {
         input.addEventListener('input', function () {
