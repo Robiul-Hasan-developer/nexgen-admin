@@ -763,7 +763,7 @@
 
 
 <!-- Add Action Modal start -->
-<div class="modal fade" id="addActionName" tabindex="-1" aria-labelledby="addActionNameLabel" aria-hidden="true">
+<div class="modal fade" id="addActionName" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addActionNameLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-1444-px">
       <div class="modal-content py-36 ps-24 pe-88-px radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-12">
@@ -856,16 +856,18 @@
                     </select>
                   </div>
                   <div class="col-sm-4">
-                    <label for="Staff" class="text-sm form-label">Staff <span class="text-danger-600">*</span> </label>
-                    <select class="form-control form-select py-10 px-20" id="Staff">
-                        <option value="Ahmad">Ahmad </option>
-                        <option value="Mohammed">Mohammed </option>
-                        <option value="Shaikha">Shaikha </option>
-                        <option value="Shaikha">Shaikha </option>
+                    <label for="Stafffs" class="text-sm form-label">Staff</label>
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="Stafffs">
+                        <option value="">Select Staff</option>
+                        <option value="john_doe">John Doe</option>
+                        <option value="jane_smith">Jane Smith</option>
+                        <option value="michael_jones">Michael Jones</option>
+                        <option value="emily_davis">Emily Davis</option>
+                        <option value="david_wilson">David Wilson</option>
                     </select>
                   </div>
                   <div class="col-sm-4">
-                    <label for="priority" class="text-sm form-label">priority <span class="text-danger-600">*</span> </label>
+                    <label for="priority" class="text-sm form-label">Priority <span class="text-danger-600">*</span> </label>
                     <select class="form-control form-select py-10 px-20" id="priority">
                         <option value="Hight">Hight </option>
                         <option value="Low">Low </option>
@@ -1035,6 +1037,49 @@
 </div> 
 <!-- Add Action Modal End -->
  
+
+<!-- Import action modal start -->
+<div class="modal fade" id="importActionName" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="importActionNameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-826-px">
+      <div class="modal-content py-44 px-32 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="importActionNameLabel">Import Action Name</h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-16 radius-6">Import Excel</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#">
+            <div class="mt-84-px mb-100-px">
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
+                <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
+                <input type="file" class="form-control validation-input flex-grow-1 file-44-px" id="fileInput" required="">
+                <div class="invalid-feedback">Please enter confirm password</div>
+              </div>
+              <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-28">
+                <span class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">Sample File</span>
+                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0">
+                  <span class="fw-normal text-xs text-neutral-300">
+                    <i class="ri-download-fill"></i>
+                  </span>
+                  <span class="w-1-px h-18-px bg-white-1"></span>
+                  <span class="px-24">Download</span>
+                </button>
+              </div>
+            </div>  
+            <div class="text-end">
+              <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#importActionName">Submit </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Import action modal end -->
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>

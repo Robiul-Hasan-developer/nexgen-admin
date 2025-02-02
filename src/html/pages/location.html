@@ -764,7 +764,7 @@
 </main>
 
 <!-- Add location start -->
-<div class="modal fade" id="addLocation" tabindex="-1" aria-labelledby="addLocationLabel" aria-hidden="true">
+<div class="modal fade" id="addLocation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addLocationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-620-px">
       <div class="modal-content py-32 px-24 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-32">
@@ -788,13 +788,11 @@
                     </div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
-                    <label for="DepartmentHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department <span class="text-danger-600">*</span>: </label>
-                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="DepartmentHere">
-                      <option value="Main Department" selected="" hidden>Department</option>
-                      <option value="1">Operation</option>
-                      <option value="2">Admin</option>
+                    <label for="DepartmentHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department</label>
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="DepartmentHere">
+                        <option selected value="Operation">Operation</option>
+                        <option selected value="Admin">Admin</option>
                     </select>
-                    <div class="invalid-feedback">Select Header Department</div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Day: </label>
@@ -848,7 +846,7 @@
 <!-- Add location End -->
 
 <!-- Edit location start -->
-<div class="modal fade" id="editLocation" tabindex="-1" aria-labelledby="editLocationLabel" aria-hidden="true">
+<div class="modal fade" id="editLocation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editLocationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-620-px">
       <div class="modal-content py-32 px-24 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-32">
@@ -932,7 +930,7 @@
 <!-- Edit location End -->
 
 <!-- View location start -->
-<div class="modal fade" id="viewLocation" tabindex="-1" aria-labelledby="viewLocationLabel" aria-hidden="true">
+<div class="modal fade" id="viewLocation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewLocationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-620-px">
       <div class="modal-content py-32 px-24 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-32">
@@ -1015,7 +1013,7 @@
 <!-- View location End -->
 
 <!-- Import Location Start -->
-<div class="modal fade" id="importLocation" tabindex="-1" aria-labelledby="importLocationLabel" aria-hidden="true">
+<div class="modal fade" id="importLocation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="importLocationLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-826-px">
       <div class="modal-content py-44 px-32 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between">
@@ -1058,6 +1056,7 @@
 <!-- Import Location End -->
 
 @@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/select2.min.js"></script>
 <script src="assets/js/location.module.js"></script>
 
 </body>

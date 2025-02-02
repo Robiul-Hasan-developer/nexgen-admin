@@ -5,3 +5,8 @@ new DataTable('#example', {
     // paging: false,      // Disables pagination
     // ordering: false     // Disables column ordering
   });
+
+
+  $(".meta-tags").select2({
+    tags: true
+});

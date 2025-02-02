@@ -765,7 +765,7 @@
 
 
 <!-- Add meeting Event start -->
-<div class="modal fade" id="addMeetingEvent" tabindex="-1" aria-labelledby="addMeetingEventLabel" aria-hidden="true">
+<div class="modal fade" id="addMeetingEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addMeetingEventLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-620-px">
       <div class="modal-content py-32 px-24 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-32">
@@ -798,14 +798,15 @@
                     <div class="invalid-feedback">Select Header Department</div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
-                    <label for="UserHereNumberOne" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">User: </label>
-                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="UserHereNumberOne">
-                      <option value="User" selected="" hidden="">User</option>
+                    <label for="UserHereNumberOne" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">User:</label>
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="UserHereNumberOne">
+                      <option selected>Operation</option>
                       <option value="1">Client</option>
                       <option value="2">Admin</option>
+                      <option>Node</option>
                     </select>
-                    <div class="invalid-feedback">Select User</div>
                   </div>
+                  
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="UserHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Location: </label>
                     <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="UserHere">
@@ -850,8 +851,17 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-center gap-16">
-                            <span class="text-secondary-light-two">Mins</span>
-                            <input type="text" class="form-control bg-transparent radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="120" value="120">
+                            <div class="d-flex align-items-center gap-16">
+                                <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                                <div class="d-flex flex-column">
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                                </div>
+                                <select class="form-control form-select w-80-px h-20-px text-xxs px-6 py-0 radius-6 pe-16 arrow-10-px">
+                                    <option value="Fixed">Fixed</option>
+                                    <option value="Not Fixed">Not Fixed</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -872,7 +882,7 @@
 <!-- Add meeting Event End -->
 
 <!-- Import User Start -->
-<div class="modal fade" id="importMeetingEvent" tabindex="-1" aria-labelledby="importMeetingEventLabel" aria-hidden="true">
+<div class="modal fade" id="importMeetingEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="importMeetingEventLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-826-px">
       <div class="modal-content py-44 px-32 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between">
@@ -915,6 +925,7 @@
   <!-- Import User End -->
 
 @@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/select2.min.js"></script>
 
 <script>
   // ***************************** Data Table js ***************************** 
@@ -924,6 +935,11 @@
     // paging: false,      // Disables pagination
     // ordering: false     // Disables column ordering
   });
+
+
+$(".meta-tags").select2({
+    tags: true
+});
 </script>
 
 </body>
