@@ -10,8 +10,7 @@
   getDatePickerSingle('#dateTimeOne');
   getDatePickerSingle('#dateTimeTwo');
   getDatePickerSingle('#dateTimeThree');
-    
-
+  
     // *************************** Suggested Recipient Dropdown js start ***************************
     $('body').on('click', function () {
     $('.recipient-dropdown').removeClass('show');
@@ -51,33 +50,6 @@
   
   
   // *************************** Sub Point js Start here ***************************   
-  // const addSubPointButton = document.querySelector('.add-subpoint-btn');
-  // const subPointsContainer = document.querySelector('.bg-white .row');
-
-  // addSubPointButton.addEventListener('click', () => {
-  //   const subPointTemplate = subPointsContainer.querySelector('.col-12');
-
-  //   if (subPointTemplate) {
-  //     const clonedSubPoint = subPointTemplate.cloneNode(true);
-
-  //     // Find the paragraph inside the cloned subpoint
-  //     let paragraph = clonedSubPoint.querySelector('p');
-      
-  //     if (paragraph) {
-  //       // Replace paragraph with an editable input field
-  //       const input = document.createElement('input');
-  //       input.type = 'text';
-  //       input.className = 'form-control subpoint-input';
-  //       input.value = 'New subpoint';
-        
-  //       // Replace paragraph with the input field
-  //       paragraph.replaceWith(input);
-  //     }
-
-  //     subPointsContainer.appendChild(clonedSubPoint);
-  //   }
-  // });
-
   document.querySelectorAll('.add-subpoint-btn').forEach((button) => {
     button.addEventListener('click', function () {
       // Find the closest section containing this button
