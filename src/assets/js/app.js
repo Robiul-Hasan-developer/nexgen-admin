@@ -522,6 +522,13 @@
     seeMoreBtn.addEventListener('click', function () {
       seeMoreList.classList.toggle('d-none');
       this.classList.toggle('active');
+
+      let btnText = seeMoreBtn.querySelector('.text');
+      if(btnText.innerHTML === "More") {
+        btnText.innerHTML = "Less";
+      } else {
+        btnText.innerHTML = "More";
+      }
     });
   }
   // ========================= Email Sidebar see more btn and list Js End ===================
@@ -900,6 +907,31 @@
     }
 });
   // ========================= Password filed validation Js End ===================
+
+  
+  // ========================= Check if Form input field is not empty Js Start ===================
+  let checkValidityForms = document.querySelectorAll('.checkValidityForm');
+    
+  if(checkValidityForms) {
+      checkValidityForms.forEach(checkValidityForm => {
+          let checkValiditySubmitBtn = checkValidityForm.querySelector('.checkValiditySubmitBtn');
+          
+          function checkFormValidity() {
+              // if (checkValidityForm.checkValidity()) {
+              //     checkValiditySubmitBtn.disabled = false;
+              // } else {
+              //     checkValiditySubmitBtn.disabled = true;
+              // }
+              checkValiditySubmitBtn.disabled = !checkValidityForm.checkValidity();
+          }
+          checkValidityForm.addEventListener("input", checkFormValidity);
+          checkValidityForm.addEventListener("change", checkFormValidity);
+      
+          checkFormValidity();
+      });
+  }
+  // ========================= Check if Form input field is not empty Js End ===================
+
 
   // ========================== Light Dark version js start ==========================
   // $(document).ready(function () {

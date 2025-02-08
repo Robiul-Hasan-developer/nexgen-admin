@@ -248,135 +248,137 @@
                 <div class="tab-content" id="pills-tabThreeContent">
                     <!-- Details Tab start -->
                     <div class="tab-pane active show" id="pills-Details" role="tabpanel" aria-labelledby="pills-Details-tab" tabindex="0">
-                      <div class="row gy-3">
-                        <div class="col-12">
-                          <label for="Typees" class="text-sm form-label">Type </label>
-                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Typees">
-                            <option value="1" selected hidden>Type</option>
-                            <option value="Type 1">Type 1 </option>
-                            <option value="Type 2">Type 2 </option>
-                            <option value="Type 3">Type 3 </option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label for="EventTitle" class="text-sm form-label">Event Title </label>
-                          <input type="text" class="form-control py-6 px-8 radius-6 text-xs" id="EventTitle" placeholder="event Title">
-                        </div>
-                        <div class="col-12">
-                          <label for="DescriptionnnTwo" class="text-sm form-label">Description</label>
-                          <textarea class="form-control min-72-px radius-6" id="DescriptionnnTwo" placeholder="Enter comments"></textarea>
-                        </div>
-                        <div class="col-12">
-                          <div class="row g-3">
-                            <div class="col-sm-4">
-                              <label for="dateTimeOne" class="text-sm form-label">Event Date</label>
-                              <div class="max-w-350-px w-100 position-relative">
-                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeOne" type="text" placeholder="Start Date" readonly="readonly">
-                                  <label for="dateTimeOne" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
-                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
-                                  </label>
+                      <form action="#" class="checkValidityForm">
+                        <div class="row gy-3">
+                          <div class="col-12">
+                            <label for="Typees" class="text-sm form-label">Type </label>
+                            <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Typees" required>
+                              <option value="1" selected hidden>Type</option>
+                              <option value="Type 1">Type 1 </option>
+                              <option value="Type 2">Type 2 </option>
+                              <option value="Type 3">Type 3 </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label for="EventTitle" class="text-sm form-label">Event Title </label>
+                            <input type="text" class="form-control py-6 px-8 radius-6 text-xs" id="EventTitle" placeholder="event Title" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="DescriptionnnTwo" class="text-sm form-label">Description</label>
+                            <textarea class="form-control min-72-px radius-6" id="DescriptionnnTwo" placeholder="Enter comments" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <div class="row g-3">
+                              <div class="col-sm-4">
+                                <label for="dateTimeOne" class="text-sm form-label">Event Date</label>
+                                <div class="max-w-350-px w-100 position-relative">
+                                    <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeOne" type="text" placeholder="Event Date" readonly="readonly" required>
+                                    <label for="dateTimeOne" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                      <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                    </label>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label for="dateTimeTwo" class="text-sm form-label">Start Time</label>
-                              <div class="max-w-350-px w-100 position-relative">
-                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeTwo" type="text" placeholder="Start Date" readonly="readonly">
-                                  <label for="dateTimeTwo" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
-                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
-                                  </label>
+                              <div class="col-sm-4">
+                                <label for="dateTimeTwo" class="text-sm form-label">Start Time</label>
+                                <div class="max-w-350-px w-100 position-relative">
+                                    <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeTwo" type="text" placeholder="Start Date" readonly="readonly" required>
+                                    <label for="dateTimeTwo" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                      <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                    </label>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <label for="dateTimeThree" class="text-sm form-label">End Time</label>
-                              <div class="max-w-350-px w-100 position-relative">
-                                  <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeThree" type="text" placeholder="Start Date" readonly="readonly">
-                                  <label for="dateTimeThree" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
-                                    <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
-                                  </label>
+                              <div class="col-sm-4">
+                                <label for="dateTimeThree" class="text-sm form-label">End Time</label>
+                                <div class="max-w-350-px w-100 position-relative">
+                                    <input class="form-control radius-6 bg-base flatpickr-input active" id="dateTimeThree" type="text" placeholder="End Time" readonly="readonly" required>
+                                    <label for="dateTimeThree" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                                      <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                                    </label>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-12">
-                          <label for="AuthorizedPerson" class="text-sm form-label">Authorized Person </label>
-                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="AuthorizedPerson">
-                            <option value="1" selected>Authorized Person</option>
-                            <option value="Unauthorized Person">Unauthorized Person </option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label for="Locationns" class="text-sm form-label">Location</label>
-                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Locationns">
-                            <option value="1" selected hidden>Event Location</option>
-                            <option value="Calefornia">Calefornia </option>
-                            <option value="Indonesia">Indonesia </option>
-                            <option value="Kuwait">Kuwait </option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label for="workfloww" class="text-sm form-label">Workflow</label>
-                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="workfloww">
-                            <option value="1" selected>Workflow</option>
-                            <option value="Department">Department </option>
-                            <option value="Employee">Employee </option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label for="actionss" class="text-sm form-label">Action</label>
-                          <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="actionss">
-                            <option value="1" selected>Action</option>
-                            <option value="Active">Active </option>
-                            <option value="Inactive">Inactive </option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label class="text-sm form-label">Day/Length</label>
-                          <div class="d-flex align-items-center gap-20">
-                            <div class="d-flex align-items-center gap-6">
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="sunday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="sunday"> S </label>
+                          <div class="col-12">
+                            <label for="AuthorizedPerson" class="text-sm form-label">Authorized Person </label>
+                            <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="AuthorizedPerson" required>
+                              <option value="1" selected>Authorized Person</option>
+                              <option value="Unauthorized Person">Unauthorized Person </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label for="Locationns" class="text-sm form-label">Location</label>
+                            <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="Locationns" required>
+                              <option value="1" selected hidden>Event Location</option>
+                              <option value="Calefornia">Calefornia </option>
+                              <option value="Indonesia">Indonesia </option>
+                              <option value="Kuwait">Kuwait </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label for="workfloww" class="text-sm form-label">Workflow</label>
+                            <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="workfloww" required>
+                              <option value="1" selected>Workflow</option>
+                              <option value="Department">Department </option>
+                              <option value="Employee">Employee </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label for="actionss" class="text-sm form-label">Action</label>
+                            <select class="form-control form-select py-6 px-8 radius-6 text-xs" id="actionss" required>
+                              <option value="1" selected>Action</option>
+                              <option value="Active">Active </option>
+                              <option value="Inactive">Inactive </option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <label class="text-sm form-label">Day/Length</label>
+                            <div class="d-flex align-items-center gap-20">
+                              <div class="d-flex align-items-center gap-6">
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="sunday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="sunday"> S </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="monday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="monday"> M </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="tuesday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="tuesday"> T </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="wednesday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="wednesday"> W </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="thursday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="thursday"> T </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="friday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="friday"> F </label>
+                                </div>
+                                <div class="">
+                                    <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="saturday">
+                                    <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="saturday"> S </label>
+                                </div>
                               </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="monday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="monday"> M </label>
-                              </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="tuesday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="tuesday"> T </label>
-                              </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="wednesday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="wednesday"> W </label>
-                              </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="thursday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="thursday"> T </label>
-                              </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="friday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="friday"> F </label>
-                              </div>
-                              <div class="">
-                                  <input class="form-check-input days-select-input" hidden="" type="checkbox" value="" id="saturday">
-                                  <label class="form-check-label w-16-px h-16-px bg-neutral-200 text-secondary-light-two fw-medium text-xxs rounded-circle d-flex justify-content-center align-items-center" for="saturday"> S </label>
-                              </div>
-                            </div>
-                            <div class="d-flex align-items-center gap-10">
-                              <span class="text-secondary-light-two">Mins</span>
-                              <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
-                              <div class="d-flex flex-column">
-                                <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
-                                <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                              <div class="d-flex align-items-center gap-10">
+                                <span class="text-secondary-light-two">Mins</span>
+                                <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                                <div class="d-flex flex-column">
+                                  <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                  <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                                </div>
                               </div>
                             </div>
                           </div>
+  
                         </div>
-
-                      </div>
-                      <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
-                        <button type="button" class="btn py-6 px-24 btn-primary-600 next-step" id="next-btn1">Next</button>
-                      </div>
+                        <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36 pe-30">
+                          <button type="button" class="btn py-6 px-24 btn-primary-600 next-step checkValiditySubmitBtn" id="next-btn1" disabled>Next</button>
+                        </div>
+                      </form>
                     </div>
                     <!-- Details Tab end -->
           
@@ -1529,14 +1531,14 @@
                             <!-- Item End -->
           
                             <h6 class="mb-8 mt-32 text-md text-primary-light-two fw-semibold">Leave a Comments</h6>
-                            <form action="#">
-                              <textarea class="form-control min-72-px bg-neutral-100" placeholder="Enter comments"></textarea>
+                            <form action="#" class="checkValidityForm">
+                              <textarea class="form-control min-72-px bg-neutral-100" placeholder="Enter comments" required></textarea>
                               <div class="d-flex justify-content-end align-items-center gap-8 mt-12">
                                 <label for="attactchment" class=" w-36-px h-36-px d-flex justify-content-center align-items-center text-md text-purple-600">
                                   <input type="file" id="attactchment" hidden="">
                                   <i class="ri-attachment-line"></i>
                                 </label>
-                                <button type="submit" class="btn btn-primary-600">Post Comments</button>
+                                <button type="submit" class="btn btn-primary-600 checkValiditySubmitBtn" disabled>Post Comments</button>
                               </div>
                             </form>
                         </div>
@@ -1567,26 +1569,26 @@
       </div>
 
       <div class="modal-body p-0">
-        <form action="#" class="">
+        <form action="#" class="checkValidityForm">
           <div class="mb-16">
             <label for="fulllName" class="text-sm form-label">Full Name </label>
-            <input type="text" class="form-control" id="fulllName" placeholder="Full Name">
+            <input type="text" class="form-control" id="fulllName" placeholder="Full Name" required>
           </div>
           <div class="mb-16">
             <label for="companyyName" class="text-sm form-label">Company Name </label>
-            <input type="text" class="form-control" id="companyyName" placeholder="Company Name">
+            <input type="text" class="form-control" id="companyyName" placeholder="Company Name" required>
           </div>
           <div class="mb-16">
             <label for="addEmail" class="text-sm form-label">Email Address </label>
-            <input type="email" class="form-control" id="addEmail" placeholder="Email">
+            <input type="email" class="form-control" id="addEmail" placeholder="Email" required>
             <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="mb-0">
             <label for="Descriptionn" class="text-sm form-label">Description</label>
-            <textarea class="form-control min-h-72-px" id="Descriptionn" placeholder="Description"></textarea>
+            <textarea class="form-control min-h-72-px" id="Descriptionn" placeholder="Description" required></textarea>
           </div>
           <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-30">
-              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addGuest">Save </button>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
             </div>
         </form>
       </div>
@@ -1652,15 +1654,15 @@
         </button>
       </div>
 
-      <div class="modal-body p-0">
+      <form action="#" class="modal-body p-0 checkValidityForm">
         <div class="row gy-3">
           <div class="col-12">
             <label for="DetauksTitle" class="text-sm form-label">Title </label>
-            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="DetauksTitle" placeholder="Welcome and Opening Remarks (20 minutes)" value="Welcome and Opening Remarks (20 minutes)">
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="DetauksTitle" placeholder="Welcome and Opening Remarks (20 minutes)" value="Welcome and Opening Remarks (20 minutes)" required>
           </div>
           <div class="col-12">
             <label for="NotesHere" class="text-sm form-label">Notes</label>
-            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="NotesHere" placeholder="Notes">
+            <input type="text" class="form-control bg-transparent py-6 px-8 radius-6 text-xs" id="NotesHere" placeholder="Notes" required>
           </div>
           <div class="col-12">
             <label for="workflowwThree" class="text-sm form-label">Workflow</label>
@@ -1810,9 +1812,9 @@
 
         <div class="border-0 d-flex align-items-center gap-1 flex-wrap justify-content-end mt-36">
           <button type="button" class="btn py-6 px-24 btn-danger-600" data-bs-dismiss="modal" aria-label="Close">Delete</button>
-          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-dismiss="modal" aria-label="Close">Save</button>
+          <button type="button" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
@@ -1844,7 +1846,7 @@
           </div>
           <div class="col-12">
             <label for="workflowwThreeFour" class="text-sm form-label">Workflow</label>
-            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="workflowwThreeFour">
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="workflowwThreeFour" required>
               <option value="1" selected="">Workflow</option>
               <option value="Department">Department </option>
               <option value="Employee">Employee </option>
@@ -1852,7 +1854,7 @@
           </div>
           <div class="col-12">
             <label for="actionssThreeFour" class="text-sm form-label">Action</label>
-            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="actionssThreeFour">
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="actionssThreeFour" required>
               <option value="1" selected="">Action</option>
               <option value="Active">Active </option>
               <option value="Inactive">Inactive </option>
@@ -1860,7 +1862,7 @@
           </div>
           <div class="col-12">
             <label for="PriorityThreeFour" class="text-sm form-label">Priority</label>
-            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="PriorityThreeFour">
+            <select class="form-control bg-transparent form-select py-6 px-8 radius-6 text-xs" id="PriorityThreeFour" required>
               <option value="1" selected>Priority</option>
               <option value="Hight">Hight </option>
               <option value="Medium">Medium </option>
@@ -1869,7 +1871,7 @@
           </div>
           <div class="col-sm-12">
             <label for="MetaDataFour" class="text-sm form-label">Meta Data</label>
-            <select class="form-control bg-transparent form-select py-6 meta-tags w-100" multiple="multiple" id="MetaDataFour">
+            <select class="form-control bg-transparent form-select py-6 meta-tags w-100" multiple="multiple" id="MetaDataFour" required>
               <option selected>UI/UX</option>
               <option>Figma</option>
               <option>Javascript</option>

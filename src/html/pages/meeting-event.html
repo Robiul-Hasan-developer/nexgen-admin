@@ -779,18 +779,18 @@
         </div>
   
         <div class="modal-body p-0">
-            <form action="#">
+            <form action="#" class="checkValidityForm">
                 <div class="d-flex flex-column gap-20">
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="EventName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Event Name<span class="text-danger-600">*</span>: </label>
                     <div class="flex-grow-1">
-                      <input type="text" class="form-control validation-input py-9 px-20" id="EventName" placeholder="Enter Department " required="">
+                      <input type="text" class="form-control validation-input py-9 px-20" id="EventName" placeholder="Enter Department " required>
                       <div class="invalid-feedback">Please Enter Event Name</div>
                     </div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="DepartmentHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department: </label>
-                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="DepartmentHere">
+                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="DepartmentHere" required>
                       <option value="Main Department" selected="" hidden="">Department</option>
                       <option value="1">Operation</option>
                       <option value="2">Admin</option>
@@ -799,7 +799,7 @@
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="UserHereNumberOne" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">User:</label>
-                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="UserHereNumberOne">
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="UserHereNumberOne" required>
                       <option selected>Operation</option>
                       <option value="1">Client</option>
                       <option value="2">Admin</option>
@@ -809,7 +809,7 @@
                   
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="UserHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Location: </label>
-                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="UserHere">
+                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="UserHere" required>
                       <option value="User" selected="" hidden="">Location</option>
                       <option value="1">Kuwait</option>
                       <option value="1">England</option>
@@ -870,9 +870,9 @@
                 <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-40 flex-wrap">
                     <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
                         <label class="form-check-label text-primary-light text-sm" for="Statusses">Status</label>
-                        <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="Statusses">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="Statusses" required>
                     </div>
-                    <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addMeetingEvent">Save</button>
+                    <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save</button>
                 </div>
             </form>
         </div>
@@ -896,7 +896,7 @@
         </div>
   
         <div class="modal-body p-0">
-          <form action="#">
+          <form action="#" class="checkValidityForm">
             <div class="mt-84-px mb-100-px">
               <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                 <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
@@ -915,7 +915,7 @@
               </div>
             </div>  
             <div class="text-end">
-              <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+              <button type="submit" class="btn py-8 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Submit </button>
             </div>
           </form>
         </div>

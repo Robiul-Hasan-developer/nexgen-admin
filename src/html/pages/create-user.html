@@ -696,6 +696,127 @@
   @@include('../layouts/_footer.html')
 </main>
 
+<!-- view User start -->
+<div class="modal fade" id="viewUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewUserLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered max-w-1472-px">
+    <div class="modal-content py-44 px-res-100-px radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="viewUserLabel">View User</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">View</span>
+        </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
+
+      <div class="modal-body p-0">
+        <form action="#" class="validation-form">
+          <div class="row gy-4 gx-100">
+            <!-- Top Content -->
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="viewFullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control validation-input py-12 px-20" id="viewFullName" placeholder="Full Name" value="Abdullah Fahad Al Mutairi" required>
+              </div>
+              <div class="mb-32 position-relative">
+                <label for="viewemail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
+                <input type="email" class="form-control validation-input py-12 px-20" id="viewemail" placeholder="Enter Email" value="Abdullah@Hayatbank.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <div class="position-relative validation">
+                    <label for="viewPassword" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPassword" placeholder="Enter Password" value="Abdull123" required>
+                      <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                    </div>
+                    <div class="text-danger password-error"></div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="position-relative validation">
+                    <label for="viewConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
+                      <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                    </div>
+                    <div class="text-danger password-error"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="viewDepartment" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="viewDepartment">
+                  <option value="Operations">Operations</option>
+                  <option value="English">Operation</option>
+                  <option value="Bangla">Admin</option>
+                </select>
+              </div>
+              <div class="mb-32 position-relative">
+                <label for="viewRole" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="viewRole">
+                  <option value="Operations">Operations</option>
+                  <option value="User">User</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+              <div class="position-relative">
+                <label for="viewphone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
+                <input type="number" class="form-control validation-input py-12 px-20" id="viewphone" placeholder="Enter phone" value="99999909" required>
+              </div>
+            </div>
+            <!-- Top Content -->
+          </div>
+
+          <div class="mt-48">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="viewwindowsUser" checked>
+              <label class="form-check-label text-primary-light text-sm fw-semibold" for="viewwindowsUser">Windows User (SSO)</label>
+            </div>
+            <div class="row gy-4 gx-100">
+              <div class="col-sm-6">
+                <div class="mb-32 position-relative">
+                  <label for="viewUsername" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="viewUsername" placeholder="Username" value="ALJAMLI" required>
+                </div>
+                <div class="position-relative">
+                  <label for="viewPasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative">
+                    <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPasswordTwo" placeholder="Enter Password" value="270" required>
+                    <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                  </div>
+                  <div class="text-danger password-error"></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="mb-32 position-relative">
+                  <label for="viewDomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="viewDomainComputer" placeholder="Domain/Computer Name" value="Abdullah" required>
+                </div>
+                <div class="position-relative">
+                  <label for="viewDomainVault" class="text-sm form-label">Domain Vault <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="viewDomainVault" placeholder="Enter Domain Vault" value=".com" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
+            <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+              <label class="form-check-label text-primary-light text-sm" for="viewUserStatus">User Status</label>
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="viewUserStatus">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- view User End -->
+
 <!-- add User start -->
 <div class="modal fade" id="addUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered max-w-1472-px">
@@ -711,7 +832,7 @@
       </div>
 
       <div class="modal-body p-0">
-        <form action="#">
+        <form action="#" class="checkValidityForm">
           <div class="row gy-4 gx-100">
             <!-- Top Content -->
             <div class="col-md-6">
@@ -810,9 +931,9 @@
           <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
             <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
               <label class="form-check-label text-primary-light text-sm" for="UserStatus">User Status</label>
-              <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="UserStatus" required>
             </div>
-            <button type="submit" class="btn py-6 px-24 btn-primary-600">Save </button>
+            <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
           </div>
         </form>
       </div>
@@ -821,244 +942,110 @@
 </div>
 <!-- add User End -->
 
-<!-- view User start -->
-<div class="modal fade" id="viewUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewUserLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered max-w-1472-px">
-      <div class="modal-content py-44 px-res-100-px radius-16">
-        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
-          <div class="d-flex align-items-center gap-18">
-            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="viewUserLabel">View User</h6>
-            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">View</span>
-          </div>
-          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
-            <i class="ri-close-fill d-flex line-height-1"></i>
-          </button>
-        </div>
-  
-        <div class="modal-body p-0">
-          <form action="#" class="validation-form">
-            <div class="row gy-4 gx-100">
-              <!-- Top Content -->
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="viewFullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
-                  <input type="text" class="form-control validation-input py-12 px-20" id="viewFullName" placeholder="Full Name" value="Abdullah Fahad Al Mutairi" required>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="viewemail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-                  <input type="email" class="form-control validation-input py-12 px-20" id="viewemail" placeholder="Enter Email" value="Abdullah@Hayatbank.com" required>
-                  <div class="invalid-feedback">Please enter a valid email address.</div>
-                </div>
-                <div class="row g-4">
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="viewPassword" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPassword" placeholder="Enter Password" value="Abdull123" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="text-danger password-error"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="viewConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="text-danger password-error"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="viewDepartment" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="viewDepartment">
-                    <option value="Operations">Operations</option>
-                    <option value="English">Operation</option>
-                    <option value="Bangla">Admin</option>
-                  </select>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="viewRole" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="viewRole">
-                    <option value="Operations">Operations</option>
-                    <option value="User">User</option>
-                    <option value="Admin">Admin</option>
-                  </select>
-                </div>
-                <div class="position-relative">
-                  <label for="viewphone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
-                  <input type="number" class="form-control validation-input py-12 px-20" id="viewphone" placeholder="Enter phone" value="99999909" required>
-                </div>
-              </div>
-              <!-- Top Content -->
-            </div>
-
-            <div class="mt-48">
-              <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="viewwindowsUser" checked>
-                <label class="form-check-label text-primary-light text-sm fw-semibold" for="viewwindowsUser">Windows User (SSO)</label>
-              </div>
-              <div class="row gy-4 gx-100">
-                <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="viewUsername" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="viewUsername" placeholder="Username" value="ALJAMLI" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="viewPasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
-                    <div class="position-relative">
-                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="viewPasswordTwo" placeholder="Enter Password" value="270" required>
-                      <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                    </div>
-                  <div class="text-danger password-error"></div>
-                </div>
-              </div>
-                <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="viewDomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="viewDomainComputer" placeholder="Domain/Computer Name" value="Abdullah" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="viewDomainVault" class="text-sm form-label">Domain Vault <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="viewDomainVault" placeholder="Enter Domain Vault" value=".com" required>
-                  </div>
-                </div>
-            </div>
-            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
-              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="viewUserStatus">User Status</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="viewUserStatus">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-</div>
-<!-- view User End -->
-
 <!-- edit User start -->
 <div class="modal fade" id="editUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editUserLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered max-w-1472-px">
-      <div class="modal-content py-44 px-res-100-px radius-16">
-        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
-          <div class="d-flex align-items-center gap-18">
-            <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="editUserLabel">Edit User</h6>
-            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
-          </div>
-          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
-            <i class="ri-close-fill d-flex line-height-1"></i>
-          </button>
+  <div class="modal-dialog modal-dialog-centered max-w-1472-px">
+    <div class="modal-content py-44 px-res-100-px radius-16">
+      <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+        <div class="d-flex align-items-center gap-18">
+          <h6 class="modal-title text-xl fw-semibold line-clamp-1" id="editUserLabel">Edit User</h6>
+          <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Edit</span>
         </div>
-  
-        <div class="modal-body p-0">
-          <form action="#">
-            <div class="row gy-4 gx-100">
-              <!-- Top Content -->
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="editFullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
-                  <input type="text" class="form-control validation-input py-12 px-20" id="editFullName" placeholder="Full Name" value="Abdullah Fahad Al Mutairi" required>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="editemail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-                  <input type="email" class="form-control validation-input py-12 px-20" id="editemail" placeholder="Enter Email" value="Abdullah@Hayatbank.com" required>
-                  <div class="invalid-feedback">Please enter a valid email address.</div>
-                </div>
-                <div class="row g-4">
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="editPassword" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPassword" placeholder="Enter Password" value="Abdull123" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="text-danger password-error"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="position-relative validation">
-                      <label for="editConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
-                      <div class="position-relative">
-                        <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
-                        <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
-                      </div>
-                      <div class="text-danger password-error"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-32 position-relative">
-                  <label for="editDepartment" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="editDepartment">
-                    <option value="Operations">Operations</option>
-                    <option value="English">Operation</option>
-                    <option value="Bangla">Admin</option>
-                  </select>
-                </div>
-                <div class="mb-32 position-relative">
-                  <label for="editRole" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
-                  <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="editRole">
-                    <option value="Operations">Operations</option>
-                    <option value="User">User</option>
-                    <option value="Admin">Admin</option>
-                  </select>
-                </div>
-                <div class="position-relative">
-                  <label for="editphone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
-                  <input type="number" class="form-control validation-input py-12 px-20" id="editphone" placeholder="Enter phone" value="99999909" required>
-                </div>
-              </div>
-              <!-- Top Content -->
-            </div>
+        <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+          <i class="ri-close-fill d-flex line-height-1"></i>
+        </button>
+      </div>
 
-            <div class="mt-48">
-              <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="editwindowsUser" checked>
-                <label class="form-check-label text-primary-light text-sm fw-semibold" for="editwindowsUser">Windows User (SSO)</label>
+      <div class="modal-body p-0">
+        <form action="#" class="checkValidityForm">
+          <div class="row gy-4 gx-100">
+            <!-- Top Content -->
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="editFullName" class="text-sm form-label">Full Name <span class="text-danger-600">*</span> </label>
+                <input type="text" class="form-control validation-input py-12 px-20" id="editFullName" placeholder="Full Name" value="Abdullah Fahad Al Mutairi" required>
               </div>
-              <div class="row gy-4 gx-100">
+              <div class="mb-32 position-relative">
+                <label for="editemail" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
+                <input type="email" class="form-control validation-input py-12 px-20" id="editemail" placeholder="Enter Email" value="Abdullah@Hayatbank.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="row g-4">
                 <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="editUsername" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="editUsername" placeholder="Username" value="ALJAMLI" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="editPasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative validation">
+                    <label for="editPassword" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
                     <div class="position-relative">
-                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPasswordTwo" placeholder="Enter Password" value="270" required>
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPassword" placeholder="Enter Password" value="Abdull123" required>
                       <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
                     </div>
-                  <div class="text-danger password-error"></div>
+                    <div class="text-danger password-error"></div>
+                  </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="mb-32 position-relative">
-                    <label for="editDomainComputer" class="text-sm form-label">Domain/Computer <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="editDomainComputer" placeholder="Domain/Computer Name" value="Abdullah" required>
-                  </div>
-                  <div class="position-relative">
-                    <label for="editDomainVault" class="text-sm form-label">Domain Vault <span class="text-danger-600">*</span> </label>
-                    <input type="text" class="form-control validation-input py-12 px-20" id="editDomainVault" placeholder="Enter Domain Vault" value=".com" required>
+                  <div class="position-relative validation">
+                    <label for="editConfirmPassword" class="text-sm form-label">Confirm Password <span class="text-danger-600">*</span> </label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editConfirmPassword" placeholder="Enter Confirm Password" value="Abdull123" required>
+                      <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                    </div>
+                    <div class="text-danger password-error"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
-              <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="editUserStatus">User Status</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="editUserStatus">
+            <div class="col-md-6">
+              <div class="mb-32 position-relative">
+                <label for="editDepartment" class="text-sm form-label">Department <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="editDepartment" required>
+                  <option value="Operations">Operations</option>
+                  <option value="English">Operation</option>
+                  <option value="Bangla">Admin</option>
+                </select>
               </div>
-              <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#editUser">Save </button>
+              <div class="mb-32 position-relative">
+                <label for="editRole" class="text-sm form-label">Role <span class="text-danger-600">*</span> </label>
+                <select class="form-control validation-input py-12 px-20 form-select text-neutral-500" id="editRole" required>
+                  <option value="Operations">Operations</option>
+                  <option value="User">User</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+              <div class="position-relative">
+                <label for="editphone" class="text-sm form-label">Phone <span class="text-danger-600">*</span> </label>
+                <input type="number" class="form-control validation-input py-12 px-20" id="editphone" placeholder="Enter phone" value="99999909" required>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+
+          <div class="mt-48">
+            <div class="form-check ps-0 d-flex align-items-center gap-6 mb-24">
+              <input class="form-check-input float-none mt-0 ms-0 shadow-none border bg-main border-neutral-300" type="checkbox" id="editwindowsUser" checked>
+              <label class="form-check-label text-primary-light text-sm fw-semibold" for="editwindowsUser">Windows User (SSO)</label>
+            </div>
+            <div class="row gy-4 gx-100">
+              <div class="col-sm-6">
+                <div class="mb-32 position-relative">
+                  <label for="editUsername" class="text-sm form-label">Username <span class="text-danger-600">*</span> </label>
+                  <input type="text" class="form-control validation-input py-12 px-20" id="editUsername" placeholder="Username" value="ALJAMLI" required>
+                </div>
+                <div class="position-relative">
+                  <label for="editPasswordTwo" class="text-sm form-label">Password <span class="text-danger-600">*</span> </label>
+                  <div class="position-relative">
+                    <input type="password" class="form-control validation-input py-12 px-20 password-field pe-32" id="editPasswordTwo" placeholder="Enter Password" value="270" required>
+                    <span class="toggle-icon position-absolute top-50 translate-middle-y end-0 text-secondary-light-two me-32 cursor-pointer text-md ri-eye-off-line"></span>
+                  </div>
+                  <div class="text-danger password-error"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-60">
+            <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled >Save</button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </div>
 <!-- edit User End -->
 
@@ -1077,7 +1064,7 @@
       </div>
 
       <div class="modal-body p-0">
-        <form action="#">
+        <form action="#" class="checkValidityForm">
           <div class="mt-84-px mb-100-px">
             <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
               <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
@@ -1096,7 +1083,7 @@
             </div>
           </div>  
           <div class="text-end">
-            <button type="submit" class="btn py-8 px-24 btn-primary-600">Submit </button>
+            <button type="submit" class="btn py-8 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Submit </button>
           </div>
         </form>
       </div>

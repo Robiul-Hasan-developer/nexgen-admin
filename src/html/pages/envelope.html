@@ -1270,7 +1270,7 @@
       </div>
 
       <div class="modal-body p-0">
-        <form action="#">
+        <form action="#" class="checkValidityForm">
           <div class="mt-84-px mb-100-px">
             <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
               <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
@@ -1289,7 +1289,7 @@
             </div>
           </div>  
           <div class="text-end">
-            <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+            <button type="submit" class="btn py-8 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Submit </button>
           </div>
         </form>
       </div>
@@ -1892,11 +1892,11 @@
         </button>
       </div>
 
-      <div class="modal-body p-0">
+      <form action="#" class="modal-body p-0 checkValidityForm">
         <div class="">
           <div class="mb-12 position-relative">
             <label for="Name" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
-            <input type="text" class="form-control recipient-input" id="Name" placeholder="Name">
+            <input type="text" class="form-control recipient-input" id="Name" placeholder="Name" required>
 
             <!-- Suggested Recipient dropdown start -->
             <ul class="recipient-dropdown max-h-258-px overflow-y-auto scroll-sm shadow-3 radius-8 d-flex flex-column overflow-hidden position-absolute top-100 start-0 w-100 bg-white z-1">
@@ -1929,7 +1929,7 @@
           </div>
           <div class="mb-12">
             <label for="Email" class="text-sm form-label">Email <span class="text-danger-600">*</span> </label>
-            <input type="email" class="form-control" id="Email" placeholder="Email">
+            <input type="email" class="form-control" id="Email" placeholder="Email" required>
             <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
 
@@ -1937,10 +1937,10 @@
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
                 <label class="form-check-label text-primary-light text-sm" for="Passcode">Passcode</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" checked>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Passcode" checked required>
               </div>
               <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code ">
+                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Access Code" required>
                 <div class="custom-tooltip position-relative">
                   <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
@@ -1967,10 +1967,10 @@
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
                 <label class="form-check-label text-primary-light text-sm" for="Authenticationn">Authentication </label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authenticationn" checked>
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Authenticationn" checked required>
               </div>
               <div class="d-flex align-items-center gap-16">
-                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP ">
+                <input type="text" class="max-w-146-px w-100 form-control px-12 py-1 placeholder-12" placeholder="Email & Mobile OTP" required>
                   <div class="custom-tooltip position-relative">
                   <button type="button" class="text-md d-flex text-primary-600">
                     <i class="ri-error-warning-line"></i>
@@ -1997,7 +1997,7 @@
             <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
               <div class="max-w-152-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
                 <label class="form-check-label text-primary-light text-sm" for="Expiryyy">Expiry</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiryyy">
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="Expiryyy" required>
               </div>
               <div class="d-flex align-items-center gap-16">
                 <div class="input-group max-w-146-px w-100">
@@ -2065,12 +2065,11 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
-        <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-toggle="modal" data-bs-target="#createDocument">Cancel</button>
-        <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">Save </button>
-      </div>
+        <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-36">
+          <button type="button" class="btn py-6 px-24 btn-neutral-50 text-primary-light" data-bs-toggle="modal" data-bs-target="#createDocument">Cancel</button>
+          <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -2289,16 +2288,16 @@
         </button>
       </div>
 
-      <div class="modal-body p-0">
+      <form action="#" class="modal-body p-0 checkValidityForm">
         <label for="englishArabic" class="text-sm form-label">
           <span class="fw-bold text-primary-600">English</span> / Arabic <span class="text-danger-600">*</span> 
         </label>
-        <textarea class="form-control h-102-px" id="englishArabic" placeholder="Discount Alert"></textarea>
-      </div>
+        <textarea class="form-control h-102-px" id="englishArabic" placeholder="Discount Alert" required></textarea>
+        <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
+          <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
+        </div>
+      </form>
 
-      <div class="border-0 d-flex align-items-center gap-1 justify-content-end mt-24">
-        <button type="button" class="btn py-6 px-24 btn-primary-600">Save </button>
-      </div>
     </div>
   </div>
 </div>

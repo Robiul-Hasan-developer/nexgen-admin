@@ -66,14 +66,6 @@
                     </span>
                   </a>
                 </li>
-                <li class="">
-                  <button type="button" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100 see-more-btn">
-                    <span class="d-flex align-items-center gap-16">
-                      <span class="arrow line-height-1 d-flex text-sm fw-bold"><i class="ri-arrow-down-s-line"></i></span>
-                      <span class="text fw-normal line-height-1">More</span>
-                    </span>
-                  </button>
-                </li>
               </ul>
               <ul class="d-flex flex-column gap-10 mt-12 see-more-list d-none">
                 <li class="">
@@ -127,8 +119,16 @@
                   </a>
                 </li>
               </ul>
+              <div class="mt-10">
+                <button type="button" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100 see-more-btn">
+                  <span class="d-flex align-items-center gap-16">
+                    <span class="arrow line-height-1 d-flex text-sm fw-bold"><i class="ri-arrow-down-s-line"></i></span>
+                    <span class="text fw-normal line-height-1">More</span>
+                  </span>
+                </button>
+              </div>
+              
               <span class="d-block text-sm text-uppercase text-secondary-light-two font-ubuntu fw-semibold mt-20 mb-14">Labels</span>
-  
               <ul class="d-flex flex-column gap-10">
                 <li class="">
                   <a href="javascript:void(0)" class="d-flex align-items-center gap-16 justify-content-between text-secondary-light-two fw-medium py-4 hover-fw-medium text-hover-primary-600 w-100">
@@ -366,6 +366,12 @@
           </div>
             <!-- Action Menu End -->
 
+            <!-- Selected Checkbox Count Start -->
+            <div class="selected-checkbox py-16 text-center">
+              <div class="text-secondary-light">All <strong class="selected-checkbox__text">50</strong> conversations on this page are selected. </div>
+            </div>
+            <!-- Selected Checkbox Count End -->
+
             <!-- Email List Start -->
             <div class="py-16 px-24 bg-white">
               <ul class="nav bordered-tab nav-pills border-bottom border-dashed border-neutral-200" id="pills-tabThree" role="tablist">
@@ -394,7 +400,7 @@
                 <div class="tab-pane fade show active" id="pills-primary" role="tabpanel" aria-labelledby="pills-primary-tab" tabindex="0">
                   <div class="max-h-620-px overflow-y-auto scroll-sm pe-4">
 
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto email-item-wrapper">
                       <!-- Email Item -->
                       <div class="email-item px-20 bg-white py-16 d-flex align-items-center group-item position-relative delete-item">
                         <span class="six-dots position-absolute start-0 top-50 translate-middle-y ms-6 line-height-1 d-flex group-hover-item-block d-none">
@@ -1479,6 +1485,28 @@
 <!-- Label Modal end -->
 
 @@include('../partial-html/_template-bottom.html')
+
+<script>
+    // ========================== Selected Checkbox count amount js STart ====================
+    $('.email-item-wrapper .form-check-input').on('change', function () {
+      // Get the number of selected checkboxes
+      let selectedCount = $('.email-item-wrapper .form-check-input:checked').length;
+
+      $('.selected-checkbox').removeClass('d-none')
+      if(selectedCount > 0) {
+        $('.selected-checkbox__text').text(selectedCount);
+      } else {
+        $('.selected-checkbox').addClass('d-none')
+      }
+
+      // Remove selected amount box and uncheck the checked input filed
+      $('.selected-checkbox__close').on('click', function () {
+        $('.selected-checkbox').addClass('d-none');
+        $('.email-item-wrapper .form--check .form-check-input').prop('checked', false); 
+      }); 
+    });
+    // ========================== Selected Checkbox count amount js End ====================
+</script>
 
 </body>
 </html>

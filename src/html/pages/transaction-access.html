@@ -688,12 +688,12 @@
         </div>
   
         <div class="modal-body p-0">
-          <form action="#">
+          <form action="#" class="checkValidityForm">
             <div class="row gy-4">
                 <div class="col-sm-6">
                     <div class="mb-32 position-relative">
                         <label for="RoleRights" class="text-sm form-label">Role Rights <span class="text-danger-600">*</span> </label>
-                        <select class="form-control py-12 px-20 form-select text-neutral-500" id="RoleRights">
+                        <select class="form-control py-12 px-20 form-select text-neutral-500" id="RoleRights" required>
                           <option value="select" selected hidden class="text-danger">Select Role Rights*</option>
                           <option value="Admin">Admin</option>
                           <option value="User">User</option>
@@ -901,7 +901,7 @@
             <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-28 flex-wrap">
                 <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
                     <label class="form-check-label text-primary-light text-sm" for="UserStatus2">Status</label>
-                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="UserStatus2">
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="UserStatus2" required>
                 </div>
                 <div class="d-flex align-items-center gap-24 flex-sm-nowrap flex-wrap">
                     <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 flex-shrink-0">
@@ -909,15 +909,15 @@
                         <label class="form-check-label text-primary-light-two text-xs" for="Selectall">Select all</label>
                     </div>
                     <div class="form-check ps-0 d-flex align-items-center gap-6 mb-0 flex-shrink-0">
-                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border radius-6 w-22-px h-22-px bg-main" type="checkbox" id="CopyRole">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none border radius-6 w-22-px h-22-px bg-main" type="checkbox" id="CopyRole" required>
                         <label class="form-check-label text-primary-light-two text-xs" for="CopyRole">Copy Role</label>
                     </div>
-                    <select class="form-select form-control py-6">
+                    <select class="form-select form-control py-6" required>
                         <option selected hidden>Select Role</option>
                         <option value="Admin">Admin</option>
                         <option value="User">User</option>
                     </select>
-                    <button type="submit" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addAccess">Save </button>
+                    <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
                 </div>
             </div>
           </form>

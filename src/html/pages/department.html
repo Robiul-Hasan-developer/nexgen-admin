@@ -698,11 +698,11 @@
         </div>
   
         <div class="modal-body p-0">
-          <form action="#">
+          <form action="#" class="checkValidityForm">
             <div>
               <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                 <label for="HeadDepartment" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Head Department <span class="text-danger-600">*</span> </label>
-                <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="HeadDepartment">
+                <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="HeadDepartment" required>
                   <option value="Main Department" selected hidden>Main Department</option>
                   <option value="1">Operation</option>
                   <option value="2">Crime</option>
@@ -712,7 +712,7 @@
               <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column mt-20">
                 <label for="DepartmentName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department Name <span class="text-danger-600">*</span> </label>
                 <div class="flex-grow-1">
-                  <input type="text" class="form-control validation-input py-9 px-20" id="DepartmentName" placeholder="Enter Department " required>
+                  <input type="text" class="form-control validation-input py-9 px-20" id="DepartmentName" placeholder="Enter Department" required>
                   <div class="invalid-feedback">Please enter Department Name</div>
                 </div>
               </div>
@@ -721,9 +721,9 @@
             <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-28">
               <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
                 <label class="form-check-label text-primary-light text-sm" for="addUserStatus2">Status</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="addUserStatus2">
+                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="addUserStatus2" required>
               </div>
-              <button type="submit" class="btn py-6 px-24 btn-primary-600">Save </button>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
             </div>
           </form>
         </div>
@@ -840,7 +840,7 @@
       </div>
 
       <div class="modal-body p-0">
-        <form action="#">
+        <form action="#" class="checkValidityForm">
           <div class="mt-84-px mb-100-px">
             <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
               <label for="fileInput" class="text-primary-light text-md flex-shrink-0 max-w-105-px w-100">File Input</label>
@@ -859,7 +859,7 @@
             </div>
           </div>  
           <div class="text-end">
-            <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+            <button type="submit" class="btn py-8 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Submit </button>
           </div>
         </form>
       </div>

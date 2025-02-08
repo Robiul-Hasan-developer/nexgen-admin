@@ -778,20 +778,25 @@
         </div>
   
         <div class="modal-body p-0">
-            <form action="#">
+            <form action="#" class="checkValidityForm">
                 <div class="d-flex flex-column gap-20">
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="LocationName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Location Name<span class="text-danger-600">*</span>: </label>
                     <div class="flex-grow-1">
-                      <input type="text" class="form-control validation-input py-9 px-20" id="LocationName" placeholder="Location Name" required="">
+                      <input type="text" class="form-control validation-input py-9 px-20" id="LocationName" placeholder="Location Name" required>
                       <div class="invalid-feedback">Please Enter Location Name</div>
                     </div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="DepartmentHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department</label>
-                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="DepartmentHere">
-                        <option selected value="Operation">Operation</option>
+                    <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="DepartmentHere" required>
                         <option selected value="Admin">Admin</option>
+                        <option selected value="Finance">Finance</option>
+                        <option selected value="Human Resources">Human Resources</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Operations">Operations</option>
+                        <option value="Customer Support">Customer Support</option>
                     </select>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
@@ -834,9 +839,9 @@
                 <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-40 flex-wrap">
                     <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
                         <label class="form-check-label text-primary-light text-sm" for="Statusses">Status</label>
-                        <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="Statusses">
+                        <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="Statusses" required>
                     </div>
-                    <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addLocation">Save</button>
+                    <button type="button" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save</button>
                 </div>
             </form>
         </div>
@@ -860,18 +865,18 @@
         </div>
   
         <div class="modal-body p-0">
-            <form action="#">
+            <form action="#" class="checkValidityForm">
                 <div class="d-flex flex-column gap-20">
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="editLocationName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Location Name<span class="text-danger-600">*</span>: </label>
                     <div class="flex-grow-1">
-                      <input type="text" class="form-control validation-input py-9 px-20" id="editLocationName" placeholder="Location Name" required="">
+                      <input type="text" class="form-control validation-input py-9 px-20" id="editLocationName" placeholder="Location Name" required>
                       <div class="invalid-feedback">Please Enter Location Name</div>
                     </div>
                   </div>
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="editDepartmentHere" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Department <span class="text-danger-600">*</span>: </label>
-                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="editDepartmentHere">
+                    <select class="form-control validation-input form-select flex-grow-1 text-neutral-400 py-9 px-20" id="editDepartmentHere" required>
                       <option value="Main Department" selected="" hidden>Department</option>
                       <option value="1">Operation</option>
                       <option value="2">Admin</option>
@@ -920,7 +925,7 @@
                         <label class="form-check-label text-primary-light text-sm" for="editStatusses">Status</label>
                         <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="editStatusses">
                     </div>
-                    <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#editLocation">Save</button>
+                    <button type="button" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save</button>
                 </div>
             </form>
         </div>
@@ -949,7 +954,7 @@
                   <div class="d-flex align-items-sm-center gap-12 flex-sm-row flex-column">
                     <label for="viewLocationName" class="text-primary-light text-xs flex-shrink-0 max-w-124-px w-100">Location Name<span class="text-danger-600">*</span>: </label>
                     <div class="flex-grow-1">
-                      <input type="text" class="form-control validation-input py-9 px-20" id="viewLocationName" placeholder="Location Name" required="">
+                      <input type="text" class="form-control validation-input py-9 px-20" id="viewLocationName" placeholder="Location Name" required>
                       <div class="invalid-feedback">Please Enter Location Name</div>
                     </div>
                   </div>
@@ -1046,7 +1051,7 @@
               </div>
             </div>  
             <div class="text-end">
-              <button type="submit" class="btn py-8 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#addDepartment">Submit </button>
+              <button type="submit" class="btn py-8 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Submit </button>
             </div>
           </form>
         </div>

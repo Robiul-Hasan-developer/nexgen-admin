@@ -48,22 +48,21 @@
   });
   // *************************** Select2 js End here ***************************   
   
-  
   // *************************** Sub Point js Start here ***************************   
   document.querySelectorAll('.add-subpoint-btn').forEach((button) => {
     button.addEventListener('click', function () {
       // Find the closest section containing this button
       const subPointsContainer = this.closest('.col-12').querySelector('.bg-white .row');
-  
+
       if (subPointsContainer) {
         const subPointTemplate = subPointsContainer.querySelector('.col-12');
-  
+
         if (subPointTemplate) {
           const clonedSubPoint = subPointTemplate.cloneNode(true);
-  
+
           // Find the paragraph inside the cloned subpoint and replace it with an editable input
           let paragraph = clonedSubPoint.querySelector('p');
-  
+
           if (paragraph) {
             const input = document.createElement('input');
             input.type = 'text';
@@ -72,14 +71,24 @@
             
             paragraph.replaceWith(input);
           }
-  
+
+          // Append the cloned subpoint
           subPointsContainer.appendChild(clonedSubPoint);
         }
       }
     });
   });
-  // *************************** Sub Point js End here ***************************   
 
+  // *************************** Delete Sub Point Start here ***************************   
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('.delete-button')) {
+      const subPointItem = event.target.closest('.col-12'); // Get the parent .col-12
+      if (subPointItem) {
+        subPointItem.remove(); // Remove the entire col-12 element
+      }
+    }
+  });
+  // *************************** Delete Sub Point End here ***************************  
   
   // *************************** Bootstrap Tab Next Previous js start ***************************   
   function showTab(index) {
@@ -114,7 +123,6 @@
   // $("#next-btn5").click(function () {
   //   $('#pills-tabThree li:nth-child(6) a').tab('show');
   // });
-
 
   // $("#prev-btn1").click(function () {
   //   $('#pills-tabThree li:nth-child(1) a').tab('show');

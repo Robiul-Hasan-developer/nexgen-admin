@@ -620,29 +620,29 @@
           </button>
         </div>
   
-        <div class="modal-body p-0">
+        <form action="#" class="modal-body p-0 checkValidityForm">
             <div class="">
                 <div class="mb-12 position-relative">
                   <label for="NameAdd" class="text-sm form-label">Name <span class="text-danger-600">*</span> </label>
-                  <input type="text" class="form-control" id="NameAdd" placeholder="Name">
+                  <input type="text" class="form-control" id="NameAdd" placeholder="Name" required>
                 </div>
                 <div class="mb-12">
                   <label for="descAdd" class="text-sm form-label">Description  <span class="text-danger-600">*</span> </label>
                   <div class="position-relative">
-                      <textarea id="descAdd" class="max-desc form-control min-h-215-px pe-56" placeholder="Max 1000 Characters "></textarea>
+                      <textarea id="descAdd" class="max-desc form-control min-h-215-px pe-56" placeholder="Max 1000 Characters" required></textarea>
                       <span class="text-length position-absolute bottom-0 end-0 me-16 mb-8 bg-white"></span>
                   </div>
                 </div>
             </div>
-        </div>
-  
-        <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-36">
-            <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
-                <label class="form-check-label text-primary-light text-sm" for="StatusAdd">Status</label>
-                <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="StatusAdd">
+            <div class="border-0 d-flex align-items-center gap-1 justify-content-between mt-36">
+                <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                    <label class="form-check-label text-primary-light text-sm" for="StatusAdd">Status</label>
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none" type="checkbox" role="switch" id="StatusAdd" required>
+                </div>
+              <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
             </div>
-          <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#createDocument">Save </button>
-        </div>
+        </form>
+  
       </div>
     </div>
 </div>
