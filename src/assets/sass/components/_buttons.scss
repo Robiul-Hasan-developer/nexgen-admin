@@ -12,53 +12,6 @@
   }
 }
 
-// // Add btn class name and color through sass loop
-$btn-colors: (
-  "success" --success,
-  "danger" --danger,
-  "warning" --warning,
-  "info" --info,
-);
-
-@each $name, $color in $btn-colors {
-  .btn-#{$name} {
-    background-color: var(#{$color}-main);
-    color: #fff;
-    border-color: var(#{$color}-main);
-    &:hover {
-      background-color: var(#{$color}-hover);
-      color: #fff;
-      border-color: var(#{$color}-main);
-    }
-    &:active,
-    &:focus {
-      background-color: var(#{$color}-pressed);
-      color: #fff;
-      border-color: var(#{$color}-pressed);
-    }
-  }
-}
-
-@each $name, $color in $btn-colors {
-  .btn-outline-#{$name} {
-    background-color: transparent;
-    color: var(#{$color}-main);
-    border-color: var(#{$color}-main);
-    &:hover {
-      background-color: var(#{$color}-hover);
-      color: #fff;
-      border-color: var(#{$color}-main);
-    }
-    &:active,
-    &:focus {
-      background-color: var(#{$color}-pressed) !important;
-      color: #fff !important;
-      border-color: var(#{$color}-pressed) !important;
-    }
-  }
-}
-
-
 /* Pill Btn */
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {

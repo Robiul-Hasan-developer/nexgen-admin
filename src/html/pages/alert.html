@@ -16,67 +16,12 @@
   <div class="dashboard-main-body">
     <div class="shadow-2 bg-white py-24 px-res-32-px radius-6">
 
-        <div class="d-flex flex-column gap-4">
-            <!-- Success Toast Message start -->
-            <div class="toast-message bg-white shadow d-inline-block py-12 px-16 rounded position-relative end-0 top-0 active">
-                <div class="toast-content d-flex align-items-center gap-3">
-                    <span class="text-2xl text-success-600 line-height-1">
-                      <i class="ri-checkbox-circle-fill"></i>
-                    </span>
-                    <div class="flex-grow-1">
-                        <div class="d-flex align-items-start justify-content-between mb-1">
-                            <h6 class="message-text mb-0 text-lg">Success</h6>
-                            <button type="button" class="close-toast bg-transparent border-0 p-0 line-height-1 text-md">
-                              <i class="ri-close-large-fill"></i>
-                            </button>
-                        </div>
-                        <span class="notification-text text-secondary text-sm">You deleted successfully!</span>
-                    </div>
-                </div>
-                <div class="progress__bar"></div>
-            </div>
-            <!-- Success Toast Message End -->
-    
-            <!-- Error Toast Message start -->
-            <div class="toast-message bg-white shadow d-inline-block py-12 px-16 rounded position-relative end-0 top-0 active error-message">
-                <div class="toast-content d-flex align-items-center gap-3">
-                    <span class="text-2xl text-success-600 line-height-1">
-                      <i class="ri-checkbox-circle-fill"></i>
-                    </span>
-                    <div class="flex-grow-1">
-                        <div class="d-flex align-items-start justify-content-between mb-1">
-                            <h6 class="message-text mb-0 text-lg">Warning</h6>
-                            <button type="button" class="close-toast bg-transparent border-0 p-0 line-height-1 text-md">
-                              <i class="ri-close-large-fill"></i>
-                            </button>
-                        </div>
-                        <span class="notification-text text-secondary text-sm">Do you want to delete it?</span>
-                    </div>
-                </div>
-                <div class="progress__bar"></div>
-            </div>
-            <!-- Error Toast Message End -->
-    
-            <!-- warning Message start -->
-            <div class="toast-message bg-white shadow d-inline-block py-12 px-16 rounded position-relative end-0 top-0 active warning-message">
-                <div class="toast-content d-flex align-items-center gap-3">
-                    <span class="text-2xl text-success-600 line-height-1">
-                      <i class="ri-checkbox-circle-fill"></i>
-                    </span>
-                    <div class="flex-grow-1">
-                        <div class="d-flex align-items-start justify-content-between mb-1">
-                            <h6 class="message-text mb-0 text-lg">Warning</h6>
-                            <button type="button" class="close-toast bg-transparent border-0 p-0 line-height-1 text-md">
-                              <i class="ri-close-large-fill"></i>
-                            </button>
-                        </div>
-                        <span class="notification-text text-secondary text-sm">Do you want to delete it?</span>
-                    </div>
-                </div>
-                <div class="progress__bar"></div>
-            </div>
-            <!-- warning Message End -->
-        </div>
+      <div class="d-flex align-items-center gap-24 flex-wrap">
+        <button type="button" class="btn btn-success px-24">Success Alert</button>
+        <button type="button" class="btn btn-warning px-24">Warning Alert</button>
+        <button type="button" class="btn btn-danger px-24">Danger Alert</button>
+        <button type="button" class="btn btn-info px-24">Info Alert</button>
+      </div>
 
     </div>
   </div>
@@ -84,6 +29,31 @@
 </main>
 
 @@include('../partial-html/_template-bottom.html')
+
+<script type="module">
+  import { toastMessage } from '../../assets/js/toast.js';
+  
+  let success = document.querySelector('.btn-success');
+  let warning = document.querySelector('.btn-warning');
+  let danger = document.querySelector('.btn-danger');
+  let info = document.querySelector('.btn-info');
+
+  success.addEventListener('click', function () {
+    toastMessage("success", "Success Alert", "This is success message", 'ri-checkbox-circle-fill');
+  });
+
+  warning.addEventListener('click', function () {
+    toastMessage("warning", "Warning Alert", "This is warning message.", 'ri-error-warning-fill');
+  });
+
+  danger.addEventListener('click', function () {
+    toastMessage("danger", "Danger Alert", "This is danger message.", 'ri-close-circle-fill');
+  });
+
+  info.addEventListener('click', function () {
+    toastMessage("info", "Info Alert", "This is Info message.", 'ri-information-2-fill');
+  });
+</script>
 
 </body>
 </html>

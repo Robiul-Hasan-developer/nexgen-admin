@@ -1,3 +1,5 @@
+import { toastMessage } from './toast.js';
+
 (function ($) {
   'use strict';
 
@@ -148,58 +150,17 @@
   });
   // ========================== Set Language in dropdown Js End =================================
   
-  
-  // *********************************** Toast Notification Js start ***********************************
-  var notification = document.querySelector('.toast-message');
-  var notificationText = document.querySelector('.notification-text');
-  var closeToast = document.querySelector('.close-toast');
-  var toastTimeout; // Declare a global timeout variable
-
-  function toastMessage(toastTextMessage) {
-    notificationText.innerHTML = toastTextMessage;
-    notification.classList.add('active');
-
-    // Set timeout to remove the active class after 3.5 seconds
-    toastTimeout = setTimeout(() => {
-      notification.classList.remove('active');
-    }, 3500);
-
-    // Close the notification
-    if (closeToast) {
-      closeToast.addEventListener('click', function () {
-        notification.classList.remove('active');
-        notification.classList.add('d-none');
-        setTimeout(() => {
-          notification.classList.remove('d-none');
-        }, 1);
-      });
-    }
-
-    // Hover to pause the removal of the active class
-    if (notification) {
-      notification.addEventListener('mouseenter', function () {
-        clearTimeout(toastTimeout);
-        this.classList.add('active');
-      });
-
-      notification.addEventListener('mouseleave', function () {
-        this.classList.remove('active'); 
-      });
-    }
-  }
-  // ********************************** Toast Notification Js end **********************************
-  
   // *************************** Delete Tr js start ***************************
   $(".delete-tr-button").on('click', function () {
     $(this).closest('tr').addClass('d-none');
-    toastMessage("You deleted successfully!");
+    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
   });
   // *************************** Delete Tr js End ***************************
 
   // ========================= Delete Item Js start ===================
   $('.delete-button').on('click', function () {
     $(this).closest('.delete-item').addClass('d-none');
-    toastMessage("You deleted successfully!");
+    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
   });
   // ========================= Delete Item Js End ===================
 
@@ -287,8 +248,7 @@
         inputItem.classList.remove('is-valid');
         inputItem.value = "";
       });
-      
-      toastMessage("Form submitted successfully!");
+      toastMessage("success", "Success", "Form submitted successfully!", 'ri-checkbox-circle-fill');
     });
   }
   // ========================= Form Submit Js End ===================
@@ -468,7 +428,7 @@
   
             // Function to handle adding a new wrapper
             addActionAdd.addEventListener('click', function () {
-                toastMessage("Add action create successfully!");
+                toastMessage("success", "Success", "Add action create successfully!", 'ri-checkbox-circle-fill');
                 // Clone the wrapper
                 var newWrapper = wrapper.cloneNode(true);
   
@@ -482,7 +442,7 @@
                 var removeButton = newWrapper.querySelector('.add-action__remove');
                 removeButton.addEventListener('click', function () {
                     this.closest('.add-action-wrapper').remove();
-                    toastMessage("You deleted successfully!");
+                    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
                 });
   
                 // Insert the cloned wrapper immediately after the current one
@@ -536,14 +496,17 @@
   // ========================= Check All checkbox by checking one checkbox start Start ===================
   let selectAll = document.querySelector('#selectAll');
 
-  if(selectAll) {
+  if (selectAll) {
     selectAll.addEventListener('change', function () {
       const allEmailItems = document.querySelectorAll('.email-item');
-  
+
       allEmailItems.forEach((allEmailItem, index) => {
         const checkbox = allEmailItem.querySelector('.email-item__checkbox');
         checkbox.checked = this.checked;
-  
+        
+        // Trigger change event manually
+        $(checkbox).trigger('change');
+
         if (this.checked) {
           allEmailItem.classList.add('active');
           localStorage.setItem(`email-item-${index}`, 'active'); // Store active state
@@ -553,16 +516,16 @@
         }
       });
     });
-  
+
     document.querySelectorAll('.email-item__checkbox').forEach((checkbox, index) => {
       checkbox.addEventListener('change', function () {
         const allEmailCheckboxes = document.querySelectorAll('.email-item__checkbox');
         const allChecked = Array.from(allEmailCheckboxes).every(cb => cb.checked);
         const anyChecked = Array.from(allEmailCheckboxes).some(cb => cb.checked);
-  
+
         // Update the "Select All" checkbox
         selectAll.checked = allChecked;
-  
+
         // Update the "active" class for the email item
         const emailItem = this.closest('.email-item');
         if (this.checked) {
@@ -572,17 +535,20 @@
           emailItem.classList.remove('active');
           localStorage.removeItem(`email-item-${index}`); // Remove active state
         }
+
+        // Trigger the jQuery checkbox count update
+        updateSelectedCount();
       });
     });
-  
+
     // Initialize state from localStorage on page load
     document.addEventListener('DOMContentLoaded', () => {
       const allEmailItems = document.querySelectorAll('.email-item');
-  
+
       allEmailItems.forEach((allEmailItem, index) => {
         const checkbox = allEmailItem.querySelector('.email-item__checkbox');
         const isActive = localStorage.getItem(`email-item-${index}`) === 'active';
-  
+
         checkbox.checked = isActive; // Set checkbox state
         if (isActive) {
           allEmailItem.classList.add('active'); // Add active class
@@ -590,10 +556,13 @@
           allEmailItem.classList.remove('active'); // Ensure active class is removed
         }
       });
-  
+
       // Ensure "Select All" reflects the current state
       const allEmailCheckboxes = document.querySelectorAll('.email-item__checkbox');
       selectAll.checked = Array.from(allEmailCheckboxes).every(cb => cb.checked);
+
+      // Update the selected count on page load
+      updateSelectedCount();
     });
   }
   // ========================= Check All checkbox by checking one checkbox Js End ===================
@@ -656,7 +625,7 @@
 
       console.log(activeEmailItems.length);
       if(activeEmailItems.length > 0) {
-        toastMessage(" All selected email item deleted successfully!");
+        toastMessage("success", "Success", "All selected email item deleted successfully!", 'ri-checkbox-circle-fill');
       }
     });
   }
@@ -716,7 +685,7 @@
     });
   
     formComposeEmailBox.addEventListener('submit', function () { 
-      toastMessage("Email Sent successfully!");
+      toastMessage("success", "Success", "Email Sent successfully!", 'ri-checkbox-circle-fill');
     });
   }
   
@@ -900,7 +869,7 @@
               inputItem.classList.remove('is-valid');
               inputItem.value = "";
             });
-            toastMessage("Form submitted successfully!");
+            toastMessage("success", "Success", "Form submitted successfully!", 'ri-checkbox-circle-fill');
             validationForm.submit(); // Uncomment this line for real form submission
           }
       });
@@ -917,12 +886,12 @@
           let checkValiditySubmitBtn = checkValidityForm.querySelector('.checkValiditySubmitBtn');
           
           function checkFormValidity() {
-              // if (checkValidityForm.checkValidity()) {
-              //     checkValiditySubmitBtn.disabled = false;
-              // } else {
-              //     checkValiditySubmitBtn.disabled = true;
-              // }
-              checkValiditySubmitBtn.disabled = !checkValidityForm.checkValidity();
+              if (checkValidityForm.checkValidity()) {
+                  checkValiditySubmitBtn.disabled = false;
+              } else {
+                  checkValiditySubmitBtn.disabled = true;
+              }
+              // checkValiditySubmitBtn.disabled = !checkValidityForm.checkValidity();
           }
           checkValidityForm.addEventListener("input", checkFormValidity);
           checkValidityForm.addEventListener("change", checkFormValidity);

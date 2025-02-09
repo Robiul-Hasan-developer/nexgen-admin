@@ -367,8 +367,8 @@
             <!-- Action Menu End -->
 
             <!-- Selected Checkbox Count Start -->
-            <div class="selected-checkbox py-16 text-center">
-              <div class="text-secondary-light">All <strong class="selected-checkbox__text">50</strong> conversations on this page are selected. </div>
+            <div class="selected-checkbox py-12 text-center">
+              <div class="text-secondary-light">All <strong class="selected-checkbox__text">22</strong> conversations on this page are selected. </div>
             </div>
             <!-- Selected Checkbox Count End -->
 
@@ -1488,22 +1488,20 @@
 
 <script>
     // ========================== Selected Checkbox count amount js STart ====================
-    $('.email-item-wrapper .form-check-input').on('change', function () {
-      // Get the number of selected checkboxes
-      let selectedCount = $('.email-item-wrapper .form-check-input:checked').length;
+    function updateSelectedCount() {
+      let selectedCount = $('.email-item-wrapper .email-item .form-check-input:checked').length;
 
-      $('.selected-checkbox').removeClass('d-none')
-      if(selectedCount > 0) {
+      $('.selected-checkbox').removeClass('d-none');
+      if (selectedCount > 0) {
         $('.selected-checkbox__text').text(selectedCount);
       } else {
-        $('.selected-checkbox').addClass('d-none')
-      }
-
-      // Remove selected amount box and uncheck the checked input filed
-      $('.selected-checkbox__close').on('click', function () {
         $('.selected-checkbox').addClass('d-none');
-        $('.email-item-wrapper .form--check .form-check-input').prop('checked', false); 
-      }); 
+      }
+    }
+
+    // Trigger count update when checkboxes change
+    $('.email-item-wrapper .form-check-input').on('change', function () {
+      updateSelectedCount();
     });
     // ========================== Selected Checkbox count amount js End ====================
 </script>
