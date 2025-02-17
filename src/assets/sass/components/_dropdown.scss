@@ -33,7 +33,7 @@
 .active-bg {
     border-radius: 4px;
     &.show {
-        background-color: var(--primary-100);
+        background-color: var(--primary-100) !important;
     }
 }
 

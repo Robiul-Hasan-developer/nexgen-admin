@@ -105,6 +105,13 @@
   }
 }
 
+.checked-bg-danger {
+  &:checked { 
+    background-color: var(--danger-600) !important;
+    border-color: var(--danger-600) !important;
+  }
+}
+
 
 .form-select {
   padding-block-start: rem(9px);

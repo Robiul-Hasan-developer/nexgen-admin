@@ -25,6 +25,19 @@
   }
 }
 
+.border-hover {
+  &-primary-500 {
+    &:hover {
+      border-color: var(--primary-500) !important;
+    }
+  }
+  &-primary-600 {
+    &:hover {
+      border-color: var(--primary-600) !important;
+    }
+  }
+}
+
 .border {
   &-cyan {
     border-color: rgba(229, 246, 251, 1);

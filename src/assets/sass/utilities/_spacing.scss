@@ -27,6 +27,9 @@
   &-44-px {
     gap: clamp(.5rem, -9rem + 10.6667vw, 3rem);
   }
+  &-84-px {
+    gap: clamp(1.5rem, -9rem + 10.6667vw, 5.25rem);
+  }
 }
 
 .gx {

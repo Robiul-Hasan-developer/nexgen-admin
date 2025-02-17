@@ -252,3 +252,22 @@
     padding-inline-start: rem(14px);
   }
 }
+
+
+
+.sidebar-menu.style-two {
+  li.dropdown a {
+      color: var(--text-secondary-light);
+  }
+  li.dropdown.open > a, li.dropdown.dropdown-open > a, li.dropdown a:hover,  li.dropdown.open > a:hover, li.dropdown.dropdown-open > a:hover {
+      background-color: transparent;
+      color: var(--success-600);
+  }
+  
+  li.dropdown > a::after, li.dropdown > a::after {
+      display: none;
+  }
+  .sidebar-submenu li a:hover {
+    color: var(--success-600);
+  }
+}

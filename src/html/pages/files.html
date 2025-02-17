@@ -1,0 +1,731 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Files",
+    page: "Business Suite",
+    pageLink: "business-suites.html",
+    activePage: "Files",
+    paraText: "For file management, display file details, status, and actions for efficient organization, with appropriate permissions for viewing, editing, and managing files."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+        <div class="d-flex gap-1 flex-xl-row flex-column">
+
+            <!-- Left Sidebar Start -->
+            <div class="bg-white p-16 max-w-290-px w-100">
+                <h6 class="mb-3 mb-16 text-lg text-primary-light-two">My Drive</h6>
+                <form action="#" class="position-relative w-100">
+                    <input type="text" class="search-filter-input form-control w-100 ps-40 bg-neutral-100 border-neutral-100" placeholder="Search here...">
+                    <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
+                      <i class="ri-search-line"></i>
+                    </span>
+                </form>
+                <div class="mt-24">
+                    <ul class="sidebar-menu style-two mt-0" id="sidebar-menu">
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-folder-2-line"></span>
+                                <span class="menu-text">My Drive</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-file-list-2-line"></span>
+                                <span class="menu-text">Documents</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-image-line"></span>
+                                <span class="menu-text">Media</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-history-line"></span>
+                                <span class="menu-text">Recent</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-star-line"></span>
+                                <span class="menu-text">Important</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">
+                                <span class="menu-icon ri-delete-bin-line"></span>
+                                <span class="menu-text">Deleted</span> 
+                            </a>
+                            <ul class="sidebar-submenu mt-0 ps-0 pt-0">
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Assets</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Personal</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="ri-subtract-line"></i> Templates</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Left Sidebar ENd -->
+
+            <!-- Middle Start -->
+            <div class="bg-white p-24 flex-grow-1">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h6 class="mb-0 text-lg text-primary-light-two">Folders</h6>
+                    <div class="d-flex gap-8">
+                        <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-32">
+                            <option value="All" selected>All</option>
+                            <option value="Home">Home</option>
+                            <option value="Beauty">Beauty</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Toys">Toys</option>
+                            <option value="Books">Books</option>
+                        </select>
+                        <button type="button" class="btn btn-success-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#createDocument">
+                            <span class=" text-white fw-normal text-sm">
+                              <i class="ri-add-line"></i>
+                            </span>
+                            Create Folders
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-40">
+                    <div class="d-grid grid-cols-4 gap-3">
+                        <div class="bg-neutral-100 radius-4 p-16">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px checked-bg-danger radius-6" type="checkbox">
+                                <div class="dropdown">
+                                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-8">
+                                        <li class="">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </a>
+                                        </li>
+                                        <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-24 text-center">
+                                <img src="assets/images/icon/folder-icon.png" alt="">
+                                <h6 class="text-primary-light-two text-md mt-12">Projects</h6>
+                            </div>
+                            <div class="mt-24 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-sm text-secondary-light-two">349 <span class="fw-normal">Files</span></span>
+                                <span class="fw-semibold text-sm text-secondary-light-two">4.10 <span class="fw-normal">GB</span></span>
+                            </div>
+                        </div>
+                        <div class="bg-neutral-100 radius-4 p-16">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px checked-bg-danger radius-6" type="checkbox">
+                                <div class="dropdown">
+                                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-8">
+                                        <li class="">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </a>
+                                        </li>
+                                        <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-24 text-center">
+                                <img src="assets/images/icon/folder-icon.png" alt="">
+                                <h6 class="text-primary-light-two text-md mt-12">Documents</h6>
+                            </div>
+                            <div class="mt-24 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-sm text-secondary-light-two">2348 <span class="fw-normal">Files</span></span>
+                                <span class="fw-semibold text-sm text-secondary-light-two">27.01<span class="fw-normal">GB</span></span>
+                            </div>
+                        </div>
+                        <div class="bg-neutral-100 radius-4 p-16">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px checked-bg-danger radius-6" type="checkbox">
+                                <div class="dropdown">
+                                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-8">
+                                        <li class="">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </a>
+                                        </li>
+                                        <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-24 text-center">
+                                <img src="assets/images/icon/folder-icon.png" alt="">
+                                <h6 class="text-primary-light-two text-md mt-12">Media</h6>
+                            </div>
+                            <div class="mt-24 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-sm text-secondary-light-two">12480 <span class="fw-normal">Files</span></span>
+                                <span class="fw-semibold text-sm text-secondary-light-two">20.87<span class="fw-normal">GB</span></span>
+                            </div>
+                        </div>
+                        <div class="bg-neutral-100 radius-4 p-16">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px checked-bg-danger radius-6" type="checkbox">
+                                <div class="dropdown">
+                                    <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu p-8">
+                                        <li class="">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                            <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                            <span class="">Edit </span>
+                                        </a>
+                                        </li>
+                                        <li class="">
+                                        <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                            <span class="">Delete</span>
+                                        </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-24 text-center">
+                                <img src="assets/images/icon/folder-icon.png" alt="">
+                                <h6 class="text-primary-light-two text-md mt-12">Velzon v1.7.0</h6>
+                            </div>
+                            <div class="mt-24 d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-sm text-secondary-light-two">180 <span class="fw-normal">Files</span></span>
+                                <span class="fw-semibold text-sm text-secondary-light-two">478.65 <span class="fw-normal">MB</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-32">
+                    <div class="d-flex align-items-center justify-content-between mb-16">
+                        <h6 class="mb-0 text-lg text-primary-light-two">Recent File</h6>
+                        <div class="d-flex gap-8">
+                            <button type="button" class="btn btn-success-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#createDocument">
+                                <span class=" text-white fw-normal text-sm">
+                                  <i class="ri-add-line"></i>
+                                </span>
+                                Create File
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto max-h-440-px overflow-y-auto scroll-sm scroll-vertical">
+                        <table class="table min-w-max mb-0">
+                          <thead>
+                            <tr>
+                              <th class="bg-neutral-100 py-16 px-24 text-secondary-light text-sm fw-semibold text-start border-bottom">Name</th>
+                              <th class="bg-neutral-100 py-16 px-24 text-secondary-light text-sm fw-semibold text-start border-bottom">File Item</th>
+                              <th class="bg-neutral-100 py-16 px-24 text-secondary-light text-sm fw-semibold text-start border-bottom">File Size</th>
+                              <th class="bg-neutral-100 py-16 px-24 text-secondary-light text-sm fw-semibold text-start border-bottom">Recent Date</th>
+                              <th class="bg-neutral-100 py-16 px-24 text-secondary-light text-sm fw-semibold text-start border-bottom">Actions</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex align-items-center gap-8">
+                                        <span class="d-flex">
+                                            <img src="assets/images/icon/recent-file-icon1.png" alt="Icon">
+                                        </span>
+                                        <span class="fw-medium text-sm text-secondary-light">logo-dark.png</span>
+                                    </div>
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">01</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">1.3 MB</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">24 May, 2022</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex gap-16">
+                                        <button class="starred-button text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two bg-neutral-100" type="button">
+                                            <i class="ri-star-fill"></i>
+                                        </button>
+
+                                        <div class="dropdown">
+                                            <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg bg-neutral-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ri-more-2-fill"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-8">
+                                                <li class="">
+                                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                                        <span class="">Edit </span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                                        <span class="">Delete</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex align-items-center gap-8">
+                                        <span class="d-flex">
+                                            <img src="assets/images/icon/recent-file-icon2.png" alt="Icon">
+                                        </span>
+                                        <span class="fw-medium text-sm text-secondary-light">velzon-invoice.pdf</span>
+                                    </div>
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">01</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">1.1 MB</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">05 May, 2022</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex gap-16">
+                                        <button class="starred-button text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two bg-neutral-100" type="button">
+                                            <i class="ri-star-fill"></i>
+                                        </button>
+
+                                        <div class="dropdown">
+                                            <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg bg-neutral-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ri-more-2-fill"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-8">
+                                                <li class="">
+                                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                                        <span class="">Edit </span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                                        <span class="">Delete</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex align-items-center gap-8">
+                                        <span class="d-flex">
+                                            <img src="assets/images/icon/recent-file-icon3.png" alt="Icon">
+                                        </span>
+                                        <span class="fw-medium text-sm text-secondary-light">Velzon React</span>
+                                    </div>
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">367</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">934 MB</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">28 Apr, 2022</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex gap-16">
+                                        <button class="starred-button text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two bg-neutral-100" type="button">
+                                            <i class="ri-star-fill"></i>
+                                        </button>
+
+                                        <div class="dropdown">
+                                            <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg bg-neutral-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ri-more-2-fill"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-8">
+                                                <li class="">
+                                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                                        <span class="">Edit </span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                                        <span class="">Delete</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex align-items-center gap-8">
+                                        <span class="d-flex">
+                                            <img src="assets/images/icon/recent-file-icon4.png" alt="Icon">
+                                        </span>
+                                        <span class="fw-medium text-sm text-secondary-light">html.docx</span>
+                                    </div>
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">01</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">0.3 KB</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">19 Apr, 2022</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex gap-16">
+                                        <button class="starred-button text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two bg-neutral-100" type="button">
+                                            <i class="ri-star-fill"></i>
+                                        </button>
+
+                                        <div class="dropdown">
+                                            <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg bg-neutral-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ri-more-2-fill"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-8">
+                                                <li class="">
+                                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                                        <span class="">Edit </span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                                        <span class="">Delete</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex align-items-center gap-8">
+                                        <span class="d-flex">
+                                            <img src="assets/images/icon/recent-file-icon1.png" alt="Icon">
+                                        </span>
+                                        <span class="fw-medium text-sm text-secondary-light">default.jpg</span>
+                                    </div>
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">01</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">1.7 MB</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <span class="fw-medium text-sm text-secondary-light">06 Apr, 2022</span>  
+                                </td>
+                                <td class="text-xs border-bottom py-16 px-20">
+                                    <div class="d-flex gap-16">
+                                        <button class="starred-button text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two bg-neutral-100" type="button">
+                                            <i class="ri-star-fill"></i>
+                                        </button>
+
+                                        <div class="dropdown">
+                                            <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-secondary-light-two active-bg bg-neutral-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="ri-more-2-fill"></i>
+                                            </button>
+                                            <ul class="dropdown-menu p-8">
+                                                <li class="">
+                                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm">
+                                                        <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                                        <span class="">Edit </span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                                                        <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                                                        <span class="">Delete</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-32 d-flex align-items-center justify-content-between">
+                        <p class="text-sm text-secondary-light-two">Showing <strong>4</strong> of <strong>125</strong> Results</p>
+                        <ul class="pagination d-flex align-items-center flex-wrap gap-6">
+                            <li class="page-item">
+                                <a class="page-link shadow-none w-28-px h-28-px d-flex justify-content-center align-items-center border border-neutral-300 text-primary-500 fw-semibold text-sm radius-4 bg-hover-primary-500 border-hover-primary-500 hover-text-white" href="#"><i class="ri-arrow-left-line"></i></a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none w-22-px h-28-px d-flex justify-content-center align-items-center border border-neutral-300 text-primary-500 fw-semibold text-sm radius-4 bg-hover-primary-500 border-hover-primary-500 hover-text-white" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none w-22-px h-28-px d-flex justify-content-center align-items-center border border-neutral-300 text-primary-500 fw-semibold text-sm radius-4 bg-hover-primary-500 border-hover-primary-500 hover-text-white" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none w-22-px h-28-px d-flex justify-content-center align-items-center border border-neutral-300 text-primary-500 fw-semibold text-sm radius-4 bg-hover-primary-500 border-hover-primary-500 hover-text-white" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none w-28-px h-28-px d-flex justify-content-center align-items-center border border-neutral-300 text-primary-500 fw-semibold text-sm radius-4 bg-hover-primary-500 border-hover-primary-500 hover-text-white" href="#"><i class="ri-arrow-right-line"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Middle ENd -->
+             
+            <!-- Right Sidebar Start -->
+            <div class="bg-white p-16 max-w-290-px w-100">
+                <div class="d-flex align-items-center justify-content-between mb-16 pb-16 border-bottom border-neutral-200 border-dashed">
+                    <h6 class="mb-0 text-lg text-primary-light-two">Overview</h6>
+                    <div class="d-flex gap-8">
+                        <button type="button" class="w-32-px h-32-px radius-4 bg-danger-100 text-danger-600 bg-hover-danger-600 hover-text-white text-sm d-flex justify-content-center align-items-center fw-semibold">
+                            <i class="ri-close-large-line"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="position-relative text-center">
+                    <div id="basicDonutChart" class="w-auto d-inline-block apexcharts-tooltip-z-none"></div>
+                </div>
+
+                <div class="mt-84-px d-flex flex-column gap-24">
+                    <div class="d-flex align-items-center justify-content-between gap-3 delete-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="">
+                                <img src="assets/images/icon/overview-icon1.png" alt="" class="w-40-px h-40-px radius-8 flex-shrink-0">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h6 class="text-sm mb-0 fw-semibold text-primary-light-two">Documents</h6>
+                                <span class="text-xs text-secondary-light-two fw-normal">2348 files</span>
+                            </div>
+                        </div>
+                        <span class="text-primary-light text-sm fw-semibold">27.01 GB</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3 delete-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="">
+                                <img src="assets/images/icon/overview-icon2.png" alt="" class="w-40-px h-40-px radius-8 flex-shrink-0">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h6 class="text-sm mb-0 fw-semibold text-primary-light-two">Media</h6>
+                                <span class="text-xs text-secondary-light-two fw-normal">12480 files</span>
+                            </div>
+                        </div>
+                        <span class="text-primary-light text-sm fw-semibold">20.87 GB</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3 delete-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="">
+                                <img src="assets/images/icon/overview-icon3.png" alt="" class="w-40-px h-40-px radius-8 flex-shrink-0">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h6 class="text-sm mb-0 fw-semibold text-primary-light-two">Projects</h6>
+                                <span class="text-xs text-secondary-light-two fw-normal">349 files</span>
+                            </div>
+                        </div>
+                        <span class="text-primary-light text-sm fw-semibold">4.10 GB</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3 delete-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="">
+                                <img src="assets/images/icon/overview-icon4.png" alt="" class="w-40-px h-40-px radius-8 flex-shrink-0">
+                            </span>
+                            <div class="flex-grow-1">
+                                <h6 class="text-sm mb-0 fw-semibold text-primary-light-two">Others</h6>
+                                <span class="text-xs text-secondary-light-two fw-normal">9873 files</span>
+                            </div>
+                        </div>
+                        <span class="text-primary-light text-sm fw-semibold">33.54 GB</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Sidebar ENd -->
+            
+        </div>
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+
+
+@@include('../partial-html/_template-bottom.html')
+<script src="assets/js/apexcharts.min.js"></script>
+
+<script>
+    var options = {
+        series: [22.7, 17.5, 28.2, 31.6],
+        chart: {
+            height: 264,
+            type: 'donut',
+        },
+        colors: ['#50C3E6', '#ED5E5E', '#6691E7', '#13C56B'],
+        dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+                return opts.w.config.series[opts.seriesIndex] + "%";
+            }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    show: false
+                }
+            }
+        }],
+        legend: {
+            position: 'right',
+            offsetY: 0,
+            height: 230,
+            show: false
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#basicDonutChart"), options);
+    chart.render();
+    // ============================ Donut Chart End ==========================
+</script>
+
+</body>
+</html>

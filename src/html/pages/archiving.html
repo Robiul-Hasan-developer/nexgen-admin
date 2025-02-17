@@ -1,0 +1,350 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Archiving",
+    page: "Business Suite",
+    pageLink: "business-suites.html",
+    activePage: "Archiving",
+    paraText: "Displays a list of archived customer authentication requests, including customer information, archive status, archive time, and available actions for efficient monitoring and retrieval management."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="shadow-2 section-bg p-3 radius-6">
+
+        <div class="bg-white p-8 mb-20 d-flex align-items-center gap-84-px">
+            <div class="d-flex align-items-center gap-20">
+                <div>
+                    <label for="dateTimeOne" class="text-sm form-label text-primary-600">From Date:</label>
+                    <div class="max-w-350-px w-100 position-relative">
+                        <input class="form-control radius-8 bg-base" id="dateTimeOne" type="text" placeholder="Start Date">
+                        <label for="dateTimeOne" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                          <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label for="dateTimeSingle" class="text-sm form-label text-primary-600">To Date:</label>
+                    <div class="max-w-350-px w-100 position-relative">
+                        <input class="form-control radius-8 bg-base" id="dateTimeSingle" type="text" placeholder="Due Date">
+                        <label for="dateTimeSingle" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
+                          <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
+                        </label>
+                    </div>
+                </div> 
+            </div>
+            <div class="d-flex align-items-center gap-20">
+                <div>
+                    <label for="Department" class="text-sm form-label text-primary-600">Department</label>
+                    <div class="max-w-350-px w-100 position-relative">
+                        <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Department">
+                            <option value="Department">Department</option>
+                            <option value="HR">Human Resources</option>
+                            <option value="IT">Information</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Support">Support</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Legal">Legal</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="Document" class="text-sm form-label text-primary-600">Document</label>
+                    <div class="max-w-350-px w-100 position-relative">
+                        <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Document">
+                            <option value="Document" selected>Document</option>
+                            <option value="Invoice">Invoice</option>
+                            <option value="Report">Report</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Proposal">Proposal</option>
+                            <option value="Certificate">Certificate</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Form">Form</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="Envelope" class="text-sm form-label text-primary-600">Envelope</label>
+                    <div class="max-w-350-px w-100 position-relative">
+                        <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Envelope">
+                            <option value="Envelope" selected>Envelope</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Window">Window</option>
+                            <option value="Padded">Padded</option>
+                            <option value="Security">Security</option>
+                            <option value="Airmail">Airmail</option>
+                            <option value="Bubble Mailer">Bubble Mailer</option>
+                            <option value="Manila">Manila</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-end gap-3 flex-grow-1">
+                <div class=" flex-grow-1">
+                    <label for="searchHere" class="text-sm form-label text-primary-600">Search</label>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+      
+                <div class="d-flex align-items-center gap-2">
+                  <div class="border radius-8 d-flex">
+                    <button type="button" class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-400 border-end">
+                      <i class="ri-printer-line"></i>
+                    </button>
+                    <div class="dropdown">
+                      <button class="text-lg h-36-px w-36-px d-flex align-items-center justify-content-center text-neutral-600 dropdown-toggle active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-sm py-8" href="#">Action</a></li>
+                        <li><a class="dropdown-item text-sm py-8" href="#">Another action</a></li>
+                        <li><a class="dropdown-item text-sm py-8" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row gy-4">
+            <div class="col-lg-3">
+                <div class="bg-white p-16 w-100">
+                    <div class="d-flex align-items-center gap-6">
+                        <button type="button" class="border border-neutral-300 border-2 text-secondary-light-two radius-6 text-center px-10 py-2 text-sm fw-normal hover-text-white bg-hover-primary-600 border-hover-primary-600 flex-grow-1">
+                            Department
+                        </button>
+                        <button type="button" class="border border-neutral-300 border-2 text-secondary-light-two radius-6 text-center px-10 py-2 text-sm fw-normal hover-text-white bg-hover-primary-600 border-hover-primary-600 flex-grow-1">
+                            Document
+                        </button>
+                        <button type="button" class="border border-neutral-300 border-2 text-secondary-light-two radius-6 text-center px-10 py-2 text-sm fw-normal hover-text-white bg-hover-primary-600 border-hover-primary-600 flex-grow-1">
+                            Assigned
+                        </button>
+                    </div>
+                    <div class="mt-30">
+                        <div class="">
+                            <div class="text-sm py-6 px-10 bg-neutral-200 text-primary-600">
+                                Sales Department 
+                            </div>
+                            <ul class="sidebar-menu style-two mt-16" id="sidebar-menu">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="text-primary-500">
+                                        <span class="menu-icon text-danger-600 ri-mail-line"></span>
+                                        <span class="menu-text">May Commission (3)</span> 
+                                    </a>
+                                    <ul class="sidebar-submenu mt-0 pt-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon2.png" alt="Icon" class="w-16-px"> 
+                                                Attendance Sheet
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon3.png" alt="Icon" class="w-16-px"> 
+                                                Commission Calculations 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                                <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">Sales Target Sheet</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="text-primary-500">
+                                        <span class="menu-icon text-purple-600 ri-mail-line"></span>
+                                        <span class="menu-text">April Commission (3)</span> 
+                                    </a>
+                                    <ul class="sidebar-submenu mt-0 pt-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon2.png" alt="Icon" class="w-16-px"> 
+                                                Attendance Sheet
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon3.png" alt="Icon" class="w-16-px"> 
+                                                Commission Calculations 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                                <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">Sales Target Sheet</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="text-primary-500">
+                                        <span class="menu-icon text-info-600 ri-mail-line"></span>
+                                        <span class="menu-text">March Commission (2)</span> 
+                                    </a>
+                                    <ul class="sidebar-submenu mt-0 pt-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon2.png" alt="Icon" class="w-16-px"> 
+                                                Attendance Sheet
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon3.png" alt="Icon" class="w-16-px"> 
+                                                Commission Calculations 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                                <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">Sales Target Sheet</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="text-primary-500">
+                                        <span class="menu-icon text-primary-500 ri-mail-line"></span>
+                                        <span class="menu-text">February Commission (1)</span> 
+                                    </a>
+                                    <ul class="sidebar-submenu mt-0 pt-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon2.png" alt="Icon" class="w-16-px"> 
+                                                Attendance Sheet
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon3.png" alt="Icon" class="w-16-px"> 
+                                                Commission Calculations 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                                <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">Sales Target Sheet</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="text-primary-500">
+                                        <span class="menu-icon text-warning-600 ri-mail-line"></span>
+                                        <span class="menu-text">January Commission (1)</span> 
+                                    </a>
+                                    <ul class="sidebar-submenu mt-0 pt-0">
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon2.png" alt="Icon" class="w-16-px"> 
+                                                Attendance Sheet
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon3.png" alt="Icon" class="w-16-px"> 
+                                                Commission Calculations 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-hover-primary-500">
+                                                <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                                <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">Sales Target Sheet</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-16">
+                            <div class="text-sm py-6 px-10 bg-neutral-200 text-primary-600">
+                                Loan Department  
+                            </div>
+                        </div>
+                        <div class="mt-16">
+                            <div class="text-sm py-6 px-10 bg-neutral-200 text-primary-600">
+                                KNET Department   
+                            </div>
+                        </div>
+                        <div class="mt-16">
+                            <div class="text-sm py-6 px-10 bg-neutral-200 text-primary-600">
+                                Legal Department 
+                            </div>
+                        </div>
+                        <div class="mt-16">
+                            <div class="text-sm py-6 px-10 bg-neutral-200 text-primary-600">
+                                Clarence Department 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-9"> 
+                <div class="row gy-4">
+                    <div class="col-xl-6">
+                        <div class="bg-white p-10 flex-grow-1">
+                            <button type="button" class="btn btn-primary-600 radius-6 d-flex align-items-center gap-1 px-24 py-4 text-sm fw-medium text-sm flex-shrink-0">
+                                Preview
+                            </button>
+                            <div class="mt-30">
+                                <h5 class="fw-normal text-lg mb-18">Sales Target Sheet</h5>
+                                <img src="assets/images/another/sales-sheet.png" alt="">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="bg-white p-10 flex-grow-1">
+                            <span class="bg-primary-600 text-white radius-6 px-16 py-2 text-xs fw-semibold flex-shrink-0">
+                                Metadata
+                            </span>
+
+                            <div class="py-60 px-48">
+                                <div class="d-flex align-items-center gap-8">
+                                    <img src="assets/images/another/adobe.png" alt="Icon">
+                                    <div class="">
+                                        <h5 class="fw-normal text-lg">Sales Target Sheet</h5>
+                                        <div class="d-flex align-items-center gap-16">
+                                            <span class="text-secondary-light-two text-xs">Documents</span>
+                                            <span class="text-secondary-light-two text-xs">ID 7494, Version 80</span>
+                                        </div>         
+                                    </div>
+                                </div>
+                            </div>  
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  @@include('../layouts/_footer.html')
+</main>
+
+
+
+@@include('../partial-html/_template-bottom.html')
+<script src="assets/js/lib/flatpickr.js"></script>
+
+<script>
+  function getDatePickerSingle(receiveID) {
+    flatpickr(receiveID, {
+      enableTime: false, // Ensure time is disabled to match the format
+      dateFormat: "d M, Y", // Format to match placeholder
+    //   mode: "range", // Enable range selection
+      minDate: "today", // Prevent past dates
+    });
+  }
+  getDatePickerSingle('#dateTimeOne');
+  getDatePickerSingle('#dateTimeSingle');
+</script>
+
+</body>
+</html>

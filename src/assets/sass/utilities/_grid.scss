@@ -1,0 +1,5 @@
+/* Grid Css Start */
+.grid-cols-4 {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+/* Grid Css End */
