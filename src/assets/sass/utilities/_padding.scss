@@ -63,6 +63,9 @@
   &-32-px {
     padding-inline: clamp(1rem, -5.25rem + 6.6667vw, 2rem);
   }
+  &-48-px {
+    padding-inline: clamp(1.5rem, -5.25rem + 6.6667vw, 3rem);
+  }
   &-100-px {
     padding-inline: clamp(1.5rem, -5.0655rem + 18.2692vw, 6.25rem);
   }

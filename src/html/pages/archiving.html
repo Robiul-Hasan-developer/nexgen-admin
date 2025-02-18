@@ -16,20 +16,20 @@
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6">
 
-        <div class="bg-white p-8 mb-20 d-flex align-items-center gap-84-px">
-            <div class="d-flex align-items-center gap-20">
-                <div>
+        <div class="bg-white p-8 mb-20 d-flex align-items-center flex-wrap gap-84-px">
+            <div class="d-flex align-items-center flex-wrap gap-20 flex-grow-1">
+                <div class="flex-grow-1">
                     <label for="dateTimeOne" class="text-sm form-label text-primary-600">From Date:</label>
-                    <div class="max-w-350-px w-100 position-relative">
+                    <div class="w-100 position-relative">
                         <input class="form-control radius-8 bg-base" id="dateTimeOne" type="text" placeholder="Start Date">
                         <label for="dateTimeOne" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
                           <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
                         </label>
                     </div>
                 </div>
-                <div>
+                <div class="flex-grow-1">
                     <label for="dateTimeSingle" class="text-sm form-label text-primary-600">To Date:</label>
-                    <div class="max-w-350-px w-100 position-relative">
+                    <div class="w-100 position-relative">
                         <input class="form-control radius-8 bg-base" id="dateTimeSingle" type="text" placeholder="Due Date">
                         <label for="dateTimeSingle" class="calendar-icon position-absolute end-0 top-50 translate-middle-y line-height-1 w-40-px h-100--2-px rounded-end-8-px bg-neutral-100 text-neutral-600 d-flex justify-content-center align-items-center me-2">
                           <iconify-icon icon="solar:calendar-linear" class="icon text-lg"></iconify-icon>
@@ -37,10 +37,10 @@
                     </div>
                 </div> 
             </div>
-            <div class="d-flex align-items-center gap-20">
-                <div>
+            <div class="d-flex align-items-center flex-wrap gap-20 flex-grow-1">
+                <div class="flex-grow-1">
                     <label for="Department" class="text-sm form-label text-primary-600">Department</label>
-                    <div class="max-w-350-px w-100 position-relative">
+                    <div class="w-100 position-relative">
                         <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Department">
                             <option value="Department">Department</option>
                             <option value="HR">Human Resources</option>
@@ -54,9 +54,9 @@
                         </select>
                     </div>
                 </div>
-                <div>
+                <div class="flex-grow-1">
                     <label for="Document" class="text-sm form-label text-primary-600">Document</label>
-                    <div class="max-w-350-px w-100 position-relative">
+                    <div class="w-100 position-relative">
                         <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Document">
                             <option value="Document" selected>Document</option>
                             <option value="Invoice">Invoice</option>
@@ -69,9 +69,9 @@
                         </select>
                     </div>
                 </div>
-                <div>
+                <div class="flex-grow-1">
                     <label for="Envelope" class="text-sm form-label text-primary-600">Envelope</label>
-                    <div class="max-w-350-px w-100 position-relative">
+                    <div class="w-100 position-relative">
                         <select class="form-control radius-8 bg-base form-select text-secondary-light-two py-6" id="Envelope">
                             <option value="Envelope" selected>Envelope</option>
                             <option value="Standard">Standard</option>
@@ -112,9 +112,9 @@
 
         
         <div class="row gy-4">
-            <div class="col-lg-3">
-                <div class="bg-white p-16 w-100">
-                    <div class="d-flex align-items-center gap-6">
+            <div class="col-xl-3">
+                <div class="bg-white p-16 w-100 shadow-13">
+                    <div class="d-flex align-items-center flex-wrap gap-6">
                         <button type="button" class="border border-neutral-300 border-2 text-secondary-light-two radius-6 text-center px-10 py-2 text-sm fw-normal hover-text-white bg-hover-primary-600 border-hover-primary-600 flex-grow-1">
                             Department
                         </button>
@@ -287,27 +287,27 @@
 
                 </div>
             </div>
-            <div class="col-9"> 
+            <div class="col-xl-9"> 
                 <div class="row gy-4">
-                    <div class="col-xl-6">
-                        <div class="bg-white p-10 flex-grow-1">
+                    <div class="col-xxl-6">
+                        <div class="bg-white p-10 flex-grow-1 shadow-13">
                             <button type="button" class="btn btn-primary-600 radius-6 d-flex align-items-center gap-1 px-24 py-4 text-sm fw-medium text-sm flex-shrink-0">
                                 Preview
                             </button>
                             <div class="mt-30">
                                 <h5 class="fw-normal text-lg mb-18">Sales Target Sheet</h5>
-                                <img src="assets/images/another/sales-sheet.png" alt="">
+                                <img src="assets/images/another/sales-sheet.png" alt="Logo" class="w-100">
                             </div>
                         </div> 
                     </div>
-                    <div class="col-xl-6">
-                        <div class="bg-white p-10 flex-grow-1">
+                    <div class="col-xxl-6">
+                        <div class="bg-white p-10 flex-grow-1 shadow-13">
                             <span class="bg-primary-600 text-white radius-6 px-16 py-2 text-xs fw-semibold flex-shrink-0">
                                 Metadata
                             </span>
 
-                            <div class="py-60 px-48">
-                                <div class="d-flex align-items-center gap-8">
+                            <div class="py-60 px-res-48-px">
+                                <div class="d-flex align-items-center gap-8 mb-64">
                                     <img src="assets/images/another/adobe.png" alt="Icon">
                                     <div class="">
                                         <h5 class="fw-normal text-lg">Sales Target Sheet</h5>
@@ -315,6 +315,138 @@
                                             <span class="text-secondary-light-two text-xs">Documents</span>
                                             <span class="text-secondary-light-two text-xs">ID 7494, Version 80</span>
                                         </div>         
+                                    </div>
+                                </div>
+
+                                <div class="overflow-x-auto pb-8">
+                                    <div class="d-flex flex-column gap-20 min-w-max">
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Month :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">October</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Number of Staff :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">6</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Department :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Finance</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Target % :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">98%</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Deduction :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">No</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Payment Release :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Paid</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 h-1-px bg-neutral-200"></div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Envelope :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">March'24 Commission</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two"># of Documents :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">5</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Remark :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">All process complete and archi...</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Created By :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Ahmad Al Mutairi 17 October 2024, 13:42:29</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 h-1-px bg-neutral-200"></div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Has Workflow:</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Yes</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Reviewed :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Moahammed Jasim 17 October 2024, 15:35:55</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Approved :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Aminah Ahmad 18 October 2024, 10:15:01</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Modified</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Sarah Al Azmi 18 October 2024, 10:17:21</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-50">
+                                            <div class="w-100 text-end max-w-150-px">
+                                                <span class="text-md text-secondary-light-two">Accessed :</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <span class="text-md text-secondary-light">Mohamed Khaled 25 October 2024, 09:16:25</span>
+                                            </div>
+                                        </div>
+    
+    
+    
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>  
@@ -329,21 +461,20 @@
 </main>
 
 
-
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
 
 <script>
-  function getDatePickerSingle(receiveID) {
-    flatpickr(receiveID, {
-      enableTime: false, // Ensure time is disabled to match the format
-      dateFormat: "d M, Y", // Format to match placeholder
-    //   mode: "range", // Enable range selection
-      minDate: "today", // Prevent past dates
-    });
-  }
-  getDatePickerSingle('#dateTimeOne');
-  getDatePickerSingle('#dateTimeSingle');
+    function getDatePickerSingle(receiveID) {
+        flatpickr(receiveID, {
+        enableTime: false, // Ensure time is disabled to match the format
+        dateFormat: "d M, Y", // Format to match placeholder
+        //   mode: "range", // Enable range selection
+        minDate: "today", // Prevent past dates
+        });
+    }
+    getDatePickerSingle('#dateTimeOne');
+    getDatePickerSingle('#dateTimeSingle');
 </script>
 
 </body>

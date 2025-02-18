@@ -1,0 +1,643 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+@@include('../layouts/_sidebar.html')
+
+<main class="dashboard-main round-shape">
+  @@include('../layouts/_nav.html')
+
+  @@include('../layouts/_breadcrumb.html',{
+    pageTitle: "Digital Signature",
+    page: "Business Suite",
+    pageLink: "business-suites.html",
+    activePage: "Workflow",
+    paraText: "Displays a list of digital signature requests, including customer information, signature status, request time, and actions for efficient tracking and approval management."
+  })
+  
+  <div class="dashboard-main-body">
+    <div class="radius-4 bg-neutral-30">
+      
+      <!-- Top Tab start -->
+      <div class="pt-16 px-24 bg-primary-20 shadow-4 position-relative">
+        <div class="d-flex align-items-start flex-wrap justify-content-between gap-16">
+          <div class="d-flex align-items-sm-center align-items-start gap-16 flex-sm-row flex-column">
+            <span class="w-70-px h-70-px bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
+              <img src="assets/images/home-one/slack.png" alt="">
+            </span>
+            <div class="flex-grow-1">
+              <h6 class="text-xl text-xl text-primary-light-two mb-8">EV00201 - Agreements - New Agreement with Supplier </h6>
+              <div class="d-flex align-items-center gap-44-px flex-wrap">
+                <div class="d-flex align-items-center gap-1">
+                  <span class="d-flex text-sm">
+                    <i class="ri-user-shared-2-line"></i>
+                  </span>
+                  <span class="text-primary-light-two text-sm">John Doe</span>
+                </div>
+                <span class="text-primary-light-two text-sm">Create Date : 12 Nov, 2024 - 14:02pm</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-14 flex-wrap">
+            <button type="button" class="btn py-6 px-16 btn-primary-600 d-flex align-items-center gap-16" data-bs-toggle="modal" data-bs-target="#scanAdd">
+                <i class="ri-qr-scan-line"></i>
+                Scan
+            </button>
+            <button type="button" class="btn py-6 px-16 btn-primary-600 d-flex align-items-center gap-16" data-bs-toggle="modal" data-bs-target="#scanEdit">
+                <i class="ri-upload-2-line"></i>
+                Upload
+            </button>
+            <button type="button" class="btn py-6 px-24 btn-primary-600">Edit</button>
+            <button type="button" class="btn py-6 px-24 btn-danger-600">Delete</button>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between pb-8 pt-18 flex-wrap gap-8">
+            <div class="d-flex align-items-center gap-14">
+                <span class="py-1 px-20 bg-primary-600 text-white text-xs fw-semibold radius-4">Documents </span>
+                <span class="px-8 py-2 text-primary-600 text-xxs bg-primary-30 rounded-pill">02 Documents</span>
+            </div>
+            <div>
+                <span class="text-primary-light-two text-xs d-block text-end">Scanning Inprogress...</span>
+                <div class="d-flex align-items-center gap-6 justify-content-end mt-4">
+                    <img src="assets/images/icon/scanning-progress-icon1.png" alt="Icon">
+                    <img src="assets/images/icon/scanning-progress-icon2.png" alt="Icon">
+                    <img src="assets/images/icon/scanning-progress-icon3.png" alt="Icon">
+                    <img src="assets/images/icon/scanning-progress-icon4.png" alt="Icon">
+                    <img src="assets/images/icon/scanning-progress-icon5.png" alt="Icon">
+                    <img src="assets/images/icon/scanning-progress-icon6.png" alt="Icon">
+                </div>
+                <div class="d-flex align-items-center gap-8 mt-8 justify-content-end">
+                    <button type="button" class="px-6 py-1 radius-4 text-xs d-flex align-items-center gap-2 bg-hover-primary-30">
+                        <span class="text-primary-600">
+                            <i class="ri-stop-circle-line"></i>
+                        </span>
+                        Pause
+                    </button>
+                    <button type="button" class="px-6 py-1 radius-4 text-xs d-flex align-items-center gap-2 bg-hover-primary-30">
+                        <span class="text-primary-600">
+                            <i class="ri-checkbox-circle-line"></i>
+                        </span>
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Top Tab end -->
+
+      <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16 overflow-x-auto scroll-sm scroll-vertical">
+
+        <!-- Content start -->
+        <div class="">
+            <div class="d-flex align-items-center gap-8 flex-wrap mb-18">
+                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                    </span>
+                    <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                    </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                        <i class="ri-download-2-line"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                        <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                            <span class="">Delete</span>
+                            </button>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                    </span>
+                    <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                    </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                        <i class="ri-download-2-line"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                        <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                            <span class="">Delete</span>
+                            </button>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
+                <div class="d-flex align-items-center justify-content-between gap-4">
+                    <div class="d-flex align-items-center gap-12">
+                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
+                        <i class="ri-folder-zip-line"></i>
+                    </span>
+                    <div class="">
+                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
+                        <span class="text-xs text-secondary-light-two">2.2MB</span>
+                    </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
+                        <i class="ri-download-2-line"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                        <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
+                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
+                            <span class="">Delete</span>
+                            </button>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="d-flex flex-md-row flex-column gap-24">
+                <!-- PDF Start -->
+                <div class="overflow-x-auto flex-grow-1">
+                <div class="w-100">
+                    <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                </div>
+                </div>
+                <!-- PDF End -->
+            </div>
+        </div>
+        <!-- Content start -->
+
+        <!-- Sidebar Start -->
+        <div class="max-w-388-px flex-shrink-0">
+          <div class="bg-white shadow-4 radius-4 p-16">
+            <h6 class="mb-24 text-md text-primary-light-two fw-semibold text-center d-flex align-items-center gap-16 justify-content-center">AI Quality Control 
+                <span class="px-12 py-4 text-primary-600 text-xxs bg-primary-50 rounded-pill">02 Times </span>
+            </h6>
+            <div class="circle-border text-center">
+              <svg class="radial-progress" data-percentage="58" viewBox="0 0 80 80">
+                  <circle class="incomplete" cx="40" cy="40" r="35"></circle>
+                  <circle class="complete" cx="40" cy="40" r="35"></circle>
+                  <text class="percentage cursor-big" x="50%" y="57%" transform="matrix(0, 1, -1, 0, 80, 0)">58%</text>
+              </svg>
+            </div>
+            <div class="d-flex justify-content-between gap-40-px px-res-36-px mt-20">
+              <div class="text-center">
+                <h6 class="text-primary-light-two text-sm mb-0">Uncleared Pages</h6>
+                <span class="text-xs">20</span>
+              </div>
+              <span class="w-1-px h-24-px bg-neutral-300"></span>
+              <div class="text-center">
+                <h6 class="text-primary-light-two text-sm mb-0">Total Pages</h6>
+                <span class="text-xs">570 / 1000</span>
+              </div>
+            </div>
+            <div class="text-center mt-16">
+              <button type="button" class="btn btn-success-600 d-inline-flex align-items-center justify-content-center gap-12 review-act-btn px-32"> 
+                <i class="icon ri-play-circle-line text-xl d-inline-flex line-height-1"></i>
+                <span class="text">Start</span>
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="bg-white shadow-4 radius-4 p-16 mt-10">
+            <h6 class="mb-24 text-center text-lg text-primary-light-two">AI Findings</h6>
+
+            <div class="max-h-230-px overflow-y-auto scroll-sm pe-8">
+              <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
+                  <div class="d-flex align-items-center gap-16">
+                    <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
+                      <img src="assets/images/icon/ai-finding-icon1.png" alt="Icon">
+                    </span>
+                    <span class="text-secondary-light-two text-sm">Blank Pages </span>
+                  </div>
+                  <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">-/10</span>
+              </div>
+              <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
+                  <div class="d-flex align-items-center gap-16">
+                    <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
+                      <img src="assets/images/icon/ai-finding-icon2.png" alt="Icon">
+                    </span>
+                    <span class="text-secondary-light-two text-sm">Fill Blank Spots </span>
+                  </div>
+                  <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">2/2</span>
+              </div>
+              <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
+                  <div class="d-flex align-items-center gap-16">
+                    <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
+                      <img src="assets/images/icon/ai-finding-icon3.png" alt="Icon">
+                    </span>
+                    <span class="text-secondary-light-two text-sm">Wrong Rotation </span>
+                  </div>
+                  <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">1/1</span>
+              </div>
+              <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
+                  <div class="d-flex align-items-center gap-16">
+                    <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
+                      <img src="assets/images/icon/ai-finding-icon4.png" alt="Icon">
+                    </span>
+                    <span class="text-secondary-light-two text-sm">Low Page Quality </span>
+                  </div>
+                  <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">-/1</span>
+              </div>
+              <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
+                  <div class="d-flex align-items-center gap-16">
+                    <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
+                      <img src="assets/images/icon/ai-finding-icon5.png" alt="Icon">
+                    </span>
+                    <span class="text-secondary-light-two text-sm">Wrong Alignment </span>
+                  </div>
+                  <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">1/1</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white shadow-4 radius-4 p-16 mt-10">
+            <h6 class="mb-24 text-center text-lg text-primary-light-two">Other Actions</h6>
+
+            <div class="max-h-380-px overflow-y-auto scroll-sm pe-8">
+                <ul class="sidebar-menu style-two mt-0" id="sidebar-menu">
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Modified Pages </span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">88</span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Version History</span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">-/10</span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Sorting  </span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">217 </span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Indexing </span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">88/217</span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Quality Control</span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">88</span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
+                            <span class="text-secondary-light-two text-sm">Dispatch</span>
+                            <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">No</span>
+                        </button>
+                        <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="text-secondary-light-two fw-normal">
+                                        DV02 - 12, Jan 2025 18:12:01 AM -
+                                        <span class="text-xxs">Hight Resolutions</span> 
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mt-8">
+                                <a href="javascript:void(0)" class="text-secondary-light-two d-flex align-items-center gap-8 text-xs py-0 text-hover-primary-500">
+                                    <img src="assets/images/home-one/attatchment-icon4.png" alt="Icon" class="w-16-px"> 
+                                    <span class="radius-4 bg-primary-600 text-white fw-semibold px-8 py-1">
+                                        DV01 - 12, Jan 2025 18:02:01 AM -
+                                        <span class="text-xxs">Main</span> 
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Sidebar End -->
+      </div>
+
+    </div>
+  </div>
+
+  @@include('../layouts/_footer.html')
+</main>
+
+<!-- Scan start -->
+<div class="modal-backdrop fade show"></div>
+<div class="modal fade show" id="scanAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="scanAddLabel" aria-modal="true" role="dialog" style="display: block; padding-left: 0px;">
+
+<!-- <div class="modal fade" id="scanAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="scanAddLabel" aria-hidden="true"> -->
+    <div class="modal-dialog modal-dialog-centered max-w-1060-px">
+      <div class="modal-content p-36 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h5 class="modal-title fw-semibold line-clamp-1" id="scanAddLabel">Scan</h5>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#" class="submit-form checkValidityForm">
+            <div class="row gy-20 gx-44">
+             
+                <div class="col-sm-12">
+                    <label for="Scanner" class="text-md text-primary-light fw-normal mb-10">Scanner </label>
+                    <select id="Scanner" class="form-control py-10 form-select text-neutral-400" required>
+                        <option value="Scanner" selected>Scanner</option>
+                        <option value="Epson">Epson</option>
+                        <option value="Canon">Canon</option>
+                        <option value="HP">HP</option>
+                        <option value="Brother">Brother</option>
+                        <option value="Fujitsu">Fujitsu</option>
+                        <option value="Kodak">Kodak</option>
+                        <option value="Plustek">Plustek</option>
+                        <option value="Xerox">Xerox</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <div class="row gy-5">
+                        <div class="col-lg-6">
+                            <h6 class="text-sm fw-semibold mb-12">Pages to Scan</h6>
+                            
+                            <div class="row gy-4">
+                                <div class="col-4">
+                                    <div class="d-flex align-items-center gap-12">   
+                                        <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="PagesStart">
+                                        <label for="PagesStart" class="">Start</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-0 d-flex align-items-center gap-24 justify-content-end mt-50 flex-wrap">
+              <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Scan End -->
+
+
+  
+@@include('../partial-html/_template-bottom.html')
+
+<script src="assets/js/pdfobject.js"></script>
+<script>
+    // ========================= Animated Radial Progress Js Start ===================
+    function animateProgress() {
+        $('svg.radial-progress').each(function () {
+        // Check if the element is within the viewport
+        const elementTop = $(this).offset().top;
+        const elementBottom = elementTop + $(this).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        if (elementBottom > viewportTop && elementTop < viewportBottom) {
+            const percent = $(this).data('percentage');
+            const radius = $(this).find('circle.complete').attr('r');
+            const circumference = 2 * Math.PI * radius;
+            const strokeDashOffset = circumference - (percent / 100) * circumference;
+
+            // Animate the circle
+            $(this).find('circle.complete').css('stroke-dashoffset', strokeDashOffset);
+        }
+        });
+    }
+
+    // Trigger animation on scroll and page load
+    $(window).on('scroll', animateProgress);
+    animateProgress(); // Run on page load
+    // ========================= Animated Radial Progress Js End ===================
+
+    // *************************** PDF js Start ***************************
+    const template = document.createElement('template');
+    template.innerHTML = `
+    <iframe frameborder="0" 
+        width="1280" 
+        height="900">
+    </iframe>
+    `
+    class PdfViewer extends HTMLElement {
+    constructor() {
+        super()
+        const shadowRoot = this.attachShadow({mode: 'open'})
+        shadowRoot.appendChild(template.content.cloneNode(true))
+    }
+    get observedAttributes() {
+        return ['src']
+    }
+    connectedCallback() {
+        this.updateIframeSrc()
+    }
+    attributeChangedCallback(name) {
+        if (['src', 'viewerPath'].includes(name)) {
+        this.updateIframeSrc()
+        }
+    }
+    updateIframeSrc() {
+        this.shadowRoot.querySelector('iframe').setAttribute(
+        'src', 
+        `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+        )
+    }
+    }
+    window.customElements.define('pdf-viewer', PdfViewer)
+    // *************************** PDF js End ***************************
+
+</script>
+
+</body>
+</html>
