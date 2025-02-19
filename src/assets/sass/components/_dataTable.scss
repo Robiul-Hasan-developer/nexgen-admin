@@ -117,4 +117,13 @@ div.dt-container .dt-paging .dt-paging-button {
 .dt-layout-row.dt-layout-table {
     min-height: 438px;
 }
+
+.table-bg-white {
+    .dt-layout-row.dt-layout-table {
+        background-color: #fff;
+    }
+    .dt-layout-cell {
+        padding: 0 !important;
+    }
+}
 /* Common Data Table Css end */

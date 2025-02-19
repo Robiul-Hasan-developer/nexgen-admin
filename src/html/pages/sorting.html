@@ -33,19 +33,15 @@
                   <span class="text-primary-light-two text-sm">John Doe</span>
                 </div>
                 <span class="text-primary-light-two text-sm">Create Date : 12 Nov, 2024 - 14:02pm</span>
+                <div class="d-flex align-items-center gap-16">
+                    <span class="py-0 px-8 bg-danger-600 text-xs fw-medium text-white rounded-pill">3 Batches - 22,872 Pages </span>
+                    <span class="py-0 px-14 bg-cyan-600 text-xs fw-medium text-white rounded-pill">Documents Group Break</span>
+                </div>
               </div>
             </div>
           </div>
           <div class="d-flex align-items-center gap-14 flex-wrap">
-            <button type="button" class="btn py-6 px-16 btn-primary-600 d-flex align-items-center gap-16" data-bs-toggle="modal" data-bs-target="#scanAdd">
-                <i class="ri-qr-scan-line"></i>
-                Scan
-            </button>
-            <button type="button" class="btn py-6 px-16 btn-primary-600 d-flex align-items-center gap-16" data-bs-toggle="modal" data-bs-target="#uploadScan">
-                <i class="ri-upload-2-line"></i>
-                Upload
-            </button>
-            <button type="button" class="btn py-6 px-24 btn-primary-600">Edit</button>
+            <button type="button" class="btn py-6 px-24 btn-primary-600" data-bs-toggle="modal" data-bs-target="#editSorting">Edit</button>
             <button type="button" class="btn py-6 px-24 btn-danger-600">Delete</button>
           </div>
         </div>
@@ -84,120 +80,348 @@
       <!-- Top Tab end -->
 
       <div class="shadow-2 section-bg px-12 py-16 radius-6 d-flex flex-lg-row flex-column gap-16 overflow-x-auto scroll-sm scroll-vertical">
-
         <!-- Content start -->
-        <div class="">
-            <div class="d-flex align-items-center gap-8 flex-wrap mb-18">
-                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
-                <div class="d-flex align-items-center justify-content-between gap-4">
-                    <div class="d-flex align-items-center gap-12">
-                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                        <i class="ri-folder-zip-line"></i>
-                    </span>
-                    <div class="">
-                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                        <span class="text-xs text-secondary-light-two">2.2MB</span>
-                    </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-1">
-                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                        <i class="ri-download-2-line"></i>
-                    </button>
-                    <div class="dropdown">
-                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                        <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                            <span class="">Delete</span>
-                            </button>
-                        </li>
-                        </ul>
-                    </div>
-                    </div>
+        <div class="flex-grow-1">
+            <!-- Filter Start -->
+            <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3 mb-10">
+                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#createDocument">
+                  <span class="text-white text-xs font-rubik fw-normal">
+                    11
+                  </span>
+                  <span class="w-1-px h-18-px bg-white-1"></span>
+                  View Documents 
+                </button>
+                <button type="button" class="btn btn-danger-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#createDocument">
+                  <span class="text-white text-xs font-rubik fw-normal">
+                    11
+                  </span>
+                  <span class="w-1-px h-18-px bg-white-1"></span>
+                  Delete Documents  
+                </button>
+      
+                <div class="d-flex align-items-center gap-3 flex-shrink-0">
+                  <span class="text-primary-light text-sm flex-shrink-0">Show Entries </span>
+                  <select class="form-control form-select py-6 border bg-white radius-8 ps-20 pe-56">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
                 </div>
-                </div>
-                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
-                <div class="d-flex align-items-center justify-content-between gap-4">
-                    <div class="d-flex align-items-center gap-12">
-                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                        <i class="ri-folder-zip-line"></i>
-                    </span>
-                    <div class="">
-                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                        <span class="text-xs text-secondary-light-two">2.2MB</span>
-                    </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-1">
-                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                        <i class="ri-download-2-line"></i>
-                    </button>
-                    <div class="dropdown">
-                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                        <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                            <span class="">Delete</span>
-                            </button>
-                        </li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="border border-dashed p-8 radius-4 delete-item bg-white max-w-330-px">
-                <div class="d-flex align-items-center justify-content-between gap-4">
-                    <div class="d-flex align-items-center gap-12">
-                    <span class="w-40-px h-40-px bg-primary-50 radius-4 d-flex justify-content-center align-items-center text-purple-600 text-lg">
-                        <i class="ri-folder-zip-line"></i>
-                    </span>
-                    <div class="">
-                        <h6 class="text-sm mb-4 text-primary-light-two">App pages.zip</h6>
-                        <span class="text-xs text-secondary-light-two">2.2MB</span>
-                    </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-1">
-                    <button type="button" class="text-md d-flex w-32-px h-32-px d-flex justify-content-center align-items-center text-secondary-light-two">
-                        <i class="ri-download-2-line"></i>
-                    </button>
-                    <div class="dropdown">
-                        <button class="text-lg h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                        <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100 delete-button">
-                            <span class="text-md d-flex"><i class="ri-delete-bin-6-line"></i></span>
-                            <span class="">Delete</span>
-                            </button>
-                        </li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
+                <div class="d-flex align-items-center gap-3 w-100">
+                  <input type="text" class="form-control max-w-760-px w-100" placeholder="Search...">
+        
+                  <div class="d-flex align-items-center gap-2 ">
+                    <button class="text-neutral-400 d-flex line-height-1  text-lg"><i class="ri-filter-line line-height-1"></i></button>
+                    
+                  </div>
                 </div>
             </div>
-            <div class="d-flex flex-md-row flex-column gap-24">
-                <!-- PDF Start -->
-                <div class="overflow-x-auto flex-grow-1">
-                <div class="w-100">
-                    <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+
+            <div class="d-flex align-items-center gap-16 justify-content-center mb-20">
+                <div class="py-4 px-6 bg-purple-50 text-purple-600 text-xs radius-4 line-height-1 d-flex align-items-center gap-10 fw-semibold delete-item">
+                    Department
+                    <button type="button" class="text-xxs delete-button"><i class="ri-close-large-line"></i></button>
                 </div>
+                <div class="py-4 px-6 bg-purple-50 text-purple-600 text-xs radius-4 line-height-1 d-flex align-items-center gap-10 fw-semibold delete-item">
+                    High
+                    <button type="button" class="text-xxs delete-button"><i class="ri-close-large-line"></i></button>
                 </div>
-                <!-- PDF End -->
+                <div class="py-4 px-6 bg-purple-50 text-purple-600 text-xs radius-4 line-height-1 d-flex align-items-center gap-10 fw-semibold delete-item">
+                    New
+                    <button type="button" class="text-xxs delete-button"><i class="ri-close-large-line"></i></button>
+                </div>
             </div>
+            <!-- Filter End -->
+            
+            
+            <!-- Table Start -->
+            <div class="overflow-x-auto pb-8 scroll-sm scroll-vertical table-bg-white">
+                <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
+                    <thead>
+                        <tr>
+                            <th class="py-14 bg-neutral-50 text-start">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </th>
+                            <th class="py-14 bg-neutral-50 text-start">Document Name</th>
+                            <th class="py-14 bg-neutral-50 text-start">Type</th>
+                            <th class="py-14 bg-neutral-50 text-center">Department </th>
+                            <th class="py-14 bg-neutral-50 text-center">Folder / Tray </th>
+                            <th class="py-14 bg-neutral-50 text-center"># of Pages </th>
+                            <th class="py-14 bg-neutral-50 text-center">Size</th>
+                            <th class="py-14 bg-neutral-50 text-center">Last Modified </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Human Resources </td>
+                            <td class="text-center fw-light">HR Contracts - Jan'22</td>
+                            <td class="text-center fw-light">2</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Unidentified Documents </span>
+                            </td>
+                            <td class="text-center fw-light">-</td>
+                            <td class="text-center fw-light">-</td>
+                            <td class="text-center fw-light">29</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Loan Documents </span>
+                            </td>
+                            <td class="text-center fw-light">Sales</td>
+                            <td class="text-center fw-light">Sales Contracts - Jan'22</td>
+                            <td class="text-center fw-light">243</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Finance </td>
+                            <td class="text-center fw-light">Loan Documents - Jan'22</td>
+                            <td class="text-center fw-light">232</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Finance</td>
+                            <td class="text-center fw-light">Loan Documents - Jan'22</td>
+                            <td class="text-center fw-light">434</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Finance</td>
+                            <td class="text-center fw-light">Loan Documents - Jan'22</td>
+                            <td class="text-center fw-light">434</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Human Resources </td>
+                            <td class="text-center fw-light">HR Contracts - Jan'22</td>
+                            <td class="text-center fw-light">2</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Unidentified Documents </span>
+                            </td>
+                            <td class="text-center fw-light">-</td>
+                            <td class="text-center fw-light">-</td>
+                            <td class="text-center fw-light">29</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Loan Documents </span>
+                            </td>
+                            <td class="text-center fw-light">Sales </td>
+                            <td class="text-center fw-light">Sales Contracts - Jan'22</td>
+                            <td class="text-center fw-light">243</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Finance </td>
+                            <td class="text-center fw-light">Loan Documents - Jan'22</td>
+                            <td class="text-center fw-light">232</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Finance </td>
+                            <td class="text-center fw-light">Loan Documents - Jan'22</td>
+                            <td class="text-center fw-light">434</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-light">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                            </td>
+                            <td class="text-start fw-light">
+                                <div class="d-flex align-items-center gap-8">   
+                                    <img src="assets/images/another/adobe.png" alt="Icon" class="w-16-px">
+                                    <span class="">Contract</span>
+                                </div>
+                            </td>
+                            <td class="fw-light">
+                                <span class="line-clamp-1">Contract</span>
+                            </td>
+                            <td class="text-center fw-light">Human Resources </td>
+                            <td class="text-center fw-light">HR Contracts - Jan'22</td>
+                            <td class="text-center fw-light">2</td>
+                            <td class="text-center fw-light">32 KB</td>
+                            <td class="text-center fw-light">
+                                <span class="line-clamp-1">Al Ajazi Mohammed 23 Apr, 202...</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Table End -->
         </div>
         <!-- Content start -->
 
         <!-- Sidebar Start -->
         <div class="max-w-388-px flex-shrink-0">
           <div class="bg-white shadow-4 radius-4 p-16">
-            <h6 class="mb-24 text-md text-primary-light-two fw-semibold text-center d-flex align-items-center gap-16 justify-content-center">AI Quality Control 
+            <h6 class="mb-24 text-md text-primary-light-two fw-semibold text-center d-flex align-items-center gap-16 justify-content-center">AI Document Identification  
                 <span class="px-12 py-4 text-primary-600 text-xxs bg-primary-50 rounded-pill">02 Times </span>
             </h6>
             <div class="circle-border text-center">
@@ -209,13 +433,13 @@
             </div>
             <div class="d-flex justify-content-between gap-40-px px-res-36-px mt-20">
               <div class="text-center">
-                <h6 class="text-primary-light-two text-sm mb-0">Uncleared Pages</h6>
+                <h6 class="text-primary-light-two text-xxs mb-0">Unidentified Documents </h6>
                 <span class="text-xs">20</span>
               </div>
               <span class="w-1-px h-24-px bg-neutral-300"></span>
               <div class="text-center">
-                <h6 class="text-primary-light-two text-sm mb-0">Total Pages</h6>
-                <span class="text-xs">570 / 1000</span>
+                <h6 class="text-primary-light-two text-xxs mb-0">Total Documents</h6>
+                <span class="text-xs">12 / 300</span>
               </div>
             </div>
             <div class="text-center mt-16">
@@ -236,7 +460,7 @@
                     <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
                       <img src="assets/images/icon/ai-finding-icon1.png" alt="Icon">
                     </span>
-                    <span class="text-secondary-light-two text-sm">Blank Pages </span>
+                    <span class="text-secondary-light-two text-sm">NBK Cheques </span>
                   </div>
                   <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">-/10</span>
               </div>
@@ -245,34 +469,34 @@
                     <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
                       <img src="assets/images/icon/ai-finding-icon2.png" alt="Icon">
                     </span>
-                    <span class="text-secondary-light-two text-sm">Fill Blank Spots </span>
+                    <span class="text-secondary-light-two text-sm">Leasing Contract </span>
                   </div>
                   <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">2/2</span>
               </div>
               <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
                   <div class="d-flex align-items-center gap-16">
                     <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
-                      <img src="assets/images/icon/ai-finding-icon3.png" alt="Icon">
+                      <img src="assets/images/icon/ai-finding-icon2.png" alt="Icon">
                     </span>
-                    <span class="text-secondary-light-two text-sm">Wrong Rotation </span>
+                    <span class="text-secondary-light-two text-sm">Invoices </span>
                   </div>
                   <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">1/1</span>
               </div>
               <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
                   <div class="d-flex align-items-center gap-16">
                     <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
-                      <img src="assets/images/icon/ai-finding-icon4.png" alt="Icon">
+                      <img src="assets/images/icon/ai-finding-icon2.png" alt="Icon">
                     </span>
-                    <span class="text-secondary-light-two text-sm">Low Page Quality </span>
+                    <span class="text-secondary-light-two text-sm">Loan Documents </span>
                   </div>
                   <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">-/1</span>
               </div>
               <div class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50">
                   <div class="d-flex align-items-center gap-16">
                     <span class="radius-4 w-32-px h-28-px border d-flex justify-content-center align-items-center bg-primary-50">
-                      <img src="assets/images/icon/ai-finding-icon5.png" alt="Icon">
+                      <img src="assets/images/icon/ai-finding-icon3.png" alt="Icon">
                     </span>
-                    <span class="text-secondary-light-two text-sm">Wrong Alignment </span>
+                    <span class="text-secondary-light-two text-sm">Unidentified Documents </span>
                   </div>
                   <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">1/1</span>
               </div>
@@ -286,7 +510,7 @@
                 <ul class="sidebar-menu style-two mt-0" id="sidebar-menu">
                     <li class="dropdown">
                         <button type="button" class="py-10 d-flex align-items-center justify-content-between border-bottom border-neutral-50 w-100 d-block">
-                            <span class="text-secondary-light-two text-sm">Modified Pages </span>
+                            <span class="text-secondary-light-two text-sm">Modified Documents  </span>
                             <span class="px-6 py-1 radius-4 border text-xxs d-flex justify-content-center align-items-center bg-primary-50">88</span>
                         </button>
                         <ul class="sidebar-submenu mt-0 pt-0 ps-0 my-16">
@@ -509,12 +733,12 @@
 </main>
 
 <!-- Scan start -->
-<div class="modal fade" id="scanAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="scanAddLabel" aria-hidden="true">
+<div class="modal fade" id="editSorting" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editSortingLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered max-w-1060-px">
       <div class="modal-content p-36 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
           <div class="d-flex align-items-center gap-18">
-            <h5 class="modal-title fw-semibold line-clamp-1" id="scanAddLabel">Scan</h5>
+            <h5 class="modal-title fw-semibold line-clamp-1" id="editSortingLabel">Document Sorting</h5>
             <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
           </div>
           <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#createDocument">
@@ -525,119 +749,7 @@
         <div class="modal-body p-0">
           <form action="#" class="submit-form checkValidityForm">
             <div class="row gy-20 gx-44">
-             
-                <div class="col-sm-12">
-                    <label for="Scanner" class="text-md text-primary-light fw-normal mb-10">Scanner </label>
-                    <select id="Scanner" class="form-control py-10 form-select text-neutral-400" required>
-                        <option value="Scanner" selected>Scanner</option>
-                        <option value="Epson">Epson</option>
-                        <option value="Canon">Canon</option>
-                        <option value="HP">HP</option>
-                        <option value="Brother">Brother</option>
-                        <option value="Fujitsu">Fujitsu</option>
-                        <option value="Kodak">Kodak</option>
-                        <option value="Plustek">Plustek</option>
-                        <option value="Xerox">Xerox</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <div class="row gy-4">
-                        <div class="col-lg-6">
-                            <div class="">
-                                <div class="">
-                                    <h6 class="text-sm fw-semibold mb-12">Pages to Scan</h6>
-                                    <div class="row gy-4">
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="PagesStart">
-                                                <label for="PagesStart" class="">Start</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="PagesCurrent">
-                                                <label for="PagesCurrent" class="">Current</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="PagesEnd">
-                                                <label for="PagesEnd" class="">End</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-28">
-                                    <h6 class="text-sm fw-semibold mb-12">Orientation</h6>
-                                    <div class="row gy-4">
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="OrientationAuto">
-                                                <label for="OrientationAuto" class="">Auto</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="OrientationPortrait">
-                                                <label for="OrientationPortrait" class="">Portrait</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="OrientationLandscape">
-                                                <label for="OrientationLandscape" class="">Landscape</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-28">
-                                    <h6 class="text-sm fw-semibold mb-12">Scanning Format</h6>
-                                    <div class="row gy-4">
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="ScanningFormatAuto">
-                                                <label for="ScanningFormatAuto" class="">Auto</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="ScanningFormatSimplex">
-                                                <label for="ScanningFormatSimplex" class="">Simplex</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="d-flex align-items-center gap-12">   
-                                                <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="ScanningFormatDuplex">
-                                                <label for="ScanningFormatDuplex" class="">Duplex</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-28">
-                                    <h6 class="text-sm fw-semibold mb-12">Contrast </h6>
-                                    <div>
-                                        <input type="range" class="range" min="10" max="100" value="50">
-                                    </div>
-                                </div>
-                                <div class="mt-28">
-                                    <h6 class="text-sm fw-semibold mb-12">Contrast </h6>
-                                    <div>
-                                        <input type="range" class="range" min="10" max="100" value="70">
-                                    </div>
-                                </div>
-                                <div class="mt-28">
-                                    <div class="d-flex align-items-center gap-12">   
-                                        <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-300 w-22-px h-22-px bg-main radius-6" type="checkbox" id="AutoContrasBrightness">
-                                        <label for="AutoContrasBrightness" class="">Auto Contrast & Brightness </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="border border-neutral-200 rounded h-100"></div>
-                        </div>
-                    </div>
-                </div>
+                <h6>Edit document sorting content goes here....</h6>
             </div>
             <div class="border-0 d-flex align-items-center gap-24 justify-content-end mt-50 flex-wrap">
               <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled>Save </button>
@@ -811,6 +923,19 @@
 <script src="assets/js/pdfobject.js"></script>
 
 <script>
+
+    // ***************************** Data Table js start ***************************** 
+    if ($('#example').length) {
+        new DataTable('#example', {
+        searching: false,   // Removes the search box
+        lengthChange: false, 
+        // paging: false,      // Disables pagination
+        // ordering: false     // Disables column ordering
+        });
+    }
+    // ***************************** Data Table js end ***************************** 
+
+
     // ========================= Animated Radial Progress Js Start ===================
     function animateProgress() {
         $('svg.radial-progress').each(function () {
@@ -837,62 +962,7 @@
     animateProgress(); // Run on page load
     // ========================= Animated Radial Progress Js End ===================
 
-    // *************************** Upload Single Image js start here ***************************
-    const fileInput = document.getElementById("upload-file");
-    const imagePreview = document.getElementById("uploaded-img__preview");
-    const uploadedImgContainer = document.querySelector(".uploaded-img");
-    const removeButton = document.querySelector(".uploaded-img__remove");
 
-    fileInput.addEventListener("change", (e) => {
-        if (e.target.files.length) {
-        const src = URL.createObjectURL(e.target.files[0]);
-        imagePreview.src = src;
-        uploadedImgContainer.classList.remove('d-none');
-        }
-    });
-    removeButton.addEventListener("click", () => {
-        imagePreview.src = "";
-        uploadedImgContainer.classList.add('d-none');
-        fileInput.value = ""; 
-    });
-    // *************************** Upload Single Image js End here ***************************
-
-    
-    // *************************** PDF js Start ***************************
-    const template = document.createElement('template');
-        template.innerHTML = `
-        <iframe frameborder="0" 
-            width="1280" 
-            height="900">
-        </iframe>
-        `
-        class PdfViewer extends HTMLElement {
-        constructor() {
-            super()
-            const shadowRoot = this.attachShadow({mode: 'open'})
-            shadowRoot.appendChild(template.content.cloneNode(true))
-        }
-        get observedAttributes() {
-            return ['src']
-        }
-        connectedCallback() {
-            this.updateIframeSrc()
-        }
-        attributeChangedCallback(name) {
-            if (['src', 'viewerPath'].includes(name)) {
-            this.updateIframeSrc()
-            }
-        }
-        updateIframeSrc() {
-            this.shadowRoot.querySelector('iframe').setAttribute(
-            'src', 
-            `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
-            )
-        }
-    }
-    window.customElements.define('pdf-viewer', PdfViewer)
-    // *************************** PDF js End ***************************
-  
 </script>
 
 </body>

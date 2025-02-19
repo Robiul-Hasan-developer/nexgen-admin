@@ -153,14 +153,14 @@ import { toastMessage } from './toast.js';
   // *************************** Delete Tr js start ***************************
   $(".delete-tr-button").on('click', function () {
     $(this).closest('tr').addClass('d-none');
-    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
+    toastMessage("danger", "Deleted", "You deleted successfully!", 'ri-delete-bin-line');
   });
   // *************************** Delete Tr js End ***************************
 
   // ========================= Delete Item Js start ===================
   $('.delete-button').on('click', function () {
     $(this).closest('.delete-item').addClass('d-none');
-    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
+    toastMessage("danger", "Deleted", "You deleted successfully!", 'ri-delete-bin-line');
   });
   // ========================= Delete Item Js End ===================
 
@@ -442,7 +442,7 @@ import { toastMessage } from './toast.js';
                 var removeButton = newWrapper.querySelector('.add-action__remove');
                 removeButton.addEventListener('click', function () {
                     this.closest('.add-action-wrapper').remove();
-                    toastMessage("success", "Success", "You deleted successfully!", 'ri-checkbox-circle-fill');
+                    toastMessage("danger", "Deleted", "You deleted successfully!", 'ri-delete-bin-line');
                 });
   
                 // Insert the cloned wrapper immediately after the current one
@@ -625,7 +625,7 @@ import { toastMessage } from './toast.js';
 
       console.log(activeEmailItems.length);
       if(activeEmailItems.length > 0) {
-        toastMessage("success", "Success", "All selected email item deleted successfully!", 'ri-checkbox-circle-fill');
+        toastMessage("success", "Success", "All selected email item deleted successfully!", 'ri-delete-bin-line');
       }
     });
   }
