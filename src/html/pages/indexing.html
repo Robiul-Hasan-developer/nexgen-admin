@@ -6,11 +6,11 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Digital Signature",
-    page: "Sorting Documents",
-    pageLink: "sorting-documents.html",
-    activePage: "Workflow",
-    paraText: "Displays a list of sorting operations, including criteria, status, completion time, and actions for efficient tracking and management."
+    pageTitle: "Indexing Documents",
+    page: "Business Suite",
+    pageLink: "index.html",
+    activePage: "Indexing Documents ",
+    paraText: "Displays a list of indexing processes, including indexed content, status, indexing time, and actions for efficient tracking and management."
   })
   
   <div class="dashboard-main-body">
@@ -24,7 +24,7 @@
               <img src="assets/images/home-one/slack.png" alt="">
             </span>
             <div class="flex-grow-1">
-              <h6 class="text-xl text-xl text-primary-light-two mb-8">EV00201 - Agreements - New Agreement with Supplier </h6>
+              <h6 class="text-xl text-xl text-primary-light-two mb-8">DI0097 - Agreements - New Agreement with Supplier </h6>
               <div class="d-flex align-items-center gap-44-px flex-wrap">
                 <div class="d-flex align-items-center gap-1">
                   <span class="d-flex text-sm">
@@ -84,14 +84,21 @@
         <div class="flex-grow-1">
             <!-- Filter Start -->
             <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3 mb-10">
-                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#createDocument">
+                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#viewDocument">
                   <span class="text-white text-xs font-rubik fw-normal">
                     11
                   </span>
                   <span class="w-1-px h-18-px bg-white-1"></span>
                   View Documents 
                 </button>
-                <button type="button" class="btn btn-danger-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#createDocument">
+                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#editDocument">
+                  <span class="text-white text-xs font-rubik fw-normal">
+                    11
+                  </span>
+                  <span class="w-1-px h-18-px bg-white-1"></span>
+                  Edit Documents 
+                </button>
+                <button type="button" class="btn btn-danger-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#deleteDocument">
                   <span class="text-white text-xs font-rubik fw-normal">
                     11
                   </span>
@@ -149,12 +156,12 @@
                             <th class="py-14 bg-neutral-50 text-start">
                                 <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
                             </th>
-                            <th class="py-14 bg-neutral-50 text-start">Document Name</th>
-                            <th class="py-14 bg-neutral-50 text-start">Type</th>
-                            <th class="py-14 bg-neutral-50 text-center">Department </th>
-                            <th class="py-14 bg-neutral-50 text-center">Folder / Tray </th>
-                            <th class="py-14 bg-neutral-50 text-center"># of Pages </th>
-                            <th class="py-14 bg-neutral-50 text-center">Size</th>
+                            <th class="py-14 bg-neutral-50 text-start">Contract Date</th>
+                            <th class="py-14 bg-neutral-50 text-start">Contract Name</th>
+                            <th class="py-14 bg-neutral-50 text-center">Contract Start Date  </th>
+                            <th class="py-14 bg-neutral-50 text-center">Contract End Date </th>
+                            <th class="py-14 bg-neutral-50 text-center">Contract First Party </th>
+                            <th class="py-14 bg-neutral-50 text-center">Contract Second Party </th>
                             <th class="py-14 bg-neutral-50 text-center">Last Modified </th>
                         </tr>
                     </thead>
@@ -421,7 +428,7 @@
         <!-- Sidebar Start -->
         <div class="max-w-388-px flex-shrink-0">
           <div class="bg-white shadow-4 radius-4 p-16">
-            <h6 class="mb-24 text-md text-primary-light-two fw-semibold text-center d-flex align-items-center gap-16 justify-content-center">AI Document Identification  
+            <h6 class="mb-24 text-md text-primary-light-two fw-semibold text-center d-flex align-items-center gap-16 justify-content-center">AI Document Indexing    
                 <span class="px-12 py-4 text-primary-600 text-xxs bg-primary-50 rounded-pill">02 Times </span>
             </h6>
             <div class="circle-border text-center">
@@ -433,13 +440,13 @@
             </div>
             <div class="d-flex justify-content-between gap-40-px px-res-36-px mt-20">
               <div class="text-center">
-                <h6 class="text-primary-light-two text-xxs mb-0">Unidentified Documents </h6>
-                <span class="text-xs">20</span>
+                <h6 class="text-primary-light-two text-xs mb-0">Error Documents </h6>
+                <span class="text-xs">2 (10 Fields)</span>
               </div>
               <span class="w-1-px h-24-px bg-neutral-300"></span>
               <div class="text-center">
-                <h6 class="text-primary-light-two text-xxs mb-0">Total Documents</h6>
-                <span class="text-xs">12 / 300</span>
+                <h6 class="text-primary-light-two text-xs mb-0">Total Documents</h6>
+                <span class="text-xs">300 (20,000 Fields)</span>
               </div>
             </div>
             <div class="text-center mt-16">
@@ -802,13 +809,13 @@
                     </thead>
                     <tbody>
                         <tr class="check-announcement-item">
-                            <td class="text-start fw-light">
+                            <td class="py-16 text-start fw-light">
                                 <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
                             </td>
-                            <td class="text-start text-xs fw-light">01</td>
-                            <td class="text-start text-xs fw-light">D00012</td>
-                            <td class="text-start text-xs fw-light">Loan Contract</td>
-                            <td class="text-center text-xs fw-light">
+                            <td class="py-16 text-start text-xs fw-light">01</td>
+                            <td class="py-16 text-start text-xs fw-light">D00012</td>
+                            <td class="py-16 text-start text-xs fw-light">Loan Contract</td>
+                            <td class="py-16 text-center text-xs fw-light">
                                 <div class="dropdown">
                                     <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="ri-more-fill"></i>
@@ -837,13 +844,13 @@
                             </td>
                         </tr>
                         <tr class="check-announcement-item">
-                            <td class="text-start fw-light">
+                            <td class="py-16 text-start fw-light">
                                 <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
                             </td>
-                            <td class="text-start text-xs fw-light">02</td>
-                            <td class="text-start text-xs fw-light">D00013</td>
-                            <td class="text-start text-xs fw-light">Loan Contract</td>
-                            <td class="text-center text-xs fw-light">
+                            <td class="py-16 text-start text-xs fw-light">02</td>
+                            <td class="py-16 text-start text-xs fw-light">D00013</td>
+                            <td class="py-16 text-start text-xs fw-light">Loan Contract</td>
+                            <td class="py-16 text-center text-xs fw-light">
                                 <div class="dropdown">
                                     <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="ri-more-fill"></i>
@@ -872,13 +879,13 @@
                             </td>
                         </tr>
                         <tr class="check-announcement-item">
-                            <td class="text-start fw-light">
+                            <td class="py-16 text-start fw-light">
                                 <input class="announcement-item-checkbox form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
                             </td>
-                            <td class="text-start text-xs fw-light">03</td>
-                            <td class="text-start text-xs fw-light">D00022</td>
-                            <td class="text-start text-xs fw-light">Loan Contract</td>
-                            <td class="text-center text-xs fw-light">
+                            <td class="py-16 text-start text-xs fw-light">03</td>
+                            <td class="py-16 text-start text-xs fw-light">D00022</td>
+                            <td class="py-16 text-start text-xs fw-light">Loan Contract</td>
+                            <td class="py-16 text-center text-xs fw-light">
                                 <div class="dropdown">
                                     <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="ri-more-fill"></i>

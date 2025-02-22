@@ -390,9 +390,9 @@ import { toastMessage } from './toast.js';
       const parentItem = this.closest('.check-announcement-item');
 
       if(this.checked) {
-        parentItem.classList.add('bg-neutral-100');
+        parentItem.classList.add('bg-neutral-200');
       } else {
-        parentItem.classList.remove('bg-neutral-100');
+        parentItem.classList.remove('bg-neutral-200');
       }
 
     });
