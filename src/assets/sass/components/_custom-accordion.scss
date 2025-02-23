@@ -1,3 +1,13 @@
 .delete-item.active .collapse-arrow-btn {
     transform: rotate(90deg);
 }
+
+.active-bg-primary {
+    .accordion-button:not(.collapsed) {
+        color: #fff !important;
+        background-color: var(--primary-600) !important;
+    }
+    .accordion-button:not(.collapsed)::after {
+        filter: invert(1) brightness(1000%);
+    }
+}

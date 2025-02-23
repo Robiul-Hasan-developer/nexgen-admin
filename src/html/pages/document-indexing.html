@@ -6,34 +6,34 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Meta Data Property",
+    pageTitle: "Document Indexing",
     page: "Digital Signature",
     pageLink: "index.html",
-    activePage: "Meta Data Property",
-    paraText: "Displays a list of metadata property configuration requests, including metadata details, status, creation time, and actions for efficient tracking and management."
+    activePage: "Document Indexing",
+    paraText: "Displays a list of document indexing configuration requests, including indexing fields, status, creation time, and actions for efficient tracking and management."
   })
   
   <div class="dashboard-main-body">
-    <div class="shadow-2 section-bg p-3 radius-6">
+    <div class="shadow-2 section-bg p-3 radius-6"> 
 
       <!-- Filter start -->
       <div class="mb-28">
         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
-
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+             
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Add Property  
+            Add Indexing  
           </button>
 
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addIndexing">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Import Property   
+            Import Indexing   
           </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
@@ -90,11 +90,10 @@
         <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
           <thead>
               <tr>
-                  <th class="bg-neutral-50 text-center">Workflow Name</th>
-                  <th class="bg-neutral-50 text-center">Documents Type</th>
-                  <th class="bg-neutral-50 text-center">Due Days</th>
-                  <th class="bg-neutral-50 text-center"># of Departments </th>
-                  <th class="bg-neutral-50 text-center">Recipients </th>
+                  <th class="bg-neutral-50 text-center">Indexing ID</th>
+                  <th class="bg-neutral-50 text-center">Index Name</th>
+                  <th class="bg-neutral-50 text-center">Document Type</th>
+                  <th class="bg-neutral-50 text-center"># of Fields</th>
                   <th class="bg-neutral-50 text-center">Created Details</th>
                   <th class="bg-neutral-50 text-center">Modified Details</th>
                   <th class="bg-neutral-50 text-center">Status</th>
@@ -109,16 +108,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -159,19 +148,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -212,22 +188,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                              <span class="text-white text-xs">1+</span>
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -268,19 +228,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -321,19 +268,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -374,16 +308,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -424,22 +348,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                              <span class="text-white text-xs">1+</span>
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -480,19 +388,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -533,19 +428,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -586,19 +468,6 @@
                     </td>
                     <td class="text-center fw-light">3</td>
                     <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
@@ -641,6 +510,152 @@
   @@include('../layouts/_footer.html')
 </main>
 
+<!-- Add Index Start -->
+<div class="modal fade" id="addEnvelopWorkflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEnvelopWorkflowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1705-px">
+      <div class="modal-content px-36 py-36 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h5 class="modal-title fw-semibold line-clamp-1" id="addEnvelopWorkflowLabel">Add Index </h5>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#" class="submit-form checkValidityForm">
+            <div class="row gy-20 gx-44">
+                <div class="col-sm-6">
+                    <label for="IndexName" class="text-sm text-primary-light fw-normal mb-10">Index Name</label>
+                    <input type="text" class="form-control py-10" id="IndexName" placeholder="Index Name" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="DocumentIdentificationType" class="text-sm text-primary-light fw-normal mb-10">Document Identification Type</label>
+                    <select id="DocumentIdentificationType" class="form-control py-10 form-select text-neutral-400" required>
+                        <option value="Document Identification Type" selected>Document Identification Type</option>
+                        <option value="technology">Technology</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="education">Education</option>
+                        <option value="retail">Retail</option>
+                    </select>
+                </div>
+                <div class="col-xl-8">
+                    <div class="border border-neutral-300 radius-6 p-8 h-100">
+                        <img src="assets/images/another/identification-certificate.png" alt="Thumb">
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="border shadow-9 h-100">
+                        <div class="d-flex align-items-center justify-content-between gap-8 mb-16 px-10 py-16 border-bottom border-neutral-300">
+                            <h6 class="text-md mb-0 fw-medium text-primary-600">Add Indexing Fields </h6>
+                            <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addFields">
+                                <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+                                  <i class="ri-add-line"></i>
+                                </span>
+                                <span class="w-1-px h-18-px bg-white-1"></span>
+                                Add 
+                            </button>
+                        </div>
+                        <div class="mt-32 px-10">
+                         
+                            <div class="accordion active-bg-primary" id="accordionExample">
+                                <div class="accordion-item mb-4 border-0 border-bottom border-neutral-300 pb-20 mb-20">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button d-flex align-items-center gap-10 fw-medium bg-neutral-100 rounded shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="">01</span>
+                                        <span class="">Company Name </span>
+                                    </button>
+                                  </h2>
+                                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body py-0 px-10">
+                                        <div class="d-flex flex-column gap-1 mt-6">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="General" selected>General</option>
+                                                <option value="English">English</option>
+                                                <option value="Bangla">Bangla</option>
+                                            </select>
+                                            <input type="text" class="form-control py-10 text-neutral-400" placeholder="Company Name">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="Validation" selected>Validation </option>
+                                                <option value="Validation One">Validation One</option>
+                                                <option value="Validation Two">Validation Two</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item mb-4 border-0 border-bottom border-neutral-300 pb-20 mb-20">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button d-flex align-items-center gap-10 fw-medium bg-neutral-100 rounded shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="">02</span>
+                                        <span class="">Date</span>
+                                    </button>
+                                  </h2>
+                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body py-0 px-10">
+                                        <div class="d-flex flex-column gap-1 mt-6">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="General" selected>General</option>
+                                                <option value="English">English</option>
+                                                <option value="Bangla">Bangla</option>
+                                            </select>
+                                            <input type="text" class="form-control py-10 text-neutral-400" placeholder="Enter Field Label">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="Validation" selected>Validation </option>
+                                                <option value="Validation One">Validation One</option>
+                                                <option value="Validation Two">Validation Two</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item mb-4 border-0 border-bottom border-neutral-300 pb-20 mb-20">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button d-flex align-items-center gap-10 fw-medium bg-neutral-100 rounded shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="">03</span>
+                                        <span class="">Invoice Date </span>
+                                    </button>
+                                  </h2>
+                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body py-0 px-10">
+                                        <div class="d-flex flex-column gap-1 mt-6">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="General" selected>General</option>
+                                                <option value="English">English</option>
+                                                <option value="Bangla">Bangla</option>
+                                            </select>
+                                            <input type="text" class="form-control py-10 text-neutral-400" placeholder="Company Name">
+                                            <select class="form-control py-10 form-select text-neutral-400" required>
+                                                <option value="Validation" selected>Validation </option>
+                                                <option value="Validation One">Validation One</option>
+                                                <option value="Validation Two">Validation Two</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-50 flex-wrap">
+                <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                    <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Status</label>
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
+                </div>
+                <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Index End -->
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
@@ -664,6 +679,7 @@
         });
     }
     getDatePicker('#dateTime');
+
 </script>
 
 </body>

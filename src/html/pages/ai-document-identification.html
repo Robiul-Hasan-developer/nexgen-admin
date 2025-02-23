@@ -6,11 +6,11 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Meta Data Property",
+    pageTitle: "AI Document Identification",
     page: "Digital Signature",
     pageLink: "index.html",
-    activePage: "Meta Data Property",
-    paraText: "Displays a list of metadata property configuration requests, including metadata details, status, creation time, and actions for efficient tracking and management."
+    activePage: "AI Document Identification",
+    paraText: "Displays a list of AI document identification configuration requests, including document types, AI model status, creation time, and actions for efficient tracking and management."
   })
   
   <div class="dashboard-main-body">
@@ -19,21 +19,21 @@
       <!-- Filter start -->
       <div class="mb-28">
         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
-
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+             
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Add Property  
+            Add Identification  
           </button>
 
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addIdentification">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Import Property   
+            Import Identification   
           </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
@@ -641,9 +641,174 @@
   @@include('../layouts/_footer.html')
 </main>
 
+<!-- Add AI Identification Start -->
+<div class="modal fade" id="addEnvelopWorkflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEnvelopWorkflowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1705-px">
+      <div class="modal-content ps-36 py-36 pe-88-px radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h5 class="modal-title fw-semibold line-clamp-1" id="addEnvelopWorkflowLabel">Add AI Identification </h5>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#" class="submit-form checkValidityForm">
+            <div class="row gy-20 gx-44">
+                <div class="col-sm-6">
+                    <label for="AIIdentificationName" class="text-sm text-primary-light fw-normal mb-10">AI Identification Name</label>
+                    <input type="text" class="form-control py-10" id="AIIdentificationName" placeholder="AI Identification Name" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="DocumentType" class="text-sm text-primary-light fw-normal mb-10">Document Type</label>
+                    <select id="DocumentType" class="form-control py-10 form-select text-neutral-400" required>
+                        <option value="Type" selected>Type</option>
+                        <option value="technology">Technology</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="finance">Finance</option>
+                        <option value="education">Education</option>
+                        <option value="retail">Retail</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <!-- Upload file -->
+                    <div class="upload-image-wrapper d-flex align-items-center gap-3"> 
+                        <div class="upload-file w-100 input-form-light radius-8 overflow-hidden bg-neutral-100 bg-hover-neutral-50 d-flex align-items-center justify-content-center gap-8 h-68-px position-relative z-1">
+                        <label for="upload-file" class="position-absolute w-100 h-100 top-0 start-0 z-n1"></label>
+                        <span class="text-2xl text-primary-600 pointer-event-none">
+                            <i class="ri-upload-cloud-2-line"></i>
+                        </span>
+                        <span class="text-primary-600 text-xs flex-shrink-0 pointer-event-none ms-12">Drag and Drop or  </span>
+                        <span class="d-flex align-items-center gap-2">
+                            <span class="">
+                            <input type="file" id="upload" hidden="" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">
+                            <label for="upload" class="form-control form-select py-6 white-icon py-2 bg-primary-600 w-80-px  ps-8 text-xs text-white pe-24">Upload</label>
+                            </span>
+                        </span>
+                        </div>
+                        <input id="upload-file" type="file" hidden="">
+                    </div>
+                    <!-- Upload file -->
+
+                    <!-- Uploaded view -->
+                    <div class="uploaded-img d-none position-relative border w-100 radius-8 p-4 bg-neutral-100 radius-8 overflow-hidden border-dashed bg-neutral-50 max-w-150-px mt-8">
+                        <button type="button" class="uploaded-img__remove position-absolute top-0 end-0 z-1 text-2xxl line-height-1 me-8 mt-8 d-flex">
+                        <iconify-icon icon="radix-icons:cross-2" class="text-xl text-danger-600"></iconify-icon>
+                        </button>
+                        <img id="uploaded-img__preview" class="radius-8 w-100 h-100 object-fit-cover" src="assets/images/user.png" alt="image">  
+                    </div>
+                    <!-- Uploaded view -->
+                </div>
+                <div class="col-xl-8">
+                    <div class="border border-neutral-300 radius-6 p-8 h-100">
+                        <img src="assets/images/another/identification-certificate.png" alt="Thumb">
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="">
+                        <div class="d-flex align-items-center justify-content-between gap-8 mb-16">
+                            <h6 class="text-md mb-0 fw-medium text-primary-600">Mandatory Fields </h6>
+                            <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addFields">
+                                <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
+                                  <i class="ri-add-line"></i>
+                                </span>
+                                <span class="w-1-px h-18-px bg-white-1"></span>
+                                Add 
+                            </button>
+                        </div>
+                        <select class="form-control form-select py-6 meta-tags w-100" multiple="multiple" id="MetaData" style="height: 180px;">
+                            <option selected>Pay to the order of </option>
+                            <option>Date</option>
+                            <option>Memo</option>
+                            <option>Figma</option>
+                            <option>9 Digits Numbers</option>
+                            <option>9 Digits Numbers</option>
+                            <option>9 Digits Numbers</option>
+                            <option>9 Digits Numbers</option>
+                            <option>9 Digits Numbers</option>
+                            <option>React</option>
+                            <option>Next</option>
+                            <option>Node</option>
+                        </select>
+
+                        <div class="mt-32">
+                            <h6 class="text-md mb-8 fw-medium text-primary-600">Structure Pattern </h6>
+                            <div class="border border-neutral-300 radius-6 p-8">
+                                <img src="assets/images/another/structure-pattern.png" alt="Structure Thumb" class="w-100 radius-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-50 flex-wrap">
+                <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                    <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Status</label>
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
+                </div>
+                <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add AI Identification End -->
+
+
+<!-- Add Fields Start -->
+<div class="modal fade" id="addFields" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addFieldsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-420-px">
+      <div class="modal-content px-36 py-36 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title fw-semibold line-clamp-1 text-sm" id="addFieldsLabel">Add Fields </h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addFields">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+            <form action="#" class="submit-form checkValidityForm d-flex flex-column gap-12">
+                <div class="">
+                    <label for="LabelName" class="text-xs fw-medium mb-4">Label Name</label>
+                    <input type="text" class="form-control py-8 radius-4" id="LabelName" placeholder="Label Name" required>
+                </div>
+                <div class="">
+                    <label for="LabelType" class="text-xs fw-medium mb-4">Label Type</label>
+                    <select id="LabelType" class="form-control py-8 radius-4 form-select" required>
+                        <option value="Label Type" selected hidden>Label Type</option>
+                        <option value="Label Type 1">Label Type 1</option>
+                        <option value="Label Type 2">Label Type 2</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label for="validation" class="text-xs fw-medium mb-4">Label Type</label>
+                    <select id="validation" class="form-control py-8 radius-4 form-select" required>
+                        <option value="Validation" selected hidden>Validation</option>
+                        <option value="Validation 1">Validation 1</option>
+                        <option value="Validation 2">Validation 2</option>
+                    </select>
+                </div>
+
+                <div class="border-0 d-flex align-items-center gap-24 justify-content-end mt-24 flex-wrap">
+                    <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Fields End -->
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/lib/select2.min.js"></script>
 
 <script>
     // ***************************** Data Table js ***************************** 
@@ -664,6 +829,15 @@
         });
     }
     getDatePicker('#dateTime');
+
+    
+    // *************************** Select2 js start here ***************************
+    $(document).ready(function() {
+        $(".meta-tags").select2({
+        tags: true
+        });
+    });
+    // *************************** Select2 js End here ***************************
 </script>
 
 </body>

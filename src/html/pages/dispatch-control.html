@@ -6,34 +6,34 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Meta Data Property",
+    pageTitle: "Dispatch Control",
     page: "Digital Signature",
     pageLink: "index.html",
-    activePage: "Meta Data Property",
-    paraText: "Displays a list of metadata property configuration requests, including metadata details, status, creation time, and actions for efficient tracking and management."
+    activePage: "Dispatch Control",
+    paraText: "Displays a list of dispatch control configuration requests, including dispatch methods, status, creation time, and actions for efficient tracking and management."
   })
   
   <div class="dashboard-main-body">
-    <div class="shadow-2 section-bg p-3 radius-6">
+    <div class="shadow-2 section-bg p-3 radius-6"> 
 
       <!-- Filter start -->
       <div class="mb-28">
         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
-
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+             
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Add Property  
+            Add Dispatch
           </button>
 
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addDispatch">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Import Property   
+            Import Dispatch   
           </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
@@ -641,7 +641,6 @@
   @@include('../layouts/_footer.html')
 </main>
 
-
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
 
@@ -664,6 +663,7 @@
         });
     }
     getDatePicker('#dateTime');
+
 </script>
 
 </body>

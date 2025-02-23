@@ -6,11 +6,11 @@
   @@include('../layouts/_nav.html')
 
   @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Meta Data Property",
+    pageTitle: "folder Management",
     page: "Digital Signature",
     pageLink: "index.html",
-    activePage: "Meta Data Property",
-    paraText: "Displays a list of metadata property configuration requests, including metadata details, status, creation time, and actions for efficient tracking and management."
+    activePage: "folder Management",
+    paraText: "Displays a list of folder management configuration requests, including folder structure, status, creation time, and actions for efficient tracking and management."
   })
   
   <div class="dashboard-main-body">
@@ -19,21 +19,21 @@
       <!-- Filter start -->
       <div class="mb-28">
         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap  gap-3">
-
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+             
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Add Property  
+            Add Folder  
           </button>
 
-          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addProperty">
+          <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-3 fw-normal flex-shrink-0" data-bs-toggle="modal" data-bs-target="#addFolder">
             <span class="w-14-px h-14-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xs">
               <i class="ri-add-line"></i>
             </span>
             <span class="w-1-px h-18-px bg-white-1"></span>
-            Import Property   
+            Import Folder   
           </button>
 
           <div class="d-flex align-items-center gap-3 flex-shrink-0">
@@ -90,11 +90,11 @@
         <table id="example" class="common-dataTable min-w-max top-row-hidden display w-100">
           <thead>
               <tr>
-                  <th class="bg-neutral-50 text-center">Workflow Name</th>
-                  <th class="bg-neutral-50 text-center">Documents Type</th>
-                  <th class="bg-neutral-50 text-center">Due Days</th>
-                  <th class="bg-neutral-50 text-center"># of Departments </th>
-                  <th class="bg-neutral-50 text-center">Recipients </th>
+                  <th class="bg-neutral-50 text-center">Folder ID</th>
+                  <th class="bg-neutral-50 text-center">New Folder Name</th>
+                  <th class="bg-neutral-50 text-center">Parent Folder</th>
+                  <th class="bg-neutral-50 text-center">Access level </th>
+                  <th class="bg-neutral-50 text-center">User </th>
                   <th class="bg-neutral-50 text-center">Created Details</th>
                   <th class="bg-neutral-50 text-center">Modified Details</th>
                   <th class="bg-neutral-50 text-center">Status</th>
@@ -103,19 +103,19 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
                     <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
+                        <span class="text-primary-500">F0097</span>
                     </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right & User</td>
                     <td class="text-center fw-light">
                         <div class="d-flex align-items-center">
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                         </div>
                     </td>
@@ -153,131 +153,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
                     <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
+                        <span class="text-primary-500">F0097</span>
                     </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right</td>
                     <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center d-none">
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">
-                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
-                    </td>
-                    <td class="text-center fw-light">
-                        <div class="dropdown">
-                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                                <span class="">View</span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                                <span class="">Edit </span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                                <span class="">History</span>
-                            </button>
-                            </li>
-                        </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
-                    <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
-                    </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                              <span class="text-white text-xs">1+</span>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">
-                        <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">Active </span>
-                    </td>
-                    <td class="text-center fw-light">
-                        <div class="dropdown">
-                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                                <span class="">View</span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                                <span class="">Edit </span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                                <span class="">History</span>
-                            </button>
-                            </li>
-                        </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
-                    <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
-                    </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <span class="text-white text-xs">1+</span>
                             </div>
                         </div>
                     </td>
@@ -315,181 +209,25 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
                     <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
+                        <span class="text-primary-500">F0097</span>
                     </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">User</td>
                     <td class="text-center fw-light">
                         <div class="d-flex align-items-center">
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">
-                        <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">Active </span>
-                    </td>
-                    <td class="text-center fw-light">
-                        <div class="dropdown">
-                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                                <span class="">View</span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                                <span class="">Edit </span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                                <span class="">History</span>
-                            </button>
-                            </li>
-                        </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
-                    <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
-                    </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">
-                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
-                    </td>
-                    <td class="text-center fw-light">
-                        <div class="dropdown">
-                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                                <span class="">View</span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                                <span class="">Edit </span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                                <span class="">History</span>
-                            </button>
-                            </li>
-                        </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
-                    <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
-                    </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                              <span class="text-white text-xs">1+</span>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
-                    <td class="text-center fw-light">
-                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
-                    </td>
-                    <td class="text-center fw-light">
-                        <div class="dropdown">
-                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="ri-more-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu p-8">
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
-                                <span class="">View</span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
-                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
-                                <span class="">Edit </span>
-                            </button>
-                            </li>
-                            <li class="">
-                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
-                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
-                                <span class="">History</span>
-                            </button>
-                            </li>
-                        </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
-                    <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
-                    </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">
-                        <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                              <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img6.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                              <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <span class="text-white text-xs">1+</span>
                             </div>
                         </div>
                     </td>
@@ -527,22 +265,78 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
                     <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
+                        <span class="text-primary-500">F0097</span>
                     </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right & User</td>
                     <td class="text-center fw-light">
                         <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
                                 <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">
+                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+                    </td>
+                    <td class="text-center fw-light">
+                        <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                <span class="">View</span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                <span class="">Edit </span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                <span class="">History</span>
+                            </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fw-light">
+                        <span class="text-primary-500">F0097</span>
+                    </td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right</td>
+                    <td class="text-center fw-light">
+                        <div class="d-flex align-items-center d-none">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                                <span class="text-white text-xs">1+</span>
                             </div>
                         </div>
                     </td>
@@ -580,22 +374,16 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-center fw-light">Contract Approval </td>
                     <td class="text-center fw-light">
-                        <span class="line-clamp-1">Accountant Leave Form </span>
+                        <span class="text-primary-500">F0097</span>
                     </td>
-                    <td class="text-center fw-light">3</td>
-                    <td class="text-center fw-light">3</td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">User</td>
                     <td class="text-center fw-light">
                         <div class="d-flex align-items-center">
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
-                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                <img src="assets/images/home-one/user-img1.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                            </div>
                             <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
                             </div>
                         </div>
                     </td>
@@ -603,6 +391,212 @@
                     <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
                     <td class="text-center fw-light">
                         <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">Active </span>
+                    </td>
+                    <td class="text-center fw-light">
+                        <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                <span class="">View</span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                <span class="">Edit </span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                <span class="">History</span>
+                            </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fw-light">
+                        <span class="text-primary-500">F0097</span>
+                    </td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right & User</td>
+                    <td class="text-center fw-light">
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">
+                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+                    </td>
+                    <td class="text-center fw-light">
+                        <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                <span class="">View</span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                <span class="">Edit </span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                <span class="">History</span>
+                            </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fw-light">
+                        <span class="text-primary-500">F0097</span>
+                    </td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right</td>
+                    <td class="text-center fw-light">
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">
+                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
+                    </td>
+                    <td class="text-center fw-light">
+                        <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                <span class="">View</span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                <span class="">Edit </span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                <span class="">History</span>
+                            </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fw-light">
+                        <span class="text-primary-500">F0097</span>
+                    </td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">User</td>
+                    <td class="text-center fw-light">
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">
+                        <span class="py-2 px-6 bg-success-50 text-success-600 text-xs radius-4 text-uppercase">Active </span>
+                    </td>
+                    <td class="text-center fw-light">
+                        <div class="dropdown">
+                        <button class="text-xl h-36-px w-36-px d-inline-flex align-items-center justify-content-center text-neutral-600 active-bg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu p-8">
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-eye-line"></i></span>
+                                <span class="">View</span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-bottom border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 text-sm w-100">
+                                <span class="text-md d-flex"><i class="ri-pencil-line"></i></span>
+                                <span class="">Edit </span>
+                            </button>
+                            </li>
+                            <li class="">
+                            <button type="button" class="d-flex align-items-center gap-2 px-20 py-4 border-neutral-100 bg-hover-neutral-200 radius-4 active-bg-primary-600 text-neutral-500 w-100" data-bs-toggle="modal" data-bs-target="#historyModal">
+                                <span class="text-md d-flex"><i class="ri-history-fill"></i></span>
+                                <span class="">History</span>
+                            </button>
+                            </li>
+                        </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fw-light">
+                        <span class="text-primary-500">F0097</span>
+                    </td>
+                    <td class="text-center fw-light">Accountant Leave Form  </td>
+                    <td class="text-center fw-light">Accountant Leave Form </td>
+                    <td class="text-center fw-light">Role Right & User</td>
+                    <td class="text-center fw-light">
+                        <div class="d-flex align-items-center">
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                <img src="assets/images/home-one/user-img3.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">Ahmad Moahmmed 10 Oct, 2024 - 13:04pm</td>
+                    <td class="text-center fw-light">
+                        <span class="py-2 px-6 bg-danger-50 text-danger-600 text-xs radius-4 text-uppercase">Inactive </span>
                     </td>
                     <td class="text-center fw-light">
                         <div class="dropdown">
@@ -641,9 +635,41 @@
   @@include('../layouts/_footer.html')
 </main>
 
+<!-- Add Folder Start -->
+<div class="modal fade" id="addEnvelopWorkflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEnvelopWorkflowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-1705-px">
+      <div class="modal-content ps-36 py-36 pe-88-px radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h5 class="modal-title fw-semibold line-clamp-1" id="addEnvelopWorkflowLabel">Add Folder </h5>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#" class="submit-form checkValidityForm">
+            <h5>Add Folder modal content goes here...</h5>
+
+            <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-50 flex-wrap">
+                <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                    <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Status</label>
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
+                </div>
+                <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Add Folder End -->
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/lib/select2.min.js"></script>
 
 <script>
     // ***************************** Data Table js ***************************** 
@@ -664,6 +690,15 @@
         });
     }
     getDatePicker('#dateTime');
+
+    
+    // *************************** Select2 js start here ***************************
+    $(document).ready(function() {
+        $(".meta-tags").select2({
+        tags: true
+        });
+    });
+    // *************************** Select2 js End here ***************************
 </script>
 
 </body>

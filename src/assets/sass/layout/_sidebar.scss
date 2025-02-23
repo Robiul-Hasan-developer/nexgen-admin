@@ -171,8 +171,8 @@
       &.open,
       &.dropdown-open {
         > a {
-          background-color: var(--primary-600);
-          color: #fff;
+          background-color: var(--primary-600) !important;
+          color: #fff !important;
           &:hover {
             color: #fff;
           }

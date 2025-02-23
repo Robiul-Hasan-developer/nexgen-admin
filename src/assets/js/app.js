@@ -246,7 +246,11 @@ import { toastMessage } from './toast.js';
       
       inputField.forEach((inputItem) => {
         inputItem.classList.remove('is-valid');
-        inputItem.value = "";
+        if(inputItem.tagName !== 'SELECT') {
+          inputItem.value = "";
+        } else {
+          inputItem.value = inputItem.querySelector("option[selected]")?.value || inputItem.options[0].value;
+        }
       });
       toastMessage("success", "Success", "Form submitted successfully!", 'ri-checkbox-circle-fill');
     });

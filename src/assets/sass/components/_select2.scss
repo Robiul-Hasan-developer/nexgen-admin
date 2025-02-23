@@ -9,7 +9,7 @@
     }
     .select2-selection--multiple {
         border: 1px solid var(--border-color) !important;
-        height: 44px;
+        min-height: 44px;
         border-radius: 8px;
         padding: 0 .25rem;
     }
