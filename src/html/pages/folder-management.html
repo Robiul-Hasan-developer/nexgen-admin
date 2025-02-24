@@ -637,11 +637,11 @@
 
 <!-- Add Folder Start -->
 <div class="modal fade" id="addEnvelopWorkflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEnvelopWorkflowLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered max-w-1705-px">
-      <div class="modal-content ps-36 py-36 pe-88-px radius-16">
-        <div class="border-0 d-flex align-items-start justify-content-between mb-32 gap-12">
+    <div class="modal-dialog modal-dialog-centered max-w-620-px">
+      <div class="modal-content px-36 py-36 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between gap-12">
           <div class="d-flex align-items-center gap-18">
-            <h5 class="modal-title fw-semibold line-clamp-1" id="addEnvelopWorkflowLabel">Add Folder </h5>
+            <h6 class="modal-title fw-semibold line-clamp-1" id="addEnvelopWorkflowLabel">Add Folder </h6>
             <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
           </div>
           <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#addEnvelopWorkflow">
@@ -651,12 +651,115 @@
   
         <div class="modal-body p-0">
           <form action="#" class="submit-form checkValidityForm">
-            <h5>Add Folder modal content goes here...</h5>
 
+            <div class="d-flex flex-column gap-3">
+                <div class="">
+                    <label for="ParentFolder" class="text-sm form-label">Parent Folder <span class="text-danger-600">* </span>: </label>
+                    <select class="form-control py-10 px-16 text-neutral-500 form-select" id="ParentFolder" required>
+                        <option value="" selected>Parent Folder</option>
+                        <option value="Parent Folder 1">Parent Folder 1</option>
+                        <option value="Parent Folder 2">Parent Folder 2</option>
+                        <option value="Parent Folder 3">Parent Folder 3</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label for="newFolderName" class="text-sm form-label">New Folder Name <span class="text-danger-600">* </span>: </label>
+                    <input type="text" class="form-control py-10 px-16 text-neutral-500" id="newFolderName" placeholder="New Folder Name" required>
+                </div>
+                <div class="">
+                    <label for="Description" class="text-sm form-label">Description :</label>
+                    <textarea class="form-control py-10 px-16 text-neutral-500 min-h-104-px" id="Description" placeholder="Description"></textarea>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                        <div class="max-w-170-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                          <label class="form-check-label text-primary-light text-sm" for="Accesslevel">Access level</label>
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="Accesslevel" required>
+                        </div>
+                        <div class="d-flex align-items-center gap-16">
+                            <select class="w-120-px form-control px-12 py-2 placeholder-12 form-select">
+                                <option value="User" selected>User</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Operation">Operation</option>
+                            </select>
+                            <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#folderAccess">
+                                <span class="w-10-px h-10-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xxs">
+                                  <i class="ri-add-line"></i>
+                                </span>
+                                <span class="w-1-px h-18-px bg-white-1"></span>
+                                Add 
+                            </button>
+                            <div class="d-flex align-items-center">
+                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                    <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                    <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                                    <span class="text-white text-xs">1+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                        <div class="max-w-170-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                          <label class="form-check-label text-primary-light text-sm" for="Autoretentiontray">Auto retention tray</label>
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="Autoretentiontray" required>
+                        </div>
+                        <div class="d-flex align-items-center gap-16">
+                            <select class="w-120-px form-control px-12 py-2 placeholder-12 form-select">
+                                <option value="Monthly" selected>Monthly</option>
+                                <option value="Yearly">Yearly</option>
+                                <option value="Daily">Daily</option>
+                            </select>
+                            <div class="custom-tooltip position-relative">
+                                <button type="button" class="text-md d-flex text-primary-600">
+                                    <i class="ri-error-warning-line"></i>
+                                </button>
+                                <div class="custom-tooltip__text bg-neutral-200 radius-4">
+                                    <ul class="text-8-px">
+                                        <li class="line-clamp-2 d-flex align-items-start gap-1">
+                                            <span class="w-4-px h-4-px bg-primary-600 rounded-circle mt-6 flex-shrink-0"></span>
+                                            Documents will be grouped into monthly sub folders within a parent folder, ensuring easy navigation and efficient access to documents based on the specific month they were processed or archived.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                        <div class="max-w-170-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                          <label class="form-check-label text-primary-light text-sm" for="AutoDelete">Auto Delete</label>
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="AutoDelete" required>
+                        </div>
+                        <div class="d-flex align-items-center gap-16">
+                            <label class="form-check-label text-primary-light text-xs">Days</label>
+                            <div class="d-flex align-items-center gap-16">
+                                <input type="text" class="quantity__input form-control radius-6 w-36-px h-20-px px-6 text-xxs text-center" placeholder="0" value="120">
+                                <div class="d-flex flex-column">
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__plus"><i class="ri-arrow-up-s-fill"></i></button>
+                                    <button type="button" class="line-height-1 text-secondary-light-two text-hover-primary-600 quantity__minus"><i class="ri-arrow-down-s-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-sm-nowrap flex-wrap gap-44">
+                        <div class="max-w-170-px w-100 form-check form-switch ps-0 mb-0 d-flex align-items-center gap-10 justify-content-between">
+                          <label class="form-check-label text-primary-light text-sm" for="Allowtomove">Allow to move</label>
+                          <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="Allowtomove" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-50 flex-wrap">
                 <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
                     <label class="form-check-label text-primary-light text-sm" for="WorkflowStatus">Status</label>
-                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatus">
                 </div>
                 <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
             </div>
@@ -666,6 +769,119 @@
     </div>
 </div>
 <!-- Add Folder End -->
+
+<!-- Folder Access Start -->
+<div class="modal fade" id="folderAccess" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="folderAccessLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered max-w-470-px">
+      <div class="modal-content px-36 py-36 radius-16">
+        <div class="border-0 d-flex align-items-start justify-content-between gap-12">
+          <div class="d-flex align-items-center gap-18">
+            <h6 class="modal-title fw-semibold line-clamp-1" id="folderAccessLabel">Folder Access </h6>
+            <span class="bg-primary-600 text-white fw-bold text-xxs py-6 px-24 radius-6">Add</span>
+          </div>
+          <button type="button" class="text-danger-600 text-2xl d-flex" data-bs-toggle="modal" data-bs-target="#folderAccess">
+            <i class="ri-close-fill d-flex line-height-1"></i>
+          </button>
+        </div>
+  
+        <div class="modal-body p-0">
+          <form action="#" class="submit-form checkValidityForm">
+
+            <div class="my-40">
+                <div class="position-relative max-w-620-px w-100">
+                    <input type="text" class="form-control w-100 ps-40 bg-neutral-100 radius-6" placeholder="Search here...">
+                    <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
+                        <i class="ri-search-line"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="mb-30 d-flex align-items-center gap-16">
+                <h6 class="text-sm mb-0">Members: </h6>
+                <div class="d-flex align-items-center">
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                    <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                    <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                    <span class="text-white text-xs">1+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-16 max-h-230-px overflow-y-auto scroll-sm pe-8">
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                            <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <h6 class="text-xs mb-0">Nancy Martino</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-primary-600 text-xs text-white radius-4 text-uppercase">Cancel</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                            hb
+                        </div>
+                        <h6 class="text-xs mb-0">Henry Baird</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                            <img src="assets/images/another/avatar-2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <h6 class="text-xs mb-0">Frank Hook</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                            <img src="assets/images/another/avatar-3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <h6 class="text-xs mb-0">Jennifer Carter</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-success-600 bg-success-50 d-flex justify-content-center align-items-center fw-semibold">
+                            AC
+                        </div>
+                        <h6 class="text-xs mb-0">Alexis Clarke</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between delete-item">
+                    <div class="d-flex align-items-center gap-16">
+                        <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
+                            <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <h6 class="text-xs mb-0">Nancy Martino</h6>
+                    </div>
+                    <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
+                </div>
+            </div>
+            
+            <div class="border-0 d-flex align-items-center gap-24 justify-content-between mt-50 flex-wrap">
+                <div class="form-check form-switch ps-0 mb-0 d-flex align-items-center gap-24 justify-content-between">
+                    <label class="form-check-label text-primary-light text-sm" for="WorkflowStatuses">Status</label>
+                    <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main bg-main h-24-px px-20" type="checkbox" role="switch" id="WorkflowStatuses">
+                </div>
+                <button type="submit" class="btn py-6 px-24 btn-primary-600 checkValiditySubmitBtn" disabled="">Save </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Folder Access End -->
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>

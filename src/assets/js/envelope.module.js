@@ -64,6 +64,17 @@ new DataTable('#example', {
     theme: 'snow',
   });
   // *************************** Editor js End here ***************************
+  
+  // *************************** Editor js start here ***************************
+  const quillTwo = new Quill('#editor-two', {
+    modules: {
+      syntax: true,
+      toolbar: '#toolbar-container',
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow',
+  });
+  // *************************** Editor js End here ***************************
 
   // *************************** Select2 js start here ***************************
   $(document).ready(function() {
