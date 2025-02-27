@@ -154,7 +154,7 @@
                     <thead>
                         <tr>
                             <th class="py-14 bg-neutral-50 text-start">
-                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1" type="checkbox" name="checkbox">
+                                <input class="form-check-input float-none mt-0 ms-0 shadow-none border border-neutral-400 bg-main w-16-px h-16-px bg-transparent cursor-pointer z-1 select-all" type="checkbox" name="checkbox">
                             </th>
                             <th class="py-14 bg-neutral-50 text-start">Contract Date</th>
                             <th class="py-14 bg-neutral-50 text-start">Contract Name</th>
@@ -1130,6 +1130,29 @@
     $(window).on('scroll', animateProgress);
     animateProgress(); // Run on page load
     // ========================= Animated Radial Progress Js End ===================
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const selectAllCheckbox = document.querySelector(".select-all");
+        const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+
+        selectAllCheckbox.addEventListener("change", function () {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
+
+        // Optional: If any checkbox is unchecked, uncheck the "Select All" checkbox
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function () {
+                if (!this.checked) {
+                    selectAllCheckbox.checked = false;
+                } else if ([...checkboxes].every(cb => cb.checked)) {
+                    selectAllCheckbox.checked = true;
+                }
+            });
+        });
+    });
 
 
 </script>
