@@ -126,4 +126,9 @@ div.dt-container .dt-paging .dt-paging-button {
         padding: 0 !important;
     }
 }
+
+
+.dt-orderable-none .dt-column-order {
+    display: none;
+}
 /* Common Data Table Css end */

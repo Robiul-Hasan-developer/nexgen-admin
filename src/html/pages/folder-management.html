@@ -680,7 +680,6 @@
                             <select class="w-120-px form-control px-12 py-2 placeholder-12 form-select">
                                 <option value="User" selected>User</option>
                                 <option value="Admin">Admin</option>
-                                <option value="Operation">Operation</option>
                             </select>
                             <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#folderAccess">
                                 <span class="w-10-px h-10-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xxs">
@@ -789,7 +788,7 @@
 
             <div class="my-40">
                 <div class="position-relative max-w-620-px w-100">
-                    <input type="text" class="form-control w-100 ps-40 bg-neutral-100 radius-6" placeholder="Search here...">
+                    <input type="text" class="form-control w-100 ps-40 bg-neutral-100 radius-6 search-input" placeholder="Search here...">
                     <span class="text-sm text-secondary-light position-absolute top-50 translate-middle-y start-0 ms-14">
                         <i class="ri-search-line"></i>
                     </span>
@@ -813,57 +812,57 @@
                 </div>
             </div>
             <div class="d-flex flex-column gap-16 max-h-230-px overflow-y-auto scroll-sm pe-8">
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
                             <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                         </div>
-                        <h6 class="text-xs mb-0">Nancy Martino</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Nancy Martino</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-primary-600 text-xs text-white radius-4 text-uppercase">Cancel</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
                             hb
                         </div>
-                        <h6 class="text-xs mb-0">Henry Baird</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Henry Baird</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
                             <img src="assets/images/another/avatar-2.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                         </div>
-                        <h6 class="text-xs mb-0">Frank Hook</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Frank Hook</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
                             <img src="assets/images/another/avatar-3.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                         </div>
-                        <h6 class="text-xs mb-0">Jennifer Carter</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Jennifer Carter</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-success-600 bg-success-50 d-flex justify-content-center align-items-center fw-semibold">
                             AC
                         </div>
-                        <h6 class="text-xs mb-0">Alexis Clarke</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Alexis Clarke</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
                 </div>
-                <div class="d-flex align-items-center justify-content-between delete-item">
+                <div class="d-flex align-items-center justify-content-between delete-item search-item">
                     <div class="d-flex align-items-center gap-16">
                         <div class="w-30-px h-30-px rounded-circle overflow-hidden text-uppercase text-xs text-danger-600 bg-danger-50 d-flex justify-content-center align-items-center fw-semibold">
                             <img src="assets/images/another/avatar-1.png" alt="Avatar" class="w-100 h-100 object-fit-cover">
                         </div>
-                        <h6 class="text-xs mb-0">Nancy Martino</h6>
+                        <h6 class="text-xs mb-0 search-item__text">Nancy Martino</h6>
                     </div>
                     <button type="button" class="delete-button py-0 px-12 bg-danger-600 text-xs text-white radius-4 text-uppercase">Remove</button>
                 </div>
@@ -915,6 +914,25 @@
         });
     });
     // *************************** Select2 js End here ***************************
+    
+    let searchInput = document.querySelector('.search-input');
+    let searchItems = document.querySelectorAll('.search-item');
+
+    searchInput.addEventListener('input', function (event) { 
+        let searchValue = event.target.value.toLowerCase().trim();
+
+        searchItems.forEach(item => {
+            let itemText = item.querySelector('.search-item__text').textContent.toLowerCase();
+
+            if(itemText.includes(searchValue)) {
+                item.classList.remove('d-none');
+                item.classList.add('d-flex');
+            } else {
+                item.classList.remove('d-flex');
+                item.classList.add('d-none');
+            }
+        });
+    });
 </script>
 
 </body>

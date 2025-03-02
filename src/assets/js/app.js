@@ -386,21 +386,41 @@ import { toastMessage } from './toast.js';
 
   
   // ========================= checkbox checked announcement item Js start ===================
-  let announcementItemCheckboxes = document.querySelectorAll('.announcement-item-checkbox');
+  var selectAllCheckbox = document.getElementById("selectAllCheckbox");
+  var checkboxes = document.querySelectorAll(".announcement-item-checkbox");
 
-  announcementItemCheckboxes.forEach(checkboxItem => {
-    checkboxItem.addEventListener('change', function () {
-
-      const parentItem = this.closest('.check-announcement-item');
-
-      if(this.checked) {
-        parentItem.classList.add('bg-neutral-200');
-      } else {
-        parentItem.classList.remove('bg-neutral-200');
-      }
-
+  if(selectAllCheckbox && checkboxes) {
+    function updateRowHighlighting() {
+        checkboxes.forEach(function (checkbox) {
+            const parentItem = checkbox.closest(".check-announcement-item");
+            if (checkbox.checked) {
+                parentItem.classList.add("bg-neutral-200");
+            } else {
+                parentItem.classList.remove("bg-neutral-200");
+            }
+        });
+    }
+  
+    selectAllCheckbox.addEventListener("change", function () {
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+        updateRowHighlighting();
     });
-  });
+  
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            updateRowHighlighting();
+            if (!this.checked) {
+                selectAllCheckbox.checked = false;
+            } else if (document.querySelectorAll(".announcement-item-checkbox:checked").length === checkboxes.length) {
+                selectAllCheckbox.checked = true;
+            }
+        });
+    });
+  
+    updateRowHighlighting();
+  }
   // ========================= checkbox checked announcement item Js End ===================
 
   
@@ -423,41 +443,43 @@ import { toastMessage } from './toast.js';
   
   // ========================= Add Action Add Remove Js Start ===================
     document.addEventListener('DOMContentLoaded', function () {
+      function addEventListeners(wrapper) {
+          var addActionAdd = wrapper.querySelector('.add-action__add');
+          var addActionRemove = wrapper.querySelector('.add-action__remove');
+
+          // Function to handle adding a new wrapper
+          addActionAdd.addEventListener('click', function () {
+              toastMessage("success", "Success", "Add action created successfully!", 'ri-checkbox-circle-fill');
+
+              // Clone the wrapper
+              var newWrapper = wrapper.cloneNode(true);
+
+              // Reset the cloned wrapper's values
+              var selects = newWrapper.querySelectorAll('select');
+              selects.forEach(function (select) {
+                  select.selectedIndex = 0; // Reset dropdowns to their default option
+              });
+
+              // Attach remove button functionality to the new clone
+              addEventListeners(newWrapper);
+
+              // Insert the cloned wrapper immediately after the current one
+              wrapper.insertAdjacentElement('afterend', newWrapper);
+          });
+
+          // Function to handle removing the wrapper
+          addActionRemove.addEventListener('click', function () {
+              wrapper.remove();
+              toastMessage("danger", "Deleted", "You deleted successfully!", 'ri-delete-bin-line');
+          });
+      }
+
       var addActionWrappers = document.querySelectorAll('.add-action-wrapper');
 
-      if(addActionWrappers) {
-        addActionWrappers.forEach(function (wrapper) {
-            var addActionAdd = wrapper.querySelector('.add-action__add');
-            var addActionRemove = wrapper.querySelector('.add-action__remove');
-  
-            // Function to handle adding a new wrapper
-            addActionAdd.addEventListener('click', function () {
-                toastMessage("success", "Success", "Add action create successfully!", 'ri-checkbox-circle-fill');
-                // Clone the wrapper
-                var newWrapper = wrapper.cloneNode(true);
-  
-                // Reset the cloned wrapper's values
-                var selects = newWrapper.querySelectorAll('select');
-                selects.forEach(function (select) {
-                    select.selectedIndex = 0; // Reset dropdowns to their default option
-                });
-  
-                // Attach remove button functionality to the new clone
-                var removeButton = newWrapper.querySelector('.add-action__remove');
-                removeButton.addEventListener('click', function () {
-                    this.closest('.add-action-wrapper').remove();
-                    toastMessage("danger", "Deleted", "You deleted successfully!", 'ri-delete-bin-line');
-                });
-  
-                // Insert the cloned wrapper immediately after the current one
-                wrapper.insertAdjacentElement('afterend', newWrapper);
-            });
-  
-            // Function to handle removing the wrapper
-            addActionRemove.addEventListener('click', function () {
-                wrapper.remove();
-            });
-        });
+      if (addActionWrappers) {
+          addActionWrappers.forEach(function (wrapper) {
+              addEventListeners(wrapper);
+          });
       }
   });
   // ========================= Add Action Add Remove Js End ===================
@@ -570,7 +592,7 @@ import { toastMessage } from './toast.js';
     });
   }
   // ========================= Check All checkbox by checking one checkbox Js End ===================
-
+ 
   // ========================= Email Item checked Js Start ===================
   let emailItemCheckboxes = document.querySelectorAll('.email-item__checkbox');
 

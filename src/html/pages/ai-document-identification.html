@@ -659,13 +659,13 @@
           <form action="#" class="submit-form checkValidityForm">
             <div class="row gy-20 gx-44">
                 <div class="col-sm-6">
-                    <label for="AIIdentificationName" class="text-sm text-primary-light fw-normal mb-10">AI Identification Name</label>
+                    <label for="AIIdentificationName" class="text-sm text-primary-light fw-normal mb-10">AI Identification Name<span class="text-danger-600">*</span>:</label>
                     <input type="text" class="form-control py-10" id="AIIdentificationName" placeholder="AI Identification Name" required>
                 </div>
                 <div class="col-sm-6">
-                    <label for="DocumentType" class="text-sm text-primary-light fw-normal mb-10">Document Type</label>
+                    <label for="DocumentType" class="text-sm text-primary-light fw-normal mb-10">Document Type<span class="text-danger-600">*</span>:</label>
                     <select id="DocumentType" class="form-control py-10 form-select text-neutral-400" required>
-                        <option value="Type" selected>Type</option>
+                        <option value="" selected>Type</option>
                         <option value="technology">Technology</option>
                         <option value="healthcare">Healthcare</option>
                         <option value="finance">Finance</option>
@@ -704,7 +704,13 @@
                 </div>
                 <div class="col-xl-8">
                     <div class="border border-neutral-300 radius-6 p-8 h-100">
-                        <img src="assets/images/another/identification-certificate.png" alt="Thumb">
+                        <!-- PDF Start -->
+                        <div class="overflow-x-auto flex-grow-1">
+                            <div class="w-100">
+                                <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                            </div>
+                        </div>
+                        <!-- PDF End -->
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -782,15 +788,15 @@
                 <div class="">
                     <label for="LabelType" class="text-xs fw-medium mb-4">Label Type</label>
                     <select id="LabelType" class="form-control py-8 radius-4 form-select" required>
-                        <option value="Label Type" selected hidden>Label Type</option>
+                        <option value="" selected>Label Type</option>
                         <option value="Label Type 1">Label Type 1</option>
                         <option value="Label Type 2">Label Type 2</option>
                     </select>
                 </div>
                 <div class="">
-                    <label for="validation" class="text-xs fw-medium mb-4">Label Type</label>
+                    <label for="validation" class="text-xs fw-medium mb-4">Validation</label>
                     <select id="validation" class="form-control py-8 radius-4 form-select" required>
-                        <option value="Validation" selected hidden>Validation</option>
+                        <option value="" selected>Validation</option>
                         <option value="Validation 1">Validation 1</option>
                         <option value="Validation 2">Validation 2</option>
                     </select>
@@ -809,6 +815,7 @@
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
 <script src="assets/js/lib/select2.min.js"></script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
     // ***************************** Data Table js ***************************** 
@@ -838,6 +845,41 @@
         });
     });
     // *************************** Select2 js End here ***************************
+
+     // *************************** PDF js Start ***************************
+     const template = document.createElement('template');
+    template.innerHTML = `
+        <iframe frameborder="0" 
+        width="1280" 
+        height="900">
+        </iframe>
+    `
+    class PdfViewer extends HTMLElement {
+        constructor() {
+        super()
+        const shadowRoot = this.attachShadow({mode: 'open'})
+        shadowRoot.appendChild(template.content.cloneNode(true))
+        }
+        get observedAttributes() {
+        return ['src']
+        }
+        connectedCallback() {
+        this.updateIframeSrc()
+        }
+        attributeChangedCallback(name) {
+        if (['src', 'viewerPath'].includes(name)) {
+            this.updateIframeSrc()
+        }
+        }
+        updateIframeSrc() {
+        this.shadowRoot.querySelector('iframe').setAttribute(
+            'src', 
+            `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+        )
+        }
+    }
+    window.customElements.define('pdf-viewer', PdfViewer)
+    // *************************** PDF js End ***************************
 </script>
 
 </body>
