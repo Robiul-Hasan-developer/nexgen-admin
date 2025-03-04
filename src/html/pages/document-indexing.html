@@ -5,13 +5,27 @@
 <main class="dashboard-main round-shape">
   @@include('../layouts/_nav.html')
 
-  @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "Document Indexing",
-    page: "Digital Signature",
-    pageLink: "index.html",
-    activePage: "Document Indexing",
-    paraText: "Displays a list of document indexing configuration requests, including indexing fields, status, creation time, and actions for efficient tracking and management."
-  })
+  <div class="bg-primary-600 px-res-40-px">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-1">
+      <h4 class="fw-medium mb-1 text-white">Document Indexing</h4>
+      <ul class="d-flex align-items-center gap-2 flex-wrap">
+        <li class="fw-medium">
+          <a href="index.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Home </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium">
+          <a href="administrative-setting.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Settings </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium">
+          <a href="archive-document-management.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Archiving & Document Management </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium text-white">Document Indexing</li>
+      </ul>
+    </div>
+    <p class="text-white-65 line-clamp-1 mt-16"> Displays a list of envelope workflow configuration requests, including workflow steps, status, creation time, and actions for efficient tracking and management. </p>
+  </div>
   
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6"> 
@@ -544,7 +558,13 @@
                 </div>
                 <div class="col-xl-8">
                     <div class="border border-neutral-300 radius-6 p-8 h-100">
-                        <img src="assets/images/another/identification-certificate.png" alt="Thumb">
+                        <!-- PDF Start -->
+                        <div class="overflow-x-auto">
+                            <div class="min-w-max">
+                                <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                            </div>
+                        </div>
+                        <!-- PDF End -->
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -659,6 +679,7 @@
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
     // ***************************** Data Table js ***************************** 
@@ -679,6 +700,43 @@
         });
     }
     getDatePicker('#dateTime');
+    // *****************************  Flat pickr or date picker js ***************************** 
+
+    
+  // *************************** PDF js Start ***************************
+  const template = document.createElement('template');
+  template.innerHTML = `
+    <iframe frameborder="0" 
+      width="1280" 
+      height="900">
+    </iframe>
+  `
+  class PdfViewer extends HTMLElement {
+    constructor() {
+      super()
+      const shadowRoot = this.attachShadow({mode: 'open'})
+      shadowRoot.appendChild(template.content.cloneNode(true))
+    }
+    get observedAttributes() {
+      return ['src']
+    }
+    connectedCallback() {
+      this.updateIframeSrc()
+    }
+    attributeChangedCallback(name) {
+      if (['src', 'viewerPath'].includes(name)) {
+        this.updateIframeSrc()
+      }
+    }
+    updateIframeSrc() {
+      this.shadowRoot.querySelector('iframe').setAttribute(
+        'src', 
+        `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+      )
+    }
+  }
+  window.customElements.define('pdf-viewer', PdfViewer);
+  // *************************** PDF js End ***************************
 
 </script>
 

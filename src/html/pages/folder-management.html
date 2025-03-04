@@ -5,13 +5,27 @@
 <main class="dashboard-main round-shape">
   @@include('../layouts/_nav.html')
 
-  @@include('../layouts/_breadcrumb.html',{
-    pageTitle: "folder Management",
-    page: "Digital Signature",
-    pageLink: "index.html",
-    activePage: "folder Management",
-    paraText: "Displays a list of folder management configuration requests, including folder structure, status, creation time, and actions for efficient tracking and management."
-  })
+  <div class="bg-primary-600 px-res-40-px">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-1">
+      <h4 class="fw-medium mb-1 text-white">folder Management</h4>
+      <ul class="d-flex align-items-center gap-2 flex-wrap">
+        <li class="fw-medium">
+          <a href="index.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Home </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium">
+          <a href="administrative-setting.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Settings </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium">
+          <a href="archive-document-management.html" class="d-flex align-items-center gap-1 text-white-65 hover-text-white"> Archiving & Document Management </a>
+        </li>
+        <li class="text-white-65"><i class="ri-arrow-right-s-line"></i></li>
+        <li class="fw-medium text-white">folder Management</li>
+      </ul>
+    </div>
+    <p class="text-white-65 line-clamp-1 mt-16"> Displays a list of envelope workflow configuration requests, including workflow steps, status, creation time, and actions for efficient tracking and management. </p>
+  </div>
   
   <div class="dashboard-main-body">
     <div class="shadow-2 section-bg p-3 radius-6">
@@ -637,7 +651,7 @@
 
 <!-- Add Folder Start -->
 <div class="modal fade" id="addEnvelopWorkflow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEnvelopWorkflowLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered max-w-620-px">
+    <div class="modal-dialog modal-dialog-centered max-w-732-px">
       <div class="modal-content px-36 py-36 radius-16">
         <div class="border-0 d-flex align-items-start justify-content-between gap-12">
           <div class="d-flex align-items-center gap-18">
@@ -677,29 +691,32 @@
                           <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="Accesslevel" required>
                         </div>
                         <div class="d-flex align-items-center gap-16">
-                            <select class="w-120-px form-control px-12 py-2 placeholder-12 form-select">
+                            <select class="form-control px-12 py-2 placeholder-12 form-select pe-32 w-172-px access-level-select">
                                 <option value="User" selected>User</option>
-                                <option value="Admin">Admin</option>
+                                <option value="Role Rights">Role Rights</option>
+                                <option value="Role Rights & User">Role Rights & User</option>
                             </select>
-                            <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#folderAccess">
-                                <span class="w-10-px h-10-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xxs">
-                                  <i class="ri-add-line"></i>
-                                </span>
-                                <span class="w-1-px h-18-px bg-white-1"></span>
-                                Add 
-                            </button>
-                            <div class="d-flex align-items-center">
-                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
-                                    <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                                </div>
-                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                    <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                                </div>
-                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
-                                    <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
-                                </div>
-                                <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
-                                    <span class="text-white text-xs">1+</span>
+                            <div class="d-flex align-items-center gap-16 access-level-data">
+                                <button type="button" class="btn btn-primary-600 radius-8 d-flex align-items-center gap-2 px-8 py-4 fw-normal flex-shrink-0 text-xs" data-bs-toggle="modal" data-bs-target="#folderAccess">
+                                    <span class="w-10-px h-10-px bg-white d-flex justify-content-center align-items-center rounded-circle text-primary-600 fw-normal text-xxs">
+                                      <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="w-1-px h-18-px bg-white-1"></span>
+                                    Add 
+                                </button>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ">
+                                        <img src="assets/images/home-one/user-img5.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                        <img src="assets/images/home-one/user-img4.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px">
+                                        <img src="assets/images/home-one/user-img2.png" alt="Image" class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                    <div class="w-24-px h-24-px rounded-circle border border-white border-2 d-flex justify-content-center align-items-center ms--10px bg-primary-500 d-flex align-items-center justify-content-center">
+                                        <span class="text-white text-xs">1+</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -710,7 +727,7 @@
                           <input class="form-check-input float-none mt-0 ms-0 shadow-none bg-main" type="checkbox" role="switch" id="Autoretentiontray" required>
                         </div>
                         <div class="d-flex align-items-center gap-16">
-                            <select class="w-120-px form-control px-12 py-2 placeholder-12 form-select">
+                            <select class="w-172-px form-control px-12 py-2 placeholder-12 form-select">
                                 <option value="Monthly" selected>Monthly</option>
                                 <option value="Yearly">Yearly</option>
                                 <option value="Daily">Daily</option>
@@ -914,7 +931,9 @@
         });
     });
     // *************************** Select2 js End here ***************************
+
     
+    // *************************** Search Item Js Start here ***************************
     let searchInput = document.querySelector('.search-input');
     let searchItems = document.querySelectorAll('.search-item');
 
@@ -933,6 +952,23 @@
             }
         });
     });
+    // *************************** Search Item Js End here ***************************
+
+    
+    // *************************** Access Select Js Start here ***************************
+    let accessLevelSelect = document.querySelector('.access-level-select');
+    let accessLevelData = document.querySelector('.access-level-data');
+
+    accessLevelSelect.addEventListener('change', function (event) {
+        let value = event.target.value;
+
+        if(value === 'Role Rights') {
+            accessLevelData.setAttribute("style", "display: none !important;");
+        } else {
+            accessLevelData.setAttribute("style", "display: flex !important;");
+        }
+    });
+    // *************************** Access Select Js End here ***************************
 </script>
 
 </body>

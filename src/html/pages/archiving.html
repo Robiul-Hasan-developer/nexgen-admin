@@ -7,7 +7,7 @@
 
   @@include('../layouts/_breadcrumb.html',{
     pageTitle: "Archiving",
-    page: "Business Suite",
+    page: "Document Management",
     pageLink: "business-suites.html",
     activePage: "Archiving",
     paraText: "Displays a list of archived customer authentication requests, including customer information, archive status, archive time, and available actions for efficient monitoring and retrieval management."
@@ -113,7 +113,7 @@
         
         <div class="row gy-4">
             <div class="col-xl-3">
-                <div class="bg-white p-16 w-100 shadow-13">
+                <div class="bg-white p-16 w-100 shadow-13 h-100">
                     <div class="d-flex align-items-center flex-wrap gap-6">
                         <button type="button" class="border border-neutral-300 border-2 text-secondary-light-two radius-6 text-center px-10 py-2 text-sm fw-normal hover-text-white bg-hover-primary-600 border-hover-primary-600 flex-grow-1">
                             Department
@@ -290,13 +290,19 @@
             <div class="col-xl-9"> 
                 <div class="row gy-4">
                     <div class="col-xxl-6">
-                        <div class="bg-white p-10 flex-grow-1 shadow-13">
+                        <div class="bg-white p-10 flex-grow-1 shadow-13 h-100">
                             <button type="button" class="btn btn-primary-600 radius-6 d-flex align-items-center gap-1 px-24 py-4 text-sm fw-medium text-sm flex-shrink-0">
                                 Preview
                             </button>
                             <div class="mt-30">
                                 <h5 class="fw-normal text-lg mb-18">Sales Target Sheet</h5>
-                                <img src="assets/images/another/sales-sheet.png" alt="Logo" class="w-100">
+                                 <!-- PDF Start -->
+                                <div class="overflow-x-auto">
+                                    <div class="min-w-max">
+                                    <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                                    </div>
+                                </div>
+                                <!-- PDF End -->
                             </div>
                         </div> 
                     </div>
@@ -319,7 +325,7 @@
                                 </div>
 
                                 <div class="overflow-x-auto pb-8">
-                                    <div class="d-flex flex-column gap-20 min-w-max">
+                                    <div class="d-flex flex-column gap-16 min-w-max">
                                         <div class="d-flex align-items-center gap-50">
                                             <div class="w-100 text-end max-w-150-px">
                                                 <span class="text-md text-secondary-light-two">Month :</span>
@@ -463,6 +469,7 @@
 
 @@include('../partial-html/_template-bottom.html')
 <script src="assets/js/lib/flatpickr.js"></script>
+<script src="assets/js/pdfobject.js"></script>
 
 <script>
     function getDatePickerSingle(receiveID) {
@@ -475,6 +482,42 @@
     }
     getDatePickerSingle('#dateTimeOne');
     getDatePickerSingle('#dateTimeSingle');
+
+
+  // *************************** PDF js Start ***************************
+  const template = document.createElement('template');
+  template.innerHTML = `
+    <iframe frameborder="0" 
+      width="1280" 
+      height="900">
+    </iframe>
+  `
+  class PdfViewer extends HTMLElement {
+    constructor() {
+      super()
+      const shadowRoot = this.attachShadow({mode: 'open'})
+      shadowRoot.appendChild(template.content.cloneNode(true))
+    }
+    get observedAttributes() {
+      return ['src']
+    }
+    connectedCallback() {
+      this.updateIframeSrc()
+    }
+    attributeChangedCallback(name) {
+      if (['src', 'viewerPath'].includes(name)) {
+        this.updateIframeSrc()
+      }
+    }
+    updateIframeSrc() {
+      this.shadowRoot.querySelector('iframe').setAttribute(
+        'src', 
+        `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
+      )
+    }
+  }
+  window.customElements.define('pdf-viewer', PdfViewer)
+  // *************************** PDF js End ***************************
 </script>
 
 </body>
