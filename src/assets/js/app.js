@@ -35,37 +35,70 @@ import { toastMessage } from './toast.js';
   // sidebar submenu collapsible js
 
   // ========================== add active class to navbar menu current page Js Start =====================
-  function dynamicActiveMenuClass(selector) {
-    let FileName = window.location.pathname.split("/").reverse()[0];
-
-    // If we are at the root path ("/" or no file name), keep the active-page class on the Home item
-    if (FileName === "" || FileName === "index.html") {
-      // Keep the active-page class on the Home link
-      selector.find("li.nav-menu__item.has-submenu").eq(0).addClass("active-page");
-    } else {
-      // Remove active-page class from all items first
-      selector.find("li").removeClass("active-page");
-
-      // Add active-page class to the correct li based on the current URL
-      selector.find("li").each(function () {
-        let anchor = $(this).find("a");
-        if ($(anchor).attr("href") == FileName) {
-          $(this).addClass("active-page");
-        }
-      });
-
-      // If any li has active-page element, add class to its parent li
-      selector.children("li").each(function () {
-        if ($(this).find(".active-page").length) {
-          $(this).addClass("active-page");
+  document.addEventListener("DOMContentLoaded", function () {
+    function dynamicActiveMenuClass() {
+      let currentPage = window.location.pathname.split("/").pop();
+      console.log(`Current Page path: ${currentPage}`);
+      
+      let menuItems = document.querySelectorAll(".sidebar-menu li a");
+  
+      menuItems.forEach((item) => {
+        let parentLi = item.closest("li");
+        let itemHref = item.getAttribute("href");
+  
+        // Remove 'active-page' from all items first
+        parentLi.classList.remove("active-page");
+  
+        // Check if the current page is either sorting.html or sorting-documents.html
+        if (currentPage === "sorting.html" || currentPage === "sorting-documents.html") {
+          if (itemHref === "sorting.html" || itemHref === "sorting-documents.html") {
+            parentLi.classList.add("active-page");
+          }
+        } else if (currentPage === "indexing.html" || currentPage === "indexing-documents.html" || currentPage === "document-indexing.html") {
+            if (itemHref === "indexing.html" || itemHref === "indexing-documents.html" || itemHref === "document-indexing.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "archiving.html" || currentPage === "archive-document-management.html") {
+            if (itemHref === "archiving.html" || itemHref === "archive-document-management.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "files.html" || currentPage === "files-upgrade.html") {
+            if (itemHref === "files.html" || itemHref === "files-upgrade.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "workflow.html" || currentPage === "workflow-view.html") {
+            if (itemHref === "workflow.html" || itemHref === "workflow-view.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "email.html" || currentPage === "email-details.html") {
+            if (itemHref === "email.html" || itemHref === "email-details.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "announcement.html" || currentPage === "announcement-template.html") {
+            if (itemHref === "announcement.html" || itemHref === "announcement-template.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "action.html" || currentPage === "action-name.html" || currentPage === "action-view.html") {
+            if (itemHref === "action.html" || itemHref === "action-name.html" || itemHref === "action-view.html") {
+              parentLi.classList.add("active-page");
+            }
+          } else if (currentPage === "index.html" || currentPage === "digital-signature-view.html") {
+            if (itemHref === "index.html" || itemHref === "digital-signature-view.html") {
+              parentLi.classList.add("active-page");
+            }
+          } 
+        
+        else {
+          // For other pages, match by exact href
+          if (itemHref === currentPage) {
+            parentLi.classList.add("active-page");
+          }
         }
       });
     }
-  }
-
-  if ($('ul').length) {
-    dynamicActiveMenuClass($('ul'));
-  }
+  
+    dynamicActiveMenuClass(); // Run the function on page load
+  });
 // ========================== add active class to navbar menu current page Js End =====================
 
 
