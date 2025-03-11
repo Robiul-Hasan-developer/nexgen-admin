@@ -38,7 +38,6 @@ import { toastMessage } from './toast.js';
   document.addEventListener("DOMContentLoaded", function () {
     function dynamicActiveMenuClass() {
       let currentPage = window.location.pathname.split("/").pop();
-      console.log(`Current Page path: ${currentPage}`);
       
       let menuItems = document.querySelectorAll(".sidebar-menu li a");
   

@@ -561,7 +561,7 @@
                         <!-- PDF Start -->
                         <div class="overflow-x-auto">
                             <div class="min-w-max">
-                                <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                                <pdf-viewer src="assets/images/pdf/add-index.pdf"></pdf-viewer>
                             </div>
                         </div>
                         <!-- PDF End -->
@@ -703,40 +703,46 @@
     // *****************************  Flat pickr or date picker js ***************************** 
 
     
-  // *************************** PDF js Start ***************************
-  const template = document.createElement('template');
-  template.innerHTML = `
-    <iframe frameborder="0" 
-      width="1280" 
-      height="900">
-    </iframe>
-  `
-  class PdfViewer extends HTMLElement {
-    constructor() {
-      super()
-      const shadowRoot = this.attachShadow({mode: 'open'})
-      shadowRoot.appendChild(template.content.cloneNode(true))
+    // *************************** PDF js Start ***************************
+    const template = document.createElement('template');
+    template.innerHTML = `
+        <iframe frameborder="0" width="1280" height="900"></iframe>
+    `;
+
+    class PdfViewer extends HTMLElement {
+        constructor() {
+            super();
+            const shadowRoot = this.attachShadow({ mode: 'open' });
+            shadowRoot.appendChild(template.content.cloneNode(true));
+        }
+
+        static get observedAttributes() {
+            return ['src'];
+        }
+
+        connectedCallback() {
+            this.updateIframeSrc();
+        }
+
+        attributeChangedCallback(name) {
+            if (name === 'src') {
+                this.updateIframeSrc();
+            }
+        }
+
+        updateIframeSrc() {
+            const pdfSrc = this.getAttribute('src');
+            if (pdfSrc) {
+                this.shadowRoot.querySelector('iframe').setAttribute(
+                    'src',
+                    `assets/images/pdf/add-index.pdf`
+                );
+            }
+        }
     }
-    get observedAttributes() {
-      return ['src']
-    }
-    connectedCallback() {
-      this.updateIframeSrc()
-    }
-    attributeChangedCallback(name) {
-      if (['src', 'viewerPath'].includes(name)) {
-        this.updateIframeSrc()
-      }
-    }
-    updateIframeSrc() {
-      this.shadowRoot.querySelector('iframe').setAttribute(
-        'src', 
-        `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
-      )
-    }
-  }
-  window.customElements.define('pdf-viewer', PdfViewer);
-  // *************************** PDF js End ***************************
+
+    window.customElements.define('pdf-viewer', PdfViewer);
+    // *************************** PDF js End *************************** 
 
 </script>
 

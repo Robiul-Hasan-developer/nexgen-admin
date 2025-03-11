@@ -721,7 +721,7 @@
                         <!-- PDF Start -->
                         <div class="overflow-x-auto flex-grow-1">
                             <div class="w-100">
-                                <pdf-viewer src="compressed.tracemonkey-pldi-09.pdf"></pdf-viewer>
+                                <pdf-viewer src="assets/images/pdf/ai-identification.pdf"></pdf-viewer>
                             </div>
                         </div>
                         <!-- PDF End -->
@@ -859,41 +859,48 @@
         });
     });
     // *************************** Select2 js End here ***************************
-
-     // *************************** PDF js Start ***************************
-     const template = document.createElement('template');
+    
+    // *************************** PDF js Start ***************************
+    const template = document.createElement('template');
     template.innerHTML = `
-        <iframe frameborder="0" 
-        width="1280" 
-        height="900">
-        </iframe>
-    `
+        <iframe frameborder="0" width="1280" height="900"></iframe>
+    `;
+
     class PdfViewer extends HTMLElement {
         constructor() {
-        super()
-        const shadowRoot = this.attachShadow({mode: 'open'})
-        shadowRoot.appendChild(template.content.cloneNode(true))
+            super();
+            const shadowRoot = this.attachShadow({ mode: 'open' });
+            shadowRoot.appendChild(template.content.cloneNode(true));
         }
-        get observedAttributes() {
-        return ['src']
+
+        static get observedAttributes() {
+            return ['src'];
         }
+
         connectedCallback() {
-        this.updateIframeSrc()
+            this.updateIframeSrc();
         }
+
         attributeChangedCallback(name) {
-        if (['src', 'viewerPath'].includes(name)) {
-            this.updateIframeSrc()
+            if (name === 'src') {
+                this.updateIframeSrc();
+            }
         }
-        }
+
         updateIframeSrc() {
-        this.shadowRoot.querySelector('iframe').setAttribute(
-            'src', 
-            `https://mozilla.github.io/pdf.js/web/viewer.html?file=${this.getAttribute('src') || ''}`
-        )
+            const pdfSrc = this.getAttribute('src');
+            if (pdfSrc) {
+                this.shadowRoot.querySelector('iframe').setAttribute(
+                    'src',
+                    `assets/images/pdf/ai-identification.pdf`
+                );
+            }
         }
     }
-    window.customElements.define('pdf-viewer', PdfViewer)
-    // *************************** PDF js End ***************************
+
+    window.customElements.define('pdf-viewer', PdfViewer);
+    // *************************** PDF js End *************************** 
+
 </script>
 
 </body>
