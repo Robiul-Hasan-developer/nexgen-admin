@@ -10,8 +10,6 @@ zip_version/
 
 dev/
 
-dist/
-
 # Compiled Java class files
 *.class
 
