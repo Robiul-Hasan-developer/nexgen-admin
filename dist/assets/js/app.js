@@ -85,6 +85,10 @@ import { toastMessage } from './toast.js';
             if (itemHref === "index.html" || itemHref === "digital-signature-view.html") {
               parentLi.classList.add("active-page");
             }
+          } else if (currentPage === "scan-upload.html" || currentPage === "scanning-process.html") {
+            if (itemHref === "scan-upload.html" || itemHref === "scanning-process.html") {
+              parentLi.classList.add("active-page");
+            }
           } 
         
         else {
